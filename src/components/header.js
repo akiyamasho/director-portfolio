@@ -9,6 +9,7 @@ import { TextBtn } from "./shared/button";
 
 const Container = styled.div`
     display: flex;
+    align-items: center;
 
     & > * {
         margin: 0 1em;

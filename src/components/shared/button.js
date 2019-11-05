@@ -12,9 +12,12 @@ export const TextBtn = styled.button`
 
     display: flex;
     align-items: center;
+    text-align: center;
+    padding: 0;
 
     cursor: pointer;
     font-size: 1em;
+
     transition: 0.1s ease-in;
 
     color: ${textBtnColour};

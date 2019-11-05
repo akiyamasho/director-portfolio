@@ -12,21 +12,19 @@ const LOCALE_JA = "ja";
 const LOCALE_EN = "en";
 
 const Language = () => (
-    <div>
-        <IntlContextConsumer>
-            {({ language: currentLocale }) => (
-                <TextBtn
-                    onClick={() => {
-                        changeLocale(
-                            currentLocale === LOCALE_EN ? LOCALE_JA : LOCALE_EN
-                        );
-                    }}
-                >
-                    <FormattedMessage id="nav.toggleLanguage" />
-                </TextBtn>
-            )}
-        </IntlContextConsumer>
-    </div>
+    <IntlContextConsumer>
+        {({ language: currentLocale }) => (
+            <TextBtn
+                onClick={() => {
+                    changeLocale(
+                        currentLocale === LOCALE_EN ? LOCALE_JA : LOCALE_EN
+                    );
+                }}
+            >
+                <FormattedMessage id="nav.toggleLanguage" />
+            </TextBtn>
+        )}
+    </IntlContextConsumer>
 );
 
 export default Language;
