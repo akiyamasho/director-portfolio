@@ -1,5 +1,6 @@
-export const textColour = "#000000 ";
+export const themeColour = "#eee";
+export const themeHoverColour = "#fff";
 
-export const textBtnColour = "#000000";
-export const textBtnHoverColour = "#444444";
+export const textBtnColour = themeColour;
+export const textBtnHoverColour = themeHoverColour;
 export const textBtnDisabledColour = "#aaaaaa";

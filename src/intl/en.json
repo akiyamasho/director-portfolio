@@ -3,5 +3,8 @@
     "nav.portfolio": "Portfolio",
     "nav.engineering": "Software Projects",
     "nav.contact": "Contact",
-    "nav.toggleLanguage": "日本語"
+    "nav.toggleLanguage": "日本語",
+    "home.name": "Akiyama Shō",
+    "home.profession": "Director・Animator・Software Engineer",
+    "home.viewPortfolio": "View Portfolio"
 }

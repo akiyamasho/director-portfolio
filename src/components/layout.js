@@ -15,15 +15,15 @@ import "./layout.css";
 
 const Content = styled.div`
     padding-top: ${navHeightPx}px;
+    min-height: calc(100vh - ${navHeightPx}px);
 `;
 
 const Layout = ({ children }) => (
     <>
         <Header />
-        <Content>
-            <main>{children}</main>
-            <footer>footer</footer>
-        </Content>
+        <main>
+            <Content>{children}</Content>
+        </main>
     </>
 );
 

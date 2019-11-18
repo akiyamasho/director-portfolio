@@ -2,6 +2,23 @@
 
 html {
     font-family: "Noto Sans JP", sans-serif;
+    color: #ffffff;
+}
+
+body {
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    body {
+        font-size: 6px;
+    }
 }
 
 .material-icons {
