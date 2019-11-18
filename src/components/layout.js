@@ -7,18 +7,23 @@
 
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import { injectIntl } from "gatsby-plugin-intl";
 
-import Header from "./header";
+import Header, { navHeightPx } from "./header";
 import "./layout.css";
+
+const Content = styled.div`
+    padding-top: ${navHeightPx}px;
+`;
 
 const Layout = ({ children }) => (
     <>
         <Header />
-        <div>
+        <Content>
             <main>{children}</main>
             <footer>footer</footer>
-        </div>
+        </Content>
     </>
 );
 

@@ -6,7 +6,7 @@ import {
     changeLocale,
 } from "gatsby-plugin-intl";
 
-import { TextBtn } from "./shared/button";
+import { NavigationLink } from "./header";
 
 const LOCALE_JA = "ja";
 const LOCALE_EN = "en";
@@ -14,7 +14,7 @@ const LOCALE_EN = "en";
 const Language = () => (
     <IntlContextConsumer>
         {({ language: currentLocale }) => (
-            <TextBtn
+            <NavigationLink
                 onClick={() => {
                     changeLocale(
                         currentLocale === LOCALE_EN ? LOCALE_JA : LOCALE_EN
@@ -22,7 +22,7 @@ const Language = () => (
                 }}
             >
                 <FormattedMessage id="nav.toggleLanguage" />
-            </TextBtn>
+            </NavigationLink>
         )}
     </IntlContextConsumer>
 );

@@ -37,5 +37,11 @@ module.exports = {
                 redirect: false,
             },
         },
+        {
+            resolve: "gatsby-plugin-google-fonts",
+            options: {
+                fonts: ["material icons"],
+            },
+        },
     ],
 };
