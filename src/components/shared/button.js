@@ -40,10 +40,11 @@ export const LineBtn = styled.button`
     color: ${textBtnColour};
     border: 1px solid ${textBtnColour};
 
-    font-size: 1.25em;
-    letter-spacing: 5px;
+    font-size: 1em;
+    letter-spacing: 1px;
     text-decoration: none;
     text-align: center;
+    text-transform: uppercase;
 
     width: auto;
     padding: 0.25em 1em;

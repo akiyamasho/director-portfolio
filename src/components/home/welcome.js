@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { FormattedMessage } from "gatsby-plugin-intl";
+import { FormattedMessage, Link } from "gatsby-plugin-intl";
 import { navHeightPx } from "../header";
 import { LineBtn } from "../shared/button";
+import { themeDark } from "../shared/colours";
 
 const Container = styled.div`
     display: flex;
@@ -10,10 +11,13 @@ const Container = styled.div`
     flex-direction: column;
     height: calc(100vh - ${navHeightPx}px);
     justify-content: center;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 30, 0.4);
 `;
 
 const TitleWrapper = styled.div`
     padding: 1em 0;
+    user-select: none;
 `;
 
 const Name = styled.div`
@@ -22,6 +26,7 @@ const Name = styled.div`
 
 const Profession = styled.div`
     font-size: 1em;
+    color: ${themeDark};
 `;
 
 const ButtonWrapper = styled.div`
@@ -41,7 +46,7 @@ const Welcome = () => (
             </Profession>
         </TitleWrapper>
         <ButtonWrapper>
-            <LineBtn>
+            <LineBtn as={Link} to="/portfolio">
                 <FormattedMessage id="home.viewPortfolio" />
             </LineBtn>
         </ButtonWrapper>

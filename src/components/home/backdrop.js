@@ -22,7 +22,7 @@ const VideoBackdrop = styled.div`
     z-index: -1;
     background: rgba(0, 0, 0, 0.7);
 
-    animation: ${fadeIn} 2s ease-in forwards;
+    animation: ${fadeIn} 1s ease-in forwards;
 `;
 
 const VideoBg = styled.video`
