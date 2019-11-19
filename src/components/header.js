@@ -13,7 +13,7 @@ import {
     textBtnHoverColour,
 } from "./shared/colours";
 
-export const navHeightPx = "50";
+export const navHeightPx = "75";
 const invertedColour = "#000";
 const invertedHoverColour = "#444";
 const btnBorderColour = "#888";
@@ -42,9 +42,10 @@ const Container = styled.div`
 `;
 
 export const NavigationLink = styled.a`
-    padding: 0 1em;
+    padding: 0 1.5em;
 
     text-decoration: none;
+    letter-spacing: 1px;
     cursor: pointer;
 
     color: ${textBtnColour};
@@ -85,6 +86,10 @@ const Hamburger = styled(TextBtn)`
 
         &:hover {
             color: ${textBtnHoverColour};
+        }
+
+        i {
+            margin-right: 1em;
         }
 
         ${props =>

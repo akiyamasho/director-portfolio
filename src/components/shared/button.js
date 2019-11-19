@@ -13,6 +13,7 @@ export const TextBtn = styled.button`
     display: flex;
     align-items: center;
     text-align: center;
+    letter-spacing: 1px;
     padding: 0;
 
     cursor: pointer;

@@ -6,5 +6,7 @@
     "nav.toggleLanguage": "日本語",
     "home.name": "Akiyama Shō",
     "home.profession": "Director・Animator・Software Engineer",
-    "home.viewPortfolio": "View Portfolio"
+    "home.viewPortfolio": "View Portfolio",
+    "portfolio.title": "Portfolio",
+    "portfolio.subTitle": "Animation, Film & Theater"
 }

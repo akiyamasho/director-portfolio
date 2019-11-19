@@ -1,10 +1,12 @@
 {
     "nav.home": "ホーム",
-    "nav.portfolio": "作品",
+    "nav.portfolio": "ポートフォリオ",
     "nav.engineering": "SE履歴",
     "nav.contact": "連絡",
     "nav.toggleLanguage": "English",
     "home.name": "秋山翔",
     "home.profession": "監督・アニメーター・ソフトウェアエンジニア",
-    "home.viewPortfolio": "ポートフォリオをご覧"
+    "home.viewPortfolio": "ポートフォリオをご覧",
+    "portfolio.title": "ポートフォリオ",
+    "portfolio.subTitle": "アニメーション制作・舞台・映像"
 }
