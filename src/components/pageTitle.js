@@ -31,6 +31,8 @@ const Title = styled.div`
 const SubTitle = styled.div`
     font-size: 1em;
     display: flex;
+    justify-content: ${props =>
+        props.shouldRenderFromRight ? "flex-end" : "flex-start"};
 `;
 
 const Line = styled.div`
@@ -41,10 +43,10 @@ const Line = styled.div`
 `;
 
 const PageTitle = ({ title, subTitle, shouldRenderFromRight }) => (
-    <Container>
+    <Container shouldRenderFromRight={shouldRenderFromRight}>
         <Content shouldRenderFromRight={shouldRenderFromRight}>
             <Title>{title}</Title>
-            <SubTitle>
+            <SubTitle shouldRenderFromRight={shouldRenderFromRight}>
                 {!shouldRenderFromRight && <Line />}
                 {subTitle}
                 {shouldRenderFromRight && <Line />}

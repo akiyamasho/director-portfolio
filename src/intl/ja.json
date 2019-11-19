@@ -8,5 +8,7 @@
     "home.profession": "監督・アニメーター・ソフトウェアエンジニア",
     "home.viewPortfolio": "ポートフォリオをご覧",
     "portfolio.title": "ポートフォリオ",
-    "portfolio.subTitle": "アニメーション制作・舞台・映像"
+    "portfolio.subTitle": "アニメーション制作・舞台・映像",
+    "engineering.title": "ソフトウェア開発",
+    "engineering.subTitle": "UI/UXデザイン・フルスタック/モバイル開発"
 }

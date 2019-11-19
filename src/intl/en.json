@@ -8,5 +8,7 @@
     "home.profession": "Director・Animator・Software Engineer",
     "home.viewPortfolio": "View Portfolio",
     "portfolio.title": "Portfolio",
-    "portfolio.subTitle": "Animation, Film & Theater"
+    "portfolio.subTitle": "Animation, Film & Theater",
+    "engineering.title": "Software Engineering",
+    "engineering.subTitle": "UI/UX Design, Full-stack/Mobile Development"
 }
