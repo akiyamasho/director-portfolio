@@ -1,6 +1,7 @@
 {
     "nav.home": "Home",
     "nav.portfolio": "Portfolio",
+    "nav.gallery": "Gallery",
     "nav.engineering": "Software Projects",
     "nav.contact": "Contact",
     "nav.toggleLanguage": "日本語",
@@ -8,7 +9,9 @@
     "home.profession": "Director・Animator・Software Engineer",
     "home.viewPortfolio": "View Portfolio",
     "portfolio.title": "Portfolio",
-    "portfolio.subTitle": "Animation, Film & Theater",
+    "portfolio.subTitle": "Animation・Film・Theater",
     "engineering.title": "Software Engineering",
-    "engineering.subTitle": "UI/UX Design, Full-stack/Mobile Development"
+    "engineering.subTitle": "UI/UX Design・Full-stack Web/Mobile Development",
+    "gallery.title": "Gallery",
+    "gallery.subTitle": "Character Design・Animation Clips・Background"
 }

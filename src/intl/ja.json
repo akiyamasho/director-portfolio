@@ -1,6 +1,7 @@
 {
     "nav.home": "ホーム",
     "nav.portfolio": "ポートフォリオ",
+    "nav.gallery": "ギャラリー",
     "nav.engineering": "SE履歴",
     "nav.contact": "連絡",
     "nav.toggleLanguage": "English",
@@ -10,5 +11,7 @@
     "portfolio.title": "ポートフォリオ",
     "portfolio.subTitle": "アニメーション制作・舞台・映像",
     "engineering.title": "ソフトウェア開発",
-    "engineering.subTitle": "UI/UXデザイン・フルスタック/モバイル開発"
+    "engineering.subTitle": "UI/UXデザイン・フルスタック/モバイル開発",
+    "gallery.title": "ギャラリー",
+    "gallery.subTitle": "キャラクターデザイン・動画・背景"
 }

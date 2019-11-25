@@ -142,6 +142,9 @@ const Header = () => {
                     <NavigationLink as={Link} to="/portfolio">
                         <FormattedMessage id="nav.portfolio" />
                     </NavigationLink>
+                    <NavigationLink as={Link} to="/gallery">
+                        <FormattedMessage id="nav.gallery" />
+                    </NavigationLink>
                     <NavigationLink as={Link} to="/engineering">
                         <FormattedMessage id="nav.engineering" />
                     </NavigationLink>
