@@ -10,8 +10,15 @@
     "home.viewPortfolio": "View Portfolio",
     "portfolio.title": "Portfolio",
     "portfolio.subTitle": "Animation・Film・Theater",
+    "portfolio.visitWebsite": "Visit Website",
+    "projects.venture.title": "Venture Anime",
+    "projects.venture.subTitle": "Venture is an anime series set at an international tech startup in Tokyo, where Japanese and foreign staff go through their day-to-day lives working on engineering and business challenges as a small team.",
+    "projects.venture.instagram": "http://instagram.com/ventureanime2020",
+    "projects.venture.twitter": "http://twitter.com/VentureAnime",
+    "projects.venture.facebook": "https://www.facebook.com/Venture-Anime-120793552647372/",
     "engineering.title": "Software Engineering",
     "engineering.subTitle": "UI/UX Design・Full-stack Web/Mobile Development",
     "gallery.title": "Gallery",
     "gallery.subTitle": "Character Design・Animation Clips・Background"
 }
+

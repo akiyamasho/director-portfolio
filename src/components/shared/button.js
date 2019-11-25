@@ -41,7 +41,42 @@ export const LineBtn = styled.button`
     color: ${textBtnColour};
     border: 1px solid ${textBtnColour};
 
-    font-size: 1em;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+
+    width: auto;
+    padding: 0.25em 1em;
+    display: inline-block;
+    border-radius: 3px;
+
+    cursor: pointer;
+
+    transition: 0.2s cubic-bezier(0.355, 0.045, 0.645, 0);
+
+    &:hover {
+        border: 1px solid ${textBtnHoverColour};
+        color: ${textBtnHoverColour};
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    &:active {
+        outline: rgba(255, 255, 255, 0.7);
+    }
+
+    &:focus {
+        outline: rgba(255, 255, 255, 0.7);
+    }
+`;
+
+export const LineLink = styled.a`
+    background: none;
+    color: ${textBtnColour};
+    border: 1px solid ${textBtnColour};
+
+    font-size: 0.85em;
     letter-spacing: 1px;
     text-decoration: none;
     text-align: center;

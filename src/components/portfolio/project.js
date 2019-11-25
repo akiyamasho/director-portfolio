@@ -2,11 +2,33 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
+import facebookLogo from "../../assets/sns/facebook.png";
+import githubLogo from "../../assets/sns/github.png";
+import instagramLogo from "../../assets/sns/instagram.png";
+import redditLogo from "../../assets/sns/reddit.png";
+import twitterLogo from "../../assets/sns/twitter.png";
+import { themeColour } from "../shared/colours";
+import { LineLink } from "../shared/button";
+
 const Container = styled.div`
     display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
 `;
 
-const PosterImg = styled.img``;
+const ContentWrapper = styled.div`
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 80%;
+`;
+
+const PosterImg = styled.img`
+    height: 300px;
+    padding: 1em;
+    width: auto;
+`;
 
 const DetailsWrapper = styled.div`
     display: flex;
@@ -17,20 +39,44 @@ const Title = styled.h1``;
 
 const SubTitle = styled.div``;
 
-const BtnWrapper = styled.div`
+const CallToAction = styled.div`
     display: flex;
+    padding: 1em 0;
+    flex-direction: column;
 `;
 
-const Link = styled.button``;
+const BtnWrapper = styled.div`
+    display: flex;
+    padding: 0.25em 0;
+`;
 
-const SnsLink = styled.img``;
+const ProjectLink = styled(LineLink)`
+    padding-right: 0.35em;
+    padding: 0.25em 0.5em;
+    border: 1px solid ${themeColour};
+`;
+
+const SnsLink = styled.a`
+    padding-right: 0.35em;
+`;
+
+const SnsIcon = styled.img`
+    height: 30px;
+    width: auto;
+`;
+
+export const SNS_TYPE_INSTAGRAM = "instagram";
+export const SNS_TYPE_TWITTER = "twitter";
+export const SNS_TYPE_FACEBOOK = "facebook";
+export const SNS_TYPE_REDDIT = "reddit";
+export const SNS_TYPE_GITHUB = "github";
 
 export const SnsTypeLogoMap = {
-    instagram: "instagram",
-    twitter: "twitter",
-    facebook: "facebook",
-    reddit: "reddit",
-    github: "github",
+    [SNS_TYPE_INSTAGRAM]: instagramLogo,
+    [SNS_TYPE_TWITTER]: twitterLogo,
+    [SNS_TYPE_FACEBOOK]: facebookLogo,
+    [SNS_TYPE_REDDIT]: redditLogo,
+    [SNS_TYPE_GITHUB]: githubLogo,
 };
 
 const SnsTypes = Object.keys(SnsTypeLogoMap);
@@ -38,27 +84,36 @@ const Project = ({
     posterImageSrc,
     title,
     subTitle,
-    linkTextMap,
+    linkTextList,
     snsLinkTypeMap,
 }) => (
     <Container>
-        <PosterImg src={posterImageSrc} />
-        <DetailsWrapper>
-            <Title>{title}</Title>
-            <SubTitle>{subTitle}</SubTitle>
-            <BtnWrapper>
-                {Object.keys(linkTextMap).map(({ link, text }) => (
-                    <Link src={link} target="__blank">
-                        {text}
-                    </Link>
-                ))}
-                {Object.keys(snsLinkTypeMap).map(({ link, type }) => (
-                    <Link src={link} target="__blank">
-                        <SnsLink src={SnsTypeLogoMap[link]} />
-                    </Link>
-                ))}
-            </BtnWrapper>
-        </DetailsWrapper>
+        <ContentWrapper>
+            <PosterImg src={posterImageSrc} />
+            <DetailsWrapper>
+                <Title>{title}</Title>
+                <SubTitle>{subTitle}</SubTitle>
+                <CallToAction>
+                    <BtnWrapper>
+                        {linkTextList.map(({ link, text }) => (
+                            <ProjectLink src={link} target="__blank">
+                                {text}
+                            </ProjectLink>
+                        ))}
+                    </BtnWrapper>
+                    <BtnWrapper>
+                        {Object.keys(snsLinkTypeMap).map(type => (
+                            <SnsLink
+                                href={snsLinkTypeMap[type]}
+                                target="__blank"
+                            >
+                                <SnsIcon src={SnsTypeLogoMap[type]} />
+                            </SnsLink>
+                        ))}
+                    </BtnWrapper>
+                </CallToAction>
+            </DetailsWrapper>
+        </ContentWrapper>
     </Container>
 );
 
@@ -66,10 +121,12 @@ Project.propTypes = {
     posterImageSrc: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     subTitle: PropTypes.string.isRequired,
-    linkTextMap: PropTypes.shape({
-        link: PropTypes.string,
-        text: PropTypes.string,
-    }),
+    linkTextList: PropTypes.arrayOf(
+        PropTypes.shape({
+            link: PropTypes.string,
+            text: PropTypes.string,
+        })
+    ),
     snsLinkTypeMap: PropTypes.shape({
         link: PropTypes.string,
         type: PropTypes.oneOf(SnsTypes),
