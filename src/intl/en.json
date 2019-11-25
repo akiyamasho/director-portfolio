@@ -16,9 +16,13 @@
     "projects.venture.instagram": "http://instagram.com/ventureanime2020",
     "projects.venture.twitter": "http://twitter.com/VentureAnime",
     "projects.venture.facebook": "https://www.facebook.com/Venture-Anime-120793552647372/",
+    "projects.moon.title": "Moon",
+    "projects.moon.subTitle": "Moon is a short film based on Natsume Soseki’s famous line, \"The moon is beautiful\". It was an official selection at {atami} and {liftOff}.",
+    "projects.moon.atami": "2019 Mt. Fuji-Atami Film Festival",
+    "projects.moon.atamiLink": "http://atamifilmfestival.org/",
+    "projects.moon.tokyoLiftOff": "2019 Tokyo Lift-off Online Film Festival",
     "engineering.title": "Software Engineering",
     "engineering.subTitle": "UI/UX Design・Full-stack Web/Mobile Development",
     "gallery.title": "Gallery",
     "gallery.subTitle": "Character Design・Animation Clips・Background"
 }
-

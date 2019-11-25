@@ -43,7 +43,7 @@ const DetailsWrapper = styled.div`
 
 const Title = styled.h1``;
 
-const SubTitle = styled.div``;
+const SubTitle = styled.span``;
 
 const CallToAction = styled.div`
     display: flex;

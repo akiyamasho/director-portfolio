@@ -13,6 +13,7 @@ import Project, {
     SNS_TYPE_REDDIT,
     SNS_TYPE_TWITTER,
 } from "../components/portfolio/project";
+import { TextLink } from "../components/shared/button";
 
 class Portfolio extends Component {
     render() {
@@ -43,6 +44,40 @@ class Portfolio extends Component {
                     [SNS_TYPE_FACEBOOK]: intl.formatMessage({
                         id: "projects.venture.facebook",
                     }),
+                },
+            },
+            {
+                posterImageSrc: sampleMovie,
+                title: intl.formatMessage({ id: "projects.moon.title" }),
+                subTitle: intl.formatMessage(
+                    {
+                        id: "projects.moon.subTitle",
+                    },
+                    {
+                        atami: (
+                            <TextLink
+                                href={intl.formatMessage({
+                                    id: "projects.moon.atamiLink",
+                                })}
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.moon.atami" />
+                            </TextLink>
+                        ),
+                        tokyoLiftOff: (
+                            <TextLink
+                                href="https://liftoff.network/tokyo-lift-off-film-festival/"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.moon.tokyoLiftOff" />
+                            </TextLink>
+                        ),
+                    }
+                ),
+                linkTextList: [],
+                snsLinkTypeMap: {
+                    [SNS_TYPE_INSTAGRAM]:
+                        "https://www.instagram.com/p/BxfC9kblwB6/",
                 },
             },
         ];

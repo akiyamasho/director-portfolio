@@ -36,6 +36,37 @@ export const TextBtn = styled.button`
     }
 `;
 
+export const TextLink = styled.a`
+    background: none;
+    border: none;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 0;
+
+    cursor: pointer;
+    font-size: 1em;
+
+    transition: 0.2s cubic-bezier(0.355, 0.045, 0.645, 0);
+
+    color: ${textBtnColour};
+
+    &:hover:not(:disabled) {
+        color: ${textBtnHoverColour};
+    }
+
+    &:disabled {
+        color: ${textBtnDisabledColour};
+    }
+
+    &:focus {
+        outline: none;
+    }
+`;
+
 export const LineBtn = styled.button`
     background: none;
     color: ${textBtnColour};
