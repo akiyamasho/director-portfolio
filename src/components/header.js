@@ -61,7 +61,6 @@ export const NavigationLink = styled.a`
         align-items: center;
         border-bottom: 1px solid ${btnBorderColour};
         padding: 0.5em 0 0.5em 1em;
-        height: ${navHeightPx}px;
         width: 100%;
         color: ${invertedColour};
         font-size: 1.25em;
