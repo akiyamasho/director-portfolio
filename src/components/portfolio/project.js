@@ -61,13 +61,13 @@ const BtnWrapper = styled.div`
 `;
 
 const ProjectLink = styled(LineLink)`
-    padding-right: 0.35em;
+    margin-right: 0.5em;
     padding: 0.25em 0.5em;
     border: 1px solid ${themeColour};
 `;
 
 const SnsLink = styled.a`
-    padding-right: 0.35em;
+    margin-right: 0.35em;
 `;
 
 const SnsIcon = styled.img`

@@ -80,6 +80,29 @@ class Portfolio extends Component {
                         "https://www.instagram.com/p/BxfC9kblwB6/",
                 },
             },
+            {
+                posterImageSrc: sampleMovie,
+                title: intl.formatMessage({ id: "projects.brighter.title" }),
+                subTitle: intl.formatMessage({
+                    id: "projects.brighter.subTitle",
+                }),
+                linkTextList: [
+                    {
+                        text: intl.formatMessage({
+                            id: "portfolio.visitWebsite",
+                        }),
+                        link: "https://brightertheanimation.com",
+                    },
+                    {
+                        text: intl.formatMessage({
+                            id: "portfolio.readPaper",
+                        }),
+                        link:
+                            "https://github.com/akiyamasho/brighter-the-animation/blob/master/paper/paper.pdf",
+                    },
+                ],
+                snsLinkTypeMap: {},
+            },
         ];
         return (
             <Layout>
