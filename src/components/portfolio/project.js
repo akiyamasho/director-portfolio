@@ -2,12 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
+import { FormattedMessage } from "gatsby-plugin-intl";
+
 import facebookLogo from "../../assets/sns/facebook.png";
 import githubLogo from "../../assets/sns/github.png";
 import instagramLogo from "../../assets/sns/instagram.png";
 import redditLogo from "../../assets/sns/reddit.png";
 import twitterLogo from "../../assets/sns/twitter.png";
-import { themeColour } from "../shared/colours";
+import { invertedColour, themeColour, themeDark } from "../shared/colours";
 import { LineLink } from "../shared/button";
 
 const Container = styled.div`
@@ -44,6 +46,32 @@ const DetailsWrapper = styled.div`
 const Title = styled.h1``;
 
 const SubTitle = styled.span``;
+
+const RoleWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    font-size: 0.5em;
+    flex-flow: wrap;
+    margin: 0.5em 0;
+`;
+
+const RoleLabel = styled.div`
+    color: ${themeDark};
+    margin: 0.5em;
+`;
+
+const RoleList = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
+const Role = styled.span`
+    border-radius: 1px;
+    padding: 0.25em;
+    background: ${themeColour};
+    color: ${invertedColour};
+    margin-right: 0.25em;
+`;
 
 const CallToAction = styled.div`
     display: flex;
@@ -96,6 +124,7 @@ const Project = ({
     subTitle,
     linkTextList,
     snsLinkTypeMap,
+    roles,
 }) => (
     <Container>
         <ContentWrapper>
@@ -103,6 +132,16 @@ const Project = ({
             <DetailsWrapper>
                 <Title>{title}</Title>
                 <SubTitle>{subTitle}</SubTitle>
+                <RoleWrapper>
+                    <RoleLabel>
+                        <FormattedMessage id="portfolio.role" />
+                    </RoleLabel>
+                    <RoleList>
+                        {roles.map(role => (
+                            <Role>{role}</Role>
+                        ))}
+                    </RoleList>
+                </RoleWrapper>
                 <CallToAction>
                     <BtnWrapper>
                         {linkTextList.map(({ link, text }) => (
@@ -131,6 +170,7 @@ Project.propTypes = {
     posterImageSrc: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     subTitle: PropTypes.string.isRequired,
+    roles: PropTypes.arrayOf(PropTypes.string),
     linkTextList: PropTypes.arrayOf(
         PropTypes.shape({
             link: PropTypes.string,

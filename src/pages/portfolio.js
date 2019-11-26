@@ -25,6 +25,26 @@ class Portfolio extends Component {
                 subTitle: intl.formatMessage({
                     id: "projects.venture.subTitle",
                 }),
+                roles: [
+                    intl.formatMessage({
+                        id: "portfolio.role.director",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.producer",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.writer",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.animator",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.backgroundArtist",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.voiceActor",
+                    }),
+                ],
                 linkTextList: [
                     {
                         text: intl.formatMessage({
@@ -74,6 +94,26 @@ class Portfolio extends Component {
                         ),
                     }
                 ),
+                roles: [
+                    intl.formatMessage({
+                        id: "portfolio.role.director",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.producer",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.writer",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.animator",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.backgroundArtist",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.voiceActor",
+                    }),
+                ],
                 linkTextList: [],
                 snsLinkTypeMap: {
                     [SNS_TYPE_INSTAGRAM]:
@@ -86,6 +126,23 @@ class Portfolio extends Component {
                 subTitle: intl.formatMessage({
                     id: "projects.brighter.subTitle",
                 }),
+                roles: [
+                    intl.formatMessage({
+                        id: "portfolio.role.director",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.producer",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.writer",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.animator",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.backgroundArtist",
+                    }),
+                ],
                 linkTextList: [
                     {
                         text: intl.formatMessage({
@@ -109,6 +166,29 @@ class Portfolio extends Component {
                 subTitle: intl.formatMessage({
                     id: "projects.seichou.subTitle",
                 }),
+                roles: [
+                    intl.formatMessage({
+                        id: "portfolio.role.director",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.producer",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.writer",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.animator",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.backgroundArtist",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.voiceActor",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.musicalPerformance",
+                    }),
+                ],
                 linkTextList: [
                     {
                         text: intl.formatMessage({
@@ -132,14 +212,16 @@ class Portfolio extends Component {
                         ({
                             posterImageSrc,
                             title,
+                            roles,
                             subTitle,
                             linkTextList,
                             snsLinkTypeMap,
                         }) => (
                             <Project
                                 posterImageSrc={posterImageSrc}
-                                subTitle={subTitle}
                                 title={title}
+                                subTitle={subTitle}
+                                roles={roles}
                                 linkTextList={linkTextList}
                                 snsLinkTypeMap={snsLinkTypeMap}
                             />
