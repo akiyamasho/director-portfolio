@@ -103,6 +103,22 @@ class Portfolio extends Component {
                 ],
                 snsLinkTypeMap: {},
             },
+            {
+                posterImageSrc: sampleMovie,
+                title: intl.formatMessage({ id: "projects.seichou.title" }),
+                subTitle: intl.formatMessage({
+                    id: "projects.seichou.subTitle",
+                }),
+                linkTextList: [
+                    {
+                        text: intl.formatMessage({
+                            id: "portfolio.watchTheShortFilm",
+                        }),
+                        link: "https://www.youtube.com/watch?v=Km9NLQb3QK0",
+                    },
+                ],
+                snsLinkTypeMap: {},
+            },
         ];
         return (
             <Layout>
