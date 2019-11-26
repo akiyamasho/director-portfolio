@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 import { FormattedMessage, injectIntl } from "gatsby-plugin-intl";
 
 import Layout from "../components/layout";
@@ -14,6 +15,50 @@ import Project, {
     SNS_TYPE_TWITTER,
 } from "../components/portfolio/project";
 import { TextLink } from "../components/shared/button";
+import { themeDark } from "../components/shared/colours";
+
+const SectionTitle = styled.h3`
+    font-size: 3em;
+`;
+
+const SideprojectContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+const SideprojectInnerWrapper = styled.div`
+    border-bottom: 1em;
+    border-top: 2px solid ${themeDark};
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+`;
+
+const SideprojectTable = styled.table`
+    width: 100%;
+`;
+
+const SideprojectTableHead = styled.th`
+    font-size: 0.5em;
+    text-align: left;
+    color: ${themeDark};
+`;
+
+const SideprojectTableData = styled.td`
+    font-size: 0.75em;
+    white-space: nowrap;
+    padding: 0 0.5em;
+`;
+
+const SideprojectMainTableData = styled(SideprojectTableData)`
+    width: 100%;
+`;
+
+const SideprojectSubtitle = styled.div`
+    font-size: 0.75em;
+`;
 
 class Portfolio extends Component {
     render() {
@@ -200,6 +245,38 @@ class Portfolio extends Component {
                 snsLinkTypeMap: {},
             },
         ];
+
+        const sideProjects = [
+            {
+                year: "2017",
+                title: intl.formatMessage({ id: "sideproject.karton.title" }),
+                subTitle: intl.formatMessage({
+                    id: "sideproject.karton.subTitle",
+                }),
+                roles: [intl.formatMessage({ id: "portfolio.role.mainActor" })],
+            },
+            {
+                year: "2015",
+                title: intl.formatMessage({
+                    id: "sideproject.bonifacio.title",
+                }),
+                subTitle: intl.formatMessage({
+                    id: "sideproject.bonifacio.subTitle",
+                }),
+                roles: [intl.formatMessage({ id: "portfolio.role.mainActor" })],
+            },
+            {
+                year: "2014",
+                title: intl.formatMessage({
+                    id: "sideproject.overheard.title",
+                }),
+                subTitle: intl.formatMessage({
+                    id: "sideproject.overheard.subTitle",
+                }),
+                roles: [intl.formatMessage({ id: "portfolio.role.actor" })],
+            },
+        ];
+
         return (
             <Layout>
                 <SEO title="Portfolio" />
@@ -228,6 +305,46 @@ class Portfolio extends Component {
                         )
                     )}
                 </div>
+                <SideprojectContainer>
+                    <SideprojectInnerWrapper>
+                        <SectionTitle>
+                            <FormattedMessage id="portfolio.otherProjects" />
+                        </SectionTitle>
+                        <SideprojectTable border="0">
+                            <thead>
+                                <SideprojectTableHead>
+                                    <FormattedMessage id="portfolio.sideproject.year" />
+                                </SideprojectTableHead>
+                                <SideprojectTableHead>
+                                    <FormattedMessage id="portfolio.sideproject.title" />
+                                </SideprojectTableHead>
+                                <SideprojectTableHead>
+                                    <FormattedMessage id="portfolio.role" />
+                                </SideprojectTableHead>
+                            </thead>
+                            <tbody>
+                                {sideProjects.map(
+                                    ({ year, title, subTitle, roles }) => (
+                                        <tr>
+                                            <SideprojectTableData>
+                                                {year}
+                                            </SideprojectTableData>
+                                            <SideprojectMainTableData>
+                                                <div>{title}</div>
+                                                <SideprojectSubtitle>
+                                                    {subTitle}
+                                                </SideprojectSubtitle>
+                                            </SideprojectMainTableData>
+                                            <SideprojectTableData>
+                                                {roles.map(role => role)}
+                                            </SideprojectTableData>
+                                        </tr>
+                                    )
+                                )}
+                            </tbody>
+                        </SideprojectTable>
+                    </SideprojectInnerWrapper>
+                </SideprojectContainer>
             </Layout>
         );
     }

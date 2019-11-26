@@ -1,6 +1,6 @@
 export const themeColour = "#eee";
 export const themeLight = "#ffff";
-export const themeDark = "#ccc";
+export const themeDark = "#aaa";
 
 export const invertedColour = "#000";
 
