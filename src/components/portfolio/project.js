@@ -80,7 +80,7 @@ const Role = styled.span`
     font-size: 0.75em;
 `;
 
-const CallToAction = styled.div`
+export const CallToAction = styled.div`
     display: flex;
     padding: 1em 0;
     flex-direction: column;
@@ -90,12 +90,12 @@ const CallToAction = styled.div`
     }
 `;
 
-const BtnWrapper = styled.div`
+export const BtnWrapper = styled.div`
     display: flex;
     padding: 0.25em 0;
 `;
 
-const ProjectLink = styled(LineLink)`
+export const ProjectLink = styled(LineLink)`
     margin-right: 0.5em;
     padding: 0.25em 0.5em;
     border: 1px solid ${themeColour};

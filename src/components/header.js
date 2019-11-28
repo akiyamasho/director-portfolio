@@ -47,6 +47,8 @@ export const NavigationLink = styled.a`
     text-decoration: none;
     letter-spacing: 1px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 
     color: ${textBtnColour};
 
@@ -141,14 +143,16 @@ const Header = () => {
                     <NavigationLink as={Link} to="/portfolio">
                         <FormattedMessage id="nav.portfolio" />
                     </NavigationLink>
-                    <NavigationLink as={Link} to="/gallery">
-                        <FormattedMessage id="nav.gallery" />
-                    </NavigationLink>
                     <NavigationLink as={Link} to="/engineering">
                         <FormattedMessage id="nav.engineering" />
                     </NavigationLink>
-                    <NavigationLink as={Link} to="/contact">
-                        <FormattedMessage id="nav.contact" />
+                    <NavigationLink
+                        target="_blank"
+                        href="https://www.instagram.com/akiyamash0"
+                    >
+                        <FormattedMessage id="nav.gallery" />
+                        &nbsp;
+                        <i className="material-icons">launch</i>
                     </NavigationLink>
                     <Language />
                 </LinkContainer>

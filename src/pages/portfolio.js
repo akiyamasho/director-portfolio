@@ -21,14 +21,15 @@ const SectionTitle = styled.h3`
     font-size: 3em;
 `;
 
-const SideprojectContainer = styled.div`
+export const SectionContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
 `;
 
-const SideprojectInnerWrapper = styled.div`
-    border-bottom: 1em;
+export const SectionInnerWrapper = styled.div`
+    padding: 1em 0;
+    border-bottom: 2px solid ${themeDark};
     border-top: 2px solid ${themeDark};
     display: flex;
     flex-direction: column;
@@ -300,8 +301,8 @@ class Portfolio extends Component {
                         )
                     )}
                 </div>
-                <SideprojectContainer>
-                    <SideprojectInnerWrapper>
+                <SectionContainer>
+                    <SectionInnerWrapper>
                         <SectionTitle>
                             <FormattedMessage id="portfolio.otherProjects" />
                         </SectionTitle>
@@ -338,8 +339,8 @@ class Portfolio extends Component {
                                 )}
                             </tbody>
                         </SideprojectTable>
-                    </SideprojectInnerWrapper>
-                </SideprojectContainer>
+                    </SectionInnerWrapper>
+                </SectionContainer>
             </Layout>
         );
     }

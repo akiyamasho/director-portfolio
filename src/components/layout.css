@@ -25,5 +25,6 @@ body {
 
 .material-icons {
     font-family: "Material Icons";
-    font-size: 2em;
+    font-size: 1em;
+    color: #888888;
 }

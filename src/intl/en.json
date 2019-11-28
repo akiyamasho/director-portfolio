@@ -50,6 +50,17 @@
     "sideproject.overheard.subTitle": "A series of short films produced by Revery Films which consist of adaptations of popular posts from the University Facebook group, Overheard at UP, which is a community for sharing fascinating and interesting sights and sounds from the University of the Philippines.",
     "engineering.title": "Software Engineering",
     "engineering.subTitle": "UI/UX Design・Full-stack Web/Mobile Development",
+    "engineering.workHistory": "Work History",
+    "engineering.year": "Year",
+    "engineering.company": "Company/Projects",
+    "engineering.cogent": "Cogent Labs Inc. (Tokyo)",
+    "engineering.ibridge": "i-BRIDGE Systems Inc. (Manila/Yokohama)",
+    "engineering.azeus": "Azeus Systems Ltd. (Manila)",
+    "engineering.role": "Role",
+    "engineering.role.fullStack": "Full-stack Engineer",
+    "engineering.role.uiUxDesigner": "UI/UX Designer",
+    "engineering.role.mobile": "Mobile Application Engineer",
+    "engineering.role.frontend": "Frontend Engineer",
     "gallery.title": "Gallery",
     "gallery.subTitle": "Character Design・Animation Clips・Background"
 }
