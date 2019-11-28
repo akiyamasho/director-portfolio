@@ -9,6 +9,10 @@ import { themeColour, themeDark } from "../components/shared/colours";
 import { TextLink } from "../components/shared/button";
 import { SectionContainer, SectionInnerWrapper } from "./portfolio";
 
+const Container = styled.div`
+    margin-bottom: 10vh;
+`;
+
 const Title = styled.h1`
     color: ${themeDark};
 `;
@@ -21,7 +25,9 @@ const TableData = styled.td`
     padding: 0.25em 0.5em;
 `;
 
-const Company = styled(TextLink)``;
+const Company = styled(TextLink)`
+    white-space: pre;
+`;
 
 const TableHead = styled.th`
     text-align: left;
@@ -92,111 +98,113 @@ class Engineering extends Component {
                     title={<FormattedMessage id="engineering.title" />}
                     shouldRenderFromRight
                 />
-                <SectionContainer>
-                    <SectionInnerWrapper>
-                        <Title>
-                            <FormattedMessage id="engineering.workHistory" />
-                        </Title>
-                        <WorkHistoryTable>
-                            <thead>
-                                <TableRow>
-                                    <TableHead>
-                                        <FormattedMessage id="engineering.year" />
-                                    </TableHead>
-                                    <TableHead>
-                                        <FormattedMessage id="engineering.company" />
-                                    </TableHead>
-                                    <TableHead>
-                                        <FormattedMessage id="engineering.role" />
-                                    </TableHead>
-                                </TableRow>
-                            </thead>
-                            <TableBody>
-                                {workHistoryItems.map(
-                                    ({
-                                        year,
-                                        companyLabelId,
-                                        companyLink,
-                                        roleLabelIdList,
-                                    }) => (
-                                        <TableRow>
-                                            <TableData>{year}</TableData>
-                                            <TableData>
-                                                <Company
-                                                    target="_blank"
-                                                    href={companyLink}
-                                                >
-                                                    <FormattedMessage
-                                                        id={companyLabelId}
-                                                    />
-                                                    &nbsp;
-                                                    <i className="material-icons">
-                                                        launch
-                                                    </i>
-                                                </Company>
-                                            </TableData>
-                                            <TableData>
-                                                <RoleList>
-                                                    {roleLabelIdList.map(
-                                                        roleLabelId => (
-                                                            <Role>
-                                                                <FormattedMessage
-                                                                    id={
-                                                                        roleLabelId
-                                                                    }
-                                                                />
-                                                            </Role>
-                                                        )
-                                                    )}
-                                                </RoleList>
-                                            </TableData>
-                                        </TableRow>
-                                    )
-                                )}
-                            </TableBody>
-                        </WorkHistoryTable>
-                    </SectionInnerWrapper>
-                </SectionContainer>
-                <SectionContainer>
-                    <SectionInnerWrapper>
-                        <Title>
-                            <FormattedMessage id="engineering.techStack" />
-                        </Title>
-                        <ul>
-                            <li>
-                                <FormattedMessage id="engineering.techStack.ios" />
-                            </li>
-                            <li>
-                                <FormattedMessage id="engineering.techStack.android" />
-                            </li>
+                <Container>
+                    <SectionContainer>
+                        <SectionInnerWrapper>
+                            <Title>
+                                <FormattedMessage id="engineering.workHistory" />
+                            </Title>
+                            <WorkHistoryTable>
+                                <thead>
+                                    <TableRow>
+                                        <TableHead>
+                                            <FormattedMessage id="engineering.year" />
+                                        </TableHead>
+                                        <TableHead>
+                                            <FormattedMessage id="engineering.company" />
+                                        </TableHead>
+                                        <TableHead>
+                                            <FormattedMessage id="engineering.role" />
+                                        </TableHead>
+                                    </TableRow>
+                                </thead>
+                                <TableBody>
+                                    {workHistoryItems.map(
+                                        ({
+                                            year,
+                                            companyLabelId,
+                                            companyLink,
+                                            roleLabelIdList,
+                                        }) => (
+                                            <TableRow>
+                                                <TableData>{year}</TableData>
+                                                <TableData>
+                                                    <Company
+                                                        target="_blank"
+                                                        href={companyLink}
+                                                    >
+                                                        <FormattedMessage
+                                                            id={companyLabelId}
+                                                        />
+                                                        &nbsp;
+                                                        <i className="material-icons">
+                                                            launch
+                                                        </i>
+                                                    </Company>
+                                                </TableData>
+                                                <TableData>
+                                                    <RoleList>
+                                                        {roleLabelIdList.map(
+                                                            roleLabelId => (
+                                                                <Role>
+                                                                    <FormattedMessage
+                                                                        id={
+                                                                            roleLabelId
+                                                                        }
+                                                                    />
+                                                                </Role>
+                                                            )
+                                                        )}
+                                                    </RoleList>
+                                                </TableData>
+                                            </TableRow>
+                                        )
+                                    )}
+                                </TableBody>
+                            </WorkHistoryTable>
+                        </SectionInnerWrapper>
+                    </SectionContainer>
+                    <SectionContainer>
+                        <SectionInnerWrapper>
+                            <Title>
+                                <FormattedMessage id="engineering.techStack" />
+                            </Title>
+                            <ul>
+                                <li>
+                                    <FormattedMessage id="engineering.techStack.ios" />
+                                </li>
+                                <li>
+                                    <FormattedMessage id="engineering.techStack.android" />
+                                </li>
 
-                            <li>
-                                <FormattedMessage id="engineering.techStack.frontend" />
-                            </li>
-                            <li>
-                                <FormattedMessage id="engineering.techStack.backend" />
-                            </li>
-                        </ul>
-                    </SectionInnerWrapper>
-                </SectionContainer>
-                <SectionContainer>
-                    <SectionInnerWrapper>
-                        <Title>
-                            <FormattedMessage id="engineering.qualifications" />
-                        </Title>
-                        <ul>
-                            <li>
-                                <FormattedMessage id="engineering.qualifications.courseraMl" />
-                            </li>
-                            <li>
-                                <FormattedMessage id="engineering.qualifications.n2" />
-                            </li>
-                            <li>
-                                <FormattedMessage id="engineering.qualifications.bscs" />
-                            </li>
-                        </ul>
-                    </SectionInnerWrapper>
-                </SectionContainer>
+                                <li>
+                                    <FormattedMessage id="engineering.techStack.frontend" />
+                                </li>
+                                <li>
+                                    <FormattedMessage id="engineering.techStack.backend" />
+                                </li>
+                            </ul>
+                        </SectionInnerWrapper>
+                    </SectionContainer>
+                    <SectionContainer>
+                        <SectionInnerWrapper>
+                            <Title>
+                                <FormattedMessage id="engineering.qualifications" />
+                            </Title>
+                            <ul>
+                                <li>
+                                    <FormattedMessage id="engineering.qualifications.courseraMl" />
+                                </li>
+                                <li>
+                                    <FormattedMessage id="engineering.qualifications.n2" />
+                                </li>
+                                <li>
+                                    <FormattedMessage id="engineering.qualifications.bscs" />
+                                </li>
+                            </ul>
+                        </SectionInnerWrapper>
+                    </SectionContainer>
+                </Container>
             </Layout>
         );
     }

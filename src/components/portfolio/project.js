@@ -15,7 +15,6 @@ import { LineLink } from "../shared/button";
 const Container = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
     padding: 2em 0;
 
     &:not(:last-child) {
@@ -26,12 +25,13 @@ const Container = styled.div`
 const ContentWrapper = styled.div`
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
 
     @media only screen and (max-width: 768px) {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        justify-content: center;
     }
 `;
 

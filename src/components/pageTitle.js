@@ -5,7 +5,7 @@ import { themeDark } from "./shared/colours";
 import { navHeightPx } from "./header";
 
 const Container = styled.div`
-    padding: 0 5em;
+    padding: 0 10vw;
     display: flex;
     justify-content: ${props =>
         props.shouldRenderFromRight ? "flex-end" : "flex-start"};

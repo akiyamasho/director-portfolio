@@ -84,25 +84,23 @@ const Hamburger = styled(TextBtn)`
         display: block;
         text-align: right;
         color: ${textBtnColour};
+        ${props =>
+            props.isMobileMenuVisible &&
+            `border-bottom: 1px solid ${btnBorderColour};`}
 
         &:hover {
             color: ${textBtnHoverColour};
+            ${props =>
+                props.isMobileMenuVisible && `color: ${invertedHoverColour};`}
         }
 
         i {
             margin-right: 1em;
             font-size: 2em;
             color: ${themeColour};
+
+            ${props => props.isMobileMenuVisible && `color: ${invertedColour};`}
         }
-
-        ${props =>
-            props.isMobileMenuVisible &&
-            `border-bottom: 1px solid ${btnBorderColour};
-            color: ${invertedColour};
-
-            &:hover {
-                color: ${invertedHoverColour};
-            }`}
     }
 `;
 
