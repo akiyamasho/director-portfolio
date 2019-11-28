@@ -79,7 +79,7 @@ export const LineBtn = styled.button`
     text-transform: uppercase;
 
     width: auto;
-    padding: 0.25em 1em;
+    padding: 0.5em 1em;
     display: inline-block;
     border-radius: 3px;
 

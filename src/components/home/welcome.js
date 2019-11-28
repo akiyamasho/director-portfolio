@@ -21,11 +21,11 @@ const TitleWrapper = styled.div`
 `;
 
 const Name = styled.div`
-    font-size: 3em;
+    font-size: 5em;
 `;
 
 const Profession = styled.div`
-    font-size: 1em;
+    font-size: 1.25em;
     color: ${themeDark};
 `;
 

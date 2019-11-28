@@ -14,9 +14,13 @@ import { LineLink } from "../shared/button";
 
 const Container = styled.div`
     display: flex;
-    min-height: 100vh;
     align-items: center;
     justify-content: center;
+    padding: 2em 0;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid ${themeDark};
+    }
 `;
 
 const ContentWrapper = styled.div`
@@ -96,7 +100,7 @@ export const BtnWrapper = styled.div`
 
 export const ProjectLink = styled(LineLink)`
     margin-right: 0.5em;
-    padding: 0.25em 0.5em;
+    padding: 0.5em 0.75em;
     border: 1px solid ${themeColour};
 `;
 

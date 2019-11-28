@@ -17,7 +17,7 @@ export const navHeightPx = "75";
 const invertedColour = "#000";
 const invertedHoverColour = "#444";
 const btnBorderColour = "#888";
-const menuVisibleBgColour = "rgba(255, 255, 255, 0.7)";
+const menuVisibleBgColour = "rgba(255, 255, 255, 0.9)";
 
 const Container = styled.div`
     position: fixed;
@@ -91,6 +91,8 @@ const Hamburger = styled(TextBtn)`
 
         i {
             margin-right: 1em;
+            font-size: 2em;
+            color: ${themeColour};
         }
 
         ${props =>
@@ -143,9 +145,6 @@ const Header = () => {
                     <NavigationLink as={Link} to="/portfolio">
                         <FormattedMessage id="nav.portfolio" />
                     </NavigationLink>
-                    <NavigationLink as={Link} to="/engineering">
-                        <FormattedMessage id="nav.engineering" />
-                    </NavigationLink>
                     <NavigationLink
                         target="_blank"
                         href="https://www.instagram.com/akiyamash0"
@@ -153,6 +152,12 @@ const Header = () => {
                         <FormattedMessage id="nav.gallery" />
                         &nbsp;
                         <i className="material-icons">launch</i>
+                    </NavigationLink>
+                    <NavigationLink as={Link} to="/engineering">
+                        <FormattedMessage id="nav.engineering" />
+                    </NavigationLink>
+                    <NavigationLink as={Link} to="/contact">
+                        <FormattedMessage id="nav.contact" />
                     </NavigationLink>
                     <Language />
                 </LinkContainer>

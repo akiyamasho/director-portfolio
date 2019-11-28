@@ -15,9 +15,15 @@ import Project, {
     SNS_TYPE_TWITTER,
 } from "../components/portfolio/project";
 import { TextLink } from "../components/shared/button";
-import { themeColour, themeDark } from "../components/shared/colours";
+import {
+    themeColour,
+    themeDark,
+    themeLight,
+} from "../components/shared/colours";
 
-const SectionTitle = styled.h1``;
+const SectionTitle = styled.h1`
+    color: ${themeDark};
+`;
 
 export const SectionContainer = styled.div`
     display: flex;
@@ -64,6 +70,11 @@ const SideprojectTableData = styled.td`
 const SideprojectSubtitle = styled.div`
     font-size: 0.75em;
     color: ${themeDark};
+`;
+
+const SideprojectRoleTd = styled(SideprojectTableData)`
+    font-size: 0.75em;
+    white-space: nowrap;
 `;
 
 class Portfolio extends Component {
@@ -346,9 +357,9 @@ class Portfolio extends Component {
                                                     {subTitle}
                                                 </SideprojectSubtitle>
                                             </SideprojectTableData>
-                                            <SideprojectTableData>
+                                            <SideprojectRoleTd>
                                                 {roles.map(role => role)}
-                                            </SideprojectTableData>
+                                            </SideprojectRoleTd>
                                         </SideprojectTableRow>
                                     )
                                 )}

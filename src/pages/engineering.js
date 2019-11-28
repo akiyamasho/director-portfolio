@@ -9,7 +9,9 @@ import { themeColour, themeDark } from "../components/shared/colours";
 import { TextLink } from "../components/shared/button";
 import { SectionContainer, SectionInnerWrapper } from "./portfolio";
 
-const Title = styled.h1``;
+const Title = styled.h1`
+    color: ${themeDark};
+`;
 
 const WorkHistoryTable = styled.table`
     border-collapse: collapse;

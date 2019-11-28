@@ -33,6 +33,10 @@ const SubTitle = styled.div`
     display: flex;
     justify-content: ${props =>
         props.shouldRenderFromRight ? "flex-end" : "flex-start"};
+
+    @media only screen and (max-width: 768px) {
+        justify-content: center;
+    }
 `;
 
 const Line = styled.div`
@@ -40,12 +44,38 @@ const Line = styled.div`
     margin: 0 1em;
     margin-bottom: 0.5em;
     width: 20vw;
+
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const MobileLineContainer = styled.div`
+    display: none;
+    padding: 1em 0;
+
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+    }
+`;
+
+const MobileLine = styled(Line)`
+    display: none;
+    width: 40vw;
+
+    @media only screen and (max-width: 768px) {
+        display: block;
+    }
 `;
 
 const PageTitle = ({ title, subTitle, shouldRenderFromRight }) => (
     <Container shouldRenderFromRight={shouldRenderFromRight}>
         <Content shouldRenderFromRight={shouldRenderFromRight}>
             <Title>{title}</Title>
+            <MobileLineContainer>
+                <MobileLine />
+            </MobileLineContainer>
             <SubTitle shouldRenderFromRight={shouldRenderFromRight}>
                 {!shouldRenderFromRight && <Line />}
                 {subTitle}
