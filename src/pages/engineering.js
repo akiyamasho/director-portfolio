@@ -15,7 +15,9 @@ const WorkHistoryTable = styled.table`
     border-collapse: collapse;
 `;
 
-const CompanyTd = styled.td``;
+const TableData = styled.td`
+    padding: 0.25em 0.5em;
+`;
 
 const Company = styled(TextLink)``;
 
@@ -27,10 +29,13 @@ const TableHead = styled.th`
     padding-bottom: 0.5em;
 `;
 
-const TableRow = styled.tr`
-    padding: 0.5em 0;
-    border-bottom: 1px solid ${themeDark};
+const TableBody = styled.tbody`
+    tr:not(:last-child) {
+        border-bottom: 1px solid ${themeDark};
+    }
 `;
+
+const TableRow = styled.tr``;
 
 const RoleList = styled.div`
     display: flex;
@@ -104,7 +109,7 @@ class Engineering extends Component {
                                     </TableHead>
                                 </TableRow>
                             </thead>
-                            <tbody>
+                            <TableBody>
                                 {workHistoryItems.map(
                                     ({
                                         year,
@@ -113,8 +118,8 @@ class Engineering extends Component {
                                         roleLabelIdList,
                                     }) => (
                                         <TableRow>
-                                            <td>{year}</td>
-                                            <CompanyTd>
+                                            <TableData>{year}</TableData>
+                                            <TableData>
                                                 <Company
                                                     target="_blank"
                                                     href={companyLink}
@@ -127,8 +132,8 @@ class Engineering extends Component {
                                                         launch
                                                     </i>
                                                 </Company>
-                                            </CompanyTd>
-                                            <td>
+                                            </TableData>
+                                            <TableData>
                                                 <RoleList>
                                                     {roleLabelIdList.map(
                                                         roleLabelId => (
@@ -142,12 +147,52 @@ class Engineering extends Component {
                                                         )
                                                     )}
                                                 </RoleList>
-                                            </td>
+                                            </TableData>
                                         </TableRow>
                                     )
                                 )}
-                            </tbody>
+                            </TableBody>
                         </WorkHistoryTable>
+                    </SectionInnerWrapper>
+                </SectionContainer>
+                <SectionContainer>
+                    <SectionInnerWrapper>
+                        <Title>
+                            <FormattedMessage id="engineering.techStack" />
+                        </Title>
+                        <ul>
+                            <li>
+                                <FormattedMessage id="engineering.techStack.ios" />
+                            </li>
+                            <li>
+                                <FormattedMessage id="engineering.techStack.android" />
+                            </li>
+
+                            <li>
+                                <FormattedMessage id="engineering.techStack.frontend" />
+                            </li>
+                            <li>
+                                <FormattedMessage id="engineering.techStack.backend" />
+                            </li>
+                        </ul>
+                    </SectionInnerWrapper>
+                </SectionContainer>
+                <SectionContainer>
+                    <SectionInnerWrapper>
+                        <Title>
+                            <FormattedMessage id="engineering.qualifications" />
+                        </Title>
+                        <ul>
+                            <li>
+                                <FormattedMessage id="engineering.qualifications.courseraMl" />
+                            </li>
+                            <li>
+                                <FormattedMessage id="engineering.qualifications.n2" />
+                            </li>
+                            <li>
+                                <FormattedMessage id="engineering.qualifications.bscs" />
+                            </li>
+                        </ul>
                     </SectionInnerWrapper>
                 </SectionContainer>
             </Layout>

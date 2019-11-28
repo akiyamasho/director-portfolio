@@ -15,11 +15,9 @@ import Project, {
     SNS_TYPE_TWITTER,
 } from "../components/portfolio/project";
 import { TextLink } from "../components/shared/button";
-import { themeDark } from "../components/shared/colours";
+import { themeColour, themeDark } from "../components/shared/colours";
 
-const SectionTitle = styled.h3`
-    font-size: 3em;
-`;
+const SectionTitle = styled.h1``;
 
 export const SectionContainer = styled.div`
     display: flex;
@@ -29,7 +27,6 @@ export const SectionContainer = styled.div`
 
 export const SectionInnerWrapper = styled.div`
     padding: 1em 0;
-    border-bottom: 2px solid ${themeDark};
     border-top: 2px solid ${themeDark};
     display: flex;
     flex-direction: column;
@@ -39,21 +36,34 @@ export const SectionInnerWrapper = styled.div`
 
 const SideprojectTable = styled.table`
     width: 100%;
+    border-collapse: collapse;
 `;
 
 const SideprojectTableHead = styled.th`
-    font-size: 0.5em;
+    font-size: 0.75em;
     text-align: left;
     color: ${themeDark};
+    border-bottom: 1px solid ${themeColour};
+    padding-bottom: 0.5em;
+`;
+
+const SideprojectTbody = styled.tbody`
+    tr:not(:last-child) {
+        border-bottom: 1px solid ${themeDark};
+    }
+`;
+
+const SideprojectTableRow = styled.tr`
+    padding: 1em 0;
 `;
 
 const SideprojectTableData = styled.td`
-    font-size: 0.75em;
-    padding: 0 0.5em;
+    padding: 0.25em 0.5em;
 `;
 
 const SideprojectSubtitle = styled.div`
     font-size: 0.75em;
+    color: ${themeDark};
 `;
 
 class Portfolio extends Component {
@@ -280,31 +290,36 @@ class Portfolio extends Component {
                     subTitle={intl.formatMessage({ id: "portfolio.subTitle" })}
                     title={intl.formatMessage({ id: "portfolio.title" })}
                 />
-                <div>
-                    {projects.map(
-                        ({
-                            posterImageSrc,
-                            title,
-                            roles,
-                            subTitle,
-                            linkTextList,
-                            snsLinkTypeMap,
-                        }) => (
-                            <Project
-                                posterImageSrc={posterImageSrc}
-                                title={title}
-                                subTitle={subTitle}
-                                roles={roles}
-                                linkTextList={linkTextList}
-                                snsLinkTypeMap={snsLinkTypeMap}
-                            />
-                        )
-                    )}
-                </div>
                 <SectionContainer>
                     <SectionInnerWrapper>
                         <SectionTitle>
-                            <FormattedMessage id="portfolio.otherProjects" />
+                            <FormattedMessage id="portfolio.animation" />
+                        </SectionTitle>
+                        {projects.map(
+                            ({
+                                posterImageSrc,
+                                title,
+                                roles,
+                                subTitle,
+                                linkTextList,
+                                snsLinkTypeMap,
+                            }) => (
+                                <Project
+                                    posterImageSrc={posterImageSrc}
+                                    title={title}
+                                    subTitle={subTitle}
+                                    roles={roles}
+                                    linkTextList={linkTextList}
+                                    snsLinkTypeMap={snsLinkTypeMap}
+                                />
+                            )
+                        )}
+                    </SectionInnerWrapper>
+                </SectionContainer>
+                <SectionContainer>
+                    <SectionInnerWrapper>
+                        <SectionTitle>
+                            <FormattedMessage id="portfolio.filmTheater" />
                         </SectionTitle>
                         <SideprojectTable border="0">
                             <thead>
@@ -318,10 +333,10 @@ class Portfolio extends Component {
                                     <FormattedMessage id="portfolio.role" />
                                 </SideprojectTableHead>
                             </thead>
-                            <tbody>
+                            <SideprojectTbody>
                                 {sideProjects.map(
                                     ({ year, title, subTitle, roles }) => (
-                                        <tr>
+                                        <SideprojectTableRow>
                                             <SideprojectTableData>
                                                 {year}
                                             </SideprojectTableData>
@@ -334,10 +349,10 @@ class Portfolio extends Component {
                                             <SideprojectTableData>
                                                 {roles.map(role => role)}
                                             </SideprojectTableData>
-                                        </tr>
+                                        </SideprojectTableRow>
                                     )
                                 )}
-                            </tbody>
+                            </SideprojectTbody>
                         </SideprojectTable>
                     </SectionInnerWrapper>
                 </SectionContainer>

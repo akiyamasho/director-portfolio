@@ -23,7 +23,6 @@ const ContentWrapper = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    width: 80%;
 
     @media only screen and (max-width: 768px) {
         flex-direction: column;
