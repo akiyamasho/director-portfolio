@@ -48,12 +48,7 @@ const SideprojectTableHead = styled.th`
 
 const SideprojectTableData = styled.td`
     font-size: 0.75em;
-    white-space: nowrap;
     padding: 0 0.5em;
-`;
-
-const SideprojectMainTableData = styled(SideprojectTableData)`
-    width: 100%;
 `;
 
 const SideprojectSubtitle = styled.div`
@@ -329,12 +324,12 @@ class Portfolio extends Component {
                                             <SideprojectTableData>
                                                 {year}
                                             </SideprojectTableData>
-                                            <SideprojectMainTableData>
+                                            <SideprojectTableData>
                                                 <div>{title}</div>
                                                 <SideprojectSubtitle>
                                                     {subTitle}
                                                 </SideprojectSubtitle>
-                                            </SideprojectMainTableData>
+                                            </SideprojectTableData>
                                             <SideprojectTableData>
                                                 {roles.map(role => role)}
                                             </SideprojectTableData>

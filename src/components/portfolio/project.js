@@ -53,6 +53,12 @@ const RoleWrapper = styled.div`
     font-size: 0.5em;
     flex-flow: wrap;
     margin: 0.5em 0;
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 `;
 
 const RoleLabel = styled.div`
@@ -68,9 +74,10 @@ const RoleList = styled.div`
 const Role = styled.span`
     border-radius: 1px;
     padding: 0.25em;
-    background: ${themeColour};
+    background: ${themeDark};
     color: ${invertedColour};
     margin-right: 0.25em;
+    font-size: 0.75em;
 `;
 
 const CallToAction = styled.div`

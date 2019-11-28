@@ -41,7 +41,7 @@ export const TextLink = styled.a`
     border: none;
     text-decoration: none;
 
-    display: flex;
+    display: inline-flex;
     align-items: center;
     text-align: center;
     letter-spacing: 1px;
