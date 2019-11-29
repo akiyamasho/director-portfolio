@@ -5,11 +5,11 @@ import homeVideo from "../../assets/home.mp4";
 
 const fadeIn = keyframes`
     from {
-        background: rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.4);
     }
     
     to {
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.8);
     }
 `;
 
