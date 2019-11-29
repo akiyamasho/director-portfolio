@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { FormattedMessage } from "gatsby-plugin-intl";
 import { TextLink } from "../components/shared/button";
 import { themeDark } from "../components/shared/colours";
 

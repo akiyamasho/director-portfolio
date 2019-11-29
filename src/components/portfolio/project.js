@@ -49,6 +49,7 @@ const PosterImg = styled.img`
 const DetailsWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    width: 100%;
 `;
 
 const Title = styled.h1``;

@@ -19,6 +19,7 @@ const Title = styled.h1`
 
 const WorkHistoryTable = styled.table`
     border-collapse: collapse;
+    width: 100%;
 `;
 
 const TableData = styled.td`
