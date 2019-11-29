@@ -38,7 +38,7 @@ const ContentWrapper = styled.div`
 const PosterImg = styled.img`
     height: auto;
     margin: 1em;
-    width: 30vw;
+    width: 25vw;
     border: 1px solid ${themeDark};
 
     @media only screen and (max-width: 768px) {
