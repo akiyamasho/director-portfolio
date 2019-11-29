@@ -36,9 +36,14 @@ const ContentWrapper = styled.div`
 `;
 
 const PosterImg = styled.img`
-    height: 300px;
-    padding: 1em;
-    width: auto;
+    height: auto;
+    margin: 1em;
+    width: 30vw;
+    border: 1px solid ${themeDark};
+
+    @media only screen and (max-width: 768px) {
+        width: 50vw;
+    }
 `;
 
 const DetailsWrapper = styled.div`

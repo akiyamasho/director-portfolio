@@ -7,7 +7,6 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import PageTitle from "../components/pageTitle";
 
-import sampleMovie from "../assets/sample_movie.jpg";
 import Project, {
     SNS_TYPE_FACEBOOK,
     SNS_TYPE_INSTAGRAM,
@@ -15,11 +14,12 @@ import Project, {
     SNS_TYPE_TWITTER,
 } from "../components/portfolio/project";
 import { TextLink } from "../components/shared/button";
-import {
-    themeColour,
-    themeDark,
-    themeLight,
-} from "../components/shared/colours";
+import { themeColour, themeDark } from "../components/shared/colours";
+
+import venture from "../assets/project/venture.jpeg";
+import moon from "../assets/project/moon.jpeg";
+import brighter from "../assets/project/brighter.jpeg";
+import seichou from "../assets/project/seichou.jpeg";
 
 const Container = styled.div`
     margin-bottom: 10vh;
@@ -86,7 +86,7 @@ class Portfolio extends Component {
         const { intl } = this.props;
         const projects = [
             {
-                posterImageSrc: sampleMovie,
+                posterImageSrc: venture,
                 title: intl.formatMessage({ id: "projects.venture.title" }),
                 subTitle: intl.formatMessage({
                     id: "projects.venture.subTitle",
@@ -133,7 +133,7 @@ class Portfolio extends Component {
                 },
             },
             {
-                posterImageSrc: sampleMovie,
+                posterImageSrc: moon,
                 title: intl.formatMessage({ id: "projects.moon.title" }),
                 subTitle: intl.formatMessage(
                     {
@@ -187,7 +187,7 @@ class Portfolio extends Component {
                 },
             },
             {
-                posterImageSrc: sampleMovie,
+                posterImageSrc: brighter,
                 title: intl.formatMessage({ id: "projects.brighter.title" }),
                 subTitle: intl.formatMessage({
                     id: "projects.brighter.subTitle",
@@ -227,7 +227,7 @@ class Portfolio extends Component {
                 snsLinkTypeMap: {},
             },
             {
-                posterImageSrc: sampleMovie,
+                posterImageSrc: seichou,
                 title: intl.formatMessage({ id: "projects.seichou.title" }),
                 subTitle: intl.formatMessage({
                     id: "projects.seichou.subTitle",
