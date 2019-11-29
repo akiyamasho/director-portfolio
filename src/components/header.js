@@ -73,34 +73,40 @@ export const NavigationLink = styled.a`
     }
 `;
 
-const Hamburger = styled(TextBtn)`
+const HamburgerContainer = styled.div`
     display: none;
+    padding-right: 0.5em;
+    height: ${navHeightPx}px;
+    width: 100%;
+    text-align: right;
+    align-items: center;
+    justify-content: flex-end;
+    ${props =>
+        props.isMobileMenuVisible &&
+        `border-bottom: 1px solid ${btnBorderColour};`}
 
     @media only screen and (max-width: 768px) {
-        cursor: pointer;
-        padding-right: 0.5em;
-        height: ${navHeightPx}px;
-        width: 100%;
-        display: block;
-        text-align: right;
-        color: ${textBtnColour};
+        display: flex;
+    }
+`;
+
+const Hamburger = styled(TextBtn)`
+    cursor: pointer;
+    display: block;
+    color: ${textBtnColour};
+
+    &:hover {
+        color: ${textBtnHoverColour};
         ${props =>
-            props.isMobileMenuVisible &&
-            `border-bottom: 1px solid ${btnBorderColour};`}
+            props.isMobileMenuVisible && `color: ${invertedHoverColour};`}
+    }
 
-        &:hover {
-            color: ${textBtnHoverColour};
-            ${props =>
-                props.isMobileMenuVisible && `color: ${invertedHoverColour};`}
-        }
+    i {
+        margin-right: 1em;
+        font-size: 2em;
+        color: ${themeColour};
 
-        i {
-            margin-right: 1em;
-            font-size: 2em;
-            color: ${themeColour};
-
-            ${props => props.isMobileMenuVisible && `color: ${invertedColour};`}
-        }
+        ${props => props.isMobileMenuVisible && `color: ${invertedColour};`}
     }
 `;
 
@@ -125,16 +131,18 @@ const Header = () => {
     return (
         <header>
             <Container isMobileMenuVisible={isMobileMenuVisible}>
-                <Hamburger
-                    onClick={() => {
-                        setIsMobileMenuVisible(!isMobileMenuVisible);
-                    }}
-                    isMobileMenuVisible={isMobileMenuVisible}
-                >
-                    <i className="material-icons">
-                        {isMobileMenuVisible ? "menu_open" : "menu"}
-                    </i>
-                </Hamburger>
+                <HamburgerContainer>
+                    <Hamburger
+                        onClick={() => {
+                            setIsMobileMenuVisible(!isMobileMenuVisible);
+                        }}
+                        isMobileMenuVisible={isMobileMenuVisible}
+                    >
+                        <i className="material-icons">
+                            {isMobileMenuVisible ? "menu_open" : "menu"}
+                        </i>
+                    </Hamburger>
+                </HamburgerContainer>
 
                 <LinkContainer isMobileMenuVisible={isMobileMenuVisible}>
                     <NavigationLink as={Link} to="/">

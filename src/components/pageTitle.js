@@ -22,6 +22,7 @@ const Container = styled.div`
 const Content = styled.div`
     display: flex;
     flex-direction: column;
+    padding-bottom: ${navHeightPx / 2}px;
 `;
 
 const Title = styled.div`

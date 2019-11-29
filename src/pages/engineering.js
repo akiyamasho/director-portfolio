@@ -26,7 +26,8 @@ const TableData = styled.td`
 `;
 
 const Company = styled(TextLink)`
-    white-space: pre;
+    display: flex;
+    flex-flow: wrap;
 `;
 
 const TableHead = styled.th`
