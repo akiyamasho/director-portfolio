@@ -1,7 +1,7 @@
 {
-  "name": "react-test",
+  "name": "akiyamasho-portfolio",
   "private": true,
-  "description": "React Test",
+  "description": "秋山翔 ポートフォリオサイト。 Akiyama Shō Portfolio Website.",
   "version": "0.1.0",
   "author": "秋山翔 <contact@akiyamasho.com>",
   "dependencies": {

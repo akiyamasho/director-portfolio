@@ -1,8 +1,9 @@
 module.exports = {
     siteMetadata: {
-        title: `React Test`,
-        description: `Some awesome description here`,
+        title: `秋山翔 Akiyama Shō`,
+        description: `秋山翔。監督・アニメーター・ソフトウェアエンジニア。Akiyama Shō. Director・Animator・Software Engineer`,
         author: `@akiyamasho`,
+        siteUrl: `https://www.akiyamasho.com`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
