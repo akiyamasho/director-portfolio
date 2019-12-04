@@ -35,11 +35,12 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "gatsby build && firebase deploy",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "prettier": "prettier --config .prettierrc --write '**/*.{js,jsx,css,md,json}' '!{CHANGELOG.md,**/*.min.js,public/**,\\.cache/**}'",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby build && gatsby serve -H 0.0.0.0",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {

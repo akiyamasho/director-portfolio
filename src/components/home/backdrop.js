@@ -38,7 +38,7 @@ const VideoBg = styled.video`
 const Backdrop = () => (
     <Fragment>
         <VideoBackdrop>&nbsp;</VideoBackdrop>
-        <VideoBg loop muted autoPlay>
+        <VideoBg loop muted autoPlay playsInline>
             <source src={homeVideo} type="video/mp4" />
         </VideoBg>
     </Fragment>
