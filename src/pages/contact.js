@@ -63,8 +63,8 @@ const Contact = () => (
                     <SnsIcon src={githubLogo} />
                 </SnsLink>
             </SnsBtnWrapper>
-            <Email href="mailto:contact@akiyamasho.com">
-                contact@akiyamasho.com
+            <Email href="mailto:akiyamashou@protonmail.com">
+                akiyamashou@protonmail.com
             </Email>
         </Container>
     </Layout>
