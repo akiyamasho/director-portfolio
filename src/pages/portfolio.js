@@ -114,6 +114,12 @@ class Portfolio extends Component {
                 linkTextList: [
                     {
                         text: intl.formatMessage({
+                            id: "portfolio.watchPilotEpisode",
+                        }),
+                        link: "https://www.youtube.com/watch?v=_w_cUYvG3x0",
+                    },
+                    {
+                        text: intl.formatMessage({
                             id: "portfolio.visitWebsite",
                         }),
                         link: "https://venture-anime.com",
@@ -137,6 +143,7 @@ class Portfolio extends Component {
                 title: intl.formatMessage({ id: "projects.moon.title" }),
                 subTitle: intl.formatMessage(
                     {
+                        "portfolio.watchPilotEpisode": "Watch Pilot Episode",
                         id: "projects.moon.subTitle",
                     },
                     {

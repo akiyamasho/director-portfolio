@@ -82,10 +82,10 @@ const RoleList = styled.div`
 
 const Role = styled.span`
     border-radius: 1px;
-    padding: 0.25em;
+    padding: 0 1em;
     background: ${themeDark};
     color: ${invertedColour};
-    margin-right: 0.25em;
+    margin: 0 0.55em;
     font-size: 0.75em;
 `;
 
