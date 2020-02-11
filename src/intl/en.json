@@ -66,7 +66,7 @@
     "engineering.techStack": "Tech Stack",
     "engineering.techStack.ios": "Swift/Objective-C (iOS)",
     "engineering.techStack.android": "Java/Kotlin (Android)",
-    "engineering.techStack.frontend": "React/Redux/Node (Frontend)",
+    "engineering.techStack.frontend": "React/Redux (Frontend)",
     "engineering.techStack.backend": "Django/GCP/Kubernetes (Backend)",
     "engineering.qualifications": "Qualifications",
     "engineering.qualifications.courseraMl": "Stanford University Machine Learning (Coursera) (2019)",
