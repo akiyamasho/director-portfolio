@@ -153,7 +153,7 @@ const Header = () => {
                     </NavigationLink>
                     <NavigationLink
                         target="_blank"
-                        href="https://www.instagram.com/akiyamash0"
+                        href="https://www.instagram.com/akiyamasho"
                     >
                         <FormattedMessage id="nav.gallery" />
                         &nbsp;

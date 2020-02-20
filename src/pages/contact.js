@@ -46,7 +46,7 @@ const Contact = () => (
             <SnsBtnWrapper>
                 <SnsLink
                     target="_blank"
-                    href="https://www.instagram.com/akiyamash0"
+                    href="https://www.instagram.com/akiyamasho"
                 >
                     <SnsIcon src={instagramLogo} />
                 </SnsLink>
