@@ -25,7 +25,7 @@ const Container = styled.div`
     margin-bottom: 10vh;
 `;
 
-const SectionTitle = styled.h1`
+const SectionTitle = styled.h2`
     color: ${themeDark};
 `;
 

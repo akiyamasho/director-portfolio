@@ -13,7 +13,7 @@ const Container = styled.div`
     margin-bottom: 10vh;
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
     color: ${themeDark};
 `;
 
