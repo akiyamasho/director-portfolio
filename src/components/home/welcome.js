@@ -20,12 +20,15 @@ const TitleWrapper = styled.div`
     user-select: none;
 `;
 
-const Name = styled.div`
+const Name = styled.h1`
     font-size: 5em;
+    font-weight: 400;
+    margin: 0;
 `;
 
-const Profession = styled.div`
+const Profession = styled.h2`
     font-size: 1.25em;
+    font-weight: 400;
     color: ${themeDark};
 `;
 
