@@ -88,9 +88,42 @@ class Portfolio extends Component {
             {
                 posterImageSrc: venture,
                 title: intl.formatMessage({ id: "projects.venture.title" }),
-                subTitle: intl.formatMessage({
-                    id: "projects.venture.subTitle",
-                }),
+                subTitle: intl.formatMessage(
+                    {
+                        id: "projects.venture.subTitle",
+                    },
+                    {
+                        independent: (
+                            <TextLink
+                                href="https://independentshortsawards.com/"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.independent" />
+                            </TextLink>
+                        ),
+                        prague: (
+                            <TextLink
+                                href="https://praguefilmfest.com/"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.prague" />
+                            </TextLink>
+                        ),
+                        kosice: (
+                            <TextLink href="http://kimff.sk/" target="_blank">
+                                <FormattedMessage id="projects.venture.kosice" />
+                            </TextLink>
+                        ),
+                        moscow: (
+                            <TextLink
+                                href="http://www.moscowshorts.com/2020/06/10/may-2020-moscow-shorts-official-selection"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.moscow" />
+                            </TextLink>
+                        ),
+                    }
+                ),
                 roles: [
                     intl.formatMessage({
                         id: "portfolio.role.director",
