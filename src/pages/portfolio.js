@@ -153,6 +153,12 @@ class Portfolio extends Component {
                     },
                     {
                         text: intl.formatMessage({
+                            id: "portfolio.watchEp1point1",
+                        }),
+                        link: "https://www.youtube.com/watch?v=BU0Aoo4pHYg",
+                    },
+                    {
+                        text: intl.formatMessage({
                             id: "portfolio.visitWebsite",
                         }),
                         link: "https://venture-anime.com",
