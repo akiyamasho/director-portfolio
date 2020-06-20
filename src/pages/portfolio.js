@@ -95,7 +95,7 @@ class Portfolio extends Component {
                     {
                         independent: (
                             <TextLink
-                                href="https://independentshortsawards.com/"
+                                href="https://independentshortsawards.com/honorable-mentions-may-2020/"
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.independent" />
