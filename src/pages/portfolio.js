@@ -14,7 +14,12 @@ import Project, {
     SNS_TYPE_TWITTER,
 } from "../components/portfolio/project";
 import { TextLink } from "../components/shared/button";
-import { themeColour, themeDark } from "../components/shared/colours";
+import {
+    filmFestivalBtnColour,
+    filmFestivalBtnHoverColour,
+    themeColour,
+    themeDark
+} from "../components/shared/colours";
 
 import venture from "../assets/project/venture.jpeg";
 import moon from "../assets/project/moon.jpeg";
@@ -27,6 +32,14 @@ const Container = styled.div`
 
 const SectionTitle = styled.h2`
     color: ${themeDark};
+`;
+
+const FilmFestivalLink = styled(TextLink)`
+    color: ${filmFestivalBtnColour};
+
+    &:hover:not(:disabled) {
+        color: ${filmFestivalBtnHoverColour};
+    }
 `;
 
 export const SectionContainer = styled.div`
@@ -94,73 +107,73 @@ class Portfolio extends Component {
                     },
                     {
                         kinno: (
-                            <TextLink
+                            <FilmFestivalLink
                                 href="http://kinnotv.com"
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.kinno" />
-                            </TextLink>
+                            </FilmFestivalLink>
                         ),
                         indie: (
-                            <TextLink
+                            <FilmFestivalLink
                                 href="https://indieshortfest.com/2020/07/03/nominations-of-july-2020/"
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.indie" />
-                            </TextLink>
+                            </FilmFestivalLink>
                         ),
                         indiex: (
-                            <TextLink
+                            <FilmFestivalLink
                                 href="https://indiexfest.com/2020/07/21/nominations-of-july-2020/"
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.indiex" />
-                            </TextLink>
+                            </FilmFestivalLink>
                         ),
                         independent: (
-                            <TextLink
+                            <FilmFestivalLink
                                 href="https://independentshortsawards.com/honorable-mentions-may-2020/"
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.independent" />
-                            </TextLink>
+                            </FilmFestivalLink>
                         ),
                         prague: (
-                            <TextLink
+                            <FilmFestivalLink
                                 href="https://praguefilmfest.com/winners/june-2020"
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.prague" />
-                            </TextLink>
+                            </FilmFestivalLink>
                         ),
                         couch: (
-                            <TextLink
+                            <FilmFestivalLink
                                 href="https://couchff.weebly.com/uploads/1/2/0/3/120372188/winners_couch_ff_summer_2020.pdf"
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.couch" />
-                            </TextLink>
+                            </FilmFestivalLink>
                         ),
                         kosice: (
-                            <TextLink href="http://kimff.sk/" target="_blank">
+                            <FilmFestivalLink href="http://kimff.sk/" target="_blank">
                                 <FormattedMessage id="projects.venture.kosice" />
-                            </TextLink>
+                            </FilmFestivalLink>
                         ),
                         moscow: (
-                            <TextLink
+                            <FilmFestivalLink
                                 href="http://www.moscowshorts.com/2020/06/10/may-2020-moscow-shorts-official-selection"
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.moscow" />
-                            </TextLink>
+                            </FilmFestivalLink>
                         ),
                         liftoff: (
-                            <TextLink
+                            <FilmFestivalLink
                                 href="https://liftoff.network/realtime-results-voting-system-showcaseextravaganza-1/"
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.liftoff" />
-                            </TextLink>
+                            </FilmFestivalLink>
                         ),
                     }
                 ),
@@ -227,22 +240,22 @@ class Portfolio extends Component {
                     },
                     {
                         atami: (
-                            <TextLink
+                            <FilmFestivalLink
                                 href={intl.formatMessage({
                                     id: "projects.moon.atamiLink",
                                 })}
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.moon.atami" />
-                            </TextLink>
+                            </FilmFestivalLink>
                         ),
                         tokyoLiftOff: (
-                            <TextLink
+                            <FilmFestivalLink
                                 href="https://liftoff.network/tokyo-lift-off-film-festival/"
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.moon.tokyoLiftOff" />
-                            </TextLink>
+                            </FilmFestivalLink>
                         ),
                     }
                 ),
