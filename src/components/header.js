@@ -159,8 +159,13 @@ const Header = () => {
                         &nbsp;
                         <i className="material-icons">launch</i>
                     </NavigationLink>
-                    <NavigationLink as={Link} to="/engineering">
+                    <NavigationLink
+                        target="_blank"
+                        href="https://github.com/akiyamasho"
+                    >
                         <FormattedMessage id="nav.engineering" />
+                        &nbsp;
+                        <i className="material-icons">launch</i>
                     </NavigationLink>
                     <NavigationLink as={Link} to="/contact">
                         <FormattedMessage id="nav.contact" />
