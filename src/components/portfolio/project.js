@@ -54,7 +54,9 @@ const DetailsWrapper = styled.div`
 
 const Title = styled.h1``;
 
-const SubTitle = styled.span``;
+const SubTitle = styled.span`
+    white-space: pre-wrap;
+`;
 
 const RoleWrapper = styled.div`
     display: flex;

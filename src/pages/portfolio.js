@@ -93,6 +93,30 @@ class Portfolio extends Component {
                         id: "projects.venture.subTitle",
                     },
                     {
+                        kinno: (
+                            <TextLink
+                                href="http://kinnotv.com"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.kinno" />
+                            </TextLink>
+                        ),
+                        indie: (
+                            <TextLink
+                                href="https://indieshortfest.com/2020/07/03/nominations-of-july-2020/"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.indie" />
+                            </TextLink>
+                        ),
+                        indiex: (
+                            <TextLink
+                                href="https://indiexfest.com/2020/07/21/nominations-of-july-2020/"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.indiex" />
+                            </TextLink>
+                        ),
                         independent: (
                             <TextLink
                                 href="https://independentshortsawards.com/honorable-mentions-may-2020/"
@@ -103,10 +127,18 @@ class Portfolio extends Component {
                         ),
                         prague: (
                             <TextLink
-                                href="https://praguefilmfest.com/"
+                                href="https://praguefilmfest.com/winners/june-2020"
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.prague" />
+                            </TextLink>
+                        ),
+                        couch: (
+                            <TextLink
+                                href="https://couchff.weebly.com/uploads/1/2/0/3/120372188/winners_couch_ff_summer_2020.pdf"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.couch" />
                             </TextLink>
                         ),
                         kosice: (
@@ -120,6 +152,14 @@ class Portfolio extends Component {
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.moscow" />
+                            </TextLink>
+                        ),
+                        liftoff: (
+                            <TextLink
+                                href="https://liftoff.network/realtime-results-voting-system-showcaseextravaganza-1/"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.liftoff" />
                             </TextLink>
                         ),
                     }
