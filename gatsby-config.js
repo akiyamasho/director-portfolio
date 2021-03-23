@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: `秋山翔 Akiyama Shō`,
-        description: `秋山翔。監督・アニメーター・ソフトウェアエンジニア。Akiyama Shō. Director・Animator・Software Engineer`,
+        description: `秋山翔。監督・アニメーター・機械学習エンジニア。Akiyama Shō. Director・Animator・Machine Learning Engineer`,
         author: `@akiyamasho`,
         siteUrl: `https://www.akiyamasho.com`,
     },
