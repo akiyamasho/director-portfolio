@@ -241,6 +241,12 @@ class Portfolio extends Component {
                         }),
                         link: "https://venture-anime.com",
                     },
+                    {
+                        text: intl.formatMessage({
+                            id: "portfolio.imdb",
+                        }),
+                        link: "https://www.imdb.com/title/tt13959862/",
+                    },
                 ],
                 snsLinkTypeMap: {
                     [SNS_TYPE_INSTAGRAM]: intl.formatMessage({
@@ -366,6 +372,12 @@ class Portfolio extends Component {
                             id: "portfolio.visitWebsite",
                         }),
                         link: "https://venture-anime.com",
+                    },
+                    {
+                        text: intl.formatMessage({
+                            id: "portfolio.imdb",
+                        }),
+                        link: "https://www.imdb.com/title/tt12630246/",
                     },
                 ],
                 snsLinkTypeMap: {
