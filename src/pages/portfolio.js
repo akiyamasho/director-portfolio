@@ -115,6 +115,27 @@ class Portfolio extends Component {
                                 <FormattedMessage id="projects.venture.bestanimation"/>
                             </FilmFestivalLink>
                         ),
+                        alternative: (
+                            <FilmFestivalLink href="https://altff.org/winners/" target="_blank">
+                                <FormattedMessage id="projects.venture.alternative"/>
+                            </FilmFestivalLink>
+                        ),
+                        fivecontinents: (
+                            <FilmFestivalLink
+                                href="https://www.ficocc.com/ficocc-5-1"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.fivecontinents"/>
+                            </FilmFestivalLink>
+                        ),
+                        lonelywolf: (
+                            <FilmFestivalLink
+                                href="https://www.lonelywolffilmfest.com/winners-nominees-spring2021.html"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.lonelywolf"/>
+                            </FilmFestivalLink>
+                        ),
                         athens: (
                             <FilmFestivalLink
                                 href="https://aimaff.com/"
@@ -168,11 +189,6 @@ class Portfolio extends Component {
                                 <FormattedMessage id="projects.venture.kosice"/>
                             </FilmFestivalLink>
                         ),
-                        alternative: (
-                            <FilmFestivalLink href="https://altff.org/winners/" target="_blank">
-                                <FormattedMessage id="projects.venture.alternative"/>
-                            </FilmFestivalLink>
-                        ),
                         prague: (
                             <FilmFestivalLink
                                 href="https://praguefilmfest.com/winners/june-2020"
@@ -181,14 +197,7 @@ class Portfolio extends Component {
                                 <FormattedMessage id="projects.venture.prague"/>
                             </FilmFestivalLink>
                         ),
-                        fivecontinents: (
-                            <FilmFestivalLink
-                                href="https://www.ficocc.com/"
-                                target="_blank"
-                            >
-                                <FormattedMessage id="projects.venture.fivecontinents"/>
-                            </FilmFestivalLink>
-                        ),
+
                         higa: (
                             <FilmFestivalLink
                                 href="https://higafestival.com/"
