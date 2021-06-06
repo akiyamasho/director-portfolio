@@ -17,7 +17,6 @@ const Container = styled.div`
 
 const TitleWrapper = styled.div`
     padding: 1em 0;
-    user-select: none;
 `;
 
 const Name = styled.h1`
