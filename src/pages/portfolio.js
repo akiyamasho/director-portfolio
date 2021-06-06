@@ -120,6 +120,11 @@ class Portfolio extends Component {
                                 <FormattedMessage id="projects.venture.alternative"/>
                             </FilmFestivalLink>
                         ),
+                        couch: (
+                            <FilmFestivalLink href="http://www.couchfilmfestival.com/winners" target="_blank">
+                                <FormattedMessage id="projects.venture.couch"/>
+                            </FilmFestivalLink>
+                        ),
                         fivecontinents: (
                             <FilmFestivalLink
                                 href="https://www.ficocc.com/ficocc-5-1"
@@ -204,6 +209,14 @@ class Portfolio extends Component {
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.higa"/>
+                            </FilmFestivalLink>
+                        ),
+                        xworld: (
+                            <FilmFestivalLink
+                                href="https://www.welcometoxworld.com/2021/VentureAnime.html"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.xworld"/>
                             </FilmFestivalLink>
                         )
                     }
@@ -336,6 +349,14 @@ class Portfolio extends Component {
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.liftoff"/>
+                            </FilmFestivalLink>
+                        ),
+                        tokyoliftoff: (
+                            <FilmFestivalLink
+                                href="https://liftoff.network/tokyo-lift-off-film-festival-2021/"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.tokyoliftoff"/>
                             </FilmFestivalLink>
                         ),
                     }
