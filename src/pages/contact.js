@@ -52,7 +52,7 @@ const Contact = () => (
                 </SnsLink>
                 <SnsLink
                     target="_blank"
-                    href="https://www.twitter.com/akiyamash0"
+                    href="https://www.twitter.com/akiyamasho_dev"
                 >
                     <SnsIcon src={twitterLogo} />
                 </SnsLink>
