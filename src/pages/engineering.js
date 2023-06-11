@@ -198,7 +198,7 @@ class Engineering extends Component {
                                     <FormattedMessage id="engineering.qualifications.courseraMl" />
                                 </li>
                                 <li>
-                                    <FormattedMessage id="engineering.qualifications.n2" />
+                                    <FormattedMessage id="engineering.qualifications.n1" />
                                 </li>
                                 <li>
                                     <FormattedMessage id="engineering.qualifications.bscs" />

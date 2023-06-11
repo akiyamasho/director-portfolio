@@ -1,6 +1,6 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
-import {FormattedMessage, injectIntl} from "gatsby-plugin-intl";
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl";
 
 import Layout from "../components/layout";
 
@@ -12,17 +12,19 @@ import Project, {
     SNS_TYPE_INSTAGRAM,
     SNS_TYPE_REDDIT,
     SNS_TYPE_TWITTER,
+    SNS_TYPE_YOUTUBE,
 } from "../components/portfolio/project";
-import {TextLink} from "../components/shared/button";
+import { TextLink } from "../components/shared/button";
 import {
     filmFestivalBtnColour,
     filmFestivalBtnHoverColour,
     themeColour,
-    themeDark
+    themeDark,
 } from "../components/shared/colours";
 
 import venturePilot from "../assets/project/venture_pilot.jpeg";
 import ventureEp1p1 from "../assets/project/venture_ep1.jpeg";
+import rss from "../assets/project/rss.jpg";
 import moon from "../assets/project/moon.jpeg";
 import brighter from "../assets/project/brighter.jpeg";
 import seichou from "../assets/project/seichou.jpeg";
@@ -97,11 +99,80 @@ const SideprojectRoleTd = styled(SideprojectTableData)`
 
 class Portfolio extends Component {
     render() {
-        const {intl} = this.props;
+        const { intl } = this.props;
         const projects = [
             {
+                posterImageSrc: rss,
+                title: intl.formatMessage({ id: "projects.rss.title" }),
+                subTitle: intl.formatMessage(
+                    {
+                        id: "projects.rss.subTitle",
+                    },
+                    {
+                        ventureLink: (
+                            <FilmFestivalLink
+                                href="https://venture-anime.jp"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.rss.venture" />
+                            </FilmFestivalLink>
+                        ),
+                        gocomic: (
+                            <FilmFestivalLink
+                                href="https://555comic.com"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.rss.gocomic" />
+                            </FilmFestivalLink>
+                        ),
+                        takeyukimi: (
+                            <FilmFestivalLink
+                                href="https://twitter.com/take_yukimi"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.rss.takeyukimi" />
+                            </FilmFestivalLink>
+                        ),
+                    }
+                ),
+                roles: [
+                    intl.formatMessage({
+                        id: "portfolio.role.director",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.showrunner",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.writer",
+                    }),
+                    intl.formatMessage({
+                        id: "portfolio.role.animator",
+                    }),
+                ],
+                linkTextList: [
+                    {
+                        text: intl.formatMessage({
+                            id: "portfolio.readLiveTweetedComic",
+                        }),
+                        link: "https://twitter.com/rss_mayu",
+                    },
+                    {
+                        text: intl.formatMessage({
+                            id: "portfolio.watchAnimation",
+                        }),
+                        link:
+                            "https://www.youtube.com/@remotestartupsenpai/videos",
+                    },
+                ],
+                snsLinkTypeMap: {
+                    [SNS_TYPE_TWITTER]: "https://twitter.com/rss_mayu",
+                    [SNS_TYPE_YOUTUBE]:
+                        "https://www.youtube.com/@remotestartupsenpai",
+                },
+            },
+            {
                 posterImageSrc: ventureEp1p1,
-                title: intl.formatMessage({id: "projects.venture1p1.title"}),
+                title: intl.formatMessage({ id: "projects.venture1p1.title" }),
                 subTitle: intl.formatMessage(
                     {
                         id: "projects.venture1p1.subTitle",
@@ -112,17 +183,23 @@ class Portfolio extends Component {
                                 href="https://bestfilmawards.com/best-film-awards/best-animation-award"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.bestanimation"/>
+                                <FormattedMessage id="projects.venture.bestanimation" />
                             </FilmFestivalLink>
                         ),
                         alternative: (
-                            <FilmFestivalLink href="https://altff.org/winners/" target="_blank">
-                                <FormattedMessage id="projects.venture.alternative"/>
+                            <FilmFestivalLink
+                                href="https://altff.org/winners/"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.alternative" />
                             </FilmFestivalLink>
                         ),
                         couch: (
-                            <FilmFestivalLink href="http://www.couchfilmfestival.com/winners" target="_blank">
-                                <FormattedMessage id="projects.venture.couch"/>
+                            <FilmFestivalLink
+                                href="http://www.couchfilmfestival.com/winners"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.couch" />
                             </FilmFestivalLink>
                         ),
                         fivecontinents: (
@@ -130,7 +207,7 @@ class Portfolio extends Component {
                                 href="https://www.ficocc.com/ficocc-5-1"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.fivecontinents"/>
+                                <FormattedMessage id="projects.venture.fivecontinents" />
                             </FilmFestivalLink>
                         ),
                         lonelywolf: (
@@ -138,7 +215,7 @@ class Portfolio extends Component {
                                 href="https://www.lonelywolffilmfest.com/winners-nominees-spring2021.html"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.lonelywolf"/>
+                                <FormattedMessage id="projects.venture.lonelywolf" />
                             </FilmFestivalLink>
                         ),
                         athens: (
@@ -146,7 +223,7 @@ class Portfolio extends Component {
                                 href="https://aimaff.com/"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.athens"/>
+                                <FormattedMessage id="projects.venture.athens" />
                             </FilmFestivalLink>
                         ),
                         indie: (
@@ -154,7 +231,7 @@ class Portfolio extends Component {
                                 href="https://indieshortfest.com/award-winners-february-2021/"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.indie"/>
+                                <FormattedMessage id="projects.venture.indie" />
                             </FilmFestivalLink>
                         ),
                         indiex: (
@@ -162,7 +239,7 @@ class Portfolio extends Component {
                                 href="https://indiexfest.com/genre-categories-nominations-of-january-2021/"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.indiex"/>
+                                <FormattedMessage id="projects.venture.indiex" />
                             </FilmFestivalLink>
                         ),
                         filmhaus: (
@@ -170,7 +247,7 @@ class Portfolio extends Component {
                                 href="https://www.filmhaus.org/mar2021-results.html"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.filmhaus"/>
+                                <FormattedMessage id="projects.venture.filmhaus" />
                             </FilmFestivalLink>
                         ),
                         independent: (
@@ -178,7 +255,7 @@ class Portfolio extends Component {
                                 href="https://independentshortsawards.com/finalists-january-2021/"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.independent"/>
+                                <FormattedMessage id="projects.venture.independent" />
                             </FilmFestivalLink>
                         ),
                         bestindie: (
@@ -186,12 +263,15 @@ class Portfolio extends Component {
                                 href="https://bestfilmawards.com/best-film-awards/best-indie-film-award"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.bestindie"/>
+                                <FormattedMessage id="projects.venture.bestindie" />
                             </FilmFestivalLink>
                         ),
                         kosice: (
-                            <FilmFestivalLink href="http://kimff.sk/" target="_blank">
-                                <FormattedMessage id="projects.venture.kosice"/>
+                            <FilmFestivalLink
+                                href="http://kimff.sk/"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.kosice" />
                             </FilmFestivalLink>
                         ),
                         prague: (
@@ -199,7 +279,7 @@ class Portfolio extends Component {
                                 href="https://praguefilmfest.com/winners/june-2020"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.prague"/>
+                                <FormattedMessage id="projects.venture.prague" />
                             </FilmFestivalLink>
                         ),
 
@@ -208,7 +288,7 @@ class Portfolio extends Component {
                                 href="https://higafestival.com/"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.higa"/>
+                                <FormattedMessage id="projects.venture.higa" />
                             </FilmFestivalLink>
                         ),
                         xworld: (
@@ -216,9 +296,9 @@ class Portfolio extends Component {
                                 href="https://www.welcometoxworld.com/2021/VentureAnime.html"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.xworld"/>
+                                <FormattedMessage id="projects.venture.xworld" />
                             </FilmFestivalLink>
-                        )
+                        ),
                     }
                 ),
                 roles: [
@@ -246,7 +326,8 @@ class Portfolio extends Component {
                         text: intl.formatMessage({
                             id: "portfolio.watchEp1p1",
                         }),
-                        link: "https://www.youtube.com/watch?v=BU0Aoo4pHYg&vl=en",
+                        link:
+                            "https://www.youtube.com/watch?v=BU0Aoo4pHYg&vl=en",
                     },
                     {
                         text: intl.formatMessage({
@@ -276,7 +357,7 @@ class Portfolio extends Component {
             },
             {
                 posterImageSrc: venturePilot,
-                title: intl.formatMessage({id: "projects.venture.title"}),
+                title: intl.formatMessage({ id: "projects.venture.title" }),
                 subTitle: intl.formatMessage(
                     {
                         id: "projects.venture.subTitle",
@@ -287,7 +368,7 @@ class Portfolio extends Component {
                                 href="http://kinnotv.com"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.kinno"/>
+                                <FormattedMessage id="projects.venture.kinno" />
                             </FilmFestivalLink>
                         ),
                         indie: (
@@ -295,7 +376,7 @@ class Portfolio extends Component {
                                 href="https://indieshortfest.com/2020/07/03/nominations-of-july-2020/"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.indie"/>
+                                <FormattedMessage id="projects.venture.indie" />
                             </FilmFestivalLink>
                         ),
                         indiex: (
@@ -303,7 +384,7 @@ class Portfolio extends Component {
                                 href="https://indiexfest.com/2020/07/21/nominations-of-july-2020/"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.indiex"/>
+                                <FormattedMessage id="projects.venture.indiex" />
                             </FilmFestivalLink>
                         ),
                         independent: (
@@ -311,7 +392,7 @@ class Portfolio extends Component {
                                 href="https://independentshortsawards.com/honorable-mentions-may-2020/"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.independent"/>
+                                <FormattedMessage id="projects.venture.independent" />
                             </FilmFestivalLink>
                         ),
                         prague: (
@@ -319,7 +400,7 @@ class Portfolio extends Component {
                                 href="https://praguefilmfest.com/winners/june-2020"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.prague"/>
+                                <FormattedMessage id="projects.venture.prague" />
                             </FilmFestivalLink>
                         ),
                         couch: (
@@ -327,12 +408,15 @@ class Portfolio extends Component {
                                 href="https://couchff.weebly.com/uploads/1/2/0/3/120372188/winners_couch_ff_summer_2020.pdf"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.couch"/>
+                                <FormattedMessage id="projects.venture.couch" />
                             </FilmFestivalLink>
                         ),
                         kosice: (
-                            <FilmFestivalLink href="http://kimff.sk/" target="_blank">
-                                <FormattedMessage id="projects.venture.kosice"/>
+                            <FilmFestivalLink
+                                href="http://kimff.sk/"
+                                target="_blank"
+                            >
+                                <FormattedMessage id="projects.venture.kosice" />
                             </FilmFestivalLink>
                         ),
                         moscow: (
@@ -340,7 +424,7 @@ class Portfolio extends Component {
                                 href="http://www.moscowshorts.com/2020/06/10/may-2020-moscow-shorts-official-selection"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.moscow"/>
+                                <FormattedMessage id="projects.venture.moscow" />
                             </FilmFestivalLink>
                         ),
                         liftoff: (
@@ -348,7 +432,7 @@ class Portfolio extends Component {
                                 href="https://liftoff.network/realtime-results-voting-system-showcaseextravaganza-1/"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.liftoff"/>
+                                <FormattedMessage id="projects.venture.liftoff" />
                             </FilmFestivalLink>
                         ),
                         tokyoliftoff: (
@@ -356,7 +440,7 @@ class Portfolio extends Component {
                                 href="https://liftoff.network/tokyo-lift-off-film-festival-2021/"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.venture.tokyoliftoff"/>
+                                <FormattedMessage id="projects.venture.tokyoliftoff" />
                             </FilmFestivalLink>
                         ),
                     }
@@ -416,7 +500,7 @@ class Portfolio extends Component {
             },
             {
                 posterImageSrc: moon,
-                title: intl.formatMessage({id: "projects.moon.title"}),
+                title: intl.formatMessage({ id: "projects.moon.title" }),
                 subTitle: intl.formatMessage(
                     {
                         "portfolio.watchPilotEpisode": "Watch Pilot Episode",
@@ -430,7 +514,7 @@ class Portfolio extends Component {
                                 })}
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.moon.atami"/>
+                                <FormattedMessage id="projects.moon.atami" />
                             </FilmFestivalLink>
                         ),
                         tokyoLiftOff: (
@@ -438,7 +522,7 @@ class Portfolio extends Component {
                                 href="https://liftoff.network/tokyo-lift-off-film-festival/"
                                 target="_blank"
                             >
-                                <FormattedMessage id="projects.moon.tokyoLiftOff"/>
+                                <FormattedMessage id="projects.moon.tokyoLiftOff" />
                             </FilmFestivalLink>
                         ),
                     }
@@ -471,7 +555,7 @@ class Portfolio extends Component {
             },
             {
                 posterImageSrc: brighter,
-                title: intl.formatMessage({id: "projects.brighter.title"}),
+                title: intl.formatMessage({ id: "projects.brighter.title" }),
                 subTitle: intl.formatMessage({
                     id: "projects.brighter.subTitle",
                 }),
@@ -511,7 +595,7 @@ class Portfolio extends Component {
             },
             {
                 posterImageSrc: seichou,
-                title: intl.formatMessage({id: "projects.seichou.title"}),
+                title: intl.formatMessage({ id: "projects.seichou.title" }),
                 subTitle: intl.formatMessage({
                     id: "projects.seichou.subTitle",
                 }),
@@ -553,11 +637,11 @@ class Portfolio extends Component {
         const sideProjects = [
             {
                 year: "2017",
-                title: intl.formatMessage({id: "sideproject.karton.title"}),
+                title: intl.formatMessage({ id: "sideproject.karton.title" }),
                 subTitle: intl.formatMessage({
                     id: "sideproject.karton.subTitle",
                 }),
-                roles: [intl.formatMessage({id: "portfolio.role.mainActor"})],
+                roles: [intl.formatMessage({ id: "portfolio.role.mainActor" })],
             },
             {
                 year: "2015",
@@ -567,7 +651,7 @@ class Portfolio extends Component {
                 subTitle: intl.formatMessage({
                     id: "sideproject.bonifacio.subTitle",
                 }),
-                roles: [intl.formatMessage({id: "portfolio.role.mainActor"})],
+                roles: [intl.formatMessage({ id: "portfolio.role.mainActor" })],
             },
             {
                 year: "2014",
@@ -577,32 +661,32 @@ class Portfolio extends Component {
                 subTitle: intl.formatMessage({
                     id: "sideproject.overheard.subTitle",
                 }),
-                roles: [intl.formatMessage({id: "portfolio.role.actor"})],
+                roles: [intl.formatMessage({ id: "portfolio.role.actor" })],
             },
         ];
 
         return (
             <Layout>
-                <SEO title="Portfolio"/>
+                <SEO title="Portfolio" />
                 <PageTitle
-                    subTitle={intl.formatMessage({id: "portfolio.subTitle"})}
-                    title={intl.formatMessage({id: "portfolio.title"})}
+                    subTitle={intl.formatMessage({ id: "portfolio.subTitle" })}
+                    title={intl.formatMessage({ id: "portfolio.title" })}
                 />
                 <Container>
                     <SectionContainer>
                         <SectionInnerWrapper>
                             <SectionTitle>
-                                <FormattedMessage id="portfolio.animation"/>
+                                <FormattedMessage id="portfolio.animation" />
                             </SectionTitle>
                             {projects.map(
                                 ({
-                                     posterImageSrc,
-                                     title,
-                                     roles,
-                                     subTitle,
-                                     linkTextList,
-                                     snsLinkTypeMap,
-                                 }) => (
+                                    posterImageSrc,
+                                    title,
+                                    roles,
+                                    subTitle,
+                                    linkTextList,
+                                    snsLinkTypeMap,
+                                }) => (
                                     <Project
                                         posterImageSrc={posterImageSrc}
                                         title={title}
@@ -618,23 +702,23 @@ class Portfolio extends Component {
                     <SectionContainer>
                         <SectionInnerWrapper>
                             <SectionTitle>
-                                <FormattedMessage id="portfolio.filmTheater"/>
+                                <FormattedMessage id="portfolio.filmTheater" />
                             </SectionTitle>
                             <SideprojectTable border="0">
                                 <thead>
-                                <SideprojectTableHead>
-                                    <FormattedMessage id="portfolio.sideproject.year"/>
-                                </SideprojectTableHead>
-                                <SideprojectTableHead>
-                                    <FormattedMessage id="portfolio.sideproject.title"/>
-                                </SideprojectTableHead>
-                                <SideprojectTableHead>
-                                    <FormattedMessage id="portfolio.role"/>
-                                </SideprojectTableHead>
+                                    <SideprojectTableHead>
+                                        <FormattedMessage id="portfolio.sideproject.year" />
+                                    </SideprojectTableHead>
+                                    <SideprojectTableHead>
+                                        <FormattedMessage id="portfolio.sideproject.title" />
+                                    </SideprojectTableHead>
+                                    <SideprojectTableHead>
+                                        <FormattedMessage id="portfolio.role" />
+                                    </SideprojectTableHead>
                                 </thead>
                                 <SideprojectTbody>
                                     {sideProjects.map(
-                                        ({year, title, subTitle, roles}) => (
+                                        ({ year, title, subTitle, roles }) => (
                                             <SideprojectTableRow>
                                                 <SideprojectTableData>
                                                     {year}

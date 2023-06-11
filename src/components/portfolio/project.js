@@ -9,6 +9,7 @@ import githubLogo from "../../assets/sns/github.png";
 import instagramLogo from "../../assets/sns/instagram.png";
 import redditLogo from "../../assets/sns/reddit.png";
 import twitterLogo from "../../assets/sns/twitter.png";
+import youtubeLogo from "../../assets/sns/youtube.png";
 import { invertedColour, themeColour, themeDark } from "../shared/colours";
 import { LineLink } from "../shared/button";
 
@@ -126,6 +127,7 @@ export const SNS_TYPE_TWITTER = "twitter";
 export const SNS_TYPE_FACEBOOK = "facebook";
 export const SNS_TYPE_REDDIT = "reddit";
 export const SNS_TYPE_GITHUB = "github";
+export const SNS_TYPE_YOUTUBE = "github";
 
 export const SnsTypeLogoMap = {
     [SNS_TYPE_INSTAGRAM]: instagramLogo,
@@ -133,6 +135,7 @@ export const SnsTypeLogoMap = {
     [SNS_TYPE_FACEBOOK]: facebookLogo,
     [SNS_TYPE_REDDIT]: redditLogo,
     [SNS_TYPE_GITHUB]: githubLogo,
+    [SNS_TYPE_YOUTUBE]: youtubeLogo,
 };
 
 const SnsTypes = Object.keys(SnsTypeLogoMap);
