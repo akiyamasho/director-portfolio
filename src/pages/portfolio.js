@@ -152,16 +152,15 @@ class Portfolio extends Component {
                 linkTextList: [
                     {
                         text: intl.formatMessage({
-                            id: "portfolio.readLiveTweetedComic",
+                            id: "portfolio.viewInstagramPage",
                         }),
-                        link: "https://twitter.com/rss_mayu",
+                        link: "https://instagram.com/remotestartupsenpai",
                     },
                     {
                         text: intl.formatMessage({
                             id: "portfolio.watchAnimation",
                         }),
-                        link:
-                            "https://www.youtube.com/@remotestartupsenpai/videos",
+                        link: "https://www.youtube.com/@remotestartupsenpai",
                     },
                 ],
                 snsLinkTypeMap: {
@@ -326,8 +325,7 @@ class Portfolio extends Component {
                         text: intl.formatMessage({
                             id: "portfolio.watchEp1p1",
                         }),
-                        link:
-                            "https://www.youtube.com/watch?v=BU0Aoo4pHYg&vl=en",
+                        link: "https://www.youtube.com/watch?v=BU0Aoo4pHYg&vl=en",
                     },
                     {
                         text: intl.formatMessage({
@@ -587,8 +585,7 @@ class Portfolio extends Component {
                         text: intl.formatMessage({
                             id: "portfolio.readPaper",
                         }),
-                        link:
-                            "https://github.com/akiyamasho/brighter-the-animation/blob/master/paper/paper.pdf",
+                        link: "https://github.com/akiyamasho/brighter-the-animation/blob/master/paper/paper.pdf",
                     },
                 ],
                 snsLinkTypeMap: {},
@@ -730,7 +727,7 @@ class Portfolio extends Component {
                                                     </SideprojectSubtitle>
                                                 </SideprojectTableData>
                                                 <SideprojectRoleTd>
-                                                    {roles.map(role => role)}
+                                                    {roles.map((role) => role)}
                                                 </SideprojectRoleTd>
                                             </SideprojectTableRow>
                                         )
