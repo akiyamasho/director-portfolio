@@ -36,7 +36,7 @@ const Container = styled.div`
 
     @media only screen and (max-width: 768px) {
         height: auto;
-        ${props =>
+        ${(props) =>
             props.isMobileMenuVisible && `background: ${menuVisibleBgColour};`}
     }
 `;
@@ -81,7 +81,7 @@ const HamburgerContainer = styled.div`
     text-align: right;
     align-items: center;
     justify-content: flex-end;
-    ${props =>
+    ${(props) =>
         props.isMobileMenuVisible &&
         `border-bottom: 1px solid ${btnBorderColour};`}
 
@@ -97,7 +97,7 @@ const Hamburger = styled(TextBtn)`
 
     &:hover {
         color: ${textBtnHoverColour};
-        ${props =>
+        ${(props) =>
             props.isMobileMenuVisible && `color: ${invertedHoverColour};`}
     }
 
@@ -106,7 +106,7 @@ const Hamburger = styled(TextBtn)`
         font-size: 2em;
         color: ${themeColour};
 
-        ${props => props.isMobileMenuVisible && `color: ${invertedColour};`}
+        ${(props) => props.isMobileMenuVisible && `color: ${invertedColour};`}
     }
 `;
 
@@ -119,7 +119,7 @@ const LinkContainer = styled.div`
     justify-content: flex-end;
 
     @media only screen and (max-width: 768px) {
-        ${props => !props.isMobileMenuVisible && "display: none;"}
+        ${(props) => !props.isMobileMenuVisible && "display: none;"}
         flex-direction: column;
         text-align: left;
     }
@@ -161,7 +161,7 @@ const Header = () => {
                     </NavigationLink>
                     <NavigationLink
                         target="_blank"
-                        href="https://github.com/akiyamasho"
+                        href="https://www.linkedin.com/in/shoakiyama"
                     >
                         <FormattedMessage id="nav.engineering" />
                         &nbsp;
