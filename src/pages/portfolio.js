@@ -164,9 +164,11 @@ class Portfolio extends Component {
                     },
                 ],
                 snsLinkTypeMap: {
-                    [SNS_TYPE_TWITTER]: "https://twitter.com/rss_mayu",
+                    [SNS_TYPE_INSTAGRAM]:
+                        "https://instagram.com/remotestartupsenpai",
                     [SNS_TYPE_YOUTUBE]:
                         "https://www.youtube.com/@remotestartupsenpai",
+                    [SNS_TYPE_TWITTER]: "https://twitter.com/rss_mayu",
                 },
             },
             {

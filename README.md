@@ -6,5 +6,5 @@
 
 ##### Local development
 
-1. Run `npm start`
+1. Run `pnpm start`
 2. Access http://localhost:8000 on your browser
