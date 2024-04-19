@@ -9,6 +9,7 @@ import SEO from "../components/seo";
 import instagramLogo from "../assets/sns/instagram.png";
 import twitterLogo from "../assets/sns/twitter.png";
 import githubLogo from "../assets/sns/github.png";
+import imdbLogo from "../assets/sns/imdb.png";
 import { navHeightPx } from "../components/header";
 
 const Container = styled.div`
@@ -61,6 +62,12 @@ const Contact = () => (
                     href="https://www.github.com/akiyamasho"
                 >
                     <SnsIcon src={githubLogo} />
+                </SnsLink>
+                <SnsLink
+                    target="_blank"
+                    href="https://www.imdb.com/name/nm11692621"
+                >
+                    <SnsIcon src={imdbLogo} />
                 </SnsLink>
             </SnsBtnWrapper>
             <Email href="mailto:contact@akiyamasho.com">
