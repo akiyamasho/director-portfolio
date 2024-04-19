@@ -1,9 +1,9 @@
 module.exports = {
     siteMetadata: {
         title: `秋山翔 Akiyama Shō`,
-        description: `秋山翔。監督・アニメーター・機械学習エンジニア。Akiyama Shō. Director・Animator・Machine Learning Engineer`,
+        description: `秋山翔。アニメ監督・機械学習エンジニア。Akiyama Shō. Animation Director・Machine Learning Engineer`,
         author: `@akiyamasho`,
-        siteUrl: `https://www.akiyamasho.com`,
+        siteUrl: `https://www.akiyamasho.com`
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -12,8 +12,8 @@ module.exports = {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `images`,
-                path: `${__dirname}/src/assets`,
-            },
+                path: `${__dirname}/src/assets`
+            }
         },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
@@ -26,8 +26,8 @@ module.exports = {
                 background_color: `#ffffff`,
                 theme_color: `#222222`,
                 display: `minimal-ui`,
-                icon: `src/assets/favicon.png`, // This path is relative to the root of the site.
-            },
+                icon: `src/assets/favicon.png` // This path is relative to the root of the site.
+            }
         },
         {
             resolve: `gatsby-plugin-intl`,
@@ -35,14 +35,14 @@ module.exports = {
                 path: `${__dirname}/src/intl`,
                 languages: [`en`, `ja`],
                 defaultLanguage: `en`,
-                redirect: false,
-            },
+                redirect: false
+            }
         },
         {
             resolve: "gatsby-plugin-google-fonts",
             options: {
-                fonts: ["material icons"],
-            },
-        },
-    ],
+                fonts: ["material icons"]
+            }
+        }
+    ]
 };
