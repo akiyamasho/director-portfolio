@@ -126,7 +126,10 @@ class Portfolio extends Component {
                     }),
                 ],
                 linkTextList: [],
-                snsLinkTypeMap: {},
+                snsLinkTypeMap: {
+                    [SNS_TYPE_INSTAGRAM]:
+                        "https://instagram.com/5requestspersecond",
+                },
             },
             {
                 posterImageSrc: rss,
