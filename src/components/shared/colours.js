@@ -5,7 +5,9 @@ export const themeMuted = "#818b92";
 export const themeSurface = "#10161b";
 export const themeRule = "rgba(221, 232, 238, 0.17)";
 export const accentColour = "#e2b84b";
-export const cinemaRed = "#c4473a";
+// A restrained projector-blue secondary accent: cool enough to separate this
+// portfolio from 5RPS while remaining legible on the charcoal surfaces.
+export const projectorLight = "#7aa7b8";
 
 export const invertedColour = "#04070a";
 
@@ -13,5 +15,5 @@ export const textBtnColour = themeColour;
 export const textBtnHoverColour = accentColour;
 export const textBtnDisabledColour = "#77736e";
 
-export const filmFestivalBtnColour = cinemaRed;
+export const filmFestivalBtnColour = projectorLight;
 export const filmFestivalBtnHoverColour = accentColour;

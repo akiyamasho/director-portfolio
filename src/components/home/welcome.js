@@ -4,7 +4,7 @@ import { FormattedMessage, Link } from "gatsby-plugin-intl";
 import { LineBtn } from "../shared/button";
 import {
     accentColour,
-    cinemaRed,
+    projectorLight,
     themeColour,
     themeMuted,
     themeRule,
@@ -16,19 +16,28 @@ const Container = styled.section`
     width: min(1440px, 100%);
     min-height: calc(100svh - 80px);
     margin: 0 auto;
-    padding: clamp(2rem, 7vw, 7rem) clamp(1.25rem, 7vw, 8rem);
+    padding: clamp(2rem, 7vw, 7rem) clamp(1.25rem, 7vw, 8rem)
+        clamp(1.75rem, 4vw, 3.5rem);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 `;
 
-const Frame = styled.div`
+const TitleSequence = styled.div`
+    position: relative;
     width: min(940px, 100%);
-    padding: clamp(1.5rem, 3.5vw, 3.5rem);
-    border: 1px solid ${themeRule};
-    border-left: 3px solid ${cinemaRed};
-    background: rgba(4, 7, 10, 0.58);
-    backdrop-filter: blur(4px);
+    padding: clamp(1.25rem, 2vw, 2.25rem) 0 clamp(1.25rem, 2vw, 2.25rem)
+        clamp(1rem, 2.5vw, 2.5rem);
+
+    &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 2px;
+        background: ${projectorLight};
+        content: "";
+    }
 `;
 
 const Kicker = styled.p`
@@ -49,6 +58,7 @@ const Name = styled.h1`
     font-weight: 600;
     letter-spacing: -0.025em;
     line-height: 0.82;
+    text-shadow: 0 3px 22px rgba(4, 7, 10, 0.5);
     text-transform: uppercase;
 
     html[lang="ja"] & {
@@ -65,6 +75,7 @@ const Profession = styled.p`
     color: ${themeMuted};
     font-size: clamp(0.95rem, 1.6vw, 1.2rem);
     letter-spacing: 0.04em;
+    text-shadow: 0 2px 12px rgba(4, 7, 10, 0.7);
 `;
 
 const Reel = styled.div`
@@ -82,14 +93,25 @@ const Reel = styled.div`
     &::before {
         width: 2.8rem;
         height: 1px;
-        background: ${cinemaRed};
+        background: ${projectorLight};
         content: "";
+    }
+
+    @media (max-width: 480px) {
+        gap: 0.65rem;
+        padding-top: 3rem;
+        font-size: 0.56rem;
+        letter-spacing: 0.08em;
+
+        &::before {
+            width: 1.8rem;
+        }
     }
 `;
 
 const Welcome = () => (
     <Container>
-        <Frame>
+        <TitleSequence>
             <Kicker>
                 <FormattedMessage id="home.kicker" />
             </Kicker>
@@ -103,7 +125,7 @@ const Welcome = () => (
                 <FormattedMessage id="home.viewPortfolio" />{" "}
                 <span aria-hidden="true">↘</span>
             </LineBtn>
-        </Frame>
+        </TitleSequence>
         <Reel>
             <FormattedMessage id="home.reelNote" />
         </Reel>

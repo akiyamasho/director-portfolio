@@ -5,7 +5,7 @@ import Language from "./language";
 import { TextBtn } from "./shared/button";
 import {
     accentColour,
-    cinemaRed,
+    projectorLight,
     themeColour,
     themeRule,
 } from "./shared/colours";
@@ -110,7 +110,7 @@ export const NavigationLink = styled.a`
         left: 0;
         width: 16px;
         height: 1px;
-        background: ${cinemaRed};
+        background: ${projectorLight};
         content: "";
         transform: scaleX(0);
         transform-origin: left;

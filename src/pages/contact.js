@@ -4,7 +4,7 @@ import { FormattedMessage, injectIntl } from "gatsby-plugin-intl";
 import { TextLink } from "../components/shared/button";
 import {
     accentColour,
-    cinemaRed,
+    projectorLight,
     themeMuted,
     themeRule,
 } from "../components/shared/colours";
@@ -26,7 +26,7 @@ const Container = styled.section`
 const Sheet = styled.div`
     width: 100%;
     border-top: 1px solid ${themeRule};
-    border-top-color: ${cinemaRed};
+    border-top-color: ${projectorLight};
     border-bottom: 1px solid ${themeRule};
     padding: clamp(2.5rem, 7vw, 6rem) 0;
 `;

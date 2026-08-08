@@ -23,8 +23,8 @@ module.exports = {
                 name: `Akiyama Shō — Director`,
                 short_name: `Shō Akiyama`,
                 start_url: `/`,
-                background_color: `#080808`,
-                theme_color: `#080808`,
+                background_color: `#0d1215`,
+                theme_color: `#0d1215`,
                 display: `minimal-ui`,
                 icon: `src/assets/favicon.png`, // This path is relative to the root of the site.
             },

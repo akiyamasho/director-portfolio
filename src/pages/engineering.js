@@ -77,14 +77,42 @@ const TableRow = styled.tr`
 const RoleList = styled.div`
     display: flex;
     flex-direction: column;
+    gap: 0.7rem;
+    margin: 0.15rem 0;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(122, 167, 184, 0.42);
+`;
+
+const RoleEntry = styled.div`
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 0.52rem;
+        left: calc(-1rem - 4px);
+        width: 7px;
+        height: 7px;
+        border: 1px solid ${accentColour};
+        border-radius: 50%;
+        background: #04070a;
+        content: "";
+    }
 `;
 
 const Role = styled.span`
-    border-radius: 1px;
-    padding: 0.25em;
+    display: block;
+    color: ${themeColour};
+    font-size: 0.8rem;
+    line-height: 1.45;
+`;
+
+const RolePeriod = styled.span`
+    display: block;
+    margin-top: 0.12rem;
     color: ${themeDark};
-    margin-right: 0.25em;
-    font-size: 0.75em;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
 `;
 
 const PublicationList = styled.ol`
@@ -150,52 +178,67 @@ const workHistoryItems = [
         year: "2024ー",
         companyLabelId: "engineering.mercari",
         companyLink: "https://about.mercari.com/en/",
-        roleLabelIdList: [
-            "engineering.role.aiEngineeringManager",
-            "engineering.role.aiTechLead",
-            "engineering.role.mlFullStack",
+        roles: [
+            {
+                labelId: "engineering.role.aiEngineeringManager",
+                periodId: "engineering.period.mercariManager",
+            },
+            {
+                labelId: "engineering.role.aiTechLead",
+                periodId: "engineering.period.mercariTechLead",
+            },
+            {
+                labelId: "engineering.role.mlFullStack",
+                periodId: "engineering.period.mercariEngineer",
+            },
         ],
     },
     {
         year: "2022-2024",
         companyLabelId: "engineering.555comic",
         companyLink: "https://555comic.com",
-        roleLabelIdList: [
-            "engineering.role.mlEngineeringManager",
-            "engineering.role.seriesCreator",
+        roles: [
+            {
+                labelId: "engineering.role.mlEngineeringManager",
+                periodId: "engineering.period.555Manager",
+            },
+            {
+                labelId: "engineering.role.seriesCreator",
+                periodId: "engineering.period.555Engineer",
+            },
         ],
     },
     {
         year: "2020-2022",
         companyLabelId: "engineering.retailAi",
         companyLink: "https://www.retail-ai.jp/en/",
-        roleLabelIdList: ["engineering.role.mleSreTechLead"],
+        roles: [{ labelId: "engineering.role.mleSreTechLead" }],
     },
     {
         year: "2018-2020",
         companyLabelId: "engineering.cogent",
         companyLink: "https://www.cogent.co.jp",
-        roleLabelIdList: [
-            "engineering.role.fullStack",
-            "engineering.role.uiUxDesigner",
+        roles: [
+            { labelId: "engineering.role.fullStack" },
+            { labelId: "engineering.role.uiUxDesigner" },
         ],
     },
     {
         year: "2015-2017",
         companyLabelId: "engineering.ibridge",
         companyLink: "http://i-bridge.com.ph",
-        roleLabelIdList: [
-            "engineering.role.mobile",
-            "engineering.role.uiUxDesigner",
+        roles: [
+            { labelId: "engineering.role.mobile" },
+            { labelId: "engineering.role.uiUxDesigner" },
         ],
     },
     {
         year: "2014-2015",
         companyLabelId: "engineering.azeus",
         companyLink: "https://www.azeus.com/",
-        roleLabelIdList: [
-            "engineering.role.frontend",
-            "engineering.role.uiUxDesigner",
+        roles: [
+            { labelId: "engineering.role.frontend" },
+            { labelId: "engineering.role.uiUxDesigner" },
         ],
     },
 ];
@@ -243,7 +286,7 @@ class Engineering extends Component {
                                             year,
                                             companyLabelId,
                                             companyLink,
-                                            roleLabelIdList,
+                                            roles,
                                         }) => (
                                             <TableRow key={companyLabelId}>
                                                 <TableData>{year}</TableData>
@@ -264,19 +307,33 @@ class Engineering extends Component {
                                                 </TableData>
                                                 <TableData>
                                                     <RoleList>
-                                                        {roleLabelIdList.map(
-                                                            (roleLabelId) => (
-                                                                <Role
+                                                        {roles.map(
+                                                            ({
+                                                                labelId,
+                                                                periodId,
+                                                            }) => (
+                                                                <RoleEntry
                                                                     key={
-                                                                        roleLabelId
+                                                                        labelId
                                                                     }
                                                                 >
-                                                                    <FormattedMessage
-                                                                        id={
-                                                                            roleLabelId
-                                                                        }
-                                                                    />
-                                                                </Role>
+                                                                    <Role>
+                                                                        <FormattedMessage
+                                                                            id={
+                                                                                labelId
+                                                                            }
+                                                                        />
+                                                                    </Role>
+                                                                    {periodId && (
+                                                                        <RolePeriod>
+                                                                            <FormattedMessage
+                                                                                id={
+                                                                                    periodId
+                                                                                }
+                                                                            />
+                                                                        </RolePeriod>
+                                                                    )}
+                                                                </RoleEntry>
                                                             )
                                                         )}
                                                     </RoleList>

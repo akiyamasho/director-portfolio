@@ -10,7 +10,7 @@ import twitterLogo from "../../assets/sns/twitter.png";
 import youtubeLogo from "../../assets/sns/youtube.png";
 import {
     accentColour,
-    cinemaRed,
+    projectorLight,
     themeMuted,
     themeRule,
 } from "../shared/colours";
@@ -40,7 +40,7 @@ const PosterImg = styled.img`
         filter 250ms ease,
         transform 250ms ease;
     ${Container}:hover & {
-        border-color: ${cinemaRed};
+        border-color: ${projectorLight};
         filter: saturate(1.08);
         transform: translateY(-4px);
     }

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import JapaneseLineBreak from "./japanese-line-break";
 import {
     accentColour,
-    cinemaRed,
+    projectorLight,
     themeMuted,
     themeRule,
 } from "./shared/colours";
@@ -29,7 +29,7 @@ const Content = styled.div`
         width: 3.5rem;
         height: 3px;
         margin-bottom: 1.25rem;
-        background: ${cinemaRed};
+        background: ${projectorLight};
         content: "";
     }
 `;

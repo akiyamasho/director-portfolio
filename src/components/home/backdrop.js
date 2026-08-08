@@ -16,11 +16,21 @@ const Veil = styled.div`
     z-index: 1;
     background: linear-gradient(
             90deg,
-            rgba(4, 7, 10, 0.74) 0%,
-            rgba(4, 7, 10, 0.48) 55%,
-            rgba(4, 7, 10, 0.2) 100%
+            rgba(4, 7, 10, 0.84) 0%,
+            rgba(4, 7, 10, 0.72) 32%,
+            rgba(4, 7, 10, 0.38) 60%,
+            rgba(4, 7, 10, 0.12) 100%
         ),
-        linear-gradient(0deg, rgba(4, 7, 10, 0.7), transparent 48%);
+        linear-gradient(0deg, rgba(4, 7, 10, 0.82), transparent 52%);
+
+    @media (max-width: 768px) {
+        background: linear-gradient(
+                90deg,
+                rgba(4, 7, 10, 0.8),
+                rgba(4, 7, 10, 0.55)
+            ),
+            linear-gradient(0deg, rgba(4, 7, 10, 0.88), transparent 56%);
+    }
 `;
 
 const Video = styled.video`

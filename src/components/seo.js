@@ -51,7 +51,7 @@ function SEO({ description, lang, meta, title }) {
                 },
                 {
                     name: `theme-color`,
-                    content: `#080808`,
+                    content: `#0d1215`,
                 },
                 {
                     name: `twitter:card`,
