@@ -1,3 +1,5 @@
+import coverImage from "../../assets/blog-covers/introducing-mlops.webp";
+
 const canonicalUrl =
     "https://akiyamasho.medium.com/introducing-mlops-why-we-need-it-and-how-to-apply-it-in-your-company-2-3-8111b59bd790";
 
@@ -31,6 +33,14 @@ export const post = {
         ],
     },
     media: {},
+    cover: {
+        src: coverImage,
+        tone: "gold",
+        alt: {
+            en: "A tabletop model connecting experiment notes, pipeline stages, and production monitoring",
+            ja: "実験ノート、パイプライン、本番監視をつなぐ卓上模型",
+        },
+    },
     translations: {
         en: {
             title: "Introducing MLOps — Why we need it, and how to apply it in your company (2/3)",

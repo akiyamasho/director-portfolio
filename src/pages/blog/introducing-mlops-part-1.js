@@ -6,7 +6,7 @@ import {
     ArticleContents,
     MLOpsSeriesNavigation,
 } from "../../components/blog/article-navigation";
-import PostHeader from "../../components/blog/post-header";
+import PostHero from "../../components/blog/post-hero";
 import SEO from "../../components/seo";
 import { post } from "../../blog/migrated/introducing-mlops-part-1";
 
@@ -392,10 +392,10 @@ const Post = ({ intl }) => {
                 description={content.summary}
                 meta={[
                     { property: "og:type", content: "article" },
-                    { property: "og:image", content: post.media.threePhases },
+                    { property: "og:image", content: post.cover.src },
                 ]}
             />
-            <PostHeader post={post} locale={locale} />
+            <PostHero post={post} locale={locale} />
             <div className="blog-body">
                 <MLOpsSeriesNavigation
                     currentPart={post.series.part}

@@ -1,3 +1,5 @@
+import coverImage from "../../assets/blog-covers/local-vscode-cloud-gpus.webp";
+
 export const localVscodeCloudGpusSource =
     "https://akiyamasho.medium.com/local-vscode-development-with-cloud-gpus-using-vertex-ai-notebooks-vscode-ssh-plugin-cb6113f23cde";
 
@@ -7,6 +9,13 @@ export const post = {
     tags: ["engineering", "gpu", "vertex-ai", "vscode"],
     canonicalUrl: localVscodeCloudGpusSource,
     media: null,
+    cover: {
+        src: coverImage,
+        alt: {
+            en: "A dark studio laptop connected by a cyan beam to a remote compute room",
+            ja: "青い光で遠隔の計算機室につながる暗いスタジオのノートパソコン",
+        },
+    },
     translations: {
         en: {
             title: "Local VSCode Development with Cloud GPUs using Vertex AI Notebooks + VSCode SSH plugin",

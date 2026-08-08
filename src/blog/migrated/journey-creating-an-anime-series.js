@@ -1,3 +1,5 @@
+import coverImage from "../../assets/blog-covers/journey-creating-anime-series.webp";
+
 const mediaBase =
     "https://storage.googleapis.com/5rps-film-public-media/20201014_journey-anime-series";
 
@@ -12,6 +14,13 @@ export const post = {
         commercialStoryboard: `${mediaBase}/commercial-storyboard-4f5534e1b809.webp`,
         pitchBible: `${mediaBase}/pitch-bible-ae19d1e810b3.webp`,
         episodeStoryboards: `${mediaBase}/episode-1-2-storyboards-a87521842106.webp`,
+    },
+    cover: {
+        src: coverImage,
+        alt: {
+            en: "Storyboards, pencils, pitch pages, and a small glowing monitor on an animation director's desk",
+            ja: "アニメーション監督の机に並ぶ絵コンテ、鉛筆、企画書、光る小型モニター",
+        },
     },
     translations: {
         en: {

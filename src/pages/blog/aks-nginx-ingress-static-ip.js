@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Helmet from "react-helmet";
 import { injectIntl } from "gatsby-plugin-intl";
 import BlogLayout from "../../components/blog/blog-layout";
-import PostHeader from "../../components/blog/post-header";
+import PostHero from "../../components/blog/post-hero";
 import SEO from "../../components/seo";
 import { post } from "../../blog/migrated/aks-nginx-ingress-static-ip";
 
@@ -242,11 +242,11 @@ const Post = ({ intl }) => {
                     { property: "og:type", content: "article" },
                     {
                         property: "og:image",
-                        content: post.media.createPublicIp,
+                        content: post.cover.src,
                     },
                 ]}
             />
-            <PostHeader post={post} locale={locale} />
+            <PostHero post={post} locale={locale} />
             {locale === "ja" ? <JapaneseArticle /> : <EnglishArticle />}
         </BlogLayout>
     );

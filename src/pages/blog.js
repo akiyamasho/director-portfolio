@@ -88,48 +88,62 @@ const Blog = ({ intl }) => {
                         post.translations[locale] || post.translations.en;
                     const cardContent = (
                         <>
-                            <div className="blog-card-topline">
-                                <div className="blog-meta">{post.date}</div>
-                                {post.externalUrl && (
-                                    <div className="blog-external-label">
-                                        {language === "ja"
-                                            ? `${post.externalSource} · 外部記事`
-                                            : `${post.externalSource} · external`}
-                                    </div>
-                                )}
-                            </div>
-                            <h2 className="blog-card-title">
-                                <JapaneseLineBreak
-                                    phrases={translation.titleBreaks}
+                            {!post.externalUrl && post.cover && (
+                                <div
+                                    className="blog-card-cover"
+                                    data-cover-tone={post.cover.tone || "cyan"}
                                 >
-                                    {translation.title}
-                                </JapaneseLineBreak>
-                                {post.externalUrl && (
-                                    <span
-                                        className="blog-card-outbound-arrow"
-                                        aria-hidden="true"
-                                    >
-                                        ↗
-                                    </span>
-                                )}
-                            </h2>
-                            {!post.externalUrl && translation.summary && (
-                                <p>
-                                    <JapaneseLineBreak>
-                                        {translation.summary}
-                                    </JapaneseLineBreak>
-                                </p>
+                                    <img
+                                        src={post.cover.src}
+                                        alt=""
+                                        loading="lazy"
+                                    />
+                                </div>
                             )}
-                            <div className="blog-card-tags">
-                                {post.tags.map((tag) => (
-                                    <span
-                                        className="blog-tag"
-                                        data-tone={tagTone(tag)}
-                                        key={tag}
+                            <div className="blog-card-copy">
+                                <div className="blog-card-topline">
+                                    <div className="blog-meta">{post.date}</div>
+                                    {post.externalUrl && (
+                                        <div className="blog-external-label">
+                                            {language === "ja"
+                                                ? `${post.externalSource} · 外部記事`
+                                                : `${post.externalSource} · external`}
+                                        </div>
+                                    )}
+                                </div>
+                                <h2 className="blog-card-title">
+                                    <JapaneseLineBreak
+                                        phrases={translation.titleBreaks}
                                     >
-                                        {tagLabel(tag, language)}
-                                    </span>
-                                ))}
+                                        {translation.title}
+                                    </JapaneseLineBreak>
+                                    {post.externalUrl && (
+                                        <span
+                                            className="blog-card-outbound-arrow"
+                                            aria-hidden="true"
+                                        >
+                                            ↗
+                                        </span>
+                                    )}
+                                </h2>
+                                {!post.externalUrl && translation.summary && (
+                                    <p>
+                                        <JapaneseLineBreak>
+                                            {translation.summary}
+                                        </JapaneseLineBreak>
+                                    </p>
+                                )}
+                                <div className="blog-card-tags">
+                                    {post.tags.map((tag) => (
+                                        <span
+                                            className="blog-tag"
+                                            data-tone={tagTone(tag)}
+                                            key={tag}
+                                        >
+                                            {tagLabel(tag, language)}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
                         </>
                     );
@@ -153,6 +167,7 @@ const Blog = ({ intl }) => {
                     ) : (
                         <Link
                             className="blog-card"
+                            data-has-cover={Boolean(post.cover)}
                             key={post.slug}
                             to={`/blog/${post.slug}`}
                         >

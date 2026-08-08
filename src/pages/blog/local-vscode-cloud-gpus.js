@@ -8,7 +8,7 @@ import {
     post,
 } from "../../blog/migrated/local-vscode-cloud-gpus";
 import BlogLayout from "../../components/blog/blog-layout";
-import PostHeader from "../../components/blog/post-header";
+import PostHero from "../../components/blog/post-hero";
 import SEO from "../../components/seo";
 
 const Article = ({ copy, locale }) => (
@@ -54,11 +54,12 @@ const LocalVscodeCloudGpusPage = ({ intl }) => {
                 title={translation.title}
                 description={translation.summary}
                 lang={locale}
+                meta={[{ property: "og:image", content: post.cover.src }]}
             />
             <Helmet>
                 <link rel="canonical" href={localVscodeCloudGpusSource} />
             </Helmet>
-            <PostHeader post={post} locale={locale} />
+            <PostHero post={post} locale={locale} />
             {locale === "ja" ? <JapaneseArticle /> : <EnglishArticle />}
         </BlogLayout>
     );

@@ -6,15 +6,12 @@ import {
     ArticleContents,
     MLOpsSeriesNavigation,
 } from "../../components/blog/article-navigation";
-import PostHeader from "../../components/blog/post-header";
+import PostHero from "../../components/blog/post-hero";
 import SEO from "../../components/seo";
 import { post } from "../../blog/migrated/introducing-mlops-part-3";
 
 const links = {
     codeChrysalis: "https://www.codechrysalis.io/",
-    coverAuthor: "https://picjumbo.com/author/viktorhanacek/",
-    coverSource:
-        "https://picjumbo.com/artificial-intelligence-brain-connected-with-thoughts-and-data/",
     part1: "https://akiyamasho.medium.com/d210a9f0e409",
     part2: "https://akiyamasho.medium.com/8111b59bd790",
     gcpLevels:
@@ -37,14 +34,6 @@ const EnglishArticle = () => (
         <ArticleContents items={post.toc.en} locale="en" />
 
         <div className="blog-body">
-            <p className="blog-media-caption">
-                Photo by{" "}
-                <ExternalLink href={links.coverAuthor}>
-                    Viktor Hanacek
-                </ExternalLink>{" "}
-                from{" "}
-                <ExternalLink href={links.coverSource}>PicJumbo</ExternalLink>
-            </p>
             <p>
                 This is part III and the last part of an archive of my tech talk
                 `Introducing MLOps — Why we need it, and how to apply it in your
@@ -496,12 +485,13 @@ const IntroducingMLOpsPart3 = ({ intl }) => {
                 title={translation.title}
                 lang={locale}
                 description={translation.summary}
+                meta={[{ property: "og:image", content: post.cover.src }]}
             />
             <Helmet>
                 <link rel="canonical" href={post.canonicalUrl} />
             </Helmet>
             <article>
-                <PostHeader post={post} locale={locale} />
+                <PostHero post={post} locale={locale} />
                 {locale === "ja" ? <JapaneseArticle /> : <EnglishArticle />}
             </article>
         </BlogLayout>

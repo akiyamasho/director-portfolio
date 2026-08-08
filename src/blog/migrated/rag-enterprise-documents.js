@@ -1,3 +1,5 @@
+import coverImage from "../../assets/blog-covers/rag-enterprise-documents.webp";
+
 export const post = {
     slug: "rag-enterprise-documents",
     date: "2024-03-04",
@@ -5,6 +7,13 @@ export const post = {
     canonicalUrl:
         "https://akiyamasho.medium.com/retrieval-augmented-generation-rag-for-navigating-large-enterprise-documents-google-cloud-x-9248ce3276d9",
     media: null,
+    cover: {
+        src: coverImage,
+        alt: {
+            en: "An illuminated document selected from a dark archive by fine cyan retrieval paths",
+            ja: "暗い文書庫から細い青の検索経路によって選び出された一枚の文書",
+        },
+    },
     translations: {
         en: {
             title: "Retrieval Augmented Generation (RAG) for Navigating Large Enterprise Documents [Google Cloud x Generali Italia Talk Keynotes]",

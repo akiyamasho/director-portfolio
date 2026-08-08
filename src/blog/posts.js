@@ -13,6 +13,13 @@ export const posts = [
         date: "2026-08-08",
         tags: ["production", "storyboarding", "animatic"],
         media: directingTheReferenceMedia,
+        cover: {
+            src: directingTheReferenceMedia.hero,
+            alt: {
+                en: "Animation key visual of a woman blowing toward a glowing heart",
+                ja: "光るハートへ息を吹きかける女性のアニメーション・キービジュアル",
+            },
+        },
         translations: {
             en: {
                 title: "Directing the Reference",

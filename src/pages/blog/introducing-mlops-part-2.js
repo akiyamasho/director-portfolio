@@ -6,7 +6,7 @@ import {
     ArticleContents,
     MLOpsSeriesNavigation,
 } from "../../components/blog/article-navigation";
-import PostHeader from "../../components/blog/post-header";
+import PostHero from "../../components/blog/post-hero";
 import SEO from "../../components/seo";
 import { post } from "../../blog/migrated/introducing-mlops-part-2";
 
@@ -336,9 +336,10 @@ const Post = ({ intl }) => {
                 meta={[
                     { property: "og:type", content: "article" },
                     { name: "robots", content: "index,follow" },
+                    { property: "og:image", content: post.cover.src },
                 ]}
             />
-            <PostHeader post={post} locale={locale} />
+            <PostHero post={post} locale={locale} />
             {locale === "ja" ? <JapaneseArticle /> : <EnglishArticle />}
         </BlogLayout>
     );

@@ -1,3 +1,5 @@
+import coverImage from "../../assets/blog-covers/aks-nginx-ingress-static-ip.webp";
+
 const mediaBaseUrl =
     "https://storage.googleapis.com/5rps-film-public-media/20230927_aks-nginx-ingress-static-ip";
 
@@ -10,6 +12,13 @@ export const post = {
     media: {
         createPublicIp: `${mediaBaseUrl}/create-public-ip-7ca3db04d465.png`,
         loadBalancerIp: `${mediaBaseUrl}/load-balancer-ip-2b631fca14fd.png`,
+    },
+    cover: {
+        src: coverImage,
+        alt: {
+            en: "A cyan route crossing a gateway into a dark modular cluster and ending at one fixed marker",
+            ja: "ゲートから暗いモジュール群へ入り、一つの固定点へ届く青い経路",
+        },
     },
     translations: {
         en: {

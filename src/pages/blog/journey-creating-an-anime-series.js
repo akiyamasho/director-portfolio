@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Helmet from "react-helmet";
 import { injectIntl } from "gatsby-plugin-intl";
 import BlogLayout from "../../components/blog/blog-layout";
-import PostHeader from "../../components/blog/post-header";
+import PostHero from "../../components/blog/post-hero";
 import SEO from "../../components/seo";
 import { post } from "../../blog/migrated/journey-creating-an-anime-series";
 
@@ -543,10 +543,10 @@ const Post = ({ intl }) => {
                 description={content.summary}
                 meta={[
                     { property: "og:type", content: "article" },
-                    { property: "og:image", content: post.media.hero },
+                    { property: "og:image", content: post.cover.src },
                 ]}
             />
-            <PostHeader post={post} locale={locale} />
+            <PostHero post={post} locale={locale} />
             {locale === "ja" ? (
                 <JapaneseArticle media={post.media} />
             ) : (
