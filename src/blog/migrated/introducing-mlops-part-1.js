@@ -6,7 +6,7 @@ const mediaBase =
 
 export const post = {
     slug: "introducing-mlops-part-1",
-    date: "2023-12-23",
+    date: "2023-12-21",
     tags: ["mlops", "machine learning", "engineering"],
     canonicalUrl,
     series: {

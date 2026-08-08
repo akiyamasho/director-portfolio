@@ -93,8 +93,8 @@ const Blog = ({ intl }) => {
                                 {post.externalUrl && (
                                     <div className="blog-external-label">
                                         {language === "ja"
-                                            ? `外部サイト · ${post.externalSource}`
-                                            : `External site · ${post.externalSource}`}
+                                            ? `${post.externalSource} · 外部記事`
+                                            : `${post.externalSource} · external`}
                                     </div>
                                 )}
                             </div>
@@ -113,13 +113,6 @@ const Blog = ({ intl }) => {
                                     </span>
                                 )}
                             </h2>
-                            {post.externalUrl && (
-                                <p className="blog-external-note">
-                                    {language === "ja"
-                                        ? "5RPS公式サイトで開く（新しいタブ）"
-                                        : "Opens on the official 5RPS website in a new tab"}
-                                </p>
-                            )}
                             {!post.externalUrl && translation.summary && (
                                 <p>
                                     <JapaneseLineBreak>

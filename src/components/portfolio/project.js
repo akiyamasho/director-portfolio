@@ -32,8 +32,8 @@ const ContentWrapper = styled.div`
 const PosterImg = styled.img`
     display: block;
     width: 100%;
-    max-height: 30rem;
-    object-fit: cover;
+    max-height: ${(props) => (props.$contain ? "none" : "30rem")};
+    object-fit: ${(props) => (props.$contain ? "contain" : "cover")};
     border: 1px solid ${themeRule};
     filter: saturate(0.82);
     transition:
@@ -150,10 +150,12 @@ const Project = ({
     linkTextList = [],
     snsLinkTypeMap = {},
     roles = [],
+    posterFit = "cover",
 }) => (
     <Container>
         <ContentWrapper>
             <PosterImg
+                $contain={posterFit === "contain"}
                 src={posterImageSrc}
                 alt={`${title} still`}
                 loading="lazy"
@@ -207,6 +209,7 @@ const Project = ({
 
 Project.propTypes = {
     posterImageSrc: PropTypes.string.isRequired,
+    posterFit: PropTypes.oneOf(["cover", "contain"]),
     title: PropTypes.node.isRequired,
     subTitle: PropTypes.node.isRequired,
     roles: PropTypes.arrayOf(PropTypes.string),

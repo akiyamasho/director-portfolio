@@ -3,7 +3,7 @@ const canonicalUrl =
 
 export const post = {
     slug: "introducing-mlops-part-2",
-    date: "2023-12-23",
+    date: "2023-12-22",
     tags: ["machine-learning", "MLOps", "engineering"],
     canonicalUrl,
     series: {

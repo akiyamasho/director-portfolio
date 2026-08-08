@@ -29,7 +29,7 @@ import rss from "../assets/project/rss.jpg";
 import moon from "../assets/project/moon.jpeg";
 import brighter from "../assets/project/brighter.jpeg";
 import seichou from "../assets/project/seichou.jpeg";
-import fiverps from "../assets/project/5rps.jpg";
+import fiverps from "../assets/project/5rps-2026.webp";
 
 const Container = styled.div`
     padding-bottom: clamp(4rem, 10vw, 10rem);
@@ -137,6 +137,7 @@ class Portfolio extends Component {
         const projects = [
             {
                 posterImageSrc: fiverps,
+                posterFit: "contain",
                 title: intl.formatMessage({ id: "projects.5rps.title" }),
                 subTitle: intl.formatMessage({
                     id: "projects.5rps.subTitle",
@@ -747,6 +748,7 @@ class Portfolio extends Component {
                             {projects.map(
                                 ({
                                     posterImageSrc,
+                                    posterFit,
                                     title,
                                     roles,
                                     subTitle,
@@ -755,6 +757,7 @@ class Portfolio extends Component {
                                 }) => (
                                     <Project
                                         posterImageSrc={posterImageSrc}
+                                        posterFit={posterFit}
                                         title={title}
                                         subTitle={subTitle}
                                         roles={roles}

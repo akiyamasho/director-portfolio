@@ -7,7 +7,7 @@ export const directingTheReferenceMedia = {
     hero: asset("hero-fixed-23783dffab76.webp"),
     overview: {
         video: asset("source-overview-b3f5d30a886d.mp4"),
-        poster: asset("source-overview-poster-8774293eefc4.webp"),
+        poster: asset("overview-poster-09s-4fb3a70fbb04.webp"),
     },
     originalInputs: [
         { key: "main", src: asset("original-main-a26ae2a99bf9.webp") },
@@ -36,27 +36,27 @@ export const directingTheReferenceMedia = {
     tests: {
         a: {
             video: asset("comparison-a-0ee5711b1760.mp4"),
-            poster: asset("comparison-a-poster-08fbfc8c7e42.webp"),
+            poster: asset("comparison-a-poster-09s-e3c108c8e47f.webp"),
         },
         b: {
             video: asset("comparison-b-4cbebe9f7ca5.mp4"),
-            poster: asset("comparison-b-poster-5aad9a549599.webp"),
+            poster: asset("comparison-b-poster-09s-1d0e47e01565.webp"),
         },
         c: {
             video: asset("comparison-c-94a46ad0699d.mp4"),
-            poster: asset("comparison-c-poster-1f8df85aac0f.webp"),
+            poster: asset("comparison-c-poster-09s-fbe2011227ba.webp"),
         },
         d: {
             video: asset("comparison-d-d24a3202f368.mp4"),
-            poster: asset("comparison-d-poster-a274f4dfcaf9.webp"),
+            poster: asset("comparison-d-poster-09s-97d451676803.webp"),
         },
         e: {
             video: asset("comparison-e-cfef20095acb.mp4"),
-            poster: asset("comparison-e-poster-399d466aedc0.webp"),
+            poster: asset("comparison-e-poster-09s-405494b6b5b5.webp"),
         },
         f: {
             video: asset("comparison-f-0f5cbdff5c9e.mp4"),
-            poster: asset("comparison-f-poster-eea21d75f537.webp"),
+            poster: asset("comparison-f-poster-09s-0a24e8e6e6ed.webp"),
         },
     },
 };
