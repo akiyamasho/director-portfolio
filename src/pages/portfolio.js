@@ -651,7 +651,9 @@ class Portfolio extends Component {
                         text: intl.formatMessage({
                             id: "portfolio.readPaper",
                         }),
-                        link: "https://github.com/akiyamasho/brighter-the-animation/blob/master/paper/paper.pdf",
+                        pdfUrl: "https://cdn.jsdelivr.net/gh/akiyamasho/brighter-the-animation@main/paper/paper.pdf",
+                        sourceUrl:
+                            "https://github.com/akiyamasho/brighter-the-animation/blob/main/paper/paper.pdf",
                     },
                 ],
                 snsLinkTypeMap: {},
@@ -756,6 +758,8 @@ class Portfolio extends Component {
                                     snsLinkTypeMap,
                                 }) => (
                                     <Project
+                                        key={title}
+                                        locale={intl.locale}
                                         posterImageSrc={posterImageSrc}
                                         posterFit={posterFit}
                                         title={title}

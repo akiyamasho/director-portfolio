@@ -11,7 +11,7 @@ import {
 } from "../../components/shared/colours";
 
 const paperUrl =
-    "https://raw.githubusercontent.com/akiyamasho/brighter-the-animation/main/paper/paper.pdf";
+    "https://cdn.jsdelivr.net/gh/akiyamasho/brighter-the-animation@main/paper/paper.pdf";
 
 const Container = styled.section`
     width: min(1200px, 100%);

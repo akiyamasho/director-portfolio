@@ -15,6 +15,7 @@ import {
     themeRule,
 } from "../shared/colours";
 import { LineLink } from "../shared/button";
+import PdfModalLink from "../pdf-modal";
 
 const Container = styled.article`
     padding: clamp(3rem, 7vw, 7rem) 0;
@@ -151,6 +152,7 @@ const Project = ({
     snsLinkTypeMap = {},
     roles = [],
     posterFit = "cover",
+    locale,
 }) => (
     <Container>
         <ContentWrapper>
@@ -175,16 +177,31 @@ const Project = ({
                 </RoleWrapper>
                 <CallToAction>
                     <BtnWrapper>
-                        {linkTextList.map(({ link, text }) => (
-                            <ProjectLink
-                                key={link}
-                                href={link}
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                {text} <span aria-hidden="true">↗</span>
-                            </ProjectLink>
-                        ))}
+                        {linkTextList.map(
+                            ({ link, pdfUrl, sourceUrl, text }) =>
+                                pdfUrl ? (
+                                    <PdfModalLink
+                                        key={pdfUrl}
+                                        locale={locale}
+                                        pdfUrl={pdfUrl}
+                                        sourceUrl={sourceUrl}
+                                        title={`${title} PDF`}
+                                        variant="line"
+                                    >
+                                        {text} <span aria-hidden="true">▣</span>
+                                    </PdfModalLink>
+                                ) : (
+                                    <ProjectLink
+                                        key={link}
+                                        href={link}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        {text}{" "}
+                                        <span aria-hidden="true">↗</span>
+                                    </ProjectLink>
+                                )
+                        )}
                     </BtnWrapper>
                     <BtnWrapper>
                         {Object.keys(snsLinkTypeMap).map((type) => (
@@ -209,12 +226,18 @@ const Project = ({
 
 Project.propTypes = {
     posterImageSrc: PropTypes.string.isRequired,
+    locale: PropTypes.string.isRequired,
     posterFit: PropTypes.oneOf(["cover", "contain"]),
     title: PropTypes.node.isRequired,
     subTitle: PropTypes.node.isRequired,
     roles: PropTypes.arrayOf(PropTypes.string),
     linkTextList: PropTypes.arrayOf(
-        PropTypes.shape({ link: PropTypes.string, text: PropTypes.string })
+        PropTypes.shape({
+            link: PropTypes.string,
+            pdfUrl: PropTypes.string,
+            sourceUrl: PropTypes.string,
+            text: PropTypes.string.isRequired,
+        })
     ),
     snsLinkTypeMap: PropTypes.objectOf(PropTypes.string),
 };

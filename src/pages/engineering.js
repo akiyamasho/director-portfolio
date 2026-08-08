@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { FormattedMessage, injectIntl, Link } from "gatsby-plugin-intl";
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import PageTitle from "../components/pageTitle";
+import PdfModalLink from "../components/pdf-modal";
 import {
     accentColour,
     themeColour,
@@ -140,36 +141,44 @@ const PublicationYear = styled.span`
     font-size: 0.68rem;
 `;
 
-const PublicationLink = styled(TextLink)`
+const PublicationLink = styled(PdfModalLink)`
     align-items: flex-start;
     line-height: 1.55;
+    padding: 0;
+    text-align: left;
 `;
 
 const publications = [
     {
         year: "2026",
         title: "Continuous Improvement and Parallel Autonomous Exploration: An LLM-Agent Framework for Searching Large Solution Spaces",
-        href: "https://arxiv.org/abs/2608.04341",
+        sourceUrl: "https://arxiv.org/abs/2608.04341",
+        pdfUrl: "https://arxiv.org/pdf/2608.04341",
     },
     {
         year: "2025",
         title: "Towards Better Search with Domain-Aware Text Embeddings for C2C Marketplaces",
-        href: "https://arxiv.org/abs/2512.21021",
+        sourceUrl: "https://arxiv.org/abs/2512.21021",
+        pdfUrl: "https://arxiv.org/pdf/2512.21021",
     },
     {
         year: "2025",
         title: "Improving Visual Recommendation on E-commerce Platforms Using Vision-Language Models",
-        href: "https://arxiv.org/abs/2510.13359",
+        sourceUrl: "https://arxiv.org/abs/2510.13359",
+        pdfUrl: "https://arxiv.org/pdf/2510.13359",
     },
     {
         year: "2025",
         title: "Zero-Shot Retrieval for Scalable Visual Search in a Two-Sided Marketplace",
-        href: "https://arxiv.org/abs/2508.05661",
+        sourceUrl: "https://arxiv.org/abs/2508.05661",
+        pdfUrl: "https://arxiv.org/pdf/2508.05661",
     },
     {
         year: "2018",
         title: "Brighter the Animation: Study and Application of the Combination of Western and Japanese Animation Process Influences to Improve Efficiency Whilst Retaining Quality of Anime Production",
-        to: "/papers/brighter-the-animation",
+        sourceUrl:
+            "https://github.com/akiyamasho/brighter-the-animation/blob/main/paper/paper.pdf",
+        pdfUrl: "https://cdn.jsdelivr.net/gh/akiyamasho/brighter-the-animation@main/paper/paper.pdf",
     },
 ];
 
@@ -373,33 +382,23 @@ class Engineering extends Component {
                             </Title>
                             <PublicationList>
                                 {publications.map(
-                                    ({ year, title, href, to }) => (
+                                    ({ year, title, pdfUrl, sourceUrl }) => (
                                         <Publication key={title}>
                                             <PublicationYear>
                                                 {year}
                                             </PublicationYear>
-                                            {to ? (
-                                                <PublicationLink
-                                                    as={Link}
-                                                    to={to}
-                                                >
-                                                    {title}&nbsp;
-                                                    <i className="material-icons">
-                                                        picture_as_pdf
-                                                    </i>
-                                                </PublicationLink>
-                                            ) : (
-                                                <PublicationLink
-                                                    href={href}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    {title}&nbsp;
-                                                    <i className="material-icons">
-                                                        launch
-                                                    </i>
-                                                </PublicationLink>
-                                            )}
+                                            <PublicationLink
+                                                locale={intl.locale}
+                                                pdfUrl={pdfUrl}
+                                                sourceUrl={sourceUrl}
+                                                title={title}
+                                                variant="text"
+                                            >
+                                                {title}&nbsp;
+                                                <i className="material-icons">
+                                                    picture_as_pdf
+                                                </i>
+                                            </PublicationLink>
                                         </Publication>
                                     )
                                 )}
