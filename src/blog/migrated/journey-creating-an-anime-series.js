@@ -1,0 +1,28 @@
+const mediaBase =
+    "https://storage.googleapis.com/5rps-film-public-media/20201014_journey-anime-series";
+
+export const post = {
+    slug: "journey-creating-an-anime-series",
+    date: "2020-10-14",
+    tags: ["animation", "indie", "programming", "pitching", "anime"],
+    canonicalUrl:
+        "https://akiyamasho.medium.com/on-the-journey-attempting-to-create-an-anime-series-about-programming-98cdcf619ced",
+    media: {
+        hero: `${mediaBase}/pilot-poster-6500d0042f0f.webp`,
+        commercialStoryboard: `${mediaBase}/commercial-storyboard-4f5534e1b809.webp`,
+        pitchBible: `${mediaBase}/pitch-bible-ae19d1e810b3.webp`,
+        episodeStoryboards: `${mediaBase}/episode-1-2-storyboards-a87521842106.webp`,
+    },
+    translations: {
+        en: {
+            title: "On the journey [attempting] to create an anime series about programming.",
+            summary:
+                "Hey everyone! I’m Shō Akiyama, an indie animator/director who also works as a software engineer in Tokyo.",
+        },
+        ja: {
+            title: "プログラミングを描くアニメシリーズへの挑戦",
+            summary:
+                "仕事の合間に『Venture』のパイロットを完成させ、テレビ放送と映画祭を経て、作品だけでは企画が動かないことを知った2020年の制作記録。",
+        },
+    },
+};

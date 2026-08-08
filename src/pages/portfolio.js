@@ -16,10 +16,11 @@ import Project, {
 } from "../components/portfolio/project";
 import { TextLink } from "../components/shared/button";
 import {
+    accentColour,
     filmFestivalBtnColour,
     filmFestivalBtnHoverColour,
-    themeColour,
     themeDark,
+    themeRule,
 } from "../components/shared/colours";
 
 import venturePilot from "../assets/project/venture_pilot.jpeg";
@@ -31,11 +32,18 @@ import seichou from "../assets/project/seichou.jpeg";
 import fiverps from "../assets/project/5rps.jpg";
 
 const Container = styled.div`
-    margin-bottom: 10vh;
+    padding-bottom: clamp(4rem, 10vw, 10rem);
 `;
 
 const SectionTitle = styled.h2`
-    color: ${themeDark};
+    margin: 0;
+    padding: 1.5rem 0;
+    color: ${accentColour};
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
 `;
 
 const FilmFestivalLink = styled(TextLink)`
@@ -47,18 +55,16 @@ const FilmFestivalLink = styled(TextLink)`
 `;
 
 export const SectionContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 5vw, 4rem);
 `;
 
 export const SectionInnerWrapper = styled.div`
-    padding: 1em 0;
-    border-top: 2px solid ${themeDark};
+    padding: clamp(2rem, 5vw, 4.5rem) 0;
+    border-top: 1px solid ${themeRule};
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 80%;
 `;
 
 const SideprojectTable = styled.table`
@@ -67,16 +73,20 @@ const SideprojectTable = styled.table`
 `;
 
 const SideprojectTableHead = styled.th`
-    font-size: 0.75em;
+    color: ${accentColour};
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.62em;
+    font-weight: 400;
+    letter-spacing: 0.12em;
     text-align: left;
-    color: ${themeDark};
-    border-bottom: 1px solid ${themeColour};
-    padding-bottom: 0.5em;
+    text-transform: uppercase;
+    border-bottom: 1px solid ${themeRule};
+    padding: 0 0.5em 0.8em;
 `;
 
 const SideprojectTbody = styled.tbody`
     tr:not(:last-child) {
-        border-bottom: 1px solid ${themeDark};
+        border-bottom: 1px solid ${themeRule};
     }
 `;
 
@@ -85,16 +95,19 @@ const SideprojectTableRow = styled.tr`
 `;
 
 const SideprojectTableData = styled.td`
-    padding: 0.25em 0.5em;
+    padding: 1.15em 0.5em;
 `;
 
 const SideprojectSubtitle = styled.div`
-    font-size: 0.75em;
+    margin-top: 0.35rem;
+    font-size: 0.82em;
     color: ${themeDark};
 `;
 
 const SideprojectRoleTd = styled(SideprojectTableData)`
-    font-size: 0.75em;
+    color: ${themeDark};
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68em;
     white-space: nowrap;
 `;
 
@@ -696,8 +709,12 @@ class Portfolio extends Component {
 
         return (
             <Layout>
-                <SEO title="Portfolio" />
+                <SEO
+                    title={intl.formatMessage({ id: "portfolio.title" })}
+                    lang={intl.locale}
+                />
                 <PageTitle
+                    kicker={intl.formatMessage({ id: "portfolio.kicker" })}
                     subTitle={intl.formatMessage({ id: "portfolio.subTitle" })}
                     title={intl.formatMessage({ id: "portfolio.title" })}
                 />

@@ -1,138 +1,82 @@
 import styled from "styled-components";
 import {
+    accentColour,
     textBtnColour,
-    textBtnHoverColour,
     textBtnDisabledColour,
+    textBtnHoverColour,
+    themeRule,
 } from "./colours";
 
-export const TextBtn = styled.button`
-    background: none;
-    border: none;
-    text-decoration: none;
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 1px;
-    padding: 0;
-
+const interactive = `
     cursor: pointer;
-    font-size: 1em;
+    transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+    &:focus-visible { outline: 2px solid ${accentColour}; outline-offset: 4px; }
+`;
 
-    transition: 0.2s cubic-bezier(0.355, 0.045, 0.645, 0);
-
+export const TextBtn = styled.button`
+    display: inline-flex;
+    align-items: center;
+    border: 0;
+    background: none;
     color: ${textBtnColour};
-
+    font: inherit;
+    ${interactive}
     &:hover:not(:disabled) {
         color: ${textBtnHoverColour};
     }
-
     &:disabled {
         color: ${textBtnDisabledColour};
-    }
-
-    &:focus {
-        outline: none;
+        cursor: default;
     }
 `;
 
 export const TextLink = styled.a`
-    background: none;
-    border: none;
-    text-decoration: none;
-
     display: inline-flex;
     align-items: center;
-    text-align: center;
-    letter-spacing: 1px;
-    padding: 0;
-
-    cursor: pointer;
-    font-size: 1em;
-
-    transition: 0.2s cubic-bezier(0.355, 0.045, 0.645, 0);
-
     color: ${textBtnColour};
-
+    text-decoration: none;
+    ${interactive}
     &:hover:not(:disabled) {
         color: ${textBtnHoverColour};
-    }
-
-    &:disabled {
-        color: ${textBtnDisabledColour};
-    }
-
-    &:focus {
-        outline: none;
     }
 `;
 
 export const LineBtn = styled.button`
-    background: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1.1rem;
+    border: 1px solid ${themeRule};
+    background: rgba(8, 8, 8, 0.25);
     color: ${textBtnColour};
-    border: 1px solid ${textBtnColour};
-
-    font-size: 0.85em;
-    letter-spacing: 1px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
     text-decoration: none;
-    text-align: center;
     text-transform: uppercase;
-
-    width: auto;
-    padding: 0.5em 1em;
-    display: inline-block;
-    border-radius: 3px;
-
-    cursor: pointer;
-
-    transition: 0.2s cubic-bezier(0.355, 0.045, 0.645, 0);
-
+    ${interactive}
     &:hover {
-        border: 1px solid ${textBtnHoverColour};
-        color: ${textBtnHoverColour};
-        background: rgba(255, 255, 255, 0.2);
-    }
-
-    &:active {
-        outline: rgba(255, 255, 255, 0.7);
-    }
-
-    &:focus {
-        outline: rgba(255, 255, 255, 0.7);
+        border-color: ${accentColour};
+        background: ${accentColour};
+        color: #04070a;
     }
 `;
 
 export const LineLink = styled.a`
-    background: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid ${themeRule};
     color: ${textBtnColour};
-    border: 1px solid ${textBtnColour};
-
-    font-size: 0.85em;
-    letter-spacing: 1px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
     text-decoration: none;
-    text-align: center;
     text-transform: uppercase;
-
-    width: auto;
-    padding: 0.25em 1em;
-    display: inline-block;
-    border-radius: 3px;
-
-    cursor: pointer;
-
-    transition: 0.2s cubic-bezier(0.355, 0.045, 0.645, 0);
-
+    ${interactive}
     &:hover {
-        border: 1px solid ${textBtnHoverColour};
-        color: ${textBtnHoverColour};
-        background: rgba(255, 255, 255, 0.2);
-    }
-
-    &:active {
-        outline: rgba(255, 255, 255, 0.7);
-    }
-
-    &:focus {
-        outline: rgba(255, 255, 255, 0.7);
+        border-color: ${accentColour};
+        color: ${accentColour};
     }
 `;

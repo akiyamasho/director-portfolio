@@ -1,57 +1,105 @@
 import React from "react";
 import styled from "styled-components";
 import { FormattedMessage, Link } from "gatsby-plugin-intl";
-import { navHeightPx } from "../header";
 import { LineBtn } from "../shared/button";
-import { themeDark } from "../shared/colours";
+import {
+    accentColour,
+    cinemaRed,
+    themeColour,
+    themeMuted,
+    themeRule,
+} from "../shared/colours";
 
-const Container = styled.div`
+const Container = styled.section`
+    position: relative;
+    z-index: 1;
+    width: min(1440px, 100%);
+    min-height: calc(100svh - 80px);
+    margin: 0 auto;
+    padding: clamp(2rem, 7vw, 7rem) clamp(1.25rem, 7vw, 8rem);
     display: flex;
-    text-align: center;
     flex-direction: column;
-    height: calc(100vh - ${navHeightPx}px);
-    justify-content: center;
-
-    text-shadow: 2px 2px 4px rgba(0, 0, 30, 0.4);
+    justify-content: flex-end;
 `;
 
-const TitleWrapper = styled.div`
-    padding: 1em 0;
+const Frame = styled.div`
+    width: min(940px, 100%);
+    padding: clamp(1.5rem, 3.5vw, 3.5rem);
+    border: 1px solid ${themeRule};
+    border-left: 3px solid ${cinemaRed};
+    background: rgba(4, 7, 10, 0.58);
+    backdrop-filter: blur(4px);
+`;
+
+const Kicker = styled.p`
+    margin: 0 0 1.25rem;
+    color: ${accentColour};
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
 `;
 
 const Name = styled.h1`
-    font-size: 5em;
-    font-weight: 400;
+    max-width: 13ch;
     margin: 0;
+    color: ${themeColour};
+    font-family: "Barlow Condensed", "Noto Sans JP", sans-serif;
+    font-size: clamp(4rem, 11vw, 10rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 0.82;
+    text-transform: uppercase;
 `;
 
-const Profession = styled.h2`
-    font-size: 1.25em;
-    font-weight: 400;
-    color: ${themeDark};
+const Profession = styled.p`
+    max-width: 38rem;
+    margin: 1.5rem 0 2.2rem;
+    color: ${themeMuted};
+    font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+    letter-spacing: 0.04em;
 `;
 
-const ButtonWrapper = styled.div`
-    display: inline-block;
-    width: auto;
-    text-align: center;
+const Reel = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-top: auto;
+    padding-top: clamp(3.5rem, 10vh, 8rem);
+    color: ${themeMuted};
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    &::before {
+        width: 2.8rem;
+        height: 1px;
+        background: ${cinemaRed};
+        content: "";
+    }
 `;
 
 const Welcome = () => (
     <Container>
-        <TitleWrapper>
+        <Frame>
+            <Kicker>
+                <FormattedMessage id="home.kicker" />
+            </Kicker>
             <Name>
                 <FormattedMessage id="home.name" />
             </Name>
             <Profession>
                 <FormattedMessage id="home.profession" />
             </Profession>
-        </TitleWrapper>
-        <ButtonWrapper>
             <LineBtn as={Link} to="/portfolio">
-                <FormattedMessage id="home.viewPortfolio" />
+                <FormattedMessage id="home.viewPortfolio" />{" "}
+                <span aria-hidden="true">↘</span>
             </LineBtn>
-        </ButtonWrapper>
+        </Frame>
+        <Reel>
+            <FormattedMessage id="home.reelNote" />
+        </Reel>
     </Container>
 );
 

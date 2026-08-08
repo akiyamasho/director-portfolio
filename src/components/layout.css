@@ -1,29 +1,83 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&display=swap");
+
+:root {
+    --ink: #eef2f4;
+    --muted: #a6afb5;
+    --quiet: #69747c;
+    --black: #04070a;
+    --charcoal: #10161b;
+    --rule: rgba(221, 232, 238, 0.17);
+    --accent: #e2b84b;
+    --cinema-red: #c4473a;
+}
+
+* {
+    box-sizing: border-box;
+}
 
 html {
-    font-family: "Noto Sans JP", sans-serif;
-    color: #ccc;
-    background: #000;
+    background: var(--black);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", "Noto Sans JP", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
+    background: var(--black);
+}
+body,
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+img,
+video {
+    max-width: 100%;
+}
+a {
+    color: inherit;
+}
+::selection {
+    background: var(--accent);
+    color: var(--black);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
 }
 
 @media only screen and (max-width: 768px) {
     body {
-        font-size: 12px;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    body {
-        font-size: 6px;
+        font-size: 15px;
     }
 }
 
 .material-icons {
     font-family: "Material Icons";
     font-size: 1em;
-    color: #888888;
+}
+
+.ja-phrase-break {
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+}
+
+[lang="ja"] main {
+    line-break: strict;
+    overflow-wrap: normal;
+    text-wrap: pretty;
+    word-break: normal;
+}
+
+@supports (word-break: auto-phrase) {
+    [lang="ja"] main {
+        word-break: auto-phrase;
+    }
 }

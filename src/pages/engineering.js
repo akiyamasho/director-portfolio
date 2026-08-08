@@ -1,20 +1,31 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { FormattedMessage, injectIntl } from "gatsby-plugin-intl";
+import { FormattedMessage, injectIntl, Link } from "gatsby-plugin-intl";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import PageTitle from "../components/pageTitle";
-import { themeColour, themeDark } from "../components/shared/colours";
+import {
+    accentColour,
+    themeColour,
+    themeDark,
+} from "../components/shared/colours";
 import { TextLink } from "../components/shared/button";
 import { SectionContainer, SectionInnerWrapper } from "./portfolio";
 
 const Container = styled.div`
-    margin-bottom: 10vh;
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 5vw, 4rem) 8rem;
 `;
 
 const Title = styled.h2`
-    color: ${themeDark};
+    color: ${accentColour};
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
 `;
 
 const WorkHistoryTable = styled.table`
@@ -23,7 +34,7 @@ const WorkHistoryTable = styled.table`
 `;
 
 const TableData = styled.td`
-    padding: 0.25em 0.5em;
+    padding: 1em 0.5em;
 `;
 
 const Company = styled(TextLink)`
@@ -35,13 +46,13 @@ const TableHead = styled.th`
     text-align: left;
     color: ${themeDark};
     font-size: 0.75em;
-    border-bottom: 1px solid ${themeColour};
+    border-bottom: 1px solid rgba(242, 239, 233, 0.16);
     padding-bottom: 0.5em;
 `;
 
 const TableBody = styled.tbody`
     tr:not(:last-child) {
-        border-bottom: 1px solid ${themeDark};
+        border-bottom: 1px solid rgba(242, 239, 233, 0.16);
     }
 `;
 
@@ -60,9 +71,92 @@ const Role = styled.span`
     font-size: 0.75em;
 `;
 
+const PublicationList = styled.ol`
+    margin: 0;
+    padding: 0;
+    list-style: none;
+`;
+
+const Publication = styled.li`
+    display: grid;
+    grid-template-columns: 5rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid rgba(242, 239, 233, 0.16);
+
+    @media only screen and (max-width: 520px) {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+`;
+
+const PublicationYear = styled.span`
+    color: ${themeDark};
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68rem;
+`;
+
+const PublicationLink = styled(TextLink)`
+    align-items: flex-start;
+    line-height: 1.55;
+`;
+
+const publications = [
+    {
+        year: "2026",
+        title: "Continuous Improvement and Parallel Autonomous Exploration: An LLM-Agent Framework for Searching Large Solution Spaces",
+        href: "https://arxiv.org/abs/2608.04341",
+    },
+    {
+        year: "2025",
+        title: "Towards Better Search with Domain-Aware Text Embeddings for C2C Marketplaces",
+        href: "https://arxiv.org/abs/2512.21021",
+    },
+    {
+        year: "2025",
+        title: "Improving Visual Recommendation on E-commerce Platforms Using Vision-Language Models",
+        href: "https://arxiv.org/abs/2510.13359",
+    },
+    {
+        year: "2025",
+        title: "Zero-Shot Retrieval for Scalable Visual Search in a Two-Sided Marketplace",
+        href: "https://arxiv.org/abs/2508.05661",
+    },
+    {
+        year: "2018",
+        title: "Brighter the Animation: Study and Application of the Combination of Western and Japanese Animation Process Influences to Improve Efficiency Whilst Retaining Quality of Anime Production",
+        to: "/papers/brighter-the-animation",
+    },
+];
+
 const workHistoryItems = [
     {
-        year: "2018ー",
+        year: "2024ー",
+        companyLabelId: "engineering.mercari",
+        companyLink: "https://about.mercari.com/en/",
+        roleLabelIdList: [
+            "engineering.role.aiEngineeringManager",
+            "engineering.role.aiTechLead",
+            "engineering.role.mlFullStack",
+        ],
+    },
+    {
+        year: "2022-2024",
+        companyLabelId: "engineering.555comic",
+        companyLink: "https://555comic.com",
+        roleLabelIdList: [
+            "engineering.role.mlEngineeringManager",
+            "engineering.role.seriesCreator",
+        ],
+    },
+    {
+        year: "2020-2022",
+        companyLabelId: "engineering.retailAi",
+        companyLink: "https://www.retail-ai.jp/en/",
+        roleLabelIdList: ["engineering.role.mleSreTechLead"],
+    },
+    {
+        year: "2018-2020",
         companyLabelId: "engineering.cogent",
         companyLink: "https://www.cogent.co.jp",
         roleLabelIdList: [
@@ -92,10 +186,15 @@ const workHistoryItems = [
 
 class Engineering extends Component {
     render() {
+        const { intl } = this.props;
         return (
             <Layout>
-                <SEO title="Engineering" />
+                <SEO
+                    title={intl.formatMessage({ id: "engineering.title" })}
+                    lang={intl.locale}
+                />
                 <PageTitle
+                    kicker={<FormattedMessage id="engineering.kicker" />}
                     subTitle={<FormattedMessage id="engineering.subTitle" />}
                     title={<FormattedMessage id="engineering.title" />}
                     shouldRenderFromRight
@@ -128,12 +227,13 @@ class Engineering extends Component {
                                             companyLink,
                                             roleLabelIdList,
                                         }) => (
-                                            <TableRow>
+                                            <TableRow key={companyLabelId}>
                                                 <TableData>{year}</TableData>
                                                 <TableData>
                                                     <Company
                                                         target="_blank"
                                                         href={companyLink}
+                                                        rel="noopener noreferrer"
                                                     >
                                                         <FormattedMessage
                                                             id={companyLabelId}
@@ -147,8 +247,12 @@ class Engineering extends Component {
                                                 <TableData>
                                                     <RoleList>
                                                         {roleLabelIdList.map(
-                                                            roleLabelId => (
-                                                                <Role>
+                                                            (roleLabelId) => (
+                                                                <Role
+                                                                    key={
+                                                                        roleLabelId
+                                                                    }
+                                                                >
                                                                     <FormattedMessage
                                                                         id={
                                                                             roleLabelId
@@ -173,19 +277,58 @@ class Engineering extends Component {
                             </Title>
                             <ul>
                                 <li>
-                                    <FormattedMessage id="engineering.techStack.ios" />
+                                    <FormattedMessage id="engineering.techStack.ai" />
                                 </li>
                                 <li>
-                                    <FormattedMessage id="engineering.techStack.android" />
-                                </li>
-
-                                <li>
-                                    <FormattedMessage id="engineering.techStack.frontend" />
+                                    <FormattedMessage id="engineering.techStack.mlops" />
                                 </li>
                                 <li>
-                                    <FormattedMessage id="engineering.techStack.backend" />
+                                    <FormattedMessage id="engineering.techStack.platform" />
+                                </li>
+                                <li>
+                                    <FormattedMessage id="engineering.techStack.product" />
                                 </li>
                             </ul>
+                        </SectionInnerWrapper>
+                    </SectionContainer>
+                    <SectionContainer>
+                        <SectionInnerWrapper>
+                            <Title>
+                                <FormattedMessage id="engineering.publications" />
+                            </Title>
+                            <PublicationList>
+                                {publications.map(
+                                    ({ year, title, href, to }) => (
+                                        <Publication key={title}>
+                                            <PublicationYear>
+                                                {year}
+                                            </PublicationYear>
+                                            {to ? (
+                                                <PublicationLink
+                                                    as={Link}
+                                                    to={to}
+                                                >
+                                                    {title}&nbsp;
+                                                    <i className="material-icons">
+                                                        picture_as_pdf
+                                                    </i>
+                                                </PublicationLink>
+                                            ) : (
+                                                <PublicationLink
+                                                    href={href}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    {title}&nbsp;
+                                                    <i className="material-icons">
+                                                        launch
+                                                    </i>
+                                                </PublicationLink>
+                                            )}
+                                        </Publication>
+                                    )
+                                )}
+                            </PublicationList>
                         </SectionInnerWrapper>
                     </SectionContainer>
                     <SectionContainer>
@@ -194,9 +337,6 @@ class Engineering extends Component {
                                 <FormattedMessage id="engineering.qualifications" />
                             </Title>
                             <ul>
-                                <li>
-                                    <FormattedMessage id="engineering.qualifications.courseraMl" />
-                                </li>
                                 <li>
                                     <FormattedMessage id="engineering.qualifications.n1" />
                                 </li>

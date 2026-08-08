@@ -1,177 +1,206 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
 import { FormattedMessage, Link } from "gatsby-plugin-intl";
-
 import Language from "./language";
-
 import { TextBtn } from "./shared/button";
-
 import {
+    accentColour,
+    cinemaRed,
     themeColour,
-    textBtnColour,
-    textBtnHoverColour,
+    themeRule,
 } from "./shared/colours";
 
-export const navHeightPx = "75";
-const invertedColour = "#000";
-const invertedHoverColour = "#444";
-const btnBorderColour = "#888";
-const menuVisibleBgColour = "rgba(255, 255, 255, 0.9)";
+export const navHeightPx = "80";
 
 const Container = styled.div`
     position: fixed;
+    z-index: 20;
+    top: 0;
     width: 100%;
+    min-height: ${navHeightPx}px;
+    display: flex;
+    align-items: center;
+    background: rgba(4, 7, 10, 0.84);
+    border-bottom: 1px solid ${themeRule};
+    backdrop-filter: blur(16px);
+`;
 
+const Inner = styled.div`
+    width: min(1440px, 100%);
+    min-height: ${navHeightPx}px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 4vw, 4.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+const Mark = styled(Link)`
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: right;
-
-    opacity: 0.8;
-
-    height: ${navHeightPx}px;
     color: ${themeColour};
+    font-family: "Barlow Condensed", "Noto Sans JP", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1.05;
+    text-decoration: none;
+
+    small {
+        margin-top: 0.35rem;
+        color: ${accentColour};
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.56rem;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+    }
+`;
+
+const LinkContainer = styled.nav`
+    display: flex;
+    align-items: center;
+    gap: clamp(0.9rem, 2.1vw, 2.25rem);
 
     @media only screen and (max-width: 768px) {
-        height: auto;
-        ${(props) =>
-            props.isMobileMenuVisible && `background: ${menuVisibleBgColour};`}
+        position: fixed;
+        inset: ${navHeightPx}px 0 0;
+        display: ${(props) => (props.isMobileMenuVisible ? "flex" : "none")};
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 2rem 1.5rem;
+        background: #0c0c0c;
+        overflow-y: auto;
     }
 `;
 
 export const NavigationLink = styled.a`
-    padding: 0 1.5em;
-
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    min-height: 44px;
+    color: ${themeColour};
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.67rem;
+    letter-spacing: 0.1em;
     text-decoration: none;
-    letter-spacing: 1px;
+    text-transform: uppercase;
     cursor: pointer;
-    display: flex;
-    align-items: center;
 
-    color: ${textBtnColour};
+    &::after {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 16px;
+        height: 1px;
+        background: ${cinemaRed};
+        content: "";
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 180ms ease;
+    }
 
-    transition: 0.2s cubic-bezier(0.355, 0.045, 0.645, 0);
-
-    &:hover {
-        color: ${textBtnHoverColour};
+    &:hover::after,
+    &:focus-visible::after {
+        transform: scaleX(1);
     }
 
     @media only screen and (max-width: 768px) {
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid ${btnBorderColour};
-        padding: 0.5em 0 0.5em 1em;
-        width: 100%;
-        color: ${invertedColour};
-        font-size: 1.25em;
-
-        &:hover {
-            color: ${invertedHoverColour};
-        }
-    }
-`;
-
-const HamburgerContainer = styled.div`
-    display: none;
-    padding-right: 0.5em;
-    height: ${navHeightPx}px;
-    width: 100%;
-    text-align: right;
-    align-items: center;
-    justify-content: flex-end;
-    ${(props) =>
-        props.isMobileMenuVisible &&
-        `border-bottom: 1px solid ${btnBorderColour};`}
-
-    @media only screen and (max-width: 768px) {
-        display: flex;
+        min-height: 60px;
+        border-bottom: 1px solid ${themeRule};
+        font-size: 0.82rem;
     }
 `;
 
 const Hamburger = styled(TextBtn)`
-    cursor: pointer;
-    display: block;
-    color: ${textBtnColour};
-
-    &:hover {
-        color: ${textBtnHoverColour};
-        ${(props) =>
-            props.isMobileMenuVisible && `color: ${invertedHoverColour};`}
-    }
-
-    i {
-        margin-right: 1em;
-        font-size: 2em;
-        color: ${themeColour};
-
-        ${(props) => props.isMobileMenuVisible && `color: ${invertedColour};`}
-    }
-`;
-
-const LinkContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    width: 100%;
-    justify-content: flex-end;
+    display: none;
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    color: ${themeColour};
 
     @media only screen and (max-width: 768px) {
-        ${(props) => !props.isMobileMenuVisible && "display: none;"}
-        flex-direction: column;
-        text-align: left;
+        display: inline-flex;
     }
 `;
 
 const Header = () => {
     const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
+    const closeMenu = () => setIsMobileMenuVisible(false);
 
     return (
         <header>
-            <Container isMobileMenuVisible={isMobileMenuVisible}>
-                <HamburgerContainer>
+            <Container>
+                <Inner>
+                    <Mark to="/" onClick={closeMenu}>
+                        秋山 翔<small>SHO AKIYAMA / DIRECTOR</small>
+                    </Mark>
                     <Hamburger
-                        onClick={() => {
-                            setIsMobileMenuVisible(!isMobileMenuVisible);
-                        }}
-                        isMobileMenuVisible={isMobileMenuVisible}
+                        aria-label={
+                            isMobileMenuVisible
+                                ? "Close navigation / ナビゲーションを閉じる"
+                                : "Open navigation / ナビゲーションを開く"
+                        }
+                        aria-expanded={isMobileMenuVisible}
+                        onClick={() =>
+                            setIsMobileMenuVisible(!isMobileMenuVisible)
+                        }
                     >
                         <i className="material-icons">
-                            {isMobileMenuVisible ? "menu_open" : "menu"}
+                            {isMobileMenuVisible ? "close" : "menu"}
                         </i>
                     </Hamburger>
-                </HamburgerContainer>
-
-                <LinkContainer isMobileMenuVisible={isMobileMenuVisible}>
-                    <NavigationLink as={Link} to="/">
-                        <FormattedMessage id="nav.home" />
-                    </NavigationLink>
-                    <NavigationLink as={Link} to="/portfolio">
-                        <FormattedMessage id="nav.portfolio" />
-                    </NavigationLink>
-                    <NavigationLink
-                        target="_blank"
-                        href="https://www.instagram.com/akiyamasho"
+                    <LinkContainer
+                        aria-label="Primary navigation / メインナビゲーション"
+                        isMobileMenuVisible={isMobileMenuVisible}
                     >
-                        <FormattedMessage id="nav.gallery" />
-                        &nbsp;
-                        <i className="material-icons">launch</i>
-                    </NavigationLink>
-                    <NavigationLink
-                        target="_blank"
-                        href="https://www.linkedin.com/in/shoakiyama"
-                    >
-                        <FormattedMessage id="nav.engineering" />
-                        &nbsp;
-                        <i className="material-icons">launch</i>
-                    </NavigationLink>
-                    <NavigationLink as={Link} to="/contact">
-                        <FormattedMessage id="nav.contact" />
-                    </NavigationLink>
-                    <Language />
-                </LinkContainer>
+                        <NavigationLink as={Link} to="/" onClick={closeMenu}>
+                            <FormattedMessage id="nav.home" />
+                        </NavigationLink>
+                        <NavigationLink
+                            as={Link}
+                            to="/portfolio"
+                            onClick={closeMenu}
+                        >
+                            <FormattedMessage id="nav.portfolio" />
+                        </NavigationLink>
+                        <NavigationLink
+                            as={Link}
+                            to="/blog"
+                            onClick={closeMenu}
+                        >
+                            <FormattedMessage
+                                id="nav.blog"
+                                defaultMessage="Journal"
+                            />
+                        </NavigationLink>
+                        <NavigationLink
+                            as={Link}
+                            to="/engineering"
+                            onClick={closeMenu}
+                        >
+                            <FormattedMessage id="nav.engineering" />
+                        </NavigationLink>
+                        <NavigationLink
+                            as={Link}
+                            to="/contact"
+                            onClick={closeMenu}
+                        >
+                            <FormattedMessage id="nav.contact" />
+                        </NavigationLink>
+                        <NavigationLink
+                            href="https://www.instagram.com/akiyamasho"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <FormattedMessage id="nav.gallery" />{" "}
+                            <span aria-hidden="true">↗</span>
+                        </NavigationLink>
+                        <Language />
+                    </LinkContainer>
+                </Inner>
             </Container>
         </header>
     );

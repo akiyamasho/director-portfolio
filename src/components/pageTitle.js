@@ -1,99 +1,76 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { themeDark } from "./shared/colours";
-import { navHeightPx } from "./header";
+import {
+    accentColour,
+    cinemaRed,
+    themeMuted,
+    themeRule,
+} from "./shared/colours";
 
-const Container = styled.div`
-    padding: 0 10vw;
+const Container = styled.section`
+    min-height: min(56vh, 560px);
+    padding: clamp(4rem, 10vw, 9rem) clamp(1.25rem, 10vw, 10rem)
+        clamp(3rem, 7vw, 6rem);
     display: flex;
-    justify-content: ${props =>
+    align-items: flex-end;
+    justify-content: ${(props) =>
         props.shouldRenderFromRight ? "flex-end" : "flex-start"};
-    align-items: center;
-    text-align: ${props => (props.shouldRenderFromRight ? "right" : "left")};
-    height: calc(100vh - ${navHeightPx}px);
-
-    @media only screen and (max-width: 768px) {
-        justify-content: center;
-        text-align: center;
-    }
+    border-bottom: 1px solid ${themeRule};
+    text-align: ${(props) => (props.shouldRenderFromRight ? "right" : "left")};
 `;
 
 const Content = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding-bottom: ${navHeightPx / 2}px;
-`;
+    max-width: 62rem;
 
-const Title = styled.div`
-    font-size: 5em;
-`;
-
-const SubTitle = styled.div`
-    font-size: 1em;
-    display: flex;
-    justify-content: ${props =>
-        props.shouldRenderFromRight ? "flex-end" : "flex-start"};
-
-    @media only screen and (max-width: 768px) {
-        justify-content: center;
-    }
-`;
-
-const Line = styled.div`
-    border-bottom: 1px solid ${themeDark};
-    margin: 0 1em;
-    margin-bottom: 0.5em;
-    width: 20vw;
-
-    @media only screen and (max-width: 768px) {
-        display: none;
-    }
-`;
-
-const MobileLineContainer = styled.div`
-    display: none;
-    padding: 1em 0;
-
-    @media only screen and (max-width: 768px) {
-        display: flex;
-        justify-content: center;
-    }
-`;
-
-const MobileLine = styled(Line)`
-    display: none;
-    width: 40vw;
-
-    @media only screen and (max-width: 768px) {
+    &::before {
         display: block;
+        width: 3.5rem;
+        height: 3px;
+        margin-bottom: 1.25rem;
+        background: ${cinemaRed};
+        content: "";
     }
 `;
+const Index = styled.p`
+    margin: 0 0 1rem;
+    color: ${accentColour};
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.64rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+`;
+const Title = styled.h1`
+    margin: 0;
+    font-family: "Barlow Condensed", "Noto Sans JP", sans-serif;
+    font-size: clamp(4rem, 10vw, 9rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 0.84;
+    text-transform: uppercase;
+`;
+const SubTitle = styled.div`
+    max-width: 42rem;
+    margin-top: 1.5rem;
+    color: ${themeMuted};
+    font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+`;
 
-const PageTitle = ({ title, subTitle, shouldRenderFromRight }) => (
+const PageTitle = ({ kicker, title, subTitle, shouldRenderFromRight }) => (
     <Container shouldRenderFromRight={shouldRenderFromRight}>
-        <Content shouldRenderFromRight={shouldRenderFromRight}>
+        <Content>
+            <Index>{kicker}</Index>
             <Title>{title}</Title>
-            <MobileLineContainer>
-                <MobileLine />
-            </MobileLineContainer>
-            <SubTitle shouldRenderFromRight={shouldRenderFromRight}>
-                {!shouldRenderFromRight && <Line />}
-                {subTitle}
-                {shouldRenderFromRight && <Line />}
-            </SubTitle>
+            <SubTitle>{subTitle}</SubTitle>
         </Content>
     </Container>
 );
 
 PageTitle.propTypes = {
-    title: PropTypes.string.isRequired,
-    subTitle: PropTypes.string.isRequired,
+    kicker: PropTypes.node.isRequired,
+    title: PropTypes.node.isRequired,
+    subTitle: PropTypes.node.isRequired,
     shouldRenderFromRight: PropTypes.bool,
 };
-
-PageTitle.defaultProps = {
-    shouldRenderFromRight: false,
-};
-
+PageTitle.defaultProps = { shouldRenderFromRight: false };
 export default PageTitle;
