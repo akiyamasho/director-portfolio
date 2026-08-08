@@ -178,7 +178,7 @@ const publications = [
         title: "Brighter the Animation: Study and Application of the Combination of Western and Japanese Animation Process Influences to Improve Efficiency Whilst Retaining Quality of Anime Production",
         sourceUrl:
             "https://github.com/akiyamasho/brighter-the-animation/blob/main/paper/paper.pdf",
-        pdfUrl: "https://cdn.jsdelivr.net/gh/akiyamasho/brighter-the-animation@main/paper/paper.pdf",
+        pdfUrl: "https://cdn.jsdelivr.net/gh/akiyamasho/brighter-the-animation@2dbaf9cfe5dc4e1b6871ab532655b3b26ffcdf84/paper/paper.pdf",
     },
 ];
 

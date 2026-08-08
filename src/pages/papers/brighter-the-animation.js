@@ -11,7 +11,7 @@ import {
 } from "../../components/shared/colours";
 
 const paperUrl =
-    "https://cdn.jsdelivr.net/gh/akiyamasho/brighter-the-animation@main/paper/paper.pdf";
+    "https://cdn.jsdelivr.net/gh/akiyamasho/brighter-the-animation@2dbaf9cfe5dc4e1b6871ab532655b3b26ffcdf84/paper/paper.pdf";
 
 const Container = styled.section`
     width: min(1200px, 100%);
@@ -80,7 +80,11 @@ const BrighterPaper = ({ intl }) => {
                 <LineBtn as={Link} to="/engineering">
                     {isJapanese ? "技術ページへ戻る" : "Back to engineering"}
                 </LineBtn>
-                <Viewer src={paperUrl} title={title} />
+                <Viewer
+                    src={paperUrl}
+                    title={title}
+                    sandbox="allow-downloads allow-popups"
+                />
             </Container>
         </Layout>
     );

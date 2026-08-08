@@ -46,7 +46,9 @@ const SectionTitle = styled.h2`
     text-transform: uppercase;
 `;
 
-const FilmFestivalLink = styled(TextLink)`
+const FilmFestivalLink = styled(TextLink).attrs({
+    rel: "noopener noreferrer",
+})`
     color: ${filmFestivalBtnColour};
 
     &:hover:not(:disabled) {
@@ -262,7 +264,7 @@ class Portfolio extends Component {
                         ),
                         couch: (
                             <FilmFestivalLink
-                                href="http://www.couchfilmfestival.com/winners"
+                                href="https://www.couchfilmfestival.com/winners"
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.couch" />
@@ -334,7 +336,7 @@ class Portfolio extends Component {
                         ),
                         kosice: (
                             <FilmFestivalLink
-                                href="http://kimff.sk/"
+                                href="https://kimff.sk/"
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.kosice" />
@@ -479,7 +481,7 @@ class Portfolio extends Component {
                         ),
                         kosice: (
                             <FilmFestivalLink
-                                href="http://kimff.sk/"
+                                href="https://kimff.sk/"
                                 target="_blank"
                             >
                                 <FormattedMessage id="projects.venture.kosice" />
@@ -653,7 +655,7 @@ class Portfolio extends Component {
                         text: intl.formatMessage({
                             id: "portfolio.readPaper",
                         }),
-                        pdfUrl: "https://cdn.jsdelivr.net/gh/akiyamasho/brighter-the-animation@main/paper/paper.pdf",
+                        pdfUrl: "https://cdn.jsdelivr.net/gh/akiyamasho/brighter-the-animation@2dbaf9cfe5dc4e1b6871ab532655b3b26ffcdf84/paper/paper.pdf",
                         sourceUrl:
                             "https://github.com/akiyamasho/brighter-the-animation/blob/main/paper/paper.pdf",
                     },

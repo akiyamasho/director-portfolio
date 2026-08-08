@@ -172,7 +172,11 @@ const PdfModalLink = ({
                                 ×
                             </CloseButton>
                         </Header>
-                        <Viewer src={`${pdfUrl}#view=FitH`} title={title} />
+                        <Viewer
+                            src={`${pdfUrl}#view=FitH`}
+                            title={title}
+                            sandbox="allow-downloads allow-popups"
+                        />
                         <Hint hidden>
                             {isJapanese
                                 ? "表示できない場合は、別タブでPDFを開いてください。"

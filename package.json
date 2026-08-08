@@ -5,30 +5,38 @@
   "version": "0.1.0",
   "author": "秋山翔 <contact@akiyamasho.com>",
   "dependencies": {
-    "babel-plugin-styled-components": "^2.1.4",
+    "babel-plugin-styled-components": "^2.3.0",
     "budoux": "0.8.4",
-    "core-js": "^3.35.1",
-    "gatsby": "^5.13.2",
-    "gatsby-plugin-image": "^3.13.1",
+    "core-js": "^3.50.0",
+    "gatsby": "^5.16.1",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-image": "^3.16.0",
     "gatsby-plugin-intl": "^5.10.0",
-    "gatsby-plugin-manifest": "^5.13.1",
-    "gatsby-plugin-offline": "^6.13.1",
-    "gatsby-plugin-react-helmet": "^6.13.1",
-    "gatsby-plugin-sharp": "^5.13.1",
-    "gatsby-plugin-styled-components": "^6.13.1",
-    "gatsby-plugin-typography": "^5.13.1",
-    "gatsby-source-filesystem": "^5.13.1",
-    "gatsby-transformer-sharp": "^5.13.1",
+    "gatsby-plugin-manifest": "^5.16.0",
+    "gatsby-plugin-offline": "^6.16.0",
+    "gatsby-plugin-react-helmet": "^6.16.0",
+    "gatsby-plugin-sharp": "^5.16.0",
+    "gatsby-plugin-styled-components": "^6.16.0",
+    "gatsby-plugin-typography": "^5.16.0",
+    "gatsby-source-filesystem": "^5.16.0",
+    "gatsby-transformer-sharp": "^5.16.0",
     "prop-types": "^15.7.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.23",
-    "styled-components": "^6.1.8"
+    "styled-components": "^6.5.1"
   },
   "devDependencies": {
-    "prettier": "^3.2.4"
+    "prettier": "^3.9.6"
+  },
+  "pnpm": {
+    "overrides": {
+      "@babel/runtime": "7.29.7",
+      "lodash": "4.18.1",
+      "path-to-regexp": "0.1.13",
+      "serialize-javascript": "7.0.5"
+    }
   },
   "keywords": [
     "gatsby"
