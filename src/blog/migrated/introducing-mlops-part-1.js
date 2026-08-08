@@ -44,6 +44,10 @@ export const post = {
     cover: {
         src: coverImage,
         tone: "cyan",
+        lede: {
+            en: "From a notebook experiment to a service that can be released, observed, and maintained.",
+            ja: "Notebook上の実験を、リリース、監視、保守ができるサービスへつなぐための基礎編。",
+        },
         alt: {
             en: "An illustrated machine-learning studio with a notebook and a small production test rig",
             ja: "ノートと小型の本番試験装置が並ぶアニメ背景調の機械学習スタジオ",

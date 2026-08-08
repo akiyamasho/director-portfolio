@@ -5,6 +5,7 @@ import JapaneseLineBreak from "../japanese-line-break";
 
 const PostHeader = ({ post, locale }) => {
     const translation = post.translations[locale] || post.translations.en;
+    const coverLede = post.cover?.lede?.[locale] || translation.summary;
     const date = new Intl.DateTimeFormat(locale === "ja" ? "ja-JP" : "en-US", {
         year: "numeric",
         month: "long",
@@ -23,7 +24,7 @@ const PostHeader = ({ post, locale }) => {
             </h1>
             <div className="blog-meta">{date}</div>
             <p className="blog-lede">
-                <JapaneseLineBreak>{translation.summary}</JapaneseLineBreak>
+                <JapaneseLineBreak>{coverLede}</JapaneseLineBreak>
             </p>
             <div className="blog-tags">
                 {post.tags.map((tag) => (

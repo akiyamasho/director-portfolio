@@ -11,6 +11,10 @@ export const post = {
     media: null,
     cover: {
         src: coverImage,
+        lede: {
+            en: "A hands-on route from a familiar local editor to GPU-backed notebooks running in the cloud.",
+            ja: "使い慣れたローカルエディタから、クラウド上のGPU付きNotebookへ接続する実践手順。",
+        },
         alt: {
             en: "An illustrated late-night workspace overlooking a remote server room",
             ja: "遠隔のサーバールームを望むアニメ背景調の夜の作業机",

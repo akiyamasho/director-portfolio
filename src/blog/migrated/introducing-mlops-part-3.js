@@ -31,6 +31,10 @@ export const post = {
     cover: {
         src: coverImage,
         tone: "violet",
+        lede: {
+            en: "A practical path from one notebook toward repeatable training and production workflows.",
+            ja: "1冊のNotebookから、再現可能な学習と本番運用の流れを段階的につくる実践編。",
+        },
         alt: {
             en: "An illustrated machine-learning studio with a notebook and a small production test rig",
             ja: "ノートと小型の本番試験装置が並ぶアニメ背景調の機械学習スタジオ",

@@ -17,6 +17,10 @@ export const posts = [
         media: directingTheReferenceMedia,
         cover: {
             src: directingTheReferenceMedia.hero,
+            lede: {
+                en: "Six input strategies. One locked sequence. A study of what motion preserves, reinterprets, and loses.",
+                ja: "入力資料だけを変え、同じ尺の中で画面設計と動きの差を見比べた演出記録。",
+            },
             alt: {
                 en: "Animation key visual of a woman blowing toward a glowing heart",
                 ja: "光るハートへ息を吹きかける女性のアニメーション・キービジュアル",

@@ -237,6 +237,7 @@ class Portfolio extends Component {
             },
             {
                 posterImageSrc: ventureEp1p1,
+                posterFit: "contain",
                 title: intl.formatMessage({ id: "projects.venture1p1.title" }),
                 subTitle: intl.formatMessage(
                     {
@@ -421,6 +422,7 @@ class Portfolio extends Component {
             },
             {
                 posterImageSrc: venturePilot,
+                posterFit: "contain",
                 title: intl.formatMessage({ id: "projects.venture.title" }),
                 subTitle: intl.formatMessage(
                     {

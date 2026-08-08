@@ -9,6 +9,10 @@ export const post = {
     media: null,
     cover: {
         src: coverImage,
+        lede: {
+            en: "A field note on evaluation, chunking, and retrieval choices inside a document system built for enterprise scale.",
+            ja: "大規模文書検索を支える評価、分割、検索設計の選択を読み解く技術ノート。",
+        },
         alt: {
             en: "An illustrated archive room with indexed files leading to an open document",
             ja: "索引付きの文書棚から開かれた資料へ続くアニメ背景調の書庫",

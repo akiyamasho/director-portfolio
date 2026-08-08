@@ -15,6 +15,10 @@ export const post = {
     },
     cover: {
         src: coverImage,
+        lede: {
+            en: "A concise archive of assigning a stable public address to an nginx ingress controller on AKS.",
+            ja: "AKS上のnginx ingress controllerに固定のパブリックIPを割り当てるための実装記録。",
+        },
         alt: {
             en: "An illustrated network operations room with a switch and a cable routing plan",
             ja: "スイッチと配線図が置かれたアニメ背景調のネットワーク運用室",

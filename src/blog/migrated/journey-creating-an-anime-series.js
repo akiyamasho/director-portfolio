@@ -17,6 +17,10 @@ export const post = {
     },
     cover: {
         src: coverImage,
+        lede: {
+            en: "Six months of production, five years of source stories, and the difficult work of turning a finished pilot into a viable series.",
+            ja: "6か月かけたパイロット版の完成後、放送、映画祭、企画提案を通じてシリーズ化の条件を探った記録。",
+        },
         alt: {
             en: "The Venture protagonist beside Tokyo's waterfront in the evening light",
             ja: "夕暮れの東京の水辺に立つ『Venture』の主人公",

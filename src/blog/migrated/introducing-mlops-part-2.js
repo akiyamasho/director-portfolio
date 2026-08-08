@@ -36,6 +36,10 @@ export const post = {
     cover: {
         src: coverImage,
         tone: "gold",
+        lede: {
+            en: "What breaks when models, product code, and operations grow without a shared delivery system.",
+            ja: "モデル、プロダクトコード、運用が共通の提供基盤を持たずに成長したとき、何が崩れるのか。",
+        },
         alt: {
             en: "An illustrated machine-learning studio with a notebook and a small production test rig",
             ja: "ノートと小型の本番試験装置が並ぶアニメ背景調の機械学習スタジオ",
