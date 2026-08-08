@@ -11,7 +11,6 @@ import styled from "styled-components";
 import { injectIntl } from "gatsby-plugin-intl";
 
 import Header, { navHeightPx } from "./header";
-import JapaneseTypesetter from "./japanese-typesetter";
 import "./layout.css";
 
 const Content = styled.div`
@@ -21,7 +20,6 @@ const Content = styled.div`
 
 const Layout = ({ children }) => (
     <>
-        <JapaneseTypesetter />
         <Header />
         <main>
             <Content>{children}</Content>

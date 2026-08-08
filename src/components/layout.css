@@ -78,8 +78,13 @@ a {
     word-break: normal;
 }
 
-[lang="ja"].ja-typeset-ready header,
-[lang="ja"].ja-typeset-ready main {
-    overflow-wrap: normal;
-    word-break: keep-all;
+@supports (word-break: auto-phrase) {
+    [lang="ja"] header,
+    [lang="ja"] main {
+        word-break: auto-phrase;
+    }
+
+    [lang="ja"] .ja-phrase-break {
+        word-break: keep-all;
+    }
 }

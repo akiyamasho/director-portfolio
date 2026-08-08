@@ -40,6 +40,11 @@ This file applies to the entire repository.
 -   Every public navigation label, heading, summary, caption, fallback, and
     accessible label must work in English and Japanese.
 -   Use Gatsby Intl links so the current locale is preserved.
+-   Keep the language control as a full document navigation that preserves the
+    current path, query, and hash.
+-   Never rewrite React-owned text nodes after render to add Japanese line-break
+    opportunities. Use `JapaneseLineBreak` for authored display phrases and the
+    native `word-break: auto-phrase` enhancement for general Japanese copy.
 -   A blog post uses one canonical slug with locale-specific title, summary, and
     article body. Add its metadata to `src/blog/posts.js` and ensure both localized
     route variants render successfully.

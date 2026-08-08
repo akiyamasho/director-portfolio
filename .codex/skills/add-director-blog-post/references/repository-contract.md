@@ -10,6 +10,12 @@
 - Each article is a Gatsby page at `src/pages/blog/<slug>.js`.
 - Gatsby Intl emits locale-aware routes. Use the same slug in both locales and
   select copy from `intl.locale`.
+- The shared language control performs a full document navigation while
+  preserving the current route, query, and hash. Keep this behavior as a
+  regression boundary between localized documents.
+- Never mutate React-owned text nodes after render for Japanese wrapping. Use
+  `JapaneseLineBreak` for authored display phrases and CSS `auto-phrase` as a
+  progressive enhancement for general copy.
 - `src/pages/blog.js` maps the registry and therefore lists every registered post
   in English and Japanese automatically.
 

@@ -110,7 +110,9 @@ make build
 When browser QA is available, inspect the EN and JA article and blog index at
 320-360px, 768-800px, and 1280px or wider. Check media loading, captions,
 controls, focus, Japanese wrapping, and horizontal overflow. If browser QA is
-unavailable, state that limitation.
+unavailable, state that limitation. On at least one article route, switch EN to
+JA and JA to EN and confirm the full document navigation preserves the article
+slug, query, and hash without a blank page or client error.
 
 For uploaded objects, require successful public HEAD requests and verify content
 type, length, and cache control. A fallback panel proves resilience, not a
