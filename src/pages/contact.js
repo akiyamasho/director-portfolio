@@ -47,6 +47,14 @@ const Title = styled.h1`
     letter-spacing: -0.025em;
     line-height: 0.86;
     text-transform: uppercase;
+
+    html[lang="ja"] & {
+        max-width: 12em;
+        font-size: clamp(2.65rem, 7vw, 5.5rem);
+        letter-spacing: 0;
+        line-height: 1.08;
+        text-transform: none;
+    }
 `;
 const Note = styled.p`
     max-width: 30rem;

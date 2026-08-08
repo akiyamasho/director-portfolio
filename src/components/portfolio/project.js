@@ -55,6 +55,12 @@ const Title = styled.h2`
     font-weight: 600;
     letter-spacing: -0.015em;
     line-height: 0.98;
+
+    html[lang="ja"] & {
+        font-size: clamp(1.9rem, 3.7vw, 3.7rem);
+        letter-spacing: 0;
+        line-height: 1.08;
+    }
 `;
 const SubTitle = styled.div`
     max-width: 47rem;

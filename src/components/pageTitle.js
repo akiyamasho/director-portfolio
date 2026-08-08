@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import JapaneseLineBreak from "./japanese-line-break";
 import {
     accentColour,
     cinemaRed,
@@ -48,6 +49,19 @@ const Title = styled.h1`
     letter-spacing: -0.025em;
     line-height: 0.84;
     text-transform: uppercase;
+
+    html[lang="ja"] & {
+        font-size: clamp(2.8rem, 8vw, 6rem);
+        letter-spacing: 0;
+        line-height: 1;
+        text-transform: none;
+    }
+
+    @media only screen and (max-width: 480px) {
+        html[lang="ja"] & {
+            font-size: clamp(2.15rem, 11vw, 3rem);
+        }
+    }
 `;
 const SubTitle = styled.div`
     max-width: 42rem;
@@ -59,17 +73,23 @@ const SubTitle = styled.div`
 const PageTitle = ({ kicker, title, subTitle, shouldRenderFromRight }) => (
     <Container shouldRenderFromRight={shouldRenderFromRight}>
         <Content>
-            <Index>{kicker}</Index>
-            <Title>{title}</Title>
-            <SubTitle>{subTitle}</SubTitle>
+            <Index>
+                <JapaneseLineBreak>{kicker}</JapaneseLineBreak>
+            </Index>
+            <Title>
+                <JapaneseLineBreak>{title}</JapaneseLineBreak>
+            </Title>
+            <SubTitle>
+                <JapaneseLineBreak>{subTitle}</JapaneseLineBreak>
+            </SubTitle>
         </Content>
     </Container>
 );
 
 PageTitle.propTypes = {
-    kicker: PropTypes.node.isRequired,
-    title: PropTypes.node.isRequired,
-    subTitle: PropTypes.node.isRequired,
+    kicker: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    subTitle: PropTypes.string.isRequired,
     shouldRenderFromRight: PropTypes.bool,
 };
 PageTitle.defaultProps = { shouldRenderFromRight: false };

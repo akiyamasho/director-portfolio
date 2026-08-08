@@ -65,10 +65,11 @@ a {
 }
 
 .ja-phrase-break {
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
     word-break: keep-all;
 }
 
+[lang="ja"] header,
 [lang="ja"] main {
     line-break: strict;
     overflow-wrap: normal;
@@ -76,8 +77,8 @@ a {
     word-break: normal;
 }
 
-@supports (word-break: auto-phrase) {
-    [lang="ja"] main {
-        word-break: auto-phrase;
-    }
+[lang="ja"].ja-typeset-ready header,
+[lang="ja"].ja-typeset-ready main {
+    overflow-wrap: normal;
+    word-break: keep-all;
 }

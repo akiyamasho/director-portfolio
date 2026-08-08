@@ -70,6 +70,12 @@ export const SectionInnerWrapper = styled.div`
 const SideprojectTable = styled.table`
     width: 100%;
     border-collapse: collapse;
+
+    @media only screen and (max-width: 600px) {
+        thead {
+            display: none;
+        }
+    }
 `;
 
 const SideprojectTableHead = styled.th`
@@ -92,10 +98,20 @@ const SideprojectTbody = styled.tbody`
 
 const SideprojectTableRow = styled.tr`
     padding: 1em 0;
+
+    @media only screen and (max-width: 600px) {
+        display: block;
+        padding: 1.1rem 0;
+    }
 `;
 
 const SideprojectTableData = styled.td`
     padding: 1.15em 0.5em;
+
+    @media only screen and (max-width: 600px) {
+        display: block;
+        padding: 0.25rem 0;
+    }
 `;
 
 const SideprojectSubtitle = styled.div`
@@ -109,6 +125,10 @@ const SideprojectRoleTd = styled(SideprojectTableData)`
     font-family: "IBM Plex Mono", monospace;
     font-size: 0.68em;
     white-space: nowrap;
+
+    @media only screen and (max-width: 600px) {
+        white-space: normal;
+    }
 `;
 
 class Portfolio extends Component {

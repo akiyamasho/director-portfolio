@@ -99,7 +99,9 @@ const Blog = ({ intl }) => {
                                 )}
                             </div>
                             <h2 className="blog-card-title">
-                                <JapaneseLineBreak>
+                                <JapaneseLineBreak
+                                    phrases={translation.titleBreaks}
+                                >
                                     {translation.title}
                                 </JapaneseLineBreak>
                                 {post.externalUrl && (

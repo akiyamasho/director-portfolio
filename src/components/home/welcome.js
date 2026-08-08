@@ -50,6 +50,13 @@ const Name = styled.h1`
     letter-spacing: -0.025em;
     line-height: 0.82;
     text-transform: uppercase;
+
+    html[lang="ja"] & {
+        font-size: clamp(3.5rem, 9vw, 7rem);
+        letter-spacing: 0;
+        line-height: 1;
+        text-transform: none;
+    }
 `;
 
 const Profession = styled.p`

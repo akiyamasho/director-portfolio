@@ -17,7 +17,9 @@ const PostHeader = ({ post, locale }) => {
                 {locale === "ja" ? "制作ノート" : "Production notebook"}
             </div>
             <h1 className="blog-title">
-                <JapaneseLineBreak>{translation.title}</JapaneseLineBreak>
+                <JapaneseLineBreak phrases={translation.titleBreaks}>
+                    {translation.title}
+                </JapaneseLineBreak>
             </h1>
             <div className="blog-meta">{date}</div>
             <p className="blog-lede">

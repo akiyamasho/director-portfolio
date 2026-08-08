@@ -31,10 +31,21 @@ const Title = styled.h2`
 const WorkHistoryTable = styled.table`
     border-collapse: collapse;
     width: 100%;
+
+    @media only screen and (max-width: 600px) {
+        thead {
+            display: none;
+        }
+    }
 `;
 
 const TableData = styled.td`
     padding: 1em 0.5em;
+
+    @media only screen and (max-width: 600px) {
+        display: block;
+        padding: 0.3rem 0;
+    }
 `;
 
 const Company = styled(TextLink)`
@@ -56,7 +67,12 @@ const TableBody = styled.tbody`
     }
 `;
 
-const TableRow = styled.tr``;
+const TableRow = styled.tr`
+    @media only screen and (max-width: 600px) {
+        display: block;
+        padding: 1rem 0;
+    }
+`;
 
 const RoleList = styled.div`
     display: flex;
@@ -194,9 +210,11 @@ class Engineering extends Component {
                     lang={intl.locale}
                 />
                 <PageTitle
-                    kicker={<FormattedMessage id="engineering.kicker" />}
-                    subTitle={<FormattedMessage id="engineering.subTitle" />}
-                    title={<FormattedMessage id="engineering.title" />}
+                    kicker={intl.formatMessage({ id: "engineering.kicker" })}
+                    subTitle={intl.formatMessage({
+                        id: "engineering.subTitle",
+                    })}
+                    title={intl.formatMessage({ id: "engineering.title" })}
                     shouldRenderFromRight
                 />
                 <Container>

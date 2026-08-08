@@ -467,7 +467,7 @@ const JapaneseArticle = ({ media }) => (
                     には国内PRで協力していただきました。二人の仕事と、小さくても作品を待ってくれる観客の反応が、次の制作へ進む理由になりました。当時は次の取り組みがすでに動いており、詳細を伝える短い映像をYouTubeで公開すると予告していました。
                 </p>
                 <p>
-                    本記事は最初に{" "}
+                    本記事は最初に
                     <ExternalLink href={post.canonicalUrl} locale="ja">
                         Medium
                     </ExternalLink>

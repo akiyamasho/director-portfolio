@@ -28,6 +28,13 @@
     text-transform: uppercase;
 }
 
+[lang="ja"] .blog-title {
+    font-size: clamp(2.75rem, 6vw, 5.2rem);
+    letter-spacing: 0;
+    line-height: 1.02;
+    text-transform: none;
+}
+
 .blog-lede {
     max-width: 680px;
     color: #bcbcbc;
@@ -122,12 +129,12 @@
 }
 
 [lang="ja"] .blog-feature-hero .blog-title {
-    font-size: clamp(2.9rem, 6vw, 5.2rem);
+    font-size: clamp(2.6rem, 5vw, 4.4rem);
     line-height: 0.9;
 }
 
 .blog-feature-hero .blog-title .ja-phrase-break {
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
     word-break: keep-all;
 }
 
@@ -240,6 +247,13 @@
     letter-spacing: -0.015em;
     line-height: 0.88;
     text-transform: uppercase;
+}
+
+[lang="ja"] .blog-section-heading h2 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    letter-spacing: 0;
+    line-height: 1.08;
+    text-transform: none;
 }
 
 .blog-section-heading > span {
@@ -421,6 +435,10 @@
     line-height: 1;
 }
 
+[lang="ja"] .blog-body h2 {
+    line-height: 1.2;
+}
+
 .blog-body h3 {
     margin: 2.75rem 0 0.55rem;
     color: #fff;
@@ -452,6 +470,7 @@
 .blog-article-nav a,
 .blog-series-nav a {
     color: var(--blog-gold);
+    overflow-wrap: anywhere;
     text-decoration-color: rgba(226, 184, 75, 0.55);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.22em;
@@ -481,6 +500,9 @@
 }
 
 .blog-body pre {
+    contain: inline-size;
+    width: 100%;
+    min-width: 0;
     max-width: 100%;
     margin: 1.5rem 0 2.25rem;
     padding: 1.2rem;
@@ -496,10 +518,19 @@
 }
 
 .blog-body pre code {
+    display: block;
     padding: 0;
     background: transparent;
     color: inherit;
     font-size: inherit;
+    overflow-wrap: normal;
+    white-space: pre;
+    word-break: normal;
+}
+
+.blog-break-url {
+    overflow-wrap: anywhere;
+    word-break: break-all;
 }
 
 .blog-body blockquote {
@@ -860,6 +891,11 @@
         margin-top: 2.75rem;
     }
 
+    [lang="ja"] .blog-title {
+        font-size: clamp(2.1rem, 9vw, 3rem);
+        line-height: 1.05;
+    }
+
     .blog-feature-hero,
     .blog-feature-hero-copy {
         min-height: 40rem;
@@ -892,7 +928,8 @@
     }
 
     [lang="ja"] .blog-feature-hero .blog-title {
-        font-size: clamp(2.9rem, 12vw, 4.5rem);
+        font-size: clamp(2.25rem, 10vw, 3.25rem);
+        line-height: 1.05;
     }
 
     .blog-facts {
@@ -967,5 +1004,21 @@
 
     .blog-series-pager > div:last-child {
         text-align: left;
+    }
+
+    .blog-notes li {
+        grid-template-columns: 2rem minmax(0, 1fr);
+        gap: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    [lang="ja"] .blog-title {
+        font-size: 1.85rem;
+    }
+
+    [lang="ja"] .blog-body p,
+    [lang="ja"] .blog-body li {
+        font-size: 0.95rem;
     }
 }

@@ -34,6 +34,7 @@ export const post = {
         },
         ja: {
             title: "MLOps入門 第3回：小さなステップで実装する",
+            titleBreaks: ["MLOps入門 第3回：", "小さなステップで", "実装する"],
             summary:
                 "1冊のJupyter Notebookから本番MLシステムへ。ML、開発、運用を横断しながら、小さく検証可能な変更を積み重ねる移行例です。",
         },

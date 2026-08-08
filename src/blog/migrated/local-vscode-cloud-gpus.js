@@ -15,6 +15,14 @@ export const post = {
         },
         ja: {
             title: "Vertex AI NotebooksとVSCode SSHプラグインを使ったローカルVSCodeからのクラウドGPU開発",
+            titleBreaks: [
+                "Vertex AI ",
+                "Notebooksと",
+                "VSCode SSH",
+                "プラグインを使った",
+                "ローカルVSCodeからの",
+                "クラウドGPU開発",
+            ],
             summary:
                 "ローカル環境にGPUがあるような感覚で、深層学習モデルの開発や推論テストを高速に行うための手順です。",
         },

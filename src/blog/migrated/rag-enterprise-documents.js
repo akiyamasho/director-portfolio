@@ -13,6 +13,7 @@ export const post = {
         },
         ja: {
             title: "大規模な社内文書を扱うRAG",
+            titleBreaks: ["大規模な", "社内文書を", "扱うRAG"],
             summary:
                 "Google CloudとGenerali Italiaの講演をもとに、検索と回答を6段階で評価したエンタープライズRAGの検証過程を整理します。",
         },

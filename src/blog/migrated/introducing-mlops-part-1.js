@@ -47,6 +47,12 @@ export const post = {
         },
         ja: {
             title: "MLOps入門 Part 1：モデルを本番環境へつなぐ",
+            titleBreaks: [
+                "MLOps入門 Part 1：",
+                "モデルを",
+                "本番環境へ",
+                "つなぐ",
+            ],
             summary:
                 "機械学習モデルの本番化を、研究からサービス提供と監視までをつなぐML、DEV、PRODの3フェーズで整理します。",
         },

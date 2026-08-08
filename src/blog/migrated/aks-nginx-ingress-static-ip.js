@@ -19,6 +19,11 @@ export const post = {
         },
         ja: {
             title: "Azure Kubernetes Service (AKS) + nginx-ingressで固定IPを使う",
+            titleBreaks: [
+                "Azure Kubernetes Service (AKS) + ",
+                "nginx-ingressで",
+                "固定IPを使う",
+            ],
             summary:
                 "GKEでの経験をもとに、AKS上のnginx-ingressへ固定IPを設定する短い手順をまとめます。",
         },

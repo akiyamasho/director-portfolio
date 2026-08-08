@@ -142,7 +142,11 @@ helm upgrade --install ingress-nginx ingress-nginx \\
         <h2>References</h2>
         <ul>
             <li>
-                <a href={ORIGINAL_REFERENCE} {...externalLinkProps}>
+                <a
+                    className="blog-break-url"
+                    href={ORIGINAL_REFERENCE}
+                    {...externalLinkProps}
+                >
                     https://github.com/helm/charts/issues/14668#issuecomment-516086523
                 </a>
             </li>
@@ -209,7 +213,11 @@ helm upgrade --install ingress-nginx ingress-nginx \\
         <h3>参考資料</h3>
         <ul>
             <li>
-                <a href={ORIGINAL_REFERENCE} {...externalLinkProps}>
+                <a
+                    className="blog-break-url"
+                    href={ORIGINAL_REFERENCE}
+                    {...externalLinkProps}
+                >
                     https://github.com/helm/charts/issues/14668#issuecomment-516086523
                 </a>
             </li>

@@ -33,6 +33,11 @@ const Inner = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (max-width: 360px) {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
 `;
 
 const Mark = styled(Link)`
@@ -53,6 +58,15 @@ const Mark = styled(Link)`
         font-size: 0.56rem;
         font-weight: 500;
         letter-spacing: 0.16em;
+    }
+
+    @media only screen and (max-width: 360px) {
+        font-size: 1rem;
+
+        small {
+            font-size: 0.49rem;
+            letter-spacing: 0.12em;
+        }
     }
 `;
 
@@ -88,6 +102,7 @@ export const NavigationLink = styled.a`
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
+    white-space: nowrap;
 
     &::after {
         position: absolute;

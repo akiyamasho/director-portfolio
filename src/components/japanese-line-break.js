@@ -1,81 +1,36 @@
 import React, { useMemo } from "react";
 import PropTypes from "prop-types";
+import { Parser, jaModel } from "budoux";
 import { useIntl } from "gatsby-plugin-intl";
 
+const parser = new Parser(jaModel);
 const ZWSP = "\u200B";
-const segmenter =
-    typeof Intl !== "undefined" && Intl.Segmenter
-        ? new Intl.Segmenter("ja", { granularity: "word" })
-        : null;
-const closingPunctuation = /^[、。！？：；）」』】〕〉》…]/;
-const openingPunctuation = /^[（「『【〔〈《]/;
-const particles = new Set([
-    "が",
-    "で",
-    "と",
-    "な",
-    "に",
-    "の",
-    "は",
-    "へ",
-    "まで",
-    "も",
-    "や",
-    "より",
-    "を",
-    "から",
-]);
+const japaneseCharacter = "[\\u3040-\\u30ff\\u3400-\\u9fff\\uf900-\\ufaff]";
+const spaceAfterJapanese = new RegExp(
+    `(${japaneseCharacter})[\\t\\n\\r ]+(?=\\S)`,
+    "g"
+);
+const spaceBeforeJapanese = new RegExp(
+    `(\\S)[\\t\\n\\r ]+(?=${japaneseCharacter})`,
+    "g"
+);
 
-export const applyJapaneseLineBreaks = (text) => {
-    if (!segmenter || !text) return text;
+export const normalizeJapaneseWhitespace = (text) =>
+    text.replace(spaceAfterJapanese, "$1").replace(spaceBeforeJapanese, "$1");
 
-    const phrases = [];
-    let current = "";
-    let inBrackets = false;
+export const applyJapaneseLineBreaks = (text) =>
+    text ? parser.parse(normalizeJapaneseWhitespace(text)).join(ZWSP) : text;
 
-    for (const { segment } of segmenter.segment(text)) {
-        if (openingPunctuation.test(segment)) {
-            if (current) phrases.push(current);
-            current = segment;
-            inBrackets = true;
-            continue;
-        }
-
-        if (closingPunctuation.test(segment)) {
-            current += segment;
-            if (segment !== "、" && segment !== "：" && segment !== "；") {
-                phrases.push(current);
-                current = "";
-                inBrackets = false;
-            }
-            continue;
-        }
-
-        const shouldContinue =
-            inBrackets ||
-            particles.has(segment) ||
-            current.length < 5 ||
-            /^\s+$/.test(segment);
-
-        if (!shouldContinue && current) {
-            phrases.push(current);
-            current = segment;
-        } else {
-            current += segment;
-        }
-    }
-
-    if (current) phrases.push(current);
-    return phrases.join(ZWSP);
-};
-
-const JapaneseLineBreak = ({ children, className }) => {
+const JapaneseLineBreak = ({ children, className, phrases }) => {
     const intl = useIntl();
     const text =
         typeof children === "string" ? children : String(children ?? "");
     const phraseText = useMemo(
-        () => (intl.locale === "ja" ? applyJapaneseLineBreaks(text) : text),
-        [intl.locale, text]
+        () =>
+            intl.locale === "ja"
+                ? phrases?.join(ZWSP) || applyJapaneseLineBreaks(text)
+                : text,
+        [intl.locale, phrases, text]
     );
 
     return (
@@ -94,8 +49,9 @@ const JapaneseLineBreak = ({ children, className }) => {
 JapaneseLineBreak.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
+    phrases: PropTypes.arrayOf(PropTypes.string),
 };
 
-JapaneseLineBreak.defaultProps = { className: undefined };
+JapaneseLineBreak.defaultProps = { className: undefined, phrases: undefined };
 
 export default JapaneseLineBreak;
