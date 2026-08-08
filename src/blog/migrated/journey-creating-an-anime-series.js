@@ -22,8 +22,8 @@ export const post = {
             ja: "6か月かけたパイロット版の完成後、放送、映画祭、企画提案を通じてシリーズ化の条件を探った記録。",
         },
         alt: {
-            en: "The Venture protagonist beside Tokyo's waterfront in the evening light",
-            ja: "夕暮れの東京の水辺に立つ『Venture』の主人公",
+            en: "The Venture protagonist looking back beside Tokyo's waterfront",
+            ja: "東京の水辺で振り返る『Venture』の主人公",
         },
     },
     translations: {
