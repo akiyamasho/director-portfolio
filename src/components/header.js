@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { FormattedMessage, Link } from "gatsby-plugin-intl";
 import Language from "./language";
@@ -76,16 +76,22 @@ const LinkContainer = styled.nav`
     gap: clamp(0.9rem, 2.1vw, 2.25rem);
 
     @media only screen and (max-width: 768px) {
-        position: fixed;
-        inset: ${navHeightPx}px 0 0;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
         display: ${(props) => (props.isMobileMenuVisible ? "flex" : "none")};
+        height: calc(100vh - ${navHeightPx}px);
+        height: calc(100dvh - ${navHeightPx}px);
         flex-direction: column;
         align-items: stretch;
         justify-content: flex-start;
         gap: 0;
-        padding: 2rem 1.5rem;
+        padding: 1.25rem 1.5rem max(2rem, env(safe-area-inset-bottom));
         background: #0c0c0c;
         overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
     }
 `;
 
@@ -145,6 +151,23 @@ const Header = () => {
     const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
     const closeMenu = () => setIsMobileMenuVisible(false);
 
+    useEffect(() => {
+        if (!isMobileMenuVisible) return undefined;
+
+        const previousOverflow = document.body.style.overflow;
+        const closeOnEscape = (event) => {
+            if (event.key === "Escape") setIsMobileMenuVisible(false);
+        };
+
+        document.body.style.overflow = "hidden";
+        window.addEventListener("keydown", closeOnEscape);
+
+        return () => {
+            document.body.style.overflow = previousOverflow;
+            window.removeEventListener("keydown", closeOnEscape);
+        };
+    }, [isMobileMenuVisible]);
+
     return (
         <header>
             <Container>
@@ -153,6 +176,7 @@ const Header = () => {
                         秋山 翔<small>SHO AKIYAMA / DIRECTOR</small>
                     </Mark>
                     <Hamburger
+                        aria-controls="primary-navigation"
                         aria-label={
                             isMobileMenuVisible
                                 ? "Close navigation / ナビゲーションを閉じる"
@@ -168,6 +192,7 @@ const Header = () => {
                         </i>
                     </Hamburger>
                     <LinkContainer
+                        id="primary-navigation"
                         aria-label="Primary navigation / メインナビゲーション"
                         isMobileMenuVisible={isMobileMenuVisible}
                     >

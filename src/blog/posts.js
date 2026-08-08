@@ -1,4 +1,6 @@
 import { directingTheReferenceMedia } from "./media";
+import screenplayCover from "../assets/blog-covers/5rps-screenplay-complete.webp";
+import storyboardingCover from "../assets/blog-covers/5rps-storyboarding-in-progress.webp";
 import { post as aksNginxIngressStaticIp } from "./migrated/aks-nginx-ingress-static-ip";
 import { post as introducingMlopsPart1 } from "./migrated/introducing-mlops-part-1";
 import { post as introducingMlopsPart2 } from "./migrated/introducing-mlops-part-2";
@@ -41,6 +43,15 @@ export const posts = [
         externalUrl:
             "https://www.5rps.jp/news/20260726-storyboarding-in-progress",
         externalSource: "5RPS",
+        cover: {
+            src: storyboardingCover,
+            tone: "external",
+            position: "center 38%",
+            alt: {
+                en: "Hand-drawn storyboard panels with framing notes for a city scene",
+                ja: "街のシーンの画角メモが描き込まれた手描きの絵コンテ",
+            },
+        },
         translations: {
             en: {
                 title: "Storyboarding in Progress: From Screenplay Notes to an Animatic",
@@ -59,6 +70,15 @@ export const posts = [
         tags: ["production", "screenplay"],
         externalUrl: "https://www.5rps.jp/news/20260711-screenplay-complete",
         externalSource: "5RPS",
+        cover: {
+            src: screenplayCover,
+            tone: "external",
+            position: "68% center",
+            alt: {
+                en: "The central characters of 5 Requests Per Second in a warmly lit studio",
+                ja: "暖かな光のスタジオに集う『秒速5リクエスト』の主要キャラクター",
+            },
+        },
         translations: {
             en: {
                 title: "5RPS Full Movie Screenplay Completed: The Human Thinks, the Agents Execute",

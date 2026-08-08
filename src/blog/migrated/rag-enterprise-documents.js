@@ -10,8 +10,8 @@ export const post = {
     cover: {
         src: coverImage,
         alt: {
-            en: "An illuminated document selected from a dark archive by fine cyan retrieval paths",
-            ja: "暗い文書庫から細い青の検索経路によって選び出された一枚の文書",
+            en: "An illustrated archive room with indexed files leading to an open document",
+            ja: "索引付きの文書棚から開かれた資料へ続くアニメ背景調の書庫",
         },
     },
     translations: {

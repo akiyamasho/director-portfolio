@@ -12,8 +12,8 @@ export const post = {
     cover: {
         src: coverImage,
         alt: {
-            en: "A dark studio laptop connected by a cyan beam to a remote compute room",
-            ja: "青い光で遠隔の計算機室につながる暗いスタジオのノートパソコン",
+            en: "An illustrated late-night workspace overlooking a remote server room",
+            ja: "遠隔のサーバールームを望むアニメ背景調の夜の作業机",
         },
     },
     translations: {

@@ -16,8 +16,8 @@ export const post = {
     cover: {
         src: coverImage,
         alt: {
-            en: "A cyan route crossing a gateway into a dark modular cluster and ending at one fixed marker",
-            ja: "ゲートから暗いモジュール群へ入り、一つの固定点へ届く青い経路",
+            en: "An illustrated network operations room with a switch and a cable routing plan",
+            ja: "スイッチと配線図が置かれたアニメ背景調のネットワーク運用室",
         },
     },
     translations: {

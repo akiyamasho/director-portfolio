@@ -18,8 +18,8 @@ export const post = {
     cover: {
         src: coverImage,
         alt: {
-            en: "Storyboards, pencils, pitch pages, and a small glowing monitor on an animation director's desk",
-            ja: "アニメーション監督の机に並ぶ絵コンテ、鉛筆、企画書、光る小型モニター",
+            en: "The Venture protagonist beside Tokyo's waterfront in the evening light",
+            ja: "夕暮れの東京の水辺に立つ『Venture』の主人公",
         },
     },
     translations: {

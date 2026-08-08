@@ -88,7 +88,7 @@ const Blog = ({ intl }) => {
                         post.translations[locale] || post.translations.en;
                     const cardContent = (
                         <>
-                            {!post.externalUrl && post.cover && (
+                            {post.cover && (
                                 <div
                                     className="blog-card-cover"
                                     data-cover-tone={post.cover.tone || "cyan"}
@@ -97,6 +97,10 @@ const Blog = ({ intl }) => {
                                         src={post.cover.src}
                                         alt=""
                                         loading="lazy"
+                                        style={{
+                                            objectPosition:
+                                                post.cover.position || "center",
+                                        }}
                                     />
                                 </div>
                             )}
@@ -152,6 +156,7 @@ const Blog = ({ intl }) => {
                         <a
                             className="blog-card"
                             data-external="true"
+                            data-has-cover={Boolean(post.cover)}
                             key={post.slug}
                             href={post.externalUrl}
                             target="_blank"

@@ -37,8 +37,8 @@ export const post = {
         src: coverImage,
         tone: "gold",
         alt: {
-            en: "A tabletop model connecting experiment notes, pipeline stages, and production monitoring",
-            ja: "実験ノート、パイプライン、本番監視をつなぐ卓上模型",
+            en: "An illustrated machine-learning studio with a notebook and a small production test rig",
+            ja: "ノートと小型の本番試験装置が並ぶアニメ背景調の機械学習スタジオ",
         },
     },
     translations: {
