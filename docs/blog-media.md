@@ -25,3 +25,17 @@ art objects are the compressed derivatives explicitly shown in the article's
 source-material section.
 
 The Gatsby app has no application-level Content Security Policy. The post uses native `<video>` elements rather than a remote-image plugin, so `storage.googleapis.com` needs no additional client allowlist.
+
+The article's Remote Startup Senpai production-transfer section adds two
+approved comparison videos and their WebP posters. One compares the rough and
+finished scene, and the other compares the approved source with an unsuccessful
+upscale attempt. Reproduce those four derivatives with:
+
+```sh
+bash scripts/upload-directing-the-reference-l7-media.sh
+```
+
+That script reads the production sources without modifying them, creates only
+the reviewed comparison deliverables in a temporary directory, verifies their
+content hashes, and uploads them beneath the existing article prefix. It does
+not upload prompts, request metadata, source keyframes, or character sheets.

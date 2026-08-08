@@ -9,6 +9,20 @@ export const directingTheReferenceMedia = {
         video: asset("source-overview-b3f5d30a886d.mp4"),
         poster: asset("overview-poster-09s-4fb3a70fbb04.webp"),
     },
+    remoteStartupSenpai: {
+        roughVsFinished: {
+            video: asset("remote-startup-rough-vs-finished-9802f4a9bd08.mp4"),
+            poster: asset(
+                "remote-startup-rough-vs-finished-poster-bc3b2b7afcfc.webp"
+            ),
+        },
+        sourceVsUpscale: {
+            video: asset("remote-startup-source-vs-upscale-c19e5be98b59.mp4"),
+            poster: asset(
+                "remote-startup-source-vs-upscale-poster-812a51f37b5b.webp"
+            ),
+        },
+    },
     originalInputs: [
         { key: "main", src: asset("original-main-a26ae2a99bf9.webp") },
         {

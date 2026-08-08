@@ -1,4 +1,6 @@
 import coverImage from "../../assets/blog-covers/journey-creating-anime-series.webp";
+import listingImage from "../../assets/blog-covers/journey-creating-anime-series-list.webp";
+import pilotPoster from "../../assets/blog-covers/journey-creating-anime-series-poster.webp";
 
 const mediaBase =
     "https://storage.googleapis.com/5rps-film-public-media/20201014_journey-anime-series";
@@ -10,13 +12,14 @@ export const post = {
     canonicalUrl:
         "https://akiyamasho.medium.com/on-the-journey-attempting-to-create-an-anime-series-about-programming-98cdcf619ced",
     media: {
-        hero: `${mediaBase}/pilot-poster-6500d0042f0f.webp`,
+        hero: pilotPoster,
         commercialStoryboard: `${mediaBase}/commercial-storyboard-4f5534e1b809.webp`,
         pitchBible: `${mediaBase}/pitch-bible-ae19d1e810b3.webp`,
         episodeStoryboards: `${mediaBase}/episode-1-2-storyboards-a87521842106.webp`,
     },
     cover: {
         src: coverImage,
+        cardSrc: listingImage,
         lede: {
             en: "Six months of production, five years of source stories, and the difficult work of turning a finished pilot into a viable series.",
             ja: "6か月かけたパイロット版の完成後、放送、映画祭、企画提案を通じてシリーズ化の条件を探った記録。",

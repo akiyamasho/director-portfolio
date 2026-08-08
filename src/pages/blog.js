@@ -94,7 +94,9 @@ const Blog = ({ intl }) => {
                                     data-cover-tone={post.cover.tone || "cyan"}
                                 >
                                     <img
-                                        src={post.cover.src}
+                                        src={
+                                            post.cover.cardSrc || post.cover.src
+                                        }
                                         alt=""
                                         loading="lazy"
                                         style={{

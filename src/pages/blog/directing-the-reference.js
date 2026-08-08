@@ -61,6 +61,32 @@ const Comparison = ({
     </article>
 );
 
+const SourceComparison = ({
+    heading,
+    labels,
+    title,
+    caption,
+    media,
+    fallback,
+}) => (
+    <article className="blog-source-comparison-card">
+        <h3>{heading}</h3>
+        <div className="blog-comparison-key" aria-hidden="true">
+            <span>{labels[0]}</span>
+            <span>{labels[1]}</span>
+        </div>
+        <div className="blog-source-player">
+            <TestVideo
+                src={media.video}
+                poster={media.poster}
+                title={title}
+                fallback={fallback}
+            />
+        </div>
+        <p className="blog-media-caption">{caption}</p>
+    </article>
+);
+
 const ImageStrip = ({ items, labels, fallback }) => (
     <div className="blog-input-strip">
         {items.map((item) => (
@@ -149,20 +175,30 @@ const EnglishArticle = ({ media }) => {
                         references fix the drawing and costumes.
                     </span>
                 </header>
-                <div className="blog-comparison-key" aria-hidden="true">
-                    <span>Top / rough storyboard</span>
-                    <span>Bottom / dense-script result</span>
+                <div className="blog-source-comparison-grid">
+                    <SourceComparison
+                        heading="Brighter / vertical comparison"
+                        labels={[
+                            "Top / rough storyboard",
+                            "Bottom / dense-script result",
+                        ]}
+                        title="Synchronized Brighter rough storyboard and dense-script result"
+                        caption="Both clips share one timeline. The 14.375-second rough holds its last frame until the fifteen-second result ends."
+                        media={media.overview}
+                        fallback="The Brighter source comparison video could not be loaded."
+                    />
+                    <SourceComparison
+                        heading="Remote Startup Senpai / horizontal comparison"
+                        labels={[
+                            "Left / rough storyboard",
+                            "Right / finished result",
+                        ]}
+                        title="Unreleased Remote Startup Senpai rough storyboard and finished result"
+                        caption="An unreleased Remote Startup Senpai clip. Seven rendered keyframes carry the top-down office staging while the original dialogue and performance timing remain on the fifteen-second timeline."
+                        media={media.remoteStartupSenpai.roughVsFinished}
+                        fallback="The Remote Startup Senpai comparison video could not be loaded."
+                    />
                 </div>
-                <TestVideo
-                    src={media.overview.video}
-                    poster={media.overview.poster}
-                    title="Synchronized rough storyboard and dense-script result"
-                    fallback="The source comparison video could not be loaded."
-                />
-                <p className="blog-media-caption">
-                    Both clips share one timeline. The 14.375-second rough holds
-                    its last frame until the fifteen-second result ends.
-                </p>
 
                 <div className="blog-input-heading">
                     <h3>Original character sheets</h3>
@@ -343,6 +379,71 @@ const EnglishArticle = ({ media }) => {
                     </p>
                 </div>
             </section>
+
+            <section className="blog-study-section">
+                <header className="blog-section-heading">
+                    <p>05 / Production transfer</p>
+                    <h2>Apply the split to a new scene</h2>
+                    <span>
+                        An unreleased Remote Startup Senpai clip separates
+                        performance timing from the finished drawing.
+                    </span>
+                </header>
+                <div className="blog-body blog-transfer-copy">
+                    <p>
+                        The office shot is an unreleased clip from Remote
+                        Startup Senpai. Meiko remains offscreen while Hiro moves
+                        from a slumped response to a sudden stand, then walks
+                        out of frame. The rough carried the top-down camera,
+                        room layout, blocking, dialogue timing, and performance.
+                        A character sheet and seven rendered keyframes carried
+                        Hiro’s finished identity and drawing.
+                    </p>
+                    <p>
+                        The authored action ends at 14.5 seconds, leaving the
+                        last half-second clear for the final delivery. After the
+                        silent render, the picture was conformed to exactly
+                        fifteen seconds and the original audio was restored.
+                    </p>
+                </div>
+
+                <div className="blog-input-heading">
+                    <h3>Upscale review</h3>
+                    <span>Source / attempted restoration</span>
+                </div>
+                <div className="blog-comparison-key" aria-hidden="true">
+                    <span>Left / approved source</span>
+                    <span>Right / attempted upscale</span>
+                </div>
+                <TestVideo
+                    src={media.remoteStartupSenpai.sourceVsUpscale.video}
+                    poster={media.remoteStartupSenpai.sourceVsUpscale.poster}
+                    title="Remote Startup Senpai source and attempted upscale comparison"
+                    fallback="The upscale comparison video could not be loaded."
+                />
+                <p className="blog-media-caption">
+                    Both sides use the same subtitles and production audio. The
+                    right side is the attempted restoration result.
+                </p>
+                <div className="blog-body blog-transfer-copy">
+                    <h3>The sharper result changed the acting.</h3>
+                    <p>
+                        The restoration clarified edges and facial detail, but
+                        it did not behave like a neutral upscale. The service
+                        returned 720 × 1280 at 24 fps and 17.375 seconds from a
+                        1080 × 1920, 30 fps, 17.533-second source. Around Hiro’s
+                        comic emotional snap, the mouth shape and intensity
+                        shifted away from the approved performance.
+                    </p>
+                    <p>
+                        Restoring the original audio, conforming the frame rate,
+                        and holding the final frame repaired the delivery
+                        length. Those steps could not restore the altered
+                        acting. The upscaled pass was rejected, and the approved
+                        source remains the production master.
+                    </p>
+                </div>
+            </section>
         </div>
     );
 };
@@ -380,19 +481,27 @@ const JapaneseArticle = ({ media }) => {
                         ラフはショット順とブロッキングを、キャラクター資料は絵柄と衣装を決めます。
                     </span>
                 </header>
-                <div className="blog-comparison-key" aria-hidden="true">
-                    <span>上 / ラフ絵コンテ</span>
-                    <span>下 / 詳細スクリプトの結果</span>
+                <div className="blog-source-comparison-grid">
+                    <SourceComparison
+                        heading="『Brighter』 / 上下比較"
+                        labels={[
+                            "上 / ラフ絵コンテ",
+                            "下 / 詳細スクリプトの結果",
+                        ]}
+                        title="『Brighter』のラフ絵コンテと詳細スクリプト結果の同期比較"
+                        caption="2つの映像を同じタイムラインで再生します。14.375秒のラフは、15秒の出力が終わるまで最終フレームを保持します。"
+                        media={media.overview}
+                        fallback="『Brighter』の比較映像を読み込めませんでした。"
+                    />
+                    <SourceComparison
+                        heading="『Remote Startup Senpai』 / 左右比較"
+                        labels={["左 / ラフ絵コンテ", "右 / 仕上げ結果"]}
+                        title="未公開の『Remote Startup Senpai』ラフ絵コンテと仕上げ結果"
+                        caption="『Remote Startup Senpai』の未公開カットです。7枚の仕上げキーフレームで俯瞰のオフィス設計を受け取り、元音声と芝居のタイミングを15秒の中に残しました。"
+                        media={media.remoteStartupSenpai.roughVsFinished}
+                        fallback="『Remote Startup Senpai』の比較映像を読み込めませんでした。"
+                    />
                 </div>
-                <TestVideo
-                    src={media.overview.video}
-                    poster={media.overview.poster}
-                    title="ラフ絵コンテと詳細スクリプト結果の同期比較"
-                    fallback="入力素材の比較映像を読み込めませんでした。"
-                />
-                <p className="blog-media-caption">
-                    2つの映像を同じタイムラインで再生します。14.375秒のラフは、15秒の出力が終わるまで最終フレームを保持します。
-                </p>
 
                 <div className="blog-input-heading">
                     <h3>元のキャラクター設定</h3>
@@ -552,6 +661,57 @@ const JapaneseArticle = ({ media }) => {
                     <p>
                         Fの疎なカメラ参照を残し、Look
                         4を最終フレームの基準として明確にし、最後の5秒に解決する衣装変化の数を減らします。
+                    </p>
+                </div>
+            </section>
+
+            <section className="blog-study-section">
+                <header className="blog-section-heading">
+                    <p>05 / 実制作への展開</p>
+                    <h2>別のシーンへ分担を移す</h2>
+                    <span>
+                        『Remote Startup
+                        Senpai』の未公開カットで、芝居のタイミングと仕上げの絵を分けて扱いました。
+                    </span>
+                </header>
+                <div className="blog-body blog-transfer-copy">
+                    <p>
+                        このオフィスのショットは『Remote Startup
+                        Senpai』の未公開カットです。Meikoは画面外から話し、Hiroは机に伏せた状態から急に立ち上がり、そのまま画面外へ歩きます。俯瞰カメラ、室内レイアウト、ブロッキング、台詞の間、芝居はラフが担当しました。Hiroの同一性と仕上げの絵は、キャラクター設定と7枚の仕上げキーフレームが担当しています。
+                    </p>
+                    <p>
+                        動作設計は14.5秒で終え、最後の0.5秒を納品処理の余白にしました。無音のレンダー後に映像を正確な15秒へ整え、元音声を戻しています。
+                    </p>
+                </div>
+
+                <div className="blog-input-heading">
+                    <h3>アップスケール検証</h3>
+                    <span>ソース / 修復の試行</span>
+                </div>
+                <div className="blog-comparison-key" aria-hidden="true">
+                    <span>左 / 承認済みソース</span>
+                    <span>右 / アップスケール試行</span>
+                </div>
+                <TestVideo
+                    src={media.remoteStartupSenpai.sourceVsUpscale.video}
+                    poster={media.remoteStartupSenpai.sourceVsUpscale.poster}
+                    title="『Remote Startup Senpai』のソースとアップスケール試行の比較"
+                    fallback="アップスケール比較映像を読み込めませんでした。"
+                />
+                <p className="blog-media-caption">
+                    左右とも同じ字幕と制作音声を使用しています。右側が修復を試した結果です。
+                </p>
+                <div className="blog-body blog-transfer-copy">
+                    <h3>鮮明になっても、芝居は同じではありませんでした。</h3>
+                    <p>
+                        輪郭と顔のディテールは明瞭になりましたが、純粋なアップスケールにはなりませんでした。1080
+                        × 1920、30
+                        fps、17.533秒のソースに対し、返された映像は720 ×
+                        1280、24
+                        fps、17.375秒です。Hiroの感情が急に切り替わる箇所では、口の形と芝居の強さが承認済みの演技から変わりました。
+                    </p>
+                    <p>
+                        元音声を戻し、フレームレートを整え、最終フレームを保持することで納品尺は修正できます。ただし、変化した芝居は戻りません。この結果は採用せず、承認済みのソースを制作マスターとして残しました。
                     </p>
                 </div>
             </section>
