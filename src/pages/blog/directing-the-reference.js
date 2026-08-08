@@ -68,6 +68,7 @@ const SourceComparison = ({
     caption,
     media,
     fallback,
+    orientation,
 }) => (
     <article className="blog-source-comparison-card">
         <h3>{heading}</h3>
@@ -75,7 +76,9 @@ const SourceComparison = ({
             <span>{labels[0]}</span>
             <span>{labels[1]}</span>
         </div>
-        <div className="blog-source-player">
+        <div
+            className={`blog-source-player blog-source-player--${orientation}`}
+        >
             <TestVideo
                 src={media.video}
                 poster={media.poster}
@@ -178,6 +181,7 @@ const EnglishArticle = ({ media }) => {
                 <div className="blog-source-comparison-grid">
                     <SourceComparison
                         heading="Brighter / vertical comparison"
+                        orientation="vertical"
                         labels={[
                             "Top / rough storyboard",
                             "Bottom / dense-script result",
@@ -189,6 +193,7 @@ const EnglishArticle = ({ media }) => {
                     />
                     <SourceComparison
                         heading="Remote Startup Senpai / horizontal comparison"
+                        orientation="horizontal"
                         labels={[
                             "Left / rough storyboard",
                             "Right / finished result",
@@ -484,6 +489,7 @@ const JapaneseArticle = ({ media }) => {
                 <div className="blog-source-comparison-grid">
                     <SourceComparison
                         heading="『Brighter』 / 上下比較"
+                        orientation="vertical"
                         labels={[
                             "上 / ラフ絵コンテ",
                             "下 / 詳細スクリプトの結果",
@@ -495,6 +501,7 @@ const JapaneseArticle = ({ media }) => {
                     />
                     <SourceComparison
                         heading="『Remote Startup Senpai』 / 左右比較"
+                        orientation="horizontal"
                         labels={["左 / ラフ絵コンテ", "右 / 仕上げ結果"]}
                         title="未公開の『Remote Startup Senpai』ラフ絵コンテと仕上げ結果"
                         caption="『Remote Startup Senpai』の未公開カットです。7枚の仕上げキーフレームで俯瞰のオフィス設計を受け取り、元音声と芝居のタイミングを15秒の中に残しました。"

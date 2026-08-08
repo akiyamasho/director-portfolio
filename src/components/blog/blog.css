@@ -339,11 +339,18 @@
 
 .blog-source-player {
     display: grid;
-    aspect-ratio: 16 / 9;
     margin-top: 1rem;
     overflow: hidden;
     place-items: center;
     background: #050708;
+}
+
+.blog-source-player--vertical {
+    aspect-ratio: 8 / 9;
+}
+
+.blog-source-player--horizontal {
+    aspect-ratio: 9 / 8;
 }
 
 .blog-source-player .blog-video,
