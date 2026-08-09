@@ -382,7 +382,7 @@ const Post = ({ intl }) => {
     const content = post.translations[locale] || post.translations.en;
 
     return (
-        <BlogLayout>
+        <BlogLayout article>
             <Helmet>
                 <link rel="canonical" href={post.canonicalUrl} />
             </Helmet>

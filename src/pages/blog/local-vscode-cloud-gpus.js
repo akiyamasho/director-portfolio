@@ -49,7 +49,7 @@ const LocalVscodeCloudGpusPage = ({ intl }) => {
     const translation = post.translations[locale];
 
     return (
-        <BlogLayout>
+        <BlogLayout article>
             <SEO
                 title={translation.title}
                 description={translation.summary}

@@ -69,13 +69,16 @@ const SourceComparison = ({
     media,
     fallback,
     orientation,
+    muted,
 }) => (
     <article className="blog-source-comparison-card">
         <h3>{heading}</h3>
-        <div className="blog-comparison-key" aria-hidden="true">
-            <span>{labels[0]}</span>
-            <span>{labels[1]}</span>
-        </div>
+        {labels ? (
+            <div className="blog-comparison-key" aria-hidden="true">
+                <span>{labels[0]}</span>
+                <span>{labels[1]}</span>
+            </div>
+        ) : null}
         <div
             className={`blog-source-player blog-source-player--${orientation}`}
         >
@@ -84,7 +87,30 @@ const SourceComparison = ({
                 poster={media.poster}
                 title={title}
                 fallback={fallback}
+                muted={muted}
             />
+        </div>
+        <p className="blog-media-caption">{caption}</p>
+    </article>
+);
+
+const ImageComparison = ({
+    heading,
+    labels,
+    media,
+    alt,
+    caption,
+    fallback,
+}) => (
+    <article className="blog-l7-study-card">
+        <h3>{heading}</h3>
+        <div className="blog-comparison-key" aria-hidden="true">
+            <span>{labels[0]}</span>
+            <span>{labels[1]}</span>
+        </div>
+        <div className="blog-l7-study-images">
+            <RemoteImage src={media.input} alt={alt[0]} fallback={fallback} />
+            <RemoteImage src={media.output} alt={alt[1]} fallback={fallback} />
         </div>
         <p className="blog-media-caption">{caption}</p>
     </article>
@@ -109,18 +135,18 @@ const Facts = ({ locale }) => {
     const facts =
         locale === "ja"
             ? [
-                  ["画面", "16:9 / 720p"],
-                  ["尺", "15秒"],
-                  ["モデル", "Seedance 2.0"],
-                  ["音声", "なし"],
-                  ["検証", "A–F"],
+                  ["画面", "16:9 / 9:16"],
+                  ["尺", "15秒 / 17.533秒"],
+                  ["モデル", "Seedance 2.0 / 2.5"],
+                  ["音声", "無音 / 元音声"],
+                  ["検証", "A–F + L7"],
               ]
             : [
-                  ["Format", "16:9 / 720p"],
-                  ["Duration", "15 seconds"],
-                  ["Model", "Seedance 2.0"],
-                  ["Sound", "Silent"],
-                  ["Tests", "A–F"],
+                  ["Format", "16:9 / 9:16"],
+                  ["Duration", "15 / 17.533 seconds"],
+                  ["Models", "Seedance 2.0 / 2.5"],
+                  ["Sound", "Silent / source audio"],
+                  ["Studies", "A–F + L7"],
               ];
     return (
         <dl className="blog-facts">
@@ -192,16 +218,13 @@ const EnglishArticle = ({ media }) => {
                         fallback="The Brighter source comparison video could not be loaded."
                     />
                     <SourceComparison
-                        heading="Remote Startup Senpai / horizontal comparison"
-                        orientation="horizontal"
-                        labels={[
-                            "Left / rough storyboard",
-                            "Right / finished result",
-                        ]}
-                        title="Unreleased Remote Startup Senpai rough storyboard and finished result"
-                        caption="An unreleased Remote Startup Senpai clip. Seven rendered keyframes carry the top-down office staging while the original dialogue and performance timing remain on the fifteen-second timeline."
-                        media={media.remoteStartupSenpai.roughVsFinished}
-                        fallback="The Remote Startup Senpai comparison video could not be loaded."
+                        heading="Remote Startup Senpai / finished clip"
+                        orientation="vertical"
+                        title="Unreleased subtitled Remote Startup Senpai clip"
+                        caption="An unreleased Remote Startup Senpai clip with its approved dialogue, subtitles, and complete 17.533-second delivery."
+                        media={media.remoteStartupSenpai.finished}
+                        fallback="The Remote Startup Senpai clip could not be loaded."
+                        muted={false}
                     />
                 </div>
 
@@ -413,6 +436,119 @@ const EnglishArticle = ({ media }) => {
                 </div>
 
                 <div className="blog-input-heading">
+                    <h3>Character authority</h3>
+                    <span>Visible / offscreen</span>
+                </div>
+                <div className="blog-body blog-compact-copy">
+                    <p>
+                        Hiro is the only visible character. His sheet fixes the
+                        face, tired eyes, loose hair, camel jacket, black shirt,
+                        charcoal trousers, and brown shoes. Meiko’s sheet fixes
+                        the identity of the offscreen speaker, but she never
+                        enters the frame.
+                    </p>
+                </div>
+                <ImageStrip
+                    items={media.remoteStartupSenpai.characters}
+                    labels={{
+                        hiro: "Hiro / visible performance",
+                        meiko: "Meiko / offscreen voice",
+                    }}
+                    fallback="Character design unavailable."
+                />
+
+                <div className="blog-input-heading">
+                    <h3>Four input conditions</h3>
+                    <span>Reference / result</span>
+                </div>
+                <div className="blog-body blog-compact-copy">
+                    <p>
+                        The tests separated motion, timing, composition, and
+                        finished drawing instead of asking one reference to do
+                        everything. A prepared seven-keyframe configuration had
+                        no completed output in the research folder, so it is not
+                        presented as a result below.
+                    </p>
+                </div>
+                <div className="blog-l7-study-grid">
+                    <ImageComparison
+                        heading="Motion blockout and character sheets"
+                        labels={[
+                            "Input / rough performance",
+                            "Output / pass 1",
+                        ]}
+                        media={media.remoteStartupSenpai.studies.motion}
+                        alt={[
+                            "Rough performance frames for Hiro in the office",
+                            "First finished rendering pass across the office scene",
+                        ]}
+                        caption="The moving rough supplied the locked camera, action order, dialogue timing, stand, exit path, and empty-office hold. The design sheets supplied the finished identity."
+                        fallback="Motion-reference study unavailable."
+                    />
+                    <ImageComparison
+                        heading="Seven storyboard beats and original audio"
+                        labels={[
+                            "Input / storyboard",
+                            "Output / no motion video",
+                        ]}
+                        media={media.remoteStartupSenpai.studies.storyboard}
+                        alt={[
+                            "Seven-panel storyboard for the office performance",
+                            "Result frames from the storyboard and audio test",
+                        ]}
+                        caption="Without a motion video, seven broad poses carried composition and progression while the production audio supplied dialogue and lip-sync timing."
+                        fallback="Storyboard study unavailable."
+                    />
+                    <ImageComparison
+                        heading="The same motion brief across two render passes"
+                        labels={["Earlier pass", "Later pass"]}
+                        media={media.remoteStartupSenpai.studies.modelPasses}
+                        alt={[
+                            "Contact sheet from the earlier motion-reference pass",
+                            "Contact sheet from the later motion-reference pass",
+                        ]}
+                        caption="Keeping the motion brief and character authority comparable exposed changes in room design, drawing stability, and the strength of Hiro’s reaction."
+                        fallback="Render-pass comparison unavailable."
+                    />
+                    <ImageComparison
+                        heading="Motion blockout with all chronological keyframes"
+                        labels={[
+                            "Input / polished keys",
+                            "Output / final pass",
+                        ]}
+                        media={media.remoteStartupSenpai.studies.allKeyframes}
+                        alt={[
+                            "Polished chronological keyframes for Hiro's performance",
+                            "Chronological result frames from the final reference pass",
+                        ]}
+                        caption="Fifteen polished keyframes fixed the important performance states while the rough remained responsible for continuous motion, timing, camera, and path."
+                        fallback="Full-keyframe study unavailable."
+                    />
+                </div>
+
+                <div className="blog-input-heading">
+                    <h3>Rough to finished</h3>
+                    <span>One synchronized timeline</span>
+                </div>
+                <div className="blog-comparison-key" aria-hidden="true">
+                    <span>Left / motion blockout</span>
+                    <span>Right / full-keyframe result</span>
+                </div>
+                <TestVideo
+                    src={media.remoteStartupSenpai.roughVsFinished.video}
+                    poster={media.remoteStartupSenpai.roughVsFinished.poster}
+                    title="Remote Startup Senpai rough performance and full-keyframe result"
+                    fallback="The rough-to-finished comparison could not be loaded."
+                    muted={false}
+                />
+                <p className="blog-media-caption">
+                    The result preserves the 8.52-second reaction, exit by
+                    12.96, and the final empty-office hold. The most important
+                    poses are fixed at authored instants rather than treated as
+                    separate shots.
+                </p>
+
+                <div className="blog-input-heading">
                     <h3>Upscale review</h3>
                     <span>Source / attempted restoration</span>
                 </div>
@@ -425,6 +561,7 @@ const EnglishArticle = ({ media }) => {
                     poster={media.remoteStartupSenpai.sourceVsUpscale.poster}
                     title="Remote Startup Senpai source and attempted upscale comparison"
                     fallback="The upscale comparison video could not be loaded."
+                    muted={false}
                 />
                 <p className="blog-media-caption">
                     Both sides use the same subtitles and production audio. The
@@ -500,13 +637,13 @@ const JapaneseArticle = ({ media }) => {
                         fallback="『Brighter』の比較映像を読み込めませんでした。"
                     />
                     <SourceComparison
-                        heading="『Remote Startup Senpai』 / 左右比較"
-                        orientation="horizontal"
-                        labels={["左 / ラフ絵コンテ", "右 / 仕上げ結果"]}
-                        title="未公開の『Remote Startup Senpai』ラフ絵コンテと仕上げ結果"
-                        caption="『Remote Startup Senpai』の未公開カットです。7枚の仕上げキーフレームで俯瞰のオフィス設計を受け取り、元音声と芝居のタイミングを15秒の中に残しました。"
-                        media={media.remoteStartupSenpai.roughVsFinished}
-                        fallback="『Remote Startup Senpai』の比較映像を読み込めませんでした。"
+                        heading="『Remote Startup Senpai』 / 仕上げカット"
+                        orientation="vertical"
+                        title="字幕付きの『Remote Startup Senpai』未公開カット"
+                        caption="承認済みの台詞と字幕を含む『Remote Startup Senpai』の未公開カットです。17.533秒の芝居を最後まで収録しています。"
+                        media={media.remoteStartupSenpai.finished}
+                        fallback="『Remote Startup Senpai』の映像を読み込めませんでした。"
+                        muted={false}
                     />
                 </div>
 
@@ -692,6 +829,99 @@ const JapaneseArticle = ({ media }) => {
                 </div>
 
                 <div className="blog-input-heading">
+                    <h3>キャラクターの基準</h3>
+                    <span>画面内 / 画面外</span>
+                </div>
+                <div className="blog-body blog-compact-copy">
+                    <p>
+                        画面に登場するのはHiroだけです。顔、疲れた目元、無造作な髪、キャメル色のジャケット、黒いシャツ、チャコールのパンツ、茶色の靴はHiroの設定を基準にしました。Meikoの設定は画面外で話す人物の同一性を定めますが、このカットには姿を見せません。
+                    </p>
+                </div>
+                <ImageStrip
+                    items={media.remoteStartupSenpai.characters}
+                    labels={{
+                        hiro: "Hiro / 画面内の芝居",
+                        meiko: "Meiko / 画面外の声",
+                    }}
+                    fallback="キャラクター設定を読み込めませんでした。"
+                />
+
+                <div className="blog-input-heading">
+                    <h3>4つの入力条件</h3>
+                    <span>参照素材 / 結果</span>
+                </div>
+                <div className="blog-body blog-compact-copy">
+                    <p>
+                        1つの資料にすべてを任せず、動き、台詞の間、構図、仕上げの絵を分けて検証しました。7枚のキーフレームを選んだ構成も準備しましたが、調査フォルダ内に完成出力がないため、結果としては掲載していません。
+                    </p>
+                </div>
+                <div className="blog-l7-study-grid">
+                    <ImageComparison
+                        heading="動くラフとキャラクター設定"
+                        labels={["入力 / ラフの芝居", "出力 / 1回目"]}
+                        media={media.remoteStartupSenpai.studies.motion}
+                        alt={[
+                            "オフィスでのHiroの芝居を示すラフフレーム",
+                            "最初の仕上げ結果を並べたコンタクトシート",
+                        ]}
+                        caption="動くラフが固定カメラ、動作順、台詞の間、立ち上がり、退場経路、空のオフィスの止めを担当し、キャラクター設定が仕上げの同一性を担当しました。"
+                        fallback="映像リファレンスの検証資料を読み込めませんでした。"
+                    />
+                    <ImageComparison
+                        heading="7つの絵コンテと元音声"
+                        labels={["入力 / 絵コンテ", "出力 / 動画参照なし"]}
+                        media={media.remoteStartupSenpai.studies.storyboard}
+                        alt={[
+                            "オフィスの芝居を7つに分けた絵コンテ",
+                            "絵コンテと音声から作った結果フレーム",
+                        ]}
+                        caption="動く映像を使わず、7つの大きなポーズで構図と進行を示し、制作音声で台詞とリップシンクのタイミングを与えました。"
+                        fallback="絵コンテ入力の検証資料を読み込めませんでした。"
+                    />
+                    <ImageComparison
+                        heading="同じ動きの設計による2つの仕上げ"
+                        labels={["前の仕上げ", "後の仕上げ"]}
+                        media={media.remoteStartupSenpai.studies.modelPasses}
+                        alt={[
+                            "前の映像参照テストのコンタクトシート",
+                            "後の映像参照テストのコンタクトシート",
+                        ]}
+                        caption="動きの設計とキャラクターの基準を近い条件に保つことで、室内設計、作画の安定性、Hiroのリアクションの強さを比較しました。"
+                        fallback="仕上げ結果の比較を読み込めませんでした。"
+                    />
+                    <ImageComparison
+                        heading="動くラフと時系列の全キーフレーム"
+                        labels={["入力 / 仕上げキー", "出力 / 最終検証"]}
+                        media={media.remoteStartupSenpai.studies.allKeyframes}
+                        alt={[
+                            "Hiroの芝居を時系列に並べた仕上げキーフレーム",
+                            "最終検証の結果を時系列に並べたフレーム",
+                        ]}
+                        caption="15枚の仕上げキーフレームで重要な芝居の状態を固定し、連続した動き、タイミング、カメラ、移動経路はラフに担当させました。"
+                        fallback="全キーフレームの検証資料を読み込めませんでした。"
+                    />
+                </div>
+
+                <div className="blog-input-heading">
+                    <h3>ラフから仕上げへ</h3>
+                    <span>同じタイムラインで同期</span>
+                </div>
+                <div className="blog-comparison-key" aria-hidden="true">
+                    <span>左 / 動きのラフ</span>
+                    <span>右 / 全キーフレームの結果</span>
+                </div>
+                <TestVideo
+                    src={media.remoteStartupSenpai.roughVsFinished.video}
+                    poster={media.remoteStartupSenpai.roughVsFinished.poster}
+                    title="『Remote Startup Senpai』のラフ芝居と全キーフレーム結果"
+                    fallback="ラフと仕上げの比較映像を読み込めませんでした。"
+                    muted={false}
+                />
+                <p className="blog-media-caption">
+                    8.52秒のリアクション、12.96秒までの退場、その後の空のオフィスの止めを残しています。重要なポーズは別々のショットではなく、指定した時刻を通過する芝居の基準として扱いました。
+                </p>
+
+                <div className="blog-input-heading">
                     <h3>アップスケール検証</h3>
                     <span>ソース / 修復の試行</span>
                 </div>
@@ -704,6 +934,7 @@ const JapaneseArticle = ({ media }) => {
                     poster={media.remoteStartupSenpai.sourceVsUpscale.poster}
                     title="『Remote Startup Senpai』のソースとアップスケール試行の比較"
                     fallback="アップスケール比較映像を読み込めませんでした。"
+                    muted={false}
                 />
                 <p className="blog-media-caption">
                     左右とも同じ字幕と制作音声を使用しています。右側が修復を試した結果です。
@@ -731,7 +962,7 @@ const Post = ({ intl }) => {
     const post = getPost("directing-the-reference");
     const content = post.translations[locale] || post.translations.en;
     return (
-        <BlogLayout>
+        <BlogLayout article>
             <SEO
                 title={content.title}
                 lang={locale}

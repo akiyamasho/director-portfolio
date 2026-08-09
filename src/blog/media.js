@@ -10,6 +10,10 @@ export const directingTheReferenceMedia = {
         poster: asset("overview-poster-09s-4fb3a70fbb04.webp"),
     },
     remoteStartupSenpai: {
+        finished: {
+            video: asset("remote-startup-finished-4fa333a8f826.mp4"),
+            poster: asset("remote-startup-finished-poster-0f481eed86fe.webp"),
+        },
         roughVsFinished: {
             video: asset("remote-startup-rough-vs-finished-9802f4a9bd08.mp4"),
             poster: asset(
@@ -21,6 +25,34 @@ export const directingTheReferenceMedia = {
             poster: asset(
                 "remote-startup-source-vs-upscale-poster-812a51f37b5b.webp"
             ),
+        },
+        characters: [
+            {
+                key: "hiro",
+                src: asset("hiro-character-design-a9baddbf7003.webp"),
+            },
+            {
+                key: "meiko",
+                src: asset("meiko-character-design-4d9e3fbba1bc.webp"),
+            },
+        ],
+        studies: {
+            motion: {
+                input: asset("rough-performance-d68322b9f8db.webp"),
+                output: asset("video-output-748a2b4d7aee.webp"),
+            },
+            storyboard: {
+                input: asset("storyboard-f1fbff680a57.webp"),
+                output: asset("storyboard-output-3594ed3132fe.webp"),
+            },
+            modelPasses: {
+                input: asset("video-output-748a2b4d7aee.webp"),
+                output: asset("model-output-3324cd00c316.webp"),
+            },
+            allKeyframes: {
+                input: asset("rendered-keyframes-361220a2c6d2.webp"),
+                output: asset("all-keyframes-output-ac97e6a986cb.webp"),
+            },
         },
     },
     originalInputs: [

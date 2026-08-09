@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const TestVideo = ({ src, poster, title, fallback }) => {
+const TestVideo = ({ src, poster, title, fallback, muted }) => {
     const [isUnavailable, setIsUnavailable] = useState(false);
 
     if (isUnavailable) {
@@ -16,7 +16,7 @@ const TestVideo = ({ src, poster, title, fallback }) => {
         <video
             className="blog-video"
             controls
-            muted
+            muted={muted}
             playsInline
             preload="metadata"
             poster={poster}
@@ -34,6 +34,9 @@ TestVideo.propTypes = {
     poster: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     fallback: PropTypes.string.isRequired,
+    muted: PropTypes.bool,
 };
+
+TestVideo.defaultProps = { muted: true };
 
 export default TestVideo;

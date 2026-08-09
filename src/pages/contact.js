@@ -10,10 +10,10 @@ import {
 } from "../components/shared/colours";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import instagramLogo from "../assets/sns/instagram.png";
-import twitterLogo from "../assets/sns/twitter.png";
-import githubLogo from "../assets/sns/github.png";
-import imdbLogo from "../assets/sns/imdb.png";
+import instagramLogo from "../assets/sns/contact-instagram.png";
+import twitterLogo from "../assets/sns/contact-twitter.png";
+import githubLogo from "../assets/sns/contact-github.png";
+import imdbLogo from "../assets/sns/contact-imdb.png";
 
 const Container = styled.section`
     min-height: calc(100svh - 80px);
@@ -72,23 +72,42 @@ const Email = styled(TextLink)`
 `;
 const Socials = styled.div`
     display: flex;
-    gap: 0.75rem;
+    gap: 0.65rem;
     margin-top: 2.5rem;
 `;
 const SnsLink = styled.a`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 52px;
+    height: 52px;
     border: 1px solid ${themeRule};
+    background: rgba(122, 167, 184, 0.035);
+    transition:
+        border-color 180ms ease,
+        background 180ms ease,
+        transform 180ms ease;
     &:hover {
-        border-color: ${accentColour};
+        border-color: ${projectorLight};
+        background: rgba(122, 167, 184, 0.1);
+        transform: translateY(-2px);
+    }
+    &:focus-visible {
+        outline: 2px solid ${accentColour};
+        outline-offset: 3px;
     }
 `;
 const SnsIcon = styled.img`
-    width: 23px;
-    height: 23px;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 180ms ease;
+
+    ${SnsLink}:hover &,
+    ${SnsLink}:focus-visible & {
+        opacity: 1;
+    }
 `;
 const socialLinks = [
     ["Instagram", "https://www.instagram.com/akiyamasho", instagramLogo],
@@ -96,6 +115,9 @@ const socialLinks = [
     ["GitHub", "https://www.github.com/akiyamasho", githubLogo],
     ["IMDb", "https://www.imdb.com/name/nm11692621", imdbLogo],
 ];
+
+const externalLinkLabel = (name, locale) =>
+    `${name} (${locale === "ja" ? "新しいタブで開く" : "opens in a new tab"})`;
 
 const Contact = ({ intl }) => (
     <Layout>
@@ -123,8 +145,8 @@ const Contact = ({ intl }) => (
                             key={name}
                             href={href}
                             target="_blank"
-                            rel="noreferrer"
-                            aria-label={name}
+                            rel="noopener noreferrer"
+                            aria-label={externalLinkLabel(name, intl.locale)}
                         >
                             <SnsIcon src={logo} alt="" />
                         </SnsLink>
