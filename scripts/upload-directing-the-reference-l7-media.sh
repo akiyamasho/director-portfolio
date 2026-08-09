@@ -27,8 +27,8 @@ test "$(gcloud config get-value project 2>/dev/null)" = "$EXPECTED_PROJECT"
 test -n "$(gcloud auth list --filter=status:ACTIVE --format='value(account)')"
 
 cp \
-  "$SOURCE_ROOT/02_seedance_first15/runs/seedance25_video_all_keyframes/l7_first15_seedance25_rough-vs-render_original-audio.mp4" \
-  "$MEDIA_WORK/rough-vs-finished-source.mp4"
+  "$SOURCE_ROOT/02_seedance_first15/01_motion_reference_first15.mp4" \
+  "$MEDIA_WORK/rough-performance-source.mp4"
 cp "$SOURCE_ROOT/subbed.mp4" "$MEDIA_WORK/upscale-source.mp4"
 cp "$SOURCE_ROOT/upscaled_but_not_best.mp4" "$MEDIA_WORK/upscale-result.mp4"
 
@@ -65,12 +65,14 @@ prepare_image "02_seedance_first15/runs/seedance25/qa_contact_sheet.png" "model-
 prepare_image "02_seedance_first15/runs/seedance25_video_all_keyframes/qa_contact_sheet_chronological.png" "all-keyframes-output.webp"
 
 ffmpeg -hide_banner -loglevel error -y \
-  -i "$MEDIA_WORK/rough-vs-finished-source.mp4" \
-  -vf "fps=30,scale=1080:960:flags=lanczos" \
-  -map 0:v:0 -map 0:a:0 -t 15.000 \
+  -i "$MEDIA_WORK/rough-performance-source.mp4" \
+  -i "$MEDIA_WORK/upscale-source.mp4" \
+  -filter_complex \
+  "[0:v]fps=30,scale=540:960:flags=lanczos,setsar=1,tpad=stop_mode=clone:stop_duration=2.533333[left];[1:v]fps=30,scale=540:960:flags=lanczos,setsar=1[right];[left][right]hstack=inputs=2[v]" \
+  -map "[v]" -map 1:a:0 -t 17.533333 -r 30 \
   -c:v libx264 -crf 21 -preset slow -pix_fmt yuv420p \
-  -c:a copy -movflags +faststart \
-  "$MEDIA_WORK/remote-startup-rough-vs-finished.mp4"
+  -c:a aac -b:a 128k -movflags +faststart \
+  "$MEDIA_WORK/remote-startup-rough-vs-subbed-final.mp4"
 
 ffmpeg -hide_banner -loglevel error -y \
   -i "$MEDIA_WORK/upscale-source.mp4" \
@@ -83,11 +85,11 @@ ffmpeg -hide_banner -loglevel error -y \
   "$MEDIA_WORK/remote-startup-source-vs-upscale.mp4"
 
 ffmpeg -hide_banner -loglevel error -y -ss 9.5 \
-  -i "$MEDIA_WORK/remote-startup-rough-vs-finished.mp4" \
+  -i "$MEDIA_WORK/remote-startup-rough-vs-subbed-final.mp4" \
   -frames:v 1 "$MEDIA_WORK/rough-poster.png"
 cwebp -quiet -q 82 -metadata none \
   "$MEDIA_WORK/rough-poster.png" \
-  -o "$MEDIA_WORK/remote-startup-rough-vs-finished-poster.webp"
+  -o "$MEDIA_WORK/remote-startup-rough-vs-subbed-final-poster.webp"
 
 ffmpeg -hide_banner -loglevel error -y -ss 9.0 \
   -i "$MEDIA_WORK/remote-startup-source-vs-upscale.mp4" \
@@ -110,11 +112,11 @@ verify_hash() {
 }
 
 verify_hash \
-  "$MEDIA_WORK/remote-startup-rough-vs-finished.mp4" \
-  "9802f4a9bd08b35bf8a1dc232a486621e30b493bdf670c7716e59d1ff8766a88"
+  "$MEDIA_WORK/remote-startup-rough-vs-subbed-final.mp4" \
+  "e6ce3241d71f6b51918562a6b52177bea080fa2bfb2839c65510f2ac8666427c"
 verify_hash \
-  "$MEDIA_WORK/remote-startup-rough-vs-finished-poster.webp" \
-  "bc3b2b7afcfc77c7b58899bf9129acdd26d0e0463f2dbce47fa7ebe25dbec26d"
+  "$MEDIA_WORK/remote-startup-rough-vs-subbed-final-poster.webp" \
+  "3c71f6702f5e235fc104d64b9dcd9057db12ade8589baf84d8a106cd2a536dec"
 verify_hash \
   "$MEDIA_WORK/remote-startup-source-vs-upscale.mp4" \
   "c19e5be98b59d0a010b4dd9d9333efa89e402ff453df03cd6292ab158ea380d7"
@@ -149,7 +151,7 @@ verify_hash "$MEDIA_WORK/all-keyframes-output.webp" \
 ffprobe -v error -show_entries \
   stream=codec_name,width,height,r_frame_rate:format=duration,size \
   -of default=noprint_wrappers=1 \
-  "$MEDIA_WORK/remote-startup-rough-vs-finished.mp4"
+  "$MEDIA_WORK/remote-startup-rough-vs-subbed-final.mp4"
 ffprobe -v error -show_entries \
   stream=codec_name,width,height,r_frame_rate:format=duration,size \
   -of default=noprint_wrappers=1 \
@@ -160,12 +162,12 @@ ffprobe -v error -show_entries \
   "$MEDIA_WORK/remote-startup-finished.mp4"
 
 gcloud storage cp \
-  "$MEDIA_WORK/remote-startup-rough-vs-finished.mp4" \
-  "$DESTINATION_ROOT/remote-startup-rough-vs-finished-9802f4a9bd08.mp4" \
+  "$MEDIA_WORK/remote-startup-rough-vs-subbed-final.mp4" \
+  "$DESTINATION_ROOT/remote-startup-rough-vs-subbed-final-e6ce3241d71f.mp4" \
   --cache-control="$CACHE_CONTROL" --content-type="video/mp4"
 gcloud storage cp \
-  "$MEDIA_WORK/remote-startup-rough-vs-finished-poster.webp" \
-  "$DESTINATION_ROOT/remote-startup-rough-vs-finished-poster-bc3b2b7afcfc.webp" \
+  "$MEDIA_WORK/remote-startup-rough-vs-subbed-final-poster.webp" \
+  "$DESTINATION_ROOT/remote-startup-rough-vs-subbed-final-poster-3c71f6702f5e.webp" \
   --cache-control="$CACHE_CONTROL" --content-type="image/webp"
 gcloud storage cp \
   "$MEDIA_WORK/remote-startup-source-vs-upscale.mp4" \
@@ -205,8 +207,8 @@ for asset in "${IMAGE_UPLOADS[@]}"; do
 done
 
 for object_name in \
-  remote-startup-rough-vs-finished-9802f4a9bd08.mp4 \
-  remote-startup-rough-vs-finished-poster-bc3b2b7afcfc.webp \
+  remote-startup-rough-vs-subbed-final-e6ce3241d71f.mp4 \
+  remote-startup-rough-vs-subbed-final-poster-3c71f6702f5e.webp \
   remote-startup-source-vs-upscale-c19e5be98b59.mp4 \
   remote-startup-source-vs-upscale-poster-812a51f37b5b.webp \
   remote-startup-finished-4fa333a8f826.mp4 \

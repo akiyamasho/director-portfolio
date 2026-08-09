@@ -218,12 +218,16 @@ const EnglishArticle = ({ media }) => {
                         fallback="The Brighter source comparison video could not be loaded."
                     />
                     <SourceComparison
-                        heading="Remote Startup Senpai / finished clip"
-                        orientation="vertical"
-                        title="Unreleased subtitled Remote Startup Senpai clip"
-                        caption="An unreleased Remote Startup Senpai clip with its approved dialogue, subtitles, and complete 17.533-second delivery."
-                        media={media.remoteStartupSenpai.finished}
-                        fallback="The Remote Startup Senpai clip could not be loaded."
+                        heading="Remote Startup Senpai / side-by-side comparison"
+                        orientation="horizontal"
+                        labels={[
+                            "Left / rough performance",
+                            "Right / approved subtitled final",
+                        ]}
+                        title="Synchronized Remote Startup Senpai rough performance and approved subtitled final"
+                        caption="The rough and approved final share one timeline. The rough holds its last frame for the final 2.533 seconds while the subtitled cut completes its full 17.533-second delivery."
+                        media={media.remoteStartupSenpai.roughVsFinished}
+                        fallback="The Remote Startup Senpai rough-to-final comparison could not be loaded."
                         muted={false}
                     />
                 </div>
@@ -532,12 +536,12 @@ const EnglishArticle = ({ media }) => {
                 </div>
                 <div className="blog-comparison-key" aria-hidden="true">
                     <span>Left / motion blockout</span>
-                    <span>Right / full-keyframe result</span>
+                    <span>Right / approved subtitled final</span>
                 </div>
                 <TestVideo
                     src={media.remoteStartupSenpai.roughVsFinished.video}
                     poster={media.remoteStartupSenpai.roughVsFinished.poster}
-                    title="Remote Startup Senpai rough performance and full-keyframe result"
+                    title="Remote Startup Senpai rough performance and approved subtitled final"
                     fallback="The rough-to-finished comparison could not be loaded."
                     muted={false}
                 />
@@ -637,12 +641,16 @@ const JapaneseArticle = ({ media }) => {
                         fallback="『Brighter』の比較映像を読み込めませんでした。"
                     />
                     <SourceComparison
-                        heading="『Remote Startup Senpai』 / 仕上げカット"
-                        orientation="vertical"
-                        title="字幕付きの『Remote Startup Senpai』未公開カット"
-                        caption="承認済みの台詞と字幕を含む『Remote Startup Senpai』の未公開カットです。17.533秒の芝居を最後まで収録しています。"
-                        media={media.remoteStartupSenpai.finished}
-                        fallback="『Remote Startup Senpai』の映像を読み込めませんでした。"
+                        heading="『Remote Startup Senpai』 / 左右比較"
+                        orientation="horizontal"
+                        labels={[
+                            "左 / ラフ芝居",
+                            "右 / 字幕付き承認済み仕上げ",
+                        ]}
+                        title="『Remote Startup Senpai』のラフ芝居と字幕付き承認済み仕上げの同期比較"
+                        caption="ラフと承認済み仕上げを同じタイムラインで再生します。ラフは最後の2.533秒で最終フレームを保持し、字幕付き仕上げは17.533秒の芝居を最後まで収録しています。"
+                        media={media.remoteStartupSenpai.roughVsFinished}
+                        fallback="『Remote Startup Senpai』のラフと仕上げの比較映像を読み込めませんでした。"
                         muted={false}
                     />
                 </div>
@@ -908,12 +916,12 @@ const JapaneseArticle = ({ media }) => {
                 </div>
                 <div className="blog-comparison-key" aria-hidden="true">
                     <span>左 / 動きのラフ</span>
-                    <span>右 / 全キーフレームの結果</span>
+                    <span>右 / 字幕付き承認済み仕上げ</span>
                 </div>
                 <TestVideo
                     src={media.remoteStartupSenpai.roughVsFinished.video}
                     poster={media.remoteStartupSenpai.roughVsFinished.poster}
-                    title="『Remote Startup Senpai』のラフ芝居と全キーフレーム結果"
+                    title="『Remote Startup Senpai』のラフ芝居と字幕付き承認済み仕上げ"
                     fallback="ラフと仕上げの比較映像を読み込めませんでした。"
                     muted={false}
                 />

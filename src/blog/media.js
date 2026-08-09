@@ -15,9 +15,11 @@ export const directingTheReferenceMedia = {
             poster: asset("remote-startup-finished-poster-0f481eed86fe.webp"),
         },
         roughVsFinished: {
-            video: asset("remote-startup-rough-vs-finished-9802f4a9bd08.mp4"),
+            video: asset(
+                "remote-startup-rough-vs-subbed-final-e6ce3241d71f.mp4"
+            ),
             poster: asset(
-                "remote-startup-rough-vs-finished-poster-bc3b2b7afcfc.webp"
+                "remote-startup-rough-vs-subbed-final-poster-3c71f6702f5e.webp"
             ),
         },
         sourceVsUpscale: {
