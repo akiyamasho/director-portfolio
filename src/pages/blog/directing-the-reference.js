@@ -101,6 +101,7 @@ const ImageComparison = ({
     alt,
     caption,
     fallback,
+    videoComparison,
 }) => (
     <article className="blog-l7-study-card">
         <h3>{heading}</h3>
@@ -113,6 +114,23 @@ const ImageComparison = ({
             <RemoteImage src={media.output} alt={alt[1]} fallback={fallback} />
         </div>
         <p className="blog-media-caption">{caption}</p>
+        {videoComparison ? (
+            <div className="blog-l7-video-comparison">
+                <h4>{videoComparison.heading}</h4>
+                <div className="blog-comparison-key" aria-hidden="true">
+                    <span>{videoComparison.labels[0]}</span>
+                    <span>{videoComparison.labels[1]}</span>
+                </div>
+                <TestVideo
+                    src={videoComparison.media.video}
+                    poster={videoComparison.media.poster}
+                    title={videoComparison.title}
+                    fallback={videoComparison.fallback}
+                    muted={false}
+                />
+                <p className="blog-media-caption">{videoComparison.caption}</p>
+            </div>
+        ) : null}
     </article>
 );
 
@@ -488,6 +506,20 @@ const EnglishArticle = ({ media }) => {
                         ]}
                         caption="The moving rough supplied the locked camera, action order, dialogue timing, stand, exit path, and empty-office hold. The design sheets supplied the finished identity."
                         fallback="Motion-reference study unavailable."
+                        videoComparison={{
+                            heading: "Motion-reference playback",
+                            labels: [
+                                "Left / input video",
+                                "Right / Seedance 2.0 output",
+                            ],
+                            media: media.remoteStartupSenpai.studies.motion
+                                .video,
+                            title: "Remote Startup Senpai motion-reference input and Seedance 2.0 output",
+                            caption:
+                                "The complete input and output play on one fifteen-second timeline. Audio comes from this test output.",
+                            fallback:
+                                "The Seedance 2.0 input-to-output comparison could not be loaded.",
+                        }}
                     />
                     <ImageComparison
                         heading="Seven storyboard beats and original audio"
@@ -513,6 +545,20 @@ const EnglishArticle = ({ media }) => {
                         ]}
                         caption="Keeping the motion brief and character authority comparable exposed changes in room design, drawing stability, and the strength of Hiro’s reaction."
                         fallback="Render-pass comparison unavailable."
+                        videoComparison={{
+                            heading: "Later motion-reference playback",
+                            labels: [
+                                "Left / input video",
+                                "Right / Seedance 2.5 output",
+                            ],
+                            media: media.remoteStartupSenpai.studies.modelPasses
+                                .video,
+                            title: "Remote Startup Senpai motion-reference input and Seedance 2.5 output",
+                            caption:
+                                "The same motion-reference video is repeated here so the later output can be judged against its actual input rather than against the earlier output alone.",
+                            fallback:
+                                "The Seedance 2.5 input-to-output comparison could not be loaded.",
+                        }}
                     />
                     <ImageComparison
                         heading="Motion blockout with all chronological keyframes"
@@ -527,6 +573,20 @@ const EnglishArticle = ({ media }) => {
                         ]}
                         caption="Fifteen polished keyframes fixed the important performance states while the rough remained responsible for continuous motion, timing, camera, and path."
                         fallback="Full-keyframe study unavailable."
+                        videoComparison={{
+                            heading: "All-keyframes playback",
+                            labels: [
+                                "Left / input video",
+                                "Right / all-keyframes output",
+                            ],
+                            media: media.remoteStartupSenpai.studies
+                                .allKeyframes.video,
+                            title: "Remote Startup Senpai motion-reference input and all-keyframes output",
+                            caption:
+                                "This pass uses the same moving rough together with the chronological finished keyframes. Both sides remain synchronized for the full fifteen seconds.",
+                            fallback:
+                                "The all-keyframes input-to-output comparison could not be loaded.",
+                        }}
                     />
                 </div>
 
@@ -874,6 +934,20 @@ const JapaneseArticle = ({ media }) => {
                         ]}
                         caption="動くラフが固定カメラ、動作順、台詞の間、立ち上がり、退場経路、空のオフィスの止めを担当し、キャラクター設定が仕上げの同一性を担当しました。"
                         fallback="映像リファレンスの検証資料を読み込めませんでした。"
+                        videoComparison={{
+                            heading: "映像リファレンスの再生比較",
+                            labels: [
+                                "左 / 入力映像",
+                                "右 / Seedance 2.0の出力",
+                            ],
+                            media: media.remoteStartupSenpai.studies.motion
+                                .video,
+                            title: "『Remote Startup Senpai』の映像入力とSeedance 2.0の出力",
+                            caption:
+                                "入力と出力を同じ15秒のタイムラインで再生します。音声はこの検証出力に含まれるものです。",
+                            fallback:
+                                "Seedance 2.0の入力と出力の比較映像を読み込めませんでした。",
+                        }}
                     />
                     <ImageComparison
                         heading="7つの絵コンテと元音声"
@@ -896,6 +970,20 @@ const JapaneseArticle = ({ media }) => {
                         ]}
                         caption="動きの設計とキャラクターの基準を近い条件に保つことで、室内設計、作画の安定性、Hiroのリアクションの強さを比較しました。"
                         fallback="仕上げ結果の比較を読み込めませんでした。"
+                        videoComparison={{
+                            heading: "後の映像リファレンス検証",
+                            labels: [
+                                "左 / 入力映像",
+                                "右 / Seedance 2.5の出力",
+                            ],
+                            media: media.remoteStartupSenpai.studies.modelPasses
+                                .video,
+                            title: "『Remote Startup Senpai』の映像入力とSeedance 2.5の出力",
+                            caption:
+                                "後の出力を実際の入力映像と見比べられるよう、同じ映像リファレンスをここでも左側に配置しています。",
+                            fallback:
+                                "Seedance 2.5の入力と出力の比較映像を読み込めませんでした。",
+                        }}
                     />
                     <ImageComparison
                         heading="動くラフと時系列の全キーフレーム"
@@ -907,6 +995,20 @@ const JapaneseArticle = ({ media }) => {
                         ]}
                         caption="15枚の仕上げキーフレームで重要な芝居の状態を固定し、連続した動き、タイミング、カメラ、移動経路はラフに担当させました。"
                         fallback="全キーフレームの検証資料を読み込めませんでした。"
+                        videoComparison={{
+                            heading: "全キーフレーム検証の再生比較",
+                            labels: [
+                                "左 / 入力映像",
+                                "右 / 全キーフレームの出力",
+                            ],
+                            media: media.remoteStartupSenpai.studies
+                                .allKeyframes.video,
+                            title: "『Remote Startup Senpai』の映像入力と全キーフレームの出力",
+                            caption:
+                                "同じ動くラフへ時系列の仕上げキーフレームを加えた検証です。左右を15秒の全編で同期しています。",
+                            fallback:
+                                "全キーフレームの入力と出力の比較映像を読み込めませんでした。",
+                        }}
                     />
                 </div>
 

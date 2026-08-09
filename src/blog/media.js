@@ -42,6 +42,10 @@ export const directingTheReferenceMedia = {
             motion: {
                 input: asset("rough-performance-d68322b9f8db.webp"),
                 output: asset("video-output-748a2b4d7aee.webp"),
+                video: {
+                    video: asset("motion-seedance20-37d1b19176cf.mp4"),
+                    poster: asset("motion-seedance20-poster-46e88743656c.webp"),
+                },
             },
             storyboard: {
                 input: asset("storyboard-f1fbff680a57.webp"),
@@ -50,10 +54,20 @@ export const directingTheReferenceMedia = {
             modelPasses: {
                 input: asset("video-output-748a2b4d7aee.webp"),
                 output: asset("model-output-3324cd00c316.webp"),
+                video: {
+                    video: asset("motion-seedance25-7fc7b0155654.mp4"),
+                    poster: asset("motion-seedance25-poster-59c565da9b43.webp"),
+                },
             },
             allKeyframes: {
                 input: asset("rendered-keyframes-361220a2c6d2.webp"),
                 output: asset("all-keyframes-output-ac97e6a986cb.webp"),
+                video: {
+                    video: asset("motion-all-keyframes-5800ff1e1260.mp4"),
+                    poster: asset(
+                        "motion-all-keyframes-poster-89104a7568af.webp"
+                    ),
+                },
             },
         },
     },

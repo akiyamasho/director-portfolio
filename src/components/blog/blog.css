@@ -477,6 +477,30 @@
     background: #eef0ed;
 }
 
+.blog-l7-video-comparison {
+    margin-top: clamp(1.5rem, 3vw, 2.25rem);
+    padding-top: 1.25rem;
+    border-top: 1px solid #35414a;
+}
+
+.blog-l7-video-comparison h4 {
+    margin: 0;
+    color: var(--blog-gold);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.blog-l7-video-comparison .blog-video {
+    width: 100%;
+    aspect-ratio: 9 / 8;
+    object-fit: contain;
+    background: #050708;
+}
+
 .blog-transfer-copy {
     margin-top: 2rem;
 }

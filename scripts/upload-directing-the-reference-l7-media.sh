@@ -29,6 +29,15 @@ test -n "$(gcloud auth list --filter=status:ACTIVE --format='value(account)')"
 cp \
   "$SOURCE_ROOT/02_seedance_first15/01_motion_reference_first15.mp4" \
   "$MEDIA_WORK/rough-performance-source.mp4"
+cp \
+  "$SOURCE_ROOT/02_seedance_first15/runs/seedance20/l7_first15_seedance20_original-audio.mp4" \
+  "$MEDIA_WORK/seedance20-output.mp4"
+cp \
+  "$SOURCE_ROOT/02_seedance_first15/runs/seedance25/l7_first15_seedance25_original-audio.mp4" \
+  "$MEDIA_WORK/seedance25-output.mp4"
+cp \
+  "$SOURCE_ROOT/02_seedance_first15/runs/seedance25_video_all_keyframes/l7_first15_seedance25_video_all_keyframes_original-audio_15s.mp4" \
+  "$MEDIA_WORK/all-keyframes-output.mp4"
 cp "$SOURCE_ROOT/subbed.mp4" "$MEDIA_WORK/upscale-source.mp4"
 cp "$SOURCE_ROOT/upscaled_but_not_best.mp4" "$MEDIA_WORK/upscale-result.mp4"
 
@@ -74,6 +83,35 @@ ffmpeg -hide_banner -loglevel error -y \
   -c:a aac -b:a 128k -movflags +faststart \
   "$MEDIA_WORK/remote-startup-rough-vs-subbed-final.mp4"
 
+prepare_motion_comparison() {
+  local output_source="$1"
+  local output_name="$2"
+
+  ffmpeg -hide_banner -loglevel error -y \
+    -i "$MEDIA_WORK/rough-performance-source.mp4" \
+    -i "$MEDIA_WORK/$output_source" \
+    -filter_complex \
+    "[0:v]fps=30,scale=540:960:flags=lanczos,setsar=1[left];[1:v]fps=30,scale=540:960:flags=lanczos,setsar=1[right];[left][right]hstack=inputs=2[v]" \
+    -map "[v]" -map 1:a:0 -t 15 -r 30 \
+    -c:v libx264 -crf 21 -preset slow -pix_fmt yuv420p \
+    -c:a aac -b:a 128k -movflags +faststart \
+    "$MEDIA_WORK/$output_name.mp4"
+
+  ffmpeg -hide_banner -loglevel error -y -ss 9.5 \
+    -i "$MEDIA_WORK/$output_name.mp4" \
+    -frames:v 1 "$MEDIA_WORK/$output_name-poster.png"
+  cwebp -quiet -q 82 -metadata none \
+    "$MEDIA_WORK/$output_name-poster.png" \
+    -o "$MEDIA_WORK/$output_name-poster.webp"
+}
+
+prepare_motion_comparison \
+  "seedance20-output.mp4" "motion-seedance20"
+prepare_motion_comparison \
+  "seedance25-output.mp4" "motion-seedance25"
+prepare_motion_comparison \
+  "all-keyframes-output.mp4" "motion-all-keyframes"
+
 ffmpeg -hide_banner -loglevel error -y \
   -i "$MEDIA_WORK/upscale-source.mp4" \
   -i "$MEDIA_WORK/upscale-result.mp4" \
@@ -117,6 +155,18 @@ verify_hash \
 verify_hash \
   "$MEDIA_WORK/remote-startup-rough-vs-subbed-final-poster.webp" \
   "3c71f6702f5e235fc104d64b9dcd9057db12ade8589baf84d8a106cd2a536dec"
+verify_hash "$MEDIA_WORK/motion-seedance20.mp4" \
+  "37d1b19176cfbf8146f9eb0d954a794e89406591af70aac756710169f59ea660"
+verify_hash "$MEDIA_WORK/motion-seedance20-poster.webp" \
+  "46e88743656c857b7a693793a587124a28d6d72ec7c6ff160b51b5c1cea2dafe"
+verify_hash "$MEDIA_WORK/motion-seedance25.mp4" \
+  "7fc7b0155654b83e1038e59a325724a37cc77303cd1fd29c182f50ececdb4262"
+verify_hash "$MEDIA_WORK/motion-seedance25-poster.webp" \
+  "59c565da9b4325f0dd44b476520e544cf22c4b0e9455cc0766a3219b2c0e4c1e"
+verify_hash "$MEDIA_WORK/motion-all-keyframes.mp4" \
+  "5800ff1e1260bf2ddfd25e89bb633b7cb85e6358ffb831d2d29f1b1f9b18181b"
+verify_hash "$MEDIA_WORK/motion-all-keyframes-poster.webp" \
+  "89104a7568af89e1e1dcb36de8ba12bd803719f44c1b0daf28c7c86a646ef492"
 verify_hash \
   "$MEDIA_WORK/remote-startup-source-vs-upscale.mp4" \
   "c19e5be98b59d0a010b4dd9d9333efa89e402ff453df03cd6292ab158ea380d7"
@@ -170,6 +220,30 @@ gcloud storage cp \
   "$DESTINATION_ROOT/remote-startup-rough-vs-subbed-final-poster-3c71f6702f5e.webp" \
   --cache-control="$CACHE_CONTROL" --content-type="image/webp"
 gcloud storage cp \
+  "$MEDIA_WORK/motion-seedance20.mp4" \
+  "$DESTINATION_ROOT/motion-seedance20-37d1b19176cf.mp4" \
+  --cache-control="$CACHE_CONTROL" --content-type="video/mp4"
+gcloud storage cp \
+  "$MEDIA_WORK/motion-seedance20-poster.webp" \
+  "$DESTINATION_ROOT/motion-seedance20-poster-46e88743656c.webp" \
+  --cache-control="$CACHE_CONTROL" --content-type="image/webp"
+gcloud storage cp \
+  "$MEDIA_WORK/motion-seedance25.mp4" \
+  "$DESTINATION_ROOT/motion-seedance25-7fc7b0155654.mp4" \
+  --cache-control="$CACHE_CONTROL" --content-type="video/mp4"
+gcloud storage cp \
+  "$MEDIA_WORK/motion-seedance25-poster.webp" \
+  "$DESTINATION_ROOT/motion-seedance25-poster-59c565da9b43.webp" \
+  --cache-control="$CACHE_CONTROL" --content-type="image/webp"
+gcloud storage cp \
+  "$MEDIA_WORK/motion-all-keyframes.mp4" \
+  "$DESTINATION_ROOT/motion-all-keyframes-5800ff1e1260.mp4" \
+  --cache-control="$CACHE_CONTROL" --content-type="video/mp4"
+gcloud storage cp \
+  "$MEDIA_WORK/motion-all-keyframes-poster.webp" \
+  "$DESTINATION_ROOT/motion-all-keyframes-poster-89104a7568af.webp" \
+  --cache-control="$CACHE_CONTROL" --content-type="image/webp"
+gcloud storage cp \
   "$MEDIA_WORK/remote-startup-source-vs-upscale.mp4" \
   "$DESTINATION_ROOT/remote-startup-source-vs-upscale-c19e5be98b59.mp4" \
   --cache-control="$CACHE_CONTROL" --content-type="video/mp4"
@@ -209,6 +283,12 @@ done
 for object_name in \
   remote-startup-rough-vs-subbed-final-e6ce3241d71f.mp4 \
   remote-startup-rough-vs-subbed-final-poster-3c71f6702f5e.webp \
+  motion-seedance20-37d1b19176cf.mp4 \
+  motion-seedance20-poster-46e88743656c.webp \
+  motion-seedance25-7fc7b0155654.mp4 \
+  motion-seedance25-poster-59c565da9b43.webp \
+  motion-all-keyframes-5800ff1e1260.mp4 \
+  motion-all-keyframes-poster-89104a7568af.webp \
   remote-startup-source-vs-upscale-c19e5be98b59.mp4 \
   remote-startup-source-vs-upscale-poster-812a51f37b5b.webp \
   remote-startup-finished-4fa333a8f826.mp4 \
