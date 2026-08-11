@@ -124,3 +124,76 @@ export const directingTheReferenceMedia = {
 };
 
 export const publicMediaBaseUrl = bucketUrl;
+
+const directingReferencePart2Prefix = "20260811_directing-the-reference-part-2";
+const directingReferencePart2Asset = (name) =>
+    `${bucketUrl}/${directingReferencePart2Prefix}/${name}`;
+
+export const directingTheReferencePart2Media = {
+    heroImage: directingReferencePart2Asset("hero-landscape-2097e9844ea2.webp"),
+    comparison: {
+        video: directingReferencePart2Asset(
+            "hero-rough-over-attempt7-d2abccadc805.mp4"
+        ),
+        poster: directingReferencePart2Asset("hero-poster-e86d0233cdac.webp"),
+    },
+    attempts: {
+        2: {
+            video: directingReferencePart2Asset(
+                "attempt2-output-e881f67b824b.mp4"
+            ),
+            poster: directingReferencePart2Asset(
+                "attempt2-poster-116cd975f2f4.webp"
+            ),
+        },
+        4: {
+            video: directingReferencePart2Asset(
+                "attempt4-output-c72b96dbc470.mp4"
+            ),
+            poster: directingReferencePart2Asset(
+                "attempt4-poster-f1592cf6ea20.webp"
+            ),
+        },
+        5: {
+            video: directingReferencePart2Asset(
+                "attempt5-output-67d36e23f9f4.mp4"
+            ),
+            poster: directingReferencePart2Asset(
+                "attempt5-poster-c516e5aa3d47.webp"
+            ),
+        },
+        6: {
+            video: directingReferencePart2Asset(
+                "attempt6-output-082182ad43cd.mp4"
+            ),
+            poster: directingReferencePart2Asset(
+                "attempt6-poster-9a86a009c420.webp"
+            ),
+        },
+        7: {
+            video: directingReferencePart2Asset(
+                "attempt7-output-d135ccbbe48e.mp4"
+            ),
+            poster: directingReferencePart2Asset(
+                "attempt7-poster-8dcfc6dcb361.webp"
+            ),
+        },
+    },
+    manualKeys: directingReferencePart2Asset(
+        "manual-rough-vs-productionized-ed593dbeefb4.webp"
+    ),
+    attempt1: directingReferencePart2Asset(
+        "attempt1-keyframes-189e86a215b0.webp"
+    ),
+    finalReferences: directingReferencePart2Asset(
+        "attempt7-reference-set-3498f11e1b9b.webp"
+    ),
+    evolution: {
+        video: directingReferencePart2Asset(
+            "attempt-evolution-grid-2b433559b78c.mp4"
+        ),
+        poster: directingReferencePart2Asset(
+            "attempt-evolution-poster-67f814a6033f.webp"
+        ),
+    },
+};

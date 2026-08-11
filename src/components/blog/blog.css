@@ -287,6 +287,112 @@
     margin-top: 3.5rem;
 }
 
+.blog-stack-key {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.65rem 0;
+    border-top: 1px solid #35414a;
+    border-bottom: 1px solid #35414a;
+    color: var(--blog-gold);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.blog-part2-opening-comparison {
+    width: min(100%, 58rem);
+    margin: 3rem auto 0;
+}
+
+.blog-part2-opening-video .blog-video,
+.blog-part2-opening-video.blog-media-fallback {
+    width: 100%;
+    aspect-ratio: 160 / 181;
+    margin-top: 1rem;
+    object-fit: contain;
+    background: #050708;
+}
+
+.blog-attempt-video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.blog-attempt-video-card {
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid #2c373e;
+    background: #0a0e11;
+}
+
+.blog-attempt-video-card header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0.8rem;
+}
+
+.blog-attempt-video-card h3,
+.blog-attempt-video-card p {
+    margin: 0;
+}
+
+.blog-attempt-video-card header span {
+    color: var(--blog-gold);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.blog-attempt-video-card p {
+    padding-top: 0.85rem;
+    color: #aeb8be;
+    font-size: 0.86rem;
+    line-height: 1.6;
+}
+
+.blog-attempt-video .blog-video,
+.blog-attempt-video.blog-media-fallback {
+    width: 100%;
+    aspect-ratio: 54 / 31;
+    object-fit: contain;
+    background: #050708;
+}
+
+.blog-part2-study-image,
+.blog-part2-tall-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    background: #eef2f4;
+}
+
+.blog-part2-wide-video .blog-video,
+.blog-part2-wide-video.blog-media-fallback {
+    width: 100%;
+    aspect-ratio: 8 / 3;
+    object-fit: contain;
+    background: #050708;
+}
+
+.blog-attempt-table {
+    max-width: none;
+    margin-top: 2rem;
+}
+
+.blog-attempt-table table {
+    margin: 0;
+}
+
 .blog-facts {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1150,6 +1256,16 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .blog-attempt-video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-stack-key {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
     .blog-feature-hero--article,
     .blog-feature-hero--article .blog-feature-hero-copy {
         min-height: clamp(32rem, 145vw, 40rem);

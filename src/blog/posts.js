@@ -1,4 +1,7 @@
-import { directingTheReferenceMedia } from "./media";
+import {
+    directingTheReferenceMedia,
+    directingTheReferencePart2Media,
+} from "./media";
 import screenplayCover from "../assets/blog-covers/5rps-screenplay-complete.webp";
 import storyboardingCover from "../assets/blog-covers/5rps-storyboarding-in-progress.webp";
 import { post as aksNginxIngressStaticIp } from "./migrated/aks-nginx-ingress-static-ip";
@@ -10,6 +13,38 @@ import { post as localVscodeCloudGpus } from "./migrated/local-vscode-cloud-gpus
 import { post as ragEnterpriseDocuments } from "./migrated/rag-enterprise-documents";
 
 export const posts = [
+    {
+        slug: "directing-the-reference-part-2",
+        date: "2026-08-11",
+        tags: ["production", "storyboarding", "animatic"],
+        media: directingTheReferencePart2Media,
+        cover: directingTheReferencePart2Media.heroImage
+            ? {
+                  src: directingTheReferencePart2Media.heroImage,
+                  lede: {
+                      en: "Seven passes on one hand-directed shot. The strongest result came from fewer visual anchors and more precise direction.",
+                      ja: "手で演出した1カットを7回検証。仕上げアンカーを減らし、演出指示を細かくすることで動きが改善しました。",
+                  },
+                  alt: {
+                      en: "Anime-film portrait of a brown-haired woman framed on the right beside an open white dream space",
+                      ja: "白い夢の空間を左に残し、右側に配置された茶色い髪の女性のアニメ映画風ポートレート",
+                  },
+              }
+            : undefined,
+        translations: {
+            en: {
+                title: "Directing the Reference, Part 2",
+                summary:
+                    "Seven passes on one five-second shot, from manually selected millisecond keyframes to a sparse production reference package.",
+            },
+            ja: {
+                title: "リファレンスを演出する Part 2",
+                titleBreaks: ["リファレンスを", "演出する", "Part 2"],
+                summary:
+                    "5秒の1カットを7回検証し、ミリ秒単位で選んだキーから、疎な仕上げリファレンス構成へ整理した制作記録。",
+            },
+        },
+    },
     {
         slug: "directing-the-reference",
         date: "2026-08-08",
@@ -28,13 +63,13 @@ export const posts = [
         },
         translations: {
             en: {
-                title: "Directing the Reference",
+                title: "Directing the Reference, Part 1",
                 summary:
                     "The same fifteen-second scene, directed six ways by changing its shot plan, character references, and timing input.",
             },
             ja: {
-                title: "リファレンスを演出する",
-                titleBreaks: ["リファレンスを", "演出する"],
+                title: "リファレンスを演出する Part 1",
+                titleBreaks: ["リファレンスを", "演出する", "Part 1"],
                 summary:
                     "同じ15秒のシーンに対し、ショット設計、キャラクター資料、タイミングの入力方法を変えた6つの演出検証。",
             },

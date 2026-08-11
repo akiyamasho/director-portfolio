@@ -33,6 +33,29 @@ const mlopsEntries = {
     ],
 };
 
+const directingReferenceEntries = {
+    en: [
+        {
+            slug: "directing-the-reference",
+            label: "Testing how references divide authority",
+        },
+        {
+            slug: "directing-the-reference-part-2",
+            label: "Productionizing fewer, stronger inputs",
+        },
+    ],
+    ja: [
+        {
+            slug: "directing-the-reference",
+            label: "リファレンスの役割を分けて検証する",
+        },
+        {
+            slug: "directing-the-reference-part-2",
+            label: "少数の強い入力へ仕上げる",
+        },
+    ],
+};
+
 export const ArticleContents = ({ items, locale }) => (
     <nav
         className="blog-article-nav"
@@ -130,5 +153,81 @@ export const MLOpsSeriesNavigation = ({ currentPart, locale }) => {
 
 MLOpsSeriesNavigation.propTypes = {
     currentPart: PropTypes.oneOf([1, 2, 3]).isRequired,
+    locale: PropTypes.string.isRequired,
+};
+
+export const DirectingReferenceSeriesNavigation = ({ currentPart, locale }) => {
+    const language = locale === "ja" ? "ja" : "en";
+    const entries = directingReferenceEntries[language];
+    const previous = entries[currentPart - 2];
+    const next = entries[currentPart];
+
+    return (
+        <nav
+            className="blog-series-nav"
+            aria-labelledby="directing-reference-series-title"
+        >
+            <div className="blog-series-heading">
+                <p
+                    className="blog-nav-label"
+                    id="directing-reference-series-title"
+                >
+                    {language === "ja"
+                        ? "全2回の制作記録"
+                        : "Two-part production study"}
+                </p>
+                <span>
+                    {language === "ja"
+                        ? `Part ${currentPart} / 2`
+                        : `Part ${currentPart} / 2`}
+                </span>
+            </div>
+            <ol className="blog-series-overview">
+                {entries.map((entry, index) => {
+                    const part = index + 1;
+                    return (
+                        <li key={entry.slug}>
+                            <span aria-hidden="true">0{part}</span>
+                            {part === currentPart ? (
+                                <strong aria-current="page">
+                                    {entry.label}
+                                </strong>
+                            ) : (
+                                <Link to={`/blog/${entry.slug}`}>
+                                    {entry.label}
+                                </Link>
+                            )}
+                        </li>
+                    );
+                })}
+            </ol>
+            <div className="blog-series-pager">
+                <div>
+                    {previous && (
+                        <Link to={`/blog/${previous.slug}`}>
+                            <span>
+                                {language === "ja" ? "前の記事" : "Previous"}
+                            </span>
+                            {previous.label}
+                        </Link>
+                    )}
+                </div>
+                <div>
+                    {next && (
+                        <Link to={`/blog/${next.slug}`}>
+                            <span>
+                                {language === "ja" ? "次の記事" : "Next"}
+                            </span>
+                            {next.label}
+                        </Link>
+                    )}
+                </div>
+            </div>
+        </nav>
+    );
+};
+
+DirectingReferenceSeriesNavigation.propTypes = {
+    currentPart: PropTypes.oneOf([1, 2]).isRequired,
     locale: PropTypes.string.isRequired,
 };

@@ -3,6 +3,7 @@ import { injectIntl } from "gatsby-plugin-intl";
 import BlogLayout from "../../components/blog/blog-layout";
 import PostHeader from "../../components/blog/post-header";
 import TestVideo from "../../components/blog/test-video";
+import { DirectingReferenceSeriesNavigation } from "../../components/blog/article-navigation";
 import SEO from "../../components/seo";
 import { getPost } from "../../blog/posts";
 
@@ -1108,6 +1109,10 @@ const Post = ({ intl }) => {
                     <PostHeader post={post} locale={locale} />
                 </div>
             </section>
+            <DirectingReferenceSeriesNavigation
+                currentPart={1}
+                locale={locale}
+            />
             {locale === "ja" ? (
                 <JapaneseArticle media={post.media} />
             ) : (
