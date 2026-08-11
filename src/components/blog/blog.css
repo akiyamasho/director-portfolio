@@ -776,6 +776,73 @@
     letter-spacing: 0.03em;
 }
 
+.blog-body h2,
+.blog-body h3,
+.blog-body h4,
+.blog-study-section h2,
+.blog-study-section h3,
+.blog-study-section h4 {
+    scroll-margin-top: 6rem;
+}
+
+.blog-heading-tools {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.1rem;
+    margin-inline-start: 0.35rem;
+    vertical-align: 0.12em;
+}
+
+.blog-heading-permalink,
+.blog-heading-copy {
+    display: inline-grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    place-items: center;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #788790;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.82rem;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+    transition:
+        color 160ms ease,
+        background-color 160ms ease;
+}
+
+.blog-heading-copy {
+    cursor: pointer;
+}
+
+.blog-heading-permalink:hover,
+.blog-heading-copy:hover,
+.blog-heading-copy[data-copied="true"] {
+    background: #151d22;
+    color: var(--blog-gold);
+}
+
+.blog-heading-permalink:focus-visible,
+.blog-heading-copy:focus-visible {
+    outline: 2px solid var(--blog-gold);
+    outline-offset: 1px;
+}
+
+.blog-section-link-status {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
 .blog-body p,
 .blog-body li {
     color: #c6c6c6;

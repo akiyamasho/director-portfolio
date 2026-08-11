@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import ArticleSectionLinks from "./article-section-links";
 import ArticleShare from "./article-share";
 import Layout from "../layout";
 import "./blog.css";
@@ -9,7 +10,12 @@ const BlogLayout = ({ children, article }) => (
     <Layout>
         <div className="blog-shell">
             {children}
-            {article ? <ArticleShare /> : null}
+            {article ? (
+                <>
+                    <ArticleSectionLinks />
+                    <ArticleShare />
+                </>
+            ) : null}
         </div>
     </Layout>
 );
