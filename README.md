@@ -77,7 +77,6 @@ The production preview is available at <http://localhost:9000>. Override it with
 - `src/blog/posts.js`: journal registry, localized metadata, tags, and external entries
 - `src/blog/media.js`: public journal media URLs
 - `src/components/blog/`: shared journal presentation
-- `.codex/skills/add-director-blog-post/`: reviewed workflow and references for journal work
 - `docs/blog-media.md`: public GCS media procedure
 - `firebase.json`: Firebase Hosting output and security headers
 
@@ -85,7 +84,7 @@ The production preview is available at <http://localhost:9000>. Override it with
 
 Every public navigation label, heading, summary, caption, fallback, and accessible label must work in English and Japanese. Use Gatsby Intl links so the current locale is preserved, and test switching in both directions on the same route.
 
-For a new journal article or a substantial article revision, follow the project-local [`add-director-blog-post` skill](./.codex/skills/add-director-blog-post/SKILL.md). Public GCS media must be approved, compressed, content-hashed, and uploaded with the documented immutable cache headers. Do not commit original production media, prompts, credentials, or private source material.
+For a new journal article or a substantial article revision, invoke the globally installed `$add-director-blog-post` skill. Public GCS media must be approved, compressed, content-hashed, and uploaded with the documented immutable cache headers. Do not commit original production media, prompts, credentials, or private source material.
 
 ## Validation
 

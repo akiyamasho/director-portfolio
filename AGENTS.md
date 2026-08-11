@@ -24,7 +24,7 @@ This file applies to the entire repository.
 -   Blog registry and media URLs: `src/blog/posts.js` and `src/blog/media.js`.
 -   Blog UI: `src/components/blog/`; blog routes: `src/pages/blog.js` and
     `src/pages/blog/`.
--   Public blog media procedure: `docs/blog-media.md` and the project-local
+-   Public blog media procedure: `docs/blog-media.md` and the globally installed
     `$add-director-blog-post` skill.
 
 ## Commands

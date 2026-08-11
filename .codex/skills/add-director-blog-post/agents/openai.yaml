@@ -1,4 +1,0 @@
-interface:
-  display_name: "Add Director Blog Post"
-  short_description: "Turn production material into an EN/JA post"
-  default_prompt: "Use $add-director-blog-post to organize this folder and draft a bilingual director journal post."
