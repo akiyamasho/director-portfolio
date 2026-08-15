@@ -103,14 +103,12 @@ const EnglishArticle = ({ media }) => (
 
         <div className="blog-body blog-opening">
             <p className="blog-lead">
-                An approaching deadline has moved this shorter film to the front
-                of my schedule for the next few weeks. Production on 5 Requests
-                Per Second is temporarily paused while I focus on finishing it.
-                I have not dropped the larger film, and I will return to it after
-                this deadline. The unnamed short began as a way to face a fear
-                that had become difficult to separate from my work: what happens
-                when the craft on which you built your identity changes faster
-                than your sense of self can follow?
+                With a deadline approaching, I am focusing on this unnamed short
+                for the next few weeks before returning to 5 Requests Per Second.
+                The film began as a way to face a fear that had become difficult
+                to separate from my work: what happens when the craft on which
+                you built your identity changes faster than your sense of self
+                can follow?
             </p>
             <p>
                 The short is a psychological drama set inside contemporary
@@ -333,6 +331,15 @@ const EnglishArticle = ({ media }) => (
                     problem rather than an invitation to invent the scene.
                 </p>
                 <p>
+                    The more these tools enter the workflow, the more I need
+                    actual drawing ability. Moving quickly and accurately from an
+                    idea to a visual strengthens every later hybrid stage, and the
+                    gain compounds almost exponentially. When the first camera,
+                    perspective, pose, or acting idea is vague, everything
+                    downstream stalls. This production has pushed me to review
+                    fundamentals and spend more time warming up before I draw.
+                </p>
+                <p>
                     Without that preparation, using a model feels like playing
                     gacha: pull again, hope the random result feels exciting, and
                     accept that the next shot may belong to another film. The
@@ -446,11 +453,10 @@ const EnglishArticle = ({ media }) => (
                     the looseness of the first drawings.
                 </p>
                 <p>
-                    5 Requests Per Second remains the larger film and will resume
-                    after this deadline. The schedule change is practical, not a
-                    decision to replace it with this project. For these few weeks,
-                    the immediate job is to bring the shorter film to its deadline
-                    without losing the direction established in the drawings.
+                    After the deadline, I will return to 5 Requests Per Second.
+                    Until then, the immediate job is to bring this short to its
+                    deadline without losing the direction established in the
+                    drawings.
                 </p>
             </div>
         </section>
@@ -463,7 +469,7 @@ const JapaneseArticle = ({ media }) => (
 
         <div className="blog-body blog-opening">
             <p className="blog-lead">
-                締切が迫っているため、今後数週間はこの短編を優先しています。その間、『秒速5リクエスト』の制作は一時的に止まりますが、中止したわけではありません。締切を終えたら戻ります。まだ題名を公表していないこの短編の出発点は、映画監督としての自分の仕事と切り離せなくなった恐れでした。人生をかけて身につけた技術が、自分の感覚より速く変化する時、作り手のアイデンティティはどうなるのか。
+                締切が迫っているため、今後数週間は題名未公表の短編に集中し、その後『秒速5リクエスト』へ戻ります。この短編の出発点は、映画監督としての自分の仕事と切り離せなくなった恐れでした。人生をかけて身につけた技術が、自分の感覚より速く変化する時、作り手のアイデンティティはどうなるのか。
             </p>
             <p>
                 現代のアニメーション制作を舞台にした心理ドラマです。手描きの設計、キャラクターと空間の設定、画像モデルと映像モデル、リポジトリを軸にしたローカル制作システムを組み合わせています。どちらかの方法が勝ったという話ではありません。異なる手段を、ひとつの演出へ従わせる試みです。
@@ -602,6 +608,9 @@ const JapaneseArticle = ({ media }) => (
                     各ボードには手動ノートを付けています。キャラクター、プロップ、ロケーションの基準を指定し、芝居、画面方向、背景の構造、カメラ、変えてはいけない要素を書きます。画像モデルへ場面の発明を頼むのではなく、演出済みの問題を渡します。
                 </p>
                 <p>
+                    こうした道具が工程に増えるほど、実際に描く力が必要になると感じています。アイデアから画へ移す速度と精度が上がるほど、その効果はハイブリッド工程の後段でほとんど指数的に積み重なります。最初のカメラ、パース、ポーズ、芝居が曖昧なら、その先の作業がすべて止まります。今回の制作を通して、基礎を見直し、描く前のウォームアップに以前より時間を使うようになりました。
+                </p>
+                <p>
                     この準備がないままモデルを使うと、ガチャに近くなります。もう一度引き、偶然おもしろい絵が出ることを願い、次のショットが別の映画に見えることを受け入れる。手描きと絵コンテが作者の判断を持ち、モデルが仕上げ、光、素材、動きを検証する時、ハイブリッドな構成が制作として機能し始めます。
                 </p>
             </div>
@@ -677,7 +686,7 @@ const JapaneseArticle = ({ media }) => (
                     短編は制作中です。次はScene 1の残りのボードと映像パッケージを完成させ、最初の絵の緩さを失わないまま、同じ権限設計をスタジオのシーンへ移します。
                 </p>
                 <p>
-                    『秒速5リクエスト』は引き続き大きな本編で、この締切を終えたら制作へ戻ります。今回の予定変更は実務上の判断であり、この短編へ置き換えるためではありません。今の数週間は、手描きで決めた演出を失わず、短編を締切へ届けることに集中します。
+                    締切後は『秒速5リクエスト』の制作へ戻ります。それまでは、手描きで決めた演出を失わず、この短編を締切へ届けることに集中します。
                 </p>
             </div>
         </section>
