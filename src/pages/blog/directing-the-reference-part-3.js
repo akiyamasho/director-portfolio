@@ -103,8 +103,11 @@ const EnglishArticle = ({ media }) => (
 
         <div className="blog-body blog-opening">
             <p className="blog-lead">
-                I have paused production on 5 Requests Per Second for a few weeks
-                to make a much shorter film. TEGAKI began as a way to face a fear
+                An approaching deadline has moved this shorter film to the front
+                of my schedule for the next few weeks. Production on 5 Requests
+                Per Second is temporarily paused while I focus on finishing it.
+                I have not dropped the larger film, and I will return to it after
+                this deadline. The unnamed short began as a way to face a fear
                 that had become difficult to separate from my work: what happens
                 when the craft on which you built your identity changes faster
                 than your sense of self can follow?
@@ -125,9 +128,56 @@ const EnglishArticle = ({ media }) => (
             </p>
         </div>
 
+        <section className="blog-study-section" id="first-moving-shot">
+            <SectionHeading
+                number="00 / Video production"
+                title="The drawings and the model move together"
+                note="Three hand-drawn opening boards became the first fifteen-second finished moving sequence."
+            />
+            <VideoFigure
+                media={media.openingShot}
+                title="Opening shots one through three"
+                fallback="The first finished moving sequence could not be loaded."
+                caption="The first finished moving sequence: three shots, 15.07 seconds, with sound. Nozomi’s turn and the empty chair at the cut carry the performance planned in the boards."
+                className="blog-part3-main-video"
+            />
+            <div className="blog-body blog-transfer-copy">
+                <p>
+                    The first moving result covers Nozomi waking at her desk after
+                    an all-nighter. Three manual drawings establish the wide,
+                    overhead close view, and reverse. They also establish what the
+                    finished video must not change: the desk, curtain, paper,
+                    drawing tablet, phone, wine, her sleeping posture, and the
+                    emotional delay before she looks up.
+                </p>
+                <p>
+                    The video model contributes continuous movement, light,
+                    texture, and the small physical transitions between those
+                    directed states. The output lasts 15.07 seconds at 24 frames
+                    per second. It is not proof that the process has been solved.
+                    It is proof that the manual layer can remain legible after the
+                    production layer arrives.
+                </p>
+                <p>
+                    That is the hybrid I am trying to build. Traditional practice
+                    supplies the judgment needed to design, diagnose, and revise.
+                    The models expand what a very small production can attempt.
+                    Neither becomes meaningful by being placed above the other.
+                    They become useful when they share one authored film.
+                </p>
+            </div>
+            <Figure
+                src={media.openingManualBoards}
+                alt="Three hand-drawn opening boards showing Nozomi asleep from a wide view, overhead, and from behind"
+                fallback="The three hand-drawn opening boards could not be loaded."
+                caption="The three manual boards used beside the finished sequence. Their line economy leaves room for production finish while keeping camera, staging, prop continuity, and performance under human direction."
+                className="blog-part3-image blog-part3-image--paper"
+            />
+        </section>
+
         <section className="blog-study-section" id="voice-to-premise">
             <SectionHeading
-                number="00 / Development"
+                number="01 / Development"
                 title="Voice first, premise second"
                 note="The film started in conversation, before a screenplay or shot list existed."
             />
@@ -150,7 +200,7 @@ const EnglishArticle = ({ media }) => (
                     machine or a friend becoming the villain.
                 </p>
                 <p>
-                    That distinction shaped everything. TEGAKI does not condemn
+                    That distinction shaped everything. The short does not condemn
                     artificial intelligence or place traditional artists on a
                     moral pedestal. It stays close to an artist who has spent
                     years learning anatomy, perspective, acting,
@@ -160,7 +210,7 @@ const EnglishArticle = ({ media }) => (
                     be cruel. Both can be true in the same film.
                 </p>
             </div>
-            <div className="blog-part3-logline" aria-label="TEGAKI logline">
+            <div className="blog-part3-logline" aria-label="Short-film logline">
                 <span>Logline</span>
                 <p>
                     An overworked animator tries to remain human in an AI world.
@@ -178,7 +228,7 @@ const EnglishArticle = ({ media }) => (
 
         <section className="blog-study-section" id="story-and-cast">
             <SectionHeading
-                number="01 / Story architecture"
+                number="02 / Story architecture"
                 title="Build pressure without a villain"
                 note="A near-five-minute screenplay, thirteen scenes, and a cast designed around one person’s interior conflict."
             />
@@ -213,14 +263,14 @@ const EnglishArticle = ({ media }) => (
             <Figure
                 src={media.cast}
                 alt="Seven production character sheets arranged as a cast grid, with turnarounds, faces, clothing, and expression studies"
-                fallback="The TEGAKI cast design grid could not be loaded."
+                fallback="The cast design grid could not be loaded."
                 caption="The production cast sheets lock silhouette, proportion, hair, costume, expression range, and props. Nozomi and Mia remain the center. The supporting cast gives the pressure around Nozomi a human face without expanding the film into a miniature feature."
             />
         </section>
 
         <section className="blog-study-section" id="world-and-space">
             <SectionHeading
-                number="02 / World building"
+                number="03 / World building"
                 title="Make one room stay one room"
                 note="Character packages, prop authority, floor plans, reusable environments, and a ten-angle studio sweep."
             />
@@ -254,7 +304,7 @@ const EnglishArticle = ({ media }) => (
             </div>
             <VideoFigure
                 media={media.studioSweep}
-                title="Ten-angle sweep through the TEGAKI animation studio"
+                title="Ten-angle sweep through the animation studio"
                 fallback="The animation-studio location sweep could not be loaded."
                 caption="A fifteen-second sweep through the animation studio. The angles were divided into reusable plates so shot planning could refer to stable desks, windows, shelves, equipment, and sightlines."
                 className="blog-part3-wide-video"
@@ -263,7 +313,7 @@ const EnglishArticle = ({ media }) => (
 
         <section className="blog-study-section" id="manual-storyboards">
             <SectionHeading
-                number="03 / Manual direction"
+                number="04 / Manual direction"
                 title="Draw the film before generating it"
                 note="Forty-seven rough boards and thirty-two shot-note files now cover Scene 1."
             />
@@ -302,7 +352,7 @@ const EnglishArticle = ({ media }) => (
 
         <section className="blog-study-section" id="experiments-and-output">
             <SectionHeading
-                number="04 / Image experiments"
+                number="05 / Image experiments"
                 title="Keep the failures visible"
                 note="Every retained bedroom-demo output remains reviewable, including rejected anatomy, staging, and continuity passes."
             />
@@ -348,7 +398,7 @@ const EnglishArticle = ({ media }) => (
 
         <section className="blog-study-section" id="production-website">
             <SectionHeading
-                number="05 / Production desk"
+                number="06 / Production desk"
                 title="Give the decisions somewhere to live"
                 note="A local website connects the repository tree, boards, manual notes, references, prompts, and generation status."
             />
@@ -380,56 +430,9 @@ const EnglishArticle = ({ media }) => (
             </div>
             <Figure
                 src={media.productionWebsite}
-                alt="Dark green TEGAKI production website showing storyboard shot cards and a shot-detail editor with manual notes"
-                fallback="The TEGAKI production-website screenshot could not be loaded."
+                alt="Dark green production website showing storyboard shot cards and a shot-detail editor with manual notes"
+                fallback="The production-website screenshot could not be loaded."
                 caption="The production desk on August 16. Scene 1’s bedroom-demo boards sit beside Shot 14’s manual note editor, with character, prop, and location authority tags available in the same view."
-            />
-        </section>
-
-        <section className="blog-study-section" id="first-moving-shot">
-            <SectionHeading
-                number="06 / Video production"
-                title="The drawings and the model move together"
-                note="Three hand-drawn opening boards became the first fifteen-second finished moving sequence."
-            />
-            <div className="blog-body blog-transfer-copy">
-                <p>
-                    The first moving result covers Nozomi waking at her desk after
-                    an all-nighter. Three manual drawings establish the wide,
-                    overhead close view, and reverse. They also establish what the
-                    finished video must not change: the desk, curtain, paper,
-                    drawing tablet, phone, wine, her sleeping posture, and the
-                    emotional delay before she looks up.
-                </p>
-                <p>
-                    The video model contributes continuous movement, light,
-                    texture, and the small physical transitions between those
-                    directed states. The output lasts 15.07 seconds at 24 frames
-                    per second. It is not proof that the process has been solved.
-                    It is proof that the manual layer can remain legible after the
-                    production layer arrives.
-                </p>
-                <p>
-                    That is the hybrid I am trying to build. Traditional practice
-                    supplies the judgment needed to design, diagnose, and revise.
-                    The models expand what a very small production can attempt.
-                    Neither becomes meaningful by being placed above the other.
-                    They become useful when they share one authored film.
-                </p>
-            </div>
-            <VideoFigure
-                media={media.openingShot}
-                title="TEGAKI opening shots one through three"
-                fallback="The first finished TEGAKI moving sequence could not be loaded."
-                caption="The first finished moving sequence: three shots, 15.07 seconds, with sound. Nozomi’s turn and the empty chair at the cut carry the performance planned in the boards."
-                className="blog-part3-main-video"
-            />
-            <Figure
-                src={media.openingManualBoards}
-                alt="Three hand-drawn opening boards showing Nozomi asleep from a wide view, overhead, and from behind"
-                fallback="The three hand-drawn opening boards could not be loaded."
-                caption="The three manual boards used beside the finished sequence. Their line economy leaves room for production finish while keeping camera, staging, prop continuity, and performance under human direction."
-                className="blog-part3-image blog-part3-image--paper"
             />
         </section>
 
@@ -437,17 +440,17 @@ const EnglishArticle = ({ media }) => (
             <SectionHeading number="07 / Next" title="Continue the short" />
             <div className="blog-body blog-transfer-copy">
                 <p>
-                    TEGAKI is still in production. The next pass is to finish the
+                    The short is still in production. The next pass is to finish the
                     remaining Scene 1 boards and video packages, then carry the
                     same authority system into the studio scenes without losing
                     the looseness of the first drawings.
                 </p>
                 <p>
-                    5 Requests Per Second remains the larger film. This short is a
-                    deliberate pause of a few weeks, not a replacement for it. I
-                    needed a smaller canvas in which the question behind these
-                    tools could become a story before returning to the longer
-                    production.
+                    5 Requests Per Second remains the larger film and will resume
+                    after this deadline. The schedule change is practical, not a
+                    decision to replace it with this project. For these few weeks,
+                    the immediate job is to bring the shorter film to its deadline
+                    without losing the direction established in the drawings.
                 </p>
             </div>
         </section>
@@ -460,7 +463,7 @@ const JapaneseArticle = ({ media }) => (
 
         <div className="blog-body blog-opening">
             <p className="blog-lead">
-                『秒速5リクエスト』の制作を数週間だけ止め、短編『TEGAKI』をつくっています。出発点は、映画監督としての自分の仕事と切り離せなくなった恐れでした。人生をかけて身につけた技術が、自分の感覚より速く変化する時、作り手のアイデンティティはどうなるのか。
+                締切が迫っているため、今後数週間はこの短編を優先しています。その間、『秒速5リクエスト』の制作は一時的に止まりますが、中止したわけではありません。締切を終えたら戻ります。まだ題名を公表していないこの短編の出発点は、映画監督としての自分の仕事と切り離せなくなった恐れでした。人生をかけて身につけた技術が、自分の感覚より速く変化する時、作り手のアイデンティティはどうなるのか。
             </p>
             <p>
                 現代のアニメーション制作を舞台にした心理ドラマです。手描きの設計、キャラクターと空間の設定、画像モデルと映像モデル、リポジトリを軸にしたローカル制作システムを組み合わせています。どちらかの方法が勝ったという話ではありません。異なる手段を、ひとつの演出へ従わせる試みです。
@@ -470,9 +473,42 @@ const JapaneseArticle = ({ media }) => (
             </p>
         </div>
 
+        <section className="blog-study-section" id="first-moving-shot">
+            <SectionHeading
+                number="00 / 映像制作"
+                title="手描きとモデルを一緒に動かす"
+                note="3枚の手描き冒頭ボードから、最初の15秒の完成映像をつくりました。"
+            />
+            <VideoFigure
+                media={media.openingShot}
+                title="冒頭Shot 1〜3"
+                fallback="最初の完成映像を読み込めませんでした。"
+                caption="最初の完成映像。3ショット、15.07秒、音あり。ノゾミが振り向く芝居と、カット後に残る空の椅子は、絵コンテで決めた演技を引き継いでいます。"
+                className="blog-part3-main-video"
+            />
+            <div className="blog-body blog-transfer-copy">
+                <p>
+                    最初の映像は、徹夜明けに机で目を覚ますノゾミです。3枚の手描きは、ワイド、俯瞰の寄り、リバースを決めています。机、カーテン、紙、液晶タブレット、スマートフォン、ワイン、眠る姿勢、顔を上げる前の間も、この段階で変えてはいけない要素として決めました。
+                </p>
+                <p>
+                    映像モデルは、その間の連続した動き、光、質感、小さな身体の移行を担います。出力は24 fps、15.07秒です。工程が解決した証明ではありません。制作の仕上げが入った後も、手動の演出が読めることを確認した最初の結果です。
+                </p>
+                <p>
+                    私が目指すハイブリッドはこの関係です。従来の制作知識が、設計、診断、修正の判断を支える。モデルは、小さな体制で試せる画面の幅を広げる。どちらかを上に置くことで意味が生まれるのではなく、同じひとつの映画へ参加することで役割が生まれます。
+                </p>
+            </div>
+            <Figure
+                src={media.openingManualBoards}
+                alt="ワイド、俯瞰、後方から眠るノゾミを描いた3枚の手描き冒頭ボード"
+                fallback="3枚の手描き冒頭ボードを読み込めませんでした。"
+                caption="完成映像と組み合わせた3枚の手描きボード。線を少なくすることで仕上げの余地を残しながら、カメラ、配置、プロップの連続性、芝居を人の演出下に置きます。"
+                className="blog-part3-image blog-part3-image--paper"
+            />
+        </section>
+
         <section className="blog-study-section" id="voice-to-premise">
             <SectionHeading
-                number="00 / 企画開発"
+                number="01 / 企画開発"
                 title="プロットより先に話す"
                 note="脚本もショットリストもない状態で、映画は対話から始まりました。"
             />
@@ -484,10 +520,10 @@ const JapaneseArticle = ({ media }) => (
                     私は、映画監督としてAIに置き換えられる恐れと、その道具を使って映画をつくる矛盾について話しました。その恐れを隠したり説教へ変えたりせず、柔道のように力の向きを変えて使いたかった。主人公は疲弊したアニメーターになり、中心の傷はアイデンティティの喪失になりました。機械や友人を悪役にするより、自分を裏切った感覚の方が深く痛むと考えました。
                 </p>
                 <p>
-                    この違いが作品全体を決めています。『TEGAKI』はAIを否定せず、伝統的な作り手を道徳的に上へ置きません。人体、パース、芝居、撮影、作画、絵、物語を長年学んだ人のすぐそばに立ち、その時間の経済的な意味が揺れ始める瞬間を見ます。技術に興奮する気持ちと、コミュニティから受ける圧力は同時に存在できます。
+                    この違いが作品全体を決めています。この短編はAIを否定せず、伝統的な作り手を道徳的に上へ置きません。人体、パース、芝居、撮影、作画、絵、物語を長年学んだ人のすぐそばに立ち、その時間の経済的な意味が揺れ始める瞬間を見ます。技術に興奮する気持ちと、コミュニティから受ける圧力は同時に存在できます。
                 </p>
             </div>
-            <div className="blog-part3-logline" aria-label="『TEGAKI』ログライン">
+            <div className="blog-part3-logline" aria-label="短編のログライン">
                 <span>Logline</span>
                 <p>
                     AIの世界で、人間のままでいようとする疲弊したアニメーター。自分が本物だと証明しようとするたびに、彼女の一部が消えていく。
@@ -503,7 +539,7 @@ const JapaneseArticle = ({ media }) => (
 
         <section className="blog-study-section" id="story-and-cast">
             <SectionHeading
-                number="01 / 物語設計"
+                number="02 / 物語設計"
                 title="悪役を置かずに圧力をつくる"
                 note="5分弱の脚本、13シーン、ひとりの内面を中心にしたキャスト。"
             />
@@ -520,15 +556,15 @@ const JapaneseArticle = ({ media }) => (
             </div>
             <Figure
                 src={media.cast}
-                alt="全身、顔、衣装、表情をまとめた7人の『TEGAKI』制作キャラクター設定"
-                fallback="『TEGAKI』キャスト設定を読み込めませんでした。"
+                alt="全身、顔、衣装、表情をまとめた7人の制作キャラクター設定"
+                fallback="キャスト設定を読み込めませんでした。"
                 caption="制作キャスト設定では、シルエット、比率、髪、衣装、表情、持ち物を固定します。中心はノゾミとミア。脇役は短編を長編の縮小版にせず、ノゾミを囲む圧力へ人の顔を与えます。"
             />
         </section>
 
         <section className="blog-study-section" id="world-and-space">
             <SectionHeading
-                number="02 / 世界設計"
+                number="03 / 世界設計"
                 title="同じ部屋を同じ部屋のまま使う"
                 note="キャラクター、プロップ、平面図、再利用できる環境、スタジオ10アングル。"
             />
@@ -545,7 +581,7 @@ const JapaneseArticle = ({ media }) => (
             </div>
             <VideoFigure
                 media={media.studioSweep}
-                title="『TEGAKI』アニメーションスタジオ10アングル"
+                title="アニメーションスタジオ10アングル"
                 fallback="アニメーションスタジオのアングル映像を読み込めませんでした。"
                 caption="15秒のスタジオ・スイープ。机、窓、棚、機材、視線の関係を固定した10枚のプレートへ分け、ショット設計で再利用します。"
                 className="blog-part3-wide-video"
@@ -554,7 +590,7 @@ const JapaneseArticle = ({ media }) => (
 
         <section className="blog-study-section" id="manual-storyboards">
             <SectionHeading
-                number="03 / 手動の演出"
+                number="04 / 手動の演出"
                 title="生成前に映画を描く"
                 note="Scene 1には47枚のラフと32本のショット手動ノートがあります。"
             />
@@ -580,7 +616,7 @@ const JapaneseArticle = ({ media }) => (
 
         <section className="blog-study-section" id="experiments-and-output">
             <SectionHeading
-                number="04 / 画像検証"
+                number="05 / 画像検証"
                 title="失敗を見える場所へ残す"
                 note="人体、配置、連続性で不採用になったものを含め、ベッドルーム・デモの保存出力を確認できます。"
             />
@@ -611,7 +647,7 @@ const JapaneseArticle = ({ media }) => (
 
         <section className="blog-study-section" id="production-website">
             <SectionHeading
-                number="05 / 制作デスク"
+                number="06 / 制作デスク"
                 title="判断の置き場所をつくる"
                 note="ローカルサイトで、リポジトリ、ボード、手動ノート、リファレンス、プロンプト、生成状況を接続します。"
             />
@@ -628,42 +664,9 @@ const JapaneseArticle = ({ media }) => (
             </div>
             <Figure
                 src={media.productionWebsite}
-                alt="絵コンテのショットカードと手動ノート編集画面を表示した深緑色の『TEGAKI』制作サイト"
-                fallback="『TEGAKI』制作サイトのスクリーンショットを読み込めませんでした。"
+                alt="絵コンテのショットカードと手動ノート編集画面を表示した深緑色の制作サイト"
+                fallback="制作サイトのスクリーンショットを読み込めませんでした。"
                 caption="8月16日の制作デスク。Scene 1のベッドルーム・デモとShot 14の手動ノートを同じ画面で開き、人物、プロップ、場所の基準タグを付けられます。"
-            />
-        </section>
-
-        <section className="blog-study-section" id="first-moving-shot">
-            <SectionHeading
-                number="06 / 映像制作"
-                title="手描きとモデルを一緒に動かす"
-                note="3枚の手描き冒頭ボードから、最初の15秒の完成映像をつくりました。"
-            />
-            <div className="blog-body blog-transfer-copy">
-                <p>
-                    最初の映像は、徹夜明けに机で目を覚ますノゾミです。3枚の手描きは、ワイド、俯瞰の寄り、リバースを決めています。机、カーテン、紙、液晶タブレット、スマートフォン、ワイン、眠る姿勢、顔を上げる前の間も、この段階で変えてはいけない要素として決めました。
-                </p>
-                <p>
-                    映像モデルは、その間の連続した動き、光、質感、小さな身体の移行を担います。出力は24 fps、15.07秒です。工程が解決した証明ではありません。制作の仕上げが入った後も、手動の演出が読めることを確認した最初の結果です。
-                </p>
-                <p>
-                    私が目指すハイブリッドはこの関係です。従来の制作知識が、設計、診断、修正の判断を支える。モデルは、小さな体制で試せる画面の幅を広げる。どちらかを上に置くことで意味が生まれるのではなく、同じひとつの映画へ参加することで役割が生まれます。
-                </p>
-            </div>
-            <VideoFigure
-                media={media.openingShot}
-                title="『TEGAKI』冒頭Shot 1〜3"
-                fallback="『TEGAKI』最初の完成映像を読み込めませんでした。"
-                caption="最初の完成映像。3ショット、15.07秒、音あり。ノゾミが振り向く芝居と、カット後に残る空の椅子は、絵コンテで決めた演技を引き継いでいます。"
-                className="blog-part3-main-video"
-            />
-            <Figure
-                src={media.openingManualBoards}
-                alt="ワイド、俯瞰、後方から眠るノゾミを描いた3枚の手描き冒頭ボード"
-                fallback="3枚の手描き冒頭ボードを読み込めませんでした。"
-                caption="完成映像と組み合わせた3枚の手描きボード。線を少なくすることで仕上げの余地を残しながら、カメラ、配置、プロップの連続性、芝居を人の演出下に置きます。"
-                className="blog-part3-image blog-part3-image--paper"
             />
         </section>
 
@@ -671,10 +674,10 @@ const JapaneseArticle = ({ media }) => (
             <SectionHeading number="07 / 次" title="短編制作を続ける" />
             <div className="blog-body blog-transfer-copy">
                 <p>
-                    『TEGAKI』は制作中です。次はScene 1の残りのボードと映像パッケージを完成させ、最初の絵の緩さを失わないまま、同じ権限設計をスタジオのシーンへ移します。
+                    短編は制作中です。次はScene 1の残りのボードと映像パッケージを完成させ、最初の絵の緩さを失わないまま、同じ権限設計をスタジオのシーンへ移します。
                 </p>
                 <p>
-                    『秒速5リクエスト』は引き続き大きな本編です。この短編は数週間の意図的な中断であり、置き換えではありません。長編へ戻る前に、これらの道具の背後にある問いを、より小さな画面の中で物語にする必要がありました。
+                    『秒速5リクエスト』は引き続き大きな本編で、この締切を終えたら制作へ戻ります。今回の予定変更は実務上の判断であり、この短編へ置き換えるためではありません。今の数週間は、手描きで決めた演出を失わず、短編を締切へ届けることに集中します。
                 </p>
             </div>
         </section>

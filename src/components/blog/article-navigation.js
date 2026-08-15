@@ -45,7 +45,7 @@ const directingReferenceEntries = {
         },
         {
             slug: "directing-the-reference-part-3",
-            label: "Turning fear into TEGAKI",
+            label: "Turning fear into a short film",
         },
     ],
     ja: [
@@ -59,7 +59,7 @@ const directingReferenceEntries = {
         },
         {
             slug: "directing-the-reference-part-3",
-            label: "恐れから『TEGAKI』をつくる",
+            label: "恐れを短編へ変える",
         },
     ],
 };

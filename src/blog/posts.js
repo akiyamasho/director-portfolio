@@ -23,8 +23,8 @@ export const posts = [
             src: directingTheReferencePart3Media.cover,
             position: "58% center",
             lede: {
-                en: "A six-day production diary for TEGAKI, from a vulnerable voice conversation to a hand-directed opening shot.",
-                ja: "率直な音声対話から、手で演出した冒頭カットまで。短編『TEGAKI』6日間の制作記録。",
+                en: "A six-day production diary for an unnamed short film, from a vulnerable voice conversation to a hand-directed opening shot.",
+                ja: "率直な音声対話から、手で演出した冒頭カットまで。題名未公表の短編、6日間の制作記録。",
             },
             alt: {
                 en: "Nozomi seen from behind while Mia works at a laptop across a cramped apartment room",
@@ -35,13 +35,13 @@ export const posts = [
             en: {
                 title: "Directing the Reference, Part 3",
                 summary:
-                    "Building the short film TEGAKI through story development, character design, spatial planning, manual storyboards, production experiments, and one finished moving shot.",
+                    "Building an unnamed short film through story development, character design, spatial planning, manual storyboards, production experiments, and one finished moving shot.",
             },
             ja: {
                 title: "リファレンスを演出する Part 3",
                 titleBreaks: ["リファレンスを", "演出する", "Part 3"],
                 summary:
-                    "短編『TEGAKI』の企画、キャラクター設計、空間設計、手描き絵コンテ、制作検証、最初の完成映像までをたどる制作記録。",
+                    "題名未公表の短編について、企画、キャラクター設計、空間設計、手描き絵コンテ、制作検証、最初の完成映像までをたどる制作記録。",
             },
         },
     },
