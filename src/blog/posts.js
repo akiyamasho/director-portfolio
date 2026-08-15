@@ -23,8 +23,8 @@ export const posts = [
             src: directingTheReferencePart3Media.cover,
             position: "58% center",
             lede: {
-                en: "The first six days of a short film, from a vulnerable voice conversation to a hand-directed opening shot.",
-                ja: "短編制作、その最初の6日間。率直な音声対話から、手で演出した冒頭カットまでの制作記録。",
+                en: "The first six days of a short film, from an early voice conversation to a hand-directed opening shot.",
+                ja: "短編制作、その最初の6日間。最初の音声対話から、手で演出した冒頭カットまでの制作記録。",
             },
             alt: {
                 en: "Nozomi seen from behind while Mia works at a laptop across a cramped apartment room",

@@ -103,15 +103,11 @@ const EnglishArticle = ({ media }) => (
 
         <div className="blog-body blog-opening">
             <p className="blog-lead">
-                With a deadline approaching, I am focusing on this short film for
-                the next few weeks before returning to 5 Requests Per Second.
-                The first ideation dates back a few years. Other projects moved
-                into production at the time, while this one remained in
-                development. I am continuing it now as a short for the current
-                deadline. The film began as a way to face a fear that had become
-                difficult to separate from my work: what happens when the craft
-                on which you built your identity changes faster than your sense
-                of self can follow?
+                This idea began a few years ago, before other projects moved into
+                production. I am returning to it now as a short film for an
+                upcoming deadline, while 5 Requests Per Second pauses for a few
+                weeks. The story is inspired by being in the middle of
+                engineering (especially machine learning) and animation.
             </p>
             <p>
                 I am making this film with{" "}
@@ -464,12 +460,6 @@ const EnglishArticle = ({ media }) => (
                     same authority system into the studio scenes without losing
                     the looseness of the first drawings.
                 </p>
-                <p>
-                    After the deadline, I will return to 5 Requests Per Second.
-                    Until then, the immediate job is to bring this short to its
-                    deadline without losing the direction established in the
-                    drawings.
-                </p>
             </div>
         </section>
     </div>
@@ -481,7 +471,7 @@ const JapaneseArticle = ({ media }) => (
 
         <div className="blog-body blog-opening">
             <p className="blog-lead">
-                締切が迫っているため、今後数週間はこの短編に集中し、その後『秒速5リクエスト』へ戻ります。最初の着想は数年前に遡ります。当時はほかの企画が制作へ進み、この企画は開発段階に残りました。今回の締切に向け、短編として続きをつくっています。出発点は、映画監督としての自分の仕事と切り離せなくなった恐れでした。人生をかけて身につけた技術が、自分の感覚より速く変化する時、作り手のアイデンティティはどうなるのか。
+                この企画の最初の着想は数年前にあり、その後はほかの企画が制作へ進みました。今回の締切に向けて短編として再開し、『秒速5リクエスト』は数週間だけ休止しています。エンジニアリング（とくに機械学習）とアニメーションの間で仕事をしてきた経験から生まれた物語です。
             </p>
             <p>
                 この短編は
@@ -705,9 +695,6 @@ const JapaneseArticle = ({ media }) => (
             <div className="blog-body blog-transfer-copy">
                 <p>
                     短編は制作中です。次はScene 1の残りのボードと映像パッケージを完成させ、最初の絵の緩さを失わないまま、同じ権限設計をスタジオのシーンへ移します。
-                </p>
-                <p>
-                    締切後は『秒速5リクエスト』の制作へ戻ります。それまでは、手描きで決めた演出を失わず、この短編を締切へ届けることに集中します。
                 </p>
             </div>
         </section>
