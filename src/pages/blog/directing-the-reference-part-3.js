@@ -39,14 +39,14 @@ const Facts = ({ locale }) => {
     const facts =
         locale === "ja"
             ? [
-                  ["制作期間", "6日間"],
+                  ["制作記録", "最初の6日間"],
                   ["Git", "88 commits"],
                   ["構成", "13 scenes"],
                   ["ショット設計", "94 shots"],
                   ["Scene 1 ラフ", "47 boards"],
               ]
             : [
-                  ["Production", "6 days"],
+                  ["Production log", "First 6 days"],
                   ["Git history", "88 commits"],
                   ["Structure", "13 scenes"],
                   ["Shot design", "94 shots"],
@@ -105,13 +105,25 @@ const EnglishArticle = ({ media }) => (
             <p className="blog-lead">
                 With a deadline approaching, I am focusing on this unnamed short
                 for the next few weeks before returning to 5 Requests Per Second.
-                The film began as a way to face a fear that had become difficult
-                to separate from my work: what happens when the craft on which
-                you built your identity changes faster than your sense of self
-                can follow?
+                The first ideation dates back a few years. Other projects moved
+                into production at the time, while this one remained in
+                development. I am continuing it now as a short for the current
+                deadline. The film began as a way to face a fear that had become
+                difficult to separate from my work: what happens when the craft
+                on which you built your identity changes faster than your sense
+                of self can follow?
             </p>
             <p>
-                The short is a psychological drama set inside contemporary
+                I am making this film with{" "}
+                <a
+                    href="https://www.instagram.com/jsonmathsai/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="@jsonmathsai on Instagram"
+                >
+                    @jsonmathsai
+                </a>
+                . The short is a psychological drama set inside contemporary
                 animation production. It is being made with hand-drawn planning,
                 character and spatial design, image and video models, and a local
                 production system built around the repository. This is not a
@@ -469,10 +481,19 @@ const JapaneseArticle = ({ media }) => (
 
         <div className="blog-body blog-opening">
             <p className="blog-lead">
-                締切が迫っているため、今後数週間は題名未公表の短編に集中し、その後『秒速5リクエスト』へ戻ります。この短編の出発点は、映画監督としての自分の仕事と切り離せなくなった恐れでした。人生をかけて身につけた技術が、自分の感覚より速く変化する時、作り手のアイデンティティはどうなるのか。
+                締切が迫っているため、今後数週間は題名未公表の短編に集中し、その後『秒速5リクエスト』へ戻ります。最初の着想は数年前に遡ります。当時はほかの企画が制作へ進み、この企画は開発段階に残りました。今回の締切に向け、短編として続きをつくっています。出発点は、映画監督としての自分の仕事と切り離せなくなった恐れでした。人生をかけて身につけた技術が、自分の感覚より速く変化する時、作り手のアイデンティティはどうなるのか。
             </p>
             <p>
-                現代のアニメーション制作を舞台にした心理ドラマです。手描きの設計、キャラクターと空間の設定、画像モデルと映像モデル、リポジトリを軸にしたローカル制作システムを組み合わせています。どちらかの方法が勝ったという話ではありません。異なる手段を、ひとつの演出へ従わせる試みです。
+                この短編は
+                <a
+                    href="https://www.instagram.com/jsonmathsai/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagramの@jsonmathsai"
+                >
+                    @jsonmathsai
+                </a>
+                と制作しています。現代のアニメーション制作を舞台にした心理ドラマです。手描きの設計、キャラクターと空間の設定、画像モデルと映像モデル、リポジトリを軸にしたローカル制作システムを組み合わせています。どちらかの方法が勝ったという話ではありません。異なる手段を、ひとつの演出へ従わせる試みです。
             </p>
             <p>
                 上の数字は、8月10日から15日までの最初の6日間の記録です。作業量であって、完成度ではありません。大切なのは、各工程が次の工程をどう変えたかです。
