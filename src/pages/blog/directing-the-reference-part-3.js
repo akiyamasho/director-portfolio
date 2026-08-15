@@ -39,15 +39,15 @@ const Facts = ({ locale }) => {
     const facts =
         locale === "ja"
             ? [
-                  ["制作記録", "最初の6日間"],
-                  ["Git", "88 commits"],
+                  ["制作記録", "最初の7日間"],
+                  ["Git", "94 commits"],
                   ["構成", "13 scenes"],
                   ["ショット設計", "94 shots"],
                   ["Scene 1 ラフ", "47 boards"],
               ]
             : [
-                  ["Production log", "First 6 days"],
-                  ["Git history", "88 commits"],
+                  ["Production log", "First 7 days"],
+                  ["Git history", "94 commits"],
                   ["Structure", "13 scenes"],
                   ["Shot design", "94 shots"],
                   ["Scene 1 roughs", "47 boards"],
@@ -127,8 +127,9 @@ const EnglishArticle = ({ media }) => (
                 those methods answer to the same direction.
             </p>
             <p>
-                The numbers above come from the first six days of the production
-                repository, from August 10 to 15. They measure activity, not a
+                The numbers above come from the first seven days of the production
+                repository, from August 10 to 16. I have been making the film at
+                night after work and on weekends. They measure activity, not a
                 finished film. The useful part of the record is how each stage
                 changed the next one.
             </p>
@@ -396,6 +397,13 @@ const EnglishArticle = ({ media }) => (
                     That question still comes from drawing, staging, editing, and
                     knowing what to look for.
                 </p>
+                <p>
+                    Since the first snapshot, production packages have extended
+                    through Shot 32 of the bedroom demo. Shots 12, 25, and 32 were
+                    rerun from updated manual authority. Indoor footwear is also a
+                    hard continuity check now, so a character sheet cannot
+                    silently put shoes on a character who is barefoot in the room.
+                </p>
             </div>
             <Figure
                 src={media.productionizedBoards}
@@ -419,7 +427,7 @@ const EnglishArticle = ({ media }) => (
             />
             <div className="blog-body blog-transfer-copy">
                 <p>
-                    The repository grew quickly: eighty-eight commits in six
+                    The repository grew quickly: ninety-four commits in seven
                     days, ninety-four shot records, and many more reference,
                     location, prop, prompt, and review files. A folder tree is
                     precise, but it becomes difficult to direct from when the
@@ -433,7 +441,8 @@ const EnglishArticle = ({ media }) => (
                     location tags remain visible as authorities rather than being
                     buried inside a long prompt. The site writes those decisions
                     back to Markdown so the browser does not become a second,
-                    disconnected source of truth.
+                    disconnected source of truth. The latest pass also tightened
+                    reference search and workspace sync.
                 </p>
                 <p>
                     This part is engineering in service of directing. It does not
@@ -456,9 +465,9 @@ const EnglishArticle = ({ media }) => (
             <div className="blog-body blog-transfer-copy">
                 <p>
                     The short is still in production. The next pass is to finish the
-                    remaining Scene 1 boards and video packages, then carry the
-                    same authority system into the studio scenes without losing
-                    the looseness of the first drawings.
+                    current Scene 1 authority review, turn the approved boards into
+                    video packages, then carry the same system into the studio
+                    scenes without losing the looseness of the first drawings.
                 </p>
             </div>
         </section>
@@ -486,7 +495,7 @@ const JapaneseArticle = ({ media }) => (
                 と制作しています。現代のアニメーション制作を舞台にした心理ドラマです。手描きの設計、キャラクターと空間の設定、画像モデルと映像モデル、リポジトリを軸にしたローカル制作システムを組み合わせています。どちらかの方法が勝ったという話ではありません。異なる手段を、ひとつの演出へ従わせる試みです。
             </p>
             <p>
-                上の数字は、8月10日から15日までの最初の6日間の記録です。作業量であって、完成度ではありません。大切なのは、各工程が次の工程をどう変えたかです。
+                上の数字は、8月10日から16日までの最初の7日間の記録です。制作は、日中の仕事を終えた夜と週末に進めています。作業量であって、完成度ではありません。大切なのは、各工程が次の工程をどう変えたかです。
             </p>
         </div>
 
@@ -650,6 +659,9 @@ const JapaneseArticle = ({ media }) => (
                 <p>
                     画像モデルは、もっともらしい完成画をつくることが得意です。制作で必要なのは、その前後とつながる正しい画かという問いです。その問いは、作画、ステージング、編集、そして見るべき点を知っていることから生まれます。
                 </p>
+                <p>
+                    最初の記録以降、ベッドルーム・デモの制作パッケージはShot 32まで揃いました。Shot 12、25、32は更新した手動の基準から再制作しています。室内の履物も連続性の必須確認に加え、裸足の場面へキャラクター設定の靴がそのまま入り込まないようにしました。
+                </p>
             </div>
             <Figure
                 src={media.productionizedBoards}
@@ -673,10 +685,10 @@ const JapaneseArticle = ({ media }) => (
             />
             <div className="blog-body blog-transfer-copy">
                 <p>
-                    6日間で88 commits、94本のショット記録に加え、人物、場所、プロップ、プロンプト、レビューのファイルが増えました。フォルダ構造は正確でも、現在のボード、ノート、制作状態が何階層も離れると、そこから演出するのは難しくなります。
+                    7日間で94 commits、94本のショット記録に加え、人物、場所、プロップ、プロンプト、レビューのファイルが増えました。フォルダ構造は正確でも、現在のボード、ノート、制作状態が何階層も離れると、そこから演出するのは難しくなります。
                 </p>
                 <p>
-                    そこで、プロジェクトをシーン、シークエンス、ショットとして読むローカル制作サイトをつくりました。ショット詳細では、ボードの隣で手動ノートを編集できます。キャラクター、プロップ、ロケーションのタグも、長いプロンプトの中ではなく、基準として見えます。編集内容はMarkdownへ戻るため、ブラウザが別の正解を持つこともありません。
+                    そこで、プロジェクトをシーン、シークエンス、ショットとして読むローカル制作サイトをつくりました。ショット詳細では、ボードの隣で手動ノートを編集できます。キャラクター、プロップ、ロケーションのタグも、長いプロンプトの中ではなく、基準として見えます。編集内容はMarkdownへ戻るため、ブラウザが別の正解を持つこともありません。最新の更新では、リファレンス検索とワークスペース同期も改善しました。
                 </p>
                 <p>
                     演出のためのエンジニアリングです。サイトがショットを決めるわけではありません。問題を見つけ、指示を直し、次の結果を確認するまでの距離を短くします。短編でも100本近いショットを扱う時、その距離は制作速度に直結します。
@@ -694,7 +706,7 @@ const JapaneseArticle = ({ media }) => (
             <SectionHeading number="07 / 次" title="短編制作を続ける" />
             <div className="blog-body blog-transfer-copy">
                 <p>
-                    短編は制作中です。次はScene 1の残りのボードと映像パッケージを完成させ、最初の絵の緩さを失わないまま、同じ権限設計をスタジオのシーンへ移します。
+                    短編は制作中です。次はScene 1の現在の基準確認を終え、承認したボードを映像パッケージへ進めます。その後、最初の絵の緩さを失わないまま、同じ仕組みをスタジオのシーンへ移します。
                 </p>
             </div>
         </section>
