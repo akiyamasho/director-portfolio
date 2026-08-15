@@ -103,8 +103,8 @@ const EnglishArticle = ({ media }) => (
 
         <div className="blog-body blog-opening">
             <p className="blog-lead">
-                With a deadline approaching, I am focusing on this unnamed short
-                for the next few weeks before returning to 5 Requests Per Second.
+                With a deadline approaching, I am focusing on this short film for
+                the next few weeks before returning to 5 Requests Per Second.
                 The first ideation dates back a few years. Other projects moved
                 into production at the time, while this one remained in
                 development. I am continuing it now as a short for the current
@@ -481,7 +481,7 @@ const JapaneseArticle = ({ media }) => (
 
         <div className="blog-body blog-opening">
             <p className="blog-lead">
-                締切が迫っているため、今後数週間は題名未公表の短編に集中し、その後『秒速5リクエスト』へ戻ります。最初の着想は数年前に遡ります。当時はほかの企画が制作へ進み、この企画は開発段階に残りました。今回の締切に向け、短編として続きをつくっています。出発点は、映画監督としての自分の仕事と切り離せなくなった恐れでした。人生をかけて身につけた技術が、自分の感覚より速く変化する時、作り手のアイデンティティはどうなるのか。
+                締切が迫っているため、今後数週間はこの短編に集中し、その後『秒速5リクエスト』へ戻ります。最初の着想は数年前に遡ります。当時はほかの企画が制作へ進み、この企画は開発段階に残りました。今回の締切に向け、短編として続きをつくっています。出発点は、映画監督としての自分の仕事と切り離せなくなった恐れでした。人生をかけて身につけた技術が、自分の感覚より速く変化する時、作り手のアイデンティティはどうなるのか。
             </p>
             <p>
                 この短編は

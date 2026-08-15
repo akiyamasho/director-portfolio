@@ -23,8 +23,8 @@ export const posts = [
             src: directingTheReferencePart3Media.cover,
             position: "58% center",
             lede: {
-                en: "The first six days of an unnamed short film, from a vulnerable voice conversation to a hand-directed opening shot.",
-                ja: "題名未公表の短編、その最初の6日間。率直な音声対話から、手で演出した冒頭カットまでの制作記録。",
+                en: "The first six days of a short film, from a vulnerable voice conversation to a hand-directed opening shot.",
+                ja: "短編制作、その最初の6日間。率直な音声対話から、手で演出した冒頭カットまでの制作記録。",
             },
             alt: {
                 en: "Nozomi seen from behind while Mia works at a laptop across a cramped apartment room",
@@ -35,13 +35,13 @@ export const posts = [
             en: {
                 title: "Directing the Reference, Part 3",
                 summary:
-                    "Building an unnamed short film through story development, character design, spatial planning, manual storyboards, production experiments, and one finished moving shot.",
+                    "Building a short film through story development, character design, spatial planning, manual storyboards, production experiments, and one finished moving shot.",
             },
             ja: {
                 title: "リファレンスを演出する Part 3",
                 titleBreaks: ["リファレンスを", "演出する", "Part 3"],
                 summary:
-                    "題名未公表の短編について、企画、キャラクター設計、空間設計、手描き絵コンテ、制作検証、最初の完成映像までをたどる制作記録。",
+                    "短編の企画、キャラクター設計、空間設計、手描き絵コンテ、制作検証、最初の完成映像までをたどる制作記録。",
             },
         },
     },
