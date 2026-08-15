@@ -384,6 +384,76 @@
     background: #050708;
 }
 
+.blog-part3-figure,
+.blog-part3-video {
+    width: min(100%, 72rem);
+    margin: 2.5rem auto 0;
+}
+
+.blog-part3-image,
+.blog-part3-figure .blog-media-fallback {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 12rem;
+    margin: 0;
+    object-fit: contain;
+    background: #0a0e11;
+}
+
+.blog-part3-image--paper {
+    background: #f4f2ed;
+}
+
+.blog-part3-video .blog-video,
+.blog-part3-video .blog-media-fallback {
+    width: 100%;
+    margin: 0;
+    object-fit: contain;
+    background: #050708;
+}
+
+.blog-part3-wide-video .blog-video,
+.blog-part3-wide-video .blog-media-fallback {
+    aspect-ratio: 16 / 9;
+}
+
+.blog-part3-main-video .blog-video,
+.blog-part3-main-video .blog-media-fallback {
+    aspect-ratio: 7 / 3;
+}
+
+.blog-part3-logline {
+    width: min(100% - 2rem, 58rem);
+    margin: 2.5rem auto 0;
+    padding: clamp(1.5rem, 4vw, 2.75rem);
+    border-top: 1px solid var(--blog-gold);
+    border-bottom: 1px solid #35414a;
+    background: #0a0e11;
+}
+
+.blog-part3-logline span {
+    color: var(--blog-gold);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.67rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.blog-part3-logline p {
+    max-width: 48rem;
+    margin: 1rem 0 0;
+    color: #eef2f4;
+    font-family: "Barlow Condensed", "Noto Sans JP", sans-serif;
+    font-size: clamp(1.8rem, 4.5vw, 3.35rem);
+    line-height: 1.05;
+}
+
+[lang="ja"] .blog-part3-logline p {
+    font-size: clamp(1.5rem, 3.7vw, 2.55rem);
+    line-height: 1.35;
+}
+
 .blog-attempt-table {
     max-width: none;
     margin-top: 2rem;
@@ -1325,6 +1395,20 @@
 @media only screen and (max-width: 768px) {
     .blog-attempt-video-grid {
         grid-template-columns: 1fr;
+    }
+
+    .blog-part3-figure,
+    .blog-part3-video {
+        margin-top: 1.75rem;
+    }
+
+    .blog-part3-main-video .blog-video,
+    .blog-part3-main-video .blog-media-fallback {
+        aspect-ratio: 7 / 4;
+    }
+
+    .blog-part3-logline {
+        width: 100%;
     }
 
     .blog-stack-key {

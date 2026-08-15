@@ -1,6 +1,7 @@
 import {
     directingTheReferenceMedia,
     directingTheReferencePart2Media,
+    directingTheReferencePart3Media,
 } from "./media";
 import screenplayCover from "../assets/blog-covers/5rps-screenplay-complete.webp";
 import storyboardingCover from "../assets/blog-covers/5rps-storyboarding-in-progress.webp";
@@ -13,6 +14,37 @@ import { post as localVscodeCloudGpus } from "./migrated/local-vscode-cloud-gpus
 import { post as ragEnterpriseDocuments } from "./migrated/rag-enterprise-documents";
 
 export const posts = [
+    {
+        slug: "directing-the-reference-part-3",
+        date: "2026-08-16",
+        tags: ["production", "screenplay", "storyboarding", "animatic"],
+        media: directingTheReferencePart3Media,
+        cover: {
+            src: directingTheReferencePart3Media.cover,
+            position: "58% center",
+            lede: {
+                en: "A six-day production diary for TEGAKI, from a vulnerable voice conversation to a hand-directed opening shot.",
+                ja: "率直な音声対話から、手で演出した冒頭カットまで。短編『TEGAKI』6日間の制作記録。",
+            },
+            alt: {
+                en: "Nozomi seen from behind while Mia works at a laptop across a cramped apartment room",
+                ja: "狭いアパートの室内で、手前からミアのノートPC作業を見るノゾミの後ろ姿",
+            },
+        },
+        translations: {
+            en: {
+                title: "Directing the Reference, Part 3",
+                summary:
+                    "Building the short film TEGAKI through story development, character design, spatial planning, manual storyboards, production experiments, and one finished moving shot.",
+            },
+            ja: {
+                title: "リファレンスを演出する Part 3",
+                titleBreaks: ["リファレンスを", "演出する", "Part 3"],
+                summary:
+                    "短編『TEGAKI』の企画、キャラクター設計、空間設計、手描き絵コンテ、制作検証、最初の完成映像までをたどる制作記録。",
+            },
+        },
+    },
     {
         slug: "directing-the-reference-part-2",
         date: "2026-08-11",

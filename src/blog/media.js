@@ -197,3 +197,46 @@ export const directingTheReferencePart2Media = {
         ),
     },
 };
+
+const directingReferencePart3Prefix = "20260816_directing-the-reference-part-3";
+const directingReferencePart3Asset = (name) =>
+    `${bucketUrl}/${directingReferencePart3Prefix}/${name}`;
+
+export const directingTheReferencePart3Media = {
+    cover: directingReferencePart3Asset("cover-d6335f46c939.webp"),
+    ideation: directingReferencePart3Asset(
+        "ideation-early-designs-8b82be2cd3ec.webp"
+    ),
+    cast: directingReferencePart3Asset("cast-designs-28e4b0a46ffc.webp"),
+    manualStoryboards: directingReferencePart3Asset(
+        "manual-storyboards-d346a8d7cc23.webp"
+    ),
+    productionizedBoards: directingReferencePart3Asset(
+        "productionized-boards-764ff35546c7.webp"
+    ),
+    experiments: directingReferencePart3Asset(
+        "experiment-grid-fcd561d82f31.webp"
+    ),
+    productionWebsite: directingReferencePart3Asset(
+        "production-website-f48e2481d47f.webp"
+    ),
+    openingManualBoards: directingReferencePart3Asset(
+        "opening-manual-boards-73d115d0635a.webp"
+    ),
+    openingShot: {
+        video: directingReferencePart3Asset(
+            "opening-shot-e7c5510fcd23.mp4"
+        ),
+        poster: directingReferencePart3Asset(
+            "opening-poster-2c0f81110268.webp"
+        ),
+    },
+    studioSweep: {
+        video: directingReferencePart3Asset(
+            "studio-sweep-dd678310752b.mp4"
+        ),
+        poster: directingReferencePart3Asset(
+            "studio-poster-9a522e655632.webp"
+        ),
+    },
+};
