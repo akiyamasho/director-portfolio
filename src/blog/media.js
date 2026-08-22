@@ -237,7 +237,7 @@ export const directingTheReferencePart3Media = {
 
 export const directingTheReferencePart4Media = {
     cover: {
-        video: `${bucketUrl}/20260822_directing-the-reference-part-4/cover-video-43ed51b54d35.mp4`,
+        video: `${bucketUrl}/20260822_directing-the-reference-part-4/cover-video-859f5d9946b7.mp4`,
         poster: `${bucketUrl}/20260822_directing-the-reference-part-4/cover-poster-1a388cc3f281.jpg`,
     },
     animatic: {

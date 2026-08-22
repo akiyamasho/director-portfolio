@@ -259,39 +259,6 @@
     line-height: 0.88;
 }
 
-.blog-feature-hero--directing-the-reference-part-4 {
-    min-height: auto;
-    overflow: visible;
-    background: #090b0d;
-}
-
-.blog-feature-hero--directing-the-reference-part-4 .blog-feature-hero-image,
-.blog-feature-hero--directing-the-reference-part-4 .blog-feature-hero-video {
-    position: relative;
-    inset: auto;
-    height: auto;
-    max-height: none;
-    object-fit: contain;
-    object-position: center;
-}
-
-.blog-feature-hero--directing-the-reference-part-4 .blog-feature-hero-shade {
-    display: none;
-}
-
-.blog-feature-hero--directing-the-reference-part-4 .blog-feature-hero-copy {
-    min-height: 0;
-    width: 100%;
-    padding: 2rem 0 0;
-    text-shadow: none;
-}
-
-.blog-feature-hero--directing-the-reference-part-4 .blog-title,
-.blog-feature-hero--directing-the-reference-part-4 .blog-lede,
-.blog-feature-hero--directing-the-reference-part-4 .blog-meta {
-    color: #f0f1f1;
-}
-
 .blog-rich-media-section {
     margin: clamp(4rem, 10vw, 8rem) auto 0;
     padding-top: 2rem;
