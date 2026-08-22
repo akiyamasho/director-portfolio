@@ -259,6 +259,105 @@
     line-height: 0.88;
 }
 
+.blog-feature-hero--directing-the-reference-part-4 {
+    min-height: auto;
+    overflow: visible;
+    background: #090b0d;
+}
+
+.blog-feature-hero--directing-the-reference-part-4 .blog-feature-hero-image,
+.blog-feature-hero--directing-the-reference-part-4 .blog-feature-hero-video {
+    position: relative;
+    inset: auto;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+}
+
+.blog-feature-hero--directing-the-reference-part-4 .blog-feature-hero-shade {
+    display: none;
+}
+
+.blog-feature-hero--directing-the-reference-part-4 .blog-feature-hero-copy {
+    min-height: 0;
+    width: 100%;
+    padding: 2rem 0 0;
+    text-shadow: none;
+}
+
+.blog-feature-hero--directing-the-reference-part-4 .blog-title,
+.blog-feature-hero--directing-the-reference-part-4 .blog-lede,
+.blog-feature-hero--directing-the-reference-part-4 .blog-meta {
+    color: #f0f1f1;
+}
+
+.blog-rich-media-section {
+    margin: clamp(4rem, 10vw, 8rem) auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid #35414a;
+}
+
+.blog-rich-media-section h2 {
+    max-width: 42rem;
+    margin: 0.4rem 0 1rem;
+    color: #fff;
+    font-family: "Barlow Condensed", "Noto Sans JP", sans-serif;
+    font-size: clamp(2rem, 5vw, 4.2rem);
+    line-height: 0.96;
+}
+
+.blog-rich-section-label {
+    color: var(--blog-gold);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+}
+
+.blog-rich-media-section > p {
+    max-width: 42rem;
+}
+
+.blog-rich-figure {
+    margin: 2rem 0 0;
+}
+
+.blog-rich-figure img {
+    width: 100%;
+    height: auto;
+    background: #111;
+}
+
+.blog-rich-figure figcaption,
+.blog-media-caption {
+    margin-top: 0.65rem;
+    color: #9fa8ad;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    line-height: 1.55;
+}
+
+.blog-rich-media-section .blog-video {
+    margin-top: 2rem;
+}
+
+.blog-rich-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.blog-rich-pair .blog-rich-figure {
+    margin: 0;
+}
+
+@media only screen and (max-width: 700px) {
+    .blog-rich-pair {
+        grid-template-columns: 1fr;
+    }
+}
+
 [lang="ja"] .blog-feature-hero--article .blog-title {
     font-size: clamp(2.35rem, 4.6vw, 4rem);
     line-height: 1.05;

@@ -237,7 +237,20 @@ export const directingTheReferencePart3Media = {
 
 export const directingTheReferencePart4Media = {
     cover: {
-        video: `${bucketUrl}/20260822_directing-the-reference-part-4/cover-video-71eafad1938c.mp4`,
-        poster: `${bucketUrl}/20260822_directing-the-reference-part-4/cover-poster-7c8f97eaf6d5.webp`,
+        video: `${bucketUrl}/20260822_directing-the-reference-part-4/cover-video-43ed51b54d35.mp4`,
+        poster: `${bucketUrl}/20260822_directing-the-reference-part-4/cover-poster-1a388cc3f281.jpg`,
+    },
+    animatic: {
+        video: `${bucketUrl}/20260822_directing-the-reference-part-4/storyboard-animatic-9e2e74ef6f9a.mp4`,
+        poster: `${bucketUrl}/20260822_directing-the-reference-part-4/animatic-poster-0af579c4f6a2.jpg`,
+    },
+    roughKeyframeMotion: {
+        video: `${bucketUrl}/20260822_directing-the-reference-part-4/rough-keyframe-motion-9334a9c6e879.mp4`,
+        poster: `${bucketUrl}/20260822_directing-the-reference-part-4/rough-keyframe-motion-poster-cff89a42c848.jpg`,
+    },
+    comparisons: {
+        earlyToFinal: `${bucketUrl}/20260822_directing-the-reference-part-4/first-experiments-vs-final-2f4637642e4a.webp`,
+        roughToKeyframe: `${bucketUrl}/20260822_directing-the-reference-part-4/scene2-rough-vs-productionized-2ae8aae6090b.webp`,
+        plates: `${bucketUrl}/20260822_directing-the-reference-part-4/studio-reference-to-plates-7e5b92490e1f.webp`,
     },
 };

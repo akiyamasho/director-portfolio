@@ -5,11 +5,24 @@ import PostHero from "../../components/blog/post-hero";
 import { DirectingReferenceSeriesNavigation } from "../../components/blog/article-navigation";
 import SEO from "../../components/seo";
 import { getPost } from "../../blog/posts";
+import TestVideo from "../../components/blog/test-video";
+import {
+    directingTheReferenceMedia as part1Media,
+    directingTheReferencePart2Media as part2Media,
+    directingTheReferencePart4Media as media,
+} from "../../blog/media";
+
+const Figure = ({ src, alt, caption }) => (
+    <figure className="blog-rich-figure">
+        <img src={src} alt={alt} loading="lazy" />
+        <figcaption>{caption}</figcaption>
+    </figure>
+);
 
 const EnglishArticle = ({ locale }) => {
     const ja = locale === "ja";
     return (
-        <div className="blog-notebook blog-part3 blog-part4">
+        <div className="blog-notebook blog-part3 blog-part4 blog-rich-part4">
             <div className="blog-body blog-opening">
                 <p className="blog-lead">
                     {ja
@@ -48,6 +61,196 @@ const EnglishArticle = ({ locale }) => {
                     )}
                 </p>
             </div>
+            <section
+                className="blog-rich-media-section blog-body"
+                aria-labelledby="animatic-heading"
+            >
+                <div className="blog-rich-section-label">
+                    A / {ja ? "音で決めるペース" : "PACING WITH SOUND"}
+                </div>
+                <h2 id="animatic-heading">
+                    {ja
+                        ? "まず、アニマティックを見直す"
+                        : "The animatic is the pacing authority"}
+                </h2>
+                <p>
+                    {ja
+                        ? "Scene 1–2のストーリーボード・アニマティックには音があります。ここでショットのホールド、台詞の間、カットの因果を確認してから、生成映像を直します。"
+                        : "The storyboard animatic for scenes 1–2 has sound. It is where we check shot holds, dialogue breath, and editorial causality before asking a generated shot to move."}
+                </p>
+                <TestVideo
+                    src={media.animatic.video}
+                    poster={media.animatic.poster}
+                    title={
+                        ja
+                            ? "Scene 1–2 ストーリーボード・アニマティック"
+                            : "Scenes 1–2 storyboard animatic"
+                    }
+                    fallback={
+                        ja
+                            ? "アニマティックを読み込めませんでした。"
+                            : "The animatic could not be loaded."
+                    }
+                    muted={false}
+                />
+                <p className="blog-media-caption">
+                    {ja
+                        ? "音付き・192秒。プロバイダーのクリップ尺ではなく、編集と演技の呼吸を基準にする。"
+                        : "192 seconds with sound. Duration comes from edit and performance, not a provider clip limit."}
+                </p>
+            </section>
+            <section
+                className="blog-rich-media-section blog-body"
+                aria-labelledby="early-heading"
+            >
+                <div className="blog-rich-section-label">
+                    B /{" "}
+                    {ja
+                        ? "初期手法から現在の反復へ"
+                        : "EARLY METHOD TO CURRENT ITERATION"}
+                </div>
+                <h2 id="early-heading">
+                    {ja
+                        ? "左から右へ、判断が増えた"
+                        : "The improvement is visible left to right"}
+                </h2>
+                <p>
+                    {ja
+                        ? "Part 1–2の初期実験では、入力と出力の間にカメラ、人物のスケール、空間のルールが足りませんでした。Part 2の試行進化は、その差分を時間の中で見せます。"
+                        : "In the early Part 1–2 experiments, the gap between input and output left too much room for camera drift, actor-scale drift, and invented geography. Part 2’s attempt evolution shows that gap over time."}
+                </p>
+                <TestVideo
+                    src={part2Media.evolution.video}
+                    poster={part2Media.evolution.poster}
+                    title={ja ? "Part 2の試行進化" : "Part 2 attempt evolution"}
+                    fallback={
+                        ja
+                            ? "初期実験の比較映像を読み込めませんでした。"
+                            : "The early-experiment comparison could not be loaded."
+                    }
+                />
+                <div className="blog-rich-pair">
+                    <Figure
+                        src={part1Media.originalInputs[0].src}
+                        alt={ja ? "Part 1の初期入力" : "Part 1 early input"}
+                        caption={
+                            ja ? "Part 1 / 初期入力" : "Part 1 / early input"
+                        }
+                    />
+                    <Figure
+                        src={part1Media.refinedInputs[0].src}
+                        alt={
+                            ja
+                                ? "Part 1の整理された入力"
+                                : "Part 1 refined input"
+                        }
+                        caption={
+                            ja
+                                ? "Part 1 / 整理された入力"
+                                : "Part 1 / refined input"
+                        }
+                    />
+                </div>
+                <p className="blog-media-caption">
+                    {ja
+                        ? "ここでのSH14–19は初期実験ではなく、現在の方法の中での最初の試行 → 最終版です。"
+                        : "The SH14–19 sheet below is not the earliest experiment; it is first attempt → final within the current method."}
+                </p>
+                <Figure
+                    src={media.comparisons.earlyToFinal}
+                    alt={
+                        ja
+                            ? "現在の方法におけるSH14からSH19の最初の試行と最終版"
+                            : "Current-method first-attempt and final comparisons across SH14 to SH19"
+                    }
+                    caption={
+                        ja
+                            ? "現在の方法 / 最初の試行 → 最終版"
+                            : "Current method / first attempt → final"
+                    }
+                />
+            </section>
+            <section
+                className="blog-rich-media-section blog-body"
+                aria-labelledby="keyframe-heading"
+            >
+                <div className="blog-rich-section-label">
+                    C / {ja ? "ラフからキーへ" : "ROUGH TO KEYFRAME"}
+                </div>
+                <h2 id="keyframe-heading">
+                    {ja
+                        ? "ラフを捨てずに、撮影可能なキーへ"
+                        : "Productionize the rough without losing its direction"}
+                </h2>
+                <p>
+                    {ja
+                        ? "Scene 2 Sequence 2では、SH01、SH02 A/B、SH03、SH04、SH05、SH06 A/B/C、SH07、SH08、SH09を一つの比較シートにしました。ラフがカメラと芝居を持ち、キーが空間と照明を検査可能にします。"
+                        : "For Scene 2 Sequence 2, SH01, SH02 A/B, SH03, SH04, SH05, SH06 A/B/C, SH07, SH08, and SH09 are kept in one comparison sheet. The rough owns camera and acting; the keyframe makes space and light inspectable."}
+                </p>
+                <Figure
+                    src={media.comparisons.roughToKeyframe}
+                    alt={
+                        ja
+                            ? "Scene 2 Sequence 2のラフとプロダクション化キーの比較一覧"
+                            : "Scene 2 Sequence 2 rough-to-productionized keyframe comparison sheet"
+                    }
+                    caption={
+                        ja
+                            ? "全12出力。ラフ → プロダクション化キー。"
+                            : "The complete twelve-output set. Rough → productionized keyframe."
+                    }
+                />
+                <TestVideo
+                    src={media.roughKeyframeMotion.video}
+                    poster={media.roughKeyframeMotion.poster}
+                    title={
+                        ja
+                            ? "ラフ、空間キー、モーションの比較"
+                            : "Rough, spatial keyframe, and motion comparison"
+                    }
+                    fallback={
+                        ja
+                            ? "比較映像を読み込めませんでした。"
+                            : "The comparison video could not be loaded."
+                    }
+                />
+                <p className="blog-media-caption">
+                    {ja
+                        ? "ラフ → 空間キー → モーション。v1をそのまま採用せず、演出側のQAを次の反復へ戻す。"
+                        : "Rough → spatial keyframe → motion. v1 is not accepted by default; animation-direction QA returns to the next iteration."}
+                </p>
+            </section>
+            <section
+                className="blog-rich-media-section blog-body"
+                aria-labelledby="plates-heading"
+            >
+                <div className="blog-rich-section-label">
+                    D / {ja ? "環境プレート" : "ENVIRONMENT PLATES"}
+                </div>
+                <h2 id="plates-heading">
+                    {ja
+                        ? "部屋を一枚の絵で終わらせない"
+                        : "A room is more than one beautiful image"}
+                </h2>
+                <p>
+                    {ja
+                        ? "スタジオの夜は、ヒーロー参照を空間の権威として、採用したカメラプレートへ展開しました。SH02とSH03は制限付きの角度、SH04は全室の基準です。却下したPlate 01は、カノンとして使っていません。"
+                        : "For the studio at night, the hero reference becomes room authority and the accepted camera plates extend it. SH02 and SH03 are limited angles; SH04 is the whole-room anchor. Rejected Plate 01 is not treated as canon."}
+                </p>
+                <Figure
+                    src={media.comparisons.plates}
+                    alt={
+                        ja
+                            ? "スタジオ夜の参照と採用プレートの比較"
+                            : "Studio night reference and accepted plate comparison"
+                    }
+                    caption={
+                        ja
+                            ? "参照 → 採用プレート。机、窓、描画壁、通路の関係をカット間で固定する。"
+                            : "Reference → accepted plates. Desk, windows, drawing wall, and walking lane stay legible across cuts."
+                    }
+                />
+            </section>
             <section className="blog-study-section" id="experiment-outputs">
                 <header className="blog-section-heading">
                     <p>00 / {ja ? "実験出力" : "Experiment outputs"}</p>
@@ -62,6 +265,11 @@ const EnglishArticle = ({ locale }) => {
                         {ja
                             ? "準備中のカバー映像は、完成した脚本のフリップブック世界の実験です。水彩の空間、反射する男性の姿、ノゾミの落下を、一つの短い流れに置きました。"
                             : "The prepared cover video is the completed screenplay’s flipbook-world experiment: watercolor space, reflected male figures, and Nozomi’s fall placed in one short flow."}
+                    </p>
+                    <p>
+                        {ja
+                            ? "AIツールが増えたからこそ、ペーシング、書くこと、描くことの基礎が以前より重要です。候補を選ぶ力と、直すべき場所を説明する力は自動化されません。"
+                            : "The more AI tools we use, the more the fundamentals of pacing, writing, and drawing matter. Selecting a candidate and explaining what must be fixed are not automated."}
                     </p>
                     <p>
                         {ja

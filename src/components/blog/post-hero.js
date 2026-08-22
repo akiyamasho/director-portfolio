@@ -8,7 +8,7 @@ const PostHero = ({ post, locale }) => {
 
     return (
         <section
-            className="blog-feature-hero blog-feature-hero--article"
+            className={`blog-feature-hero blog-feature-hero--article blog-feature-hero--${post.slug}`}
             data-cover-tone={post.cover.tone || "cyan"}
         >
             {failed ? (
