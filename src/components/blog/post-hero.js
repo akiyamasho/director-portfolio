@@ -14,9 +14,21 @@ const PostHero = ({ post, locale }) => {
             {failed ? (
                 <div className="blog-media-fallback" role="status">
                     {locale === "ja"
-                        ? "カバー画像を読み込めませんでした。"
-                        : "The cover image could not be loaded."}
+                        ? "カバーメディアを読み込めませんでした。"
+                        : "The cover media could not be loaded."}
                 </div>
+            ) : post.cover.video ? (
+                <video
+                    className="blog-feature-hero-image blog-feature-hero-video"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    poster={post.cover.poster}
+                    onError={() => setFailed(true)}
+                    aria-label={alt}
+                >
+                    <source src={post.cover.video} type="video/mp4" />
+                </video>
             ) : (
                 <img
                     className="blog-feature-hero-image"

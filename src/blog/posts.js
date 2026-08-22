@@ -2,9 +2,11 @@ import {
     directingTheReferenceMedia,
     directingTheReferencePart2Media,
     directingTheReferencePart3Media,
+    directingTheReferencePart4Media,
 } from "./media";
 import screenplayCover from "../assets/blog-covers/5rps-screenplay-complete.webp";
 import storyboardingCover from "../assets/blog-covers/5rps-storyboarding-in-progress.webp";
+import tegakiPart4Cover from "../assets/blog-covers/tegaki-part4-cover.webp";
 import { post as aksNginxIngressStaticIp } from "./migrated/aks-nginx-ingress-static-ip";
 import { post as introducingMlopsPart1 } from "./migrated/introducing-mlops-part-1";
 import { post as introducingMlopsPart2 } from "./migrated/introducing-mlops-part-2";
@@ -14,6 +16,39 @@ import { post as localVscodeCloudGpus } from "./migrated/local-vscode-cloud-gpus
 import { post as ragEnterpriseDocuments } from "./migrated/rag-enterprise-documents";
 
 export const posts = [
+    {
+        slug: "directing-the-reference-part-4",
+        date: "2026-08-22",
+        tags: ["production", "screenplay", "animation"],
+        media: directingTheReferencePart4Media,
+        cover: {
+            src: tegakiPart4Cover,
+            poster: directingTheReferencePart4Media.cover.poster,
+            video: directingTheReferencePart4Media.cover.video,
+            position: "center",
+            lede: {
+                en: "The screenplay is complete. Two people and limited hours are finishing the film.",
+                ja: "脚本は完成しました。二人の小さなチームと限られた時間で映画を仕上げます。",
+            },
+            alt: {
+                en: "Cover video for Directing the Reference, Part 4",
+                ja: "リファレンスを演出する Part 4のカバー映像",
+            },
+        },
+        translations: {
+            en: {
+                title: "Directing the Reference, Part 4",
+                summary:
+                    "The screenplay is complete. A two-person team is finishing a six-scene short film by August 31, while learning that pacing, writing, and drawing fundamentals matter more than ever.",
+            },
+            ja: {
+                title: "リファレンスを演出する Part 4",
+                titleBreaks: ["リファレンスを", "演出する", "Part 4"],
+                summary:
+                    "脚本を完成させ、二人のチームで8月31日までに短編を仕上げる。AI時代にこそ必要なペーシング、文章、描画の基礎を記録します。",
+            },
+        },
+    },
     {
         slug: "directing-the-reference-part-3",
         date: "2026-08-16",

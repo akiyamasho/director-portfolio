@@ -224,19 +224,20 @@ export const directingTheReferencePart3Media = {
         "opening-manual-boards-73d115d0635a.webp"
     ),
     openingShot: {
-        video: directingReferencePart3Asset(
-            "opening-shot-e7c5510fcd23.mp4"
-        ),
+        video: directingReferencePart3Asset("opening-shot-e7c5510fcd23.mp4"),
         poster: directingReferencePart3Asset(
             "opening-poster-2c0f81110268.webp"
         ),
     },
     studioSweep: {
-        video: directingReferencePart3Asset(
-            "studio-sweep-dd678310752b.mp4"
-        ),
-        poster: directingReferencePart3Asset(
-            "studio-poster-9a522e655632.webp"
-        ),
+        video: directingReferencePart3Asset("studio-sweep-dd678310752b.mp4"),
+        poster: directingReferencePart3Asset("studio-poster-9a522e655632.webp"),
+    },
+};
+
+export const directingTheReferencePart4Media = {
+    cover: {
+        video: `${bucketUrl}/20260822_directing-the-reference-part-4/cover-video-71eafad1938c.mp4`,
+        poster: `${bucketUrl}/20260822_directing-the-reference-part-4/cover-poster-7c8f97eaf6d5.webp`,
     },
 };
