@@ -61,10 +61,49 @@ const EnglishArticle = ({ locale }) => {
 
             <section
                 className="blog-rich-media-section blog-body"
+                aria-labelledby="opening-video-heading"
+            >
+                <div className="blog-rich-section-label">
+                    A / {ja ? "最初の完成映像" : "FIRST MOVING SHOT"}
+                </div>
+                <h2 id="opening-video-heading">
+                    {ja
+                        ? "最初の完成映像で演出を確認する"
+                        : "The first moving shot tests the direction"}
+                </h2>
+                <p>
+                    {ja
+                        ? "最初のデモ映像は、脚本と手描きの設計を動くショットへ渡した最初の確認です。二つの字幕付きバージョンを見ながら、カメラ、芝居、編集の意図が画面に残っているかを確認します。"
+                        : "The captioned demo is the first check of how the screenplay and hand-drawn planning carry into a moving shot. The two subtitled versions let us check whether camera, acting, and editorial intention remain legible on screen."}
+                </p>
+                <TestVideo
+                    src={media.cover.video}
+                    poster={media.cover.poster}
+                    title={
+                        ja
+                            ? "字幕付きの最初のデモ映像"
+                            : "First captioned demo video"
+                    }
+                    fallback={
+                        ja
+                            ? "最初のデモ映像を読み込めませんでした。"
+                            : "The first demo video could not be loaded."
+                    }
+                    muted={false}
+                />
+                <p className="blog-media-caption">
+                    {ja
+                        ? "最初のデモ映像。字幕付きの二つのバージョンで、演出の意図とペースを確認する。"
+                        : "The first demo video, with two captioned versions, used to check direction and pace."}
+                </p>
+            </section>
+
+            <section
+                className="blog-rich-media-section blog-body"
                 aria-labelledby="animatic-heading"
             >
                 <div className="blog-rich-section-label">
-                    A / {ja ? "音で決めるペース" : "PACING WITH SOUND"}
+                    B / {ja ? "音で決めるペース" : "PACING WITH SOUND"}
                 </div>
                 <h2 id="animatic-heading">
                     {ja
@@ -103,7 +142,7 @@ const EnglishArticle = ({ locale }) => {
                 aria-labelledby="keyframe-heading"
             >
                 <div className="blog-rich-section-label">
-                    B / {ja ? "ラフからキーへ" : "ROUGH TO KEYFRAME"}
+                    C / {ja ? "ラフからキーへ" : "ROUGH TO KEYFRAME"}
                 </div>
                 <h2 id="keyframe-heading">
                     {ja
@@ -135,7 +174,7 @@ const EnglishArticle = ({ locale }) => {
                 aria-labelledby="iterations-heading"
             >
                 <div className="blog-rich-section-label">
-                    C / {ja ? "現在の反復" : "CURRENT ITERATIONS"}
+                    D / {ja ? "現在の反復" : "CURRENT ITERATIONS"}
                 </div>
                 <h2 id="iterations-heading">
                     {ja
@@ -167,7 +206,7 @@ const EnglishArticle = ({ locale }) => {
                 aria-labelledby="motion-heading"
             >
                 <div className="blog-rich-section-label">
-                    D / {ja ? "空間からモーションへ" : "SPACE TO MOTION"}
+                    E / {ja ? "空間からモーションへ" : "SPACE TO MOTION"}
                 </div>
                 <h2 id="motion-heading">
                     {ja
@@ -205,7 +244,7 @@ const EnglishArticle = ({ locale }) => {
                 aria-labelledby="plates-heading"
             >
                 <div className="blog-rich-section-label">
-                    E / {ja ? "環境プレート" : "ENVIRONMENT PLATES"}
+                    F / {ja ? "環境プレート" : "ENVIRONMENT PLATES"}
                 </div>
                 <h2 id="plates-heading">
                     {ja
@@ -234,7 +273,7 @@ const EnglishArticle = ({ locale }) => {
 
             <section className="blog-study-section blog-notes" id="finish-line">
                 <header className="blog-section-heading">
-                    <p>F / {ja ? "完成へ" : "FINISHING"}</p>
+                    <p>G / {ja ? "完成へ" : "FINISHING"}</p>
                     <h2>{ja ? "映画を最後まで閉じる" : "Close the film"}</h2>
                 </header>
                 <div className="blog-body blog-transfer-copy">

@@ -6,7 +6,6 @@ import {
 } from "./media";
 import screenplayCover from "../assets/blog-covers/5rps-screenplay-complete.webp";
 import storyboardingCover from "../assets/blog-covers/5rps-storyboarding-in-progress.webp";
-import tegakiPart4Cover from "../assets/blog-covers/tegaki-part4-cover.webp";
 import { post as aksNginxIngressStaticIp } from "./migrated/aks-nginx-ingress-static-ip";
 import { post as introducingMlopsPart1 } from "./migrated/introducing-mlops-part-1";
 import { post as introducingMlopsPart2 } from "./migrated/introducing-mlops-part-2";
@@ -22,17 +21,15 @@ export const posts = [
         tags: ["production", "screenplay", "animation"],
         media: directingTheReferencePart4Media,
         cover: {
-            src: tegakiPart4Cover,
-            poster: directingTheReferencePart4Media.cover.poster,
-            video: directingTheReferencePart4Media.cover.video,
+            src: directingTheReferencePart4Media.cover.poster,
             position: "center",
             lede: {
                 en: "The screenplay is complete. Two people and limited hours are finishing the film.",
                 ja: "脚本は完成しました。二人の小さなチームと限られた時間で映画を仕上げます。",
             },
             alt: {
-                en: "Cover video for Directing the Reference, Part 4",
-                ja: "リファレンスを演出する Part 4のカバー映像",
+                en: "First frame from the opening demo video for Directing the Reference, Part 4",
+                ja: "リファレンスを演出する Part 4の冒頭デモ映像のファーストフレーム",
             },
         },
         translations: {
