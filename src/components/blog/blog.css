@@ -341,23 +341,6 @@
     margin-top: 2rem;
 }
 
-.blog-rich-pair {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.blog-rich-pair .blog-rich-figure {
-    margin: 0;
-}
-
-@media only screen and (max-width: 700px) {
-    .blog-rich-pair {
-        grid-template-columns: 1fr;
-    }
-}
-
 [lang="ja"] .blog-feature-hero--article .blog-title {
     font-size: clamp(2.35rem, 4.6vw, 4rem);
     line-height: 1.05;
