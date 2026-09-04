@@ -254,3 +254,37 @@ export const directingTheReferencePart4Media = {
         plates: `${bucketUrl}/20260822_directing-the-reference-part-4/studio-reference-to-plates-7e5b92490e1f.webp`,
     },
 };
+
+const directingReferencePart5Prefix = "20260905_directing-the-reference-part-5";
+const directingReferencePart5Asset = (name) =>
+    `${bucketUrl}/${directingReferencePart5Prefix}/${name}`;
+
+export const directingTheReferencePart5Media = {
+    cover: directingReferencePart5Asset(
+        "part5-rainy-street-hero-4e0cea10e5ba.webp"
+    ),
+    currentWip: {
+        video: directingReferencePart5Asset(
+            "current-wip-subtitled-3c7109e75582.mp4"
+        ),
+        poster: directingReferencePart5Asset(
+            "current-wip-subtitled-poster-ced0ba593e7a.webp"
+        ),
+    },
+    pacing: {
+        video: directingReferencePart5Asset(
+            "pacing-cut-subtitled-0029da550c38.mp4"
+        ),
+        poster: directingReferencePart5Asset(
+            "pacing-cut-subtitled-poster-4689b9dfa9ad.webp"
+        ),
+    },
+    comparisons: [
+        directingReferencePart5Asset("scene-01-comparison-9100543822a4.webp"),
+        directingReferencePart5Asset("scene-02-comparison-014d8e014bda.webp"),
+        directingReferencePart5Asset("scene-03-comparison-5977316d7867.webp"),
+        directingReferencePart5Asset("scene-04-comparison-3a137c1b3ef2.webp"),
+        directingReferencePart5Asset("scene-05-comparison-e0b78e97953e.webp"),
+        directingReferencePart5Asset("scene-06-comparison-5cbfc9603991.webp"),
+    ],
+};

@@ -51,6 +51,10 @@ const directingReferenceEntries = {
             slug: "directing-the-reference-part-4",
             label: "Finishing the film with two people",
         },
+        {
+            slug: "directing-the-reference-part-5",
+            label: "Making the cut answer to the notes",
+        },
     ],
     ja: [
         {
@@ -68,6 +72,10 @@ const directingReferenceEntries = {
         {
             slug: "directing-the-reference-part-4",
             label: "二人で映画を完成させる",
+        },
+        {
+            slug: "directing-the-reference-part-5",
+            label: "ノートに応える編集へ",
         },
     ],
 };
@@ -189,13 +197,13 @@ export const DirectingReferenceSeriesNavigation = ({ currentPart, locale }) => {
                     id="directing-reference-series-title"
                 >
                     {language === "ja"
-                        ? "全4回の制作記録"
-                        : "Four-part production study"}
+                        ? "全5回の制作記録"
+                        : "Five-part production study"}
                 </p>
                 <span>
                     {language === "ja"
-                        ? `Part ${currentPart} / 4`
-                        : "Part " + currentPart + " / 4"}
+                        ? `Part ${currentPart} / 5`
+                        : "Part " + currentPart + " / 5"}
                 </span>
             </div>
             <ol className="blog-series-overview">
@@ -244,6 +252,6 @@ export const DirectingReferenceSeriesNavigation = ({ currentPart, locale }) => {
 };
 
 DirectingReferenceSeriesNavigation.propTypes = {
-    currentPart: PropTypes.oneOf([1, 2, 3, 4]).isRequired,
+    currentPart: PropTypes.oneOf([1, 2, 3, 4, 5]).isRequired,
     locale: PropTypes.string.isRequired,
 };

@@ -3,6 +3,7 @@ import {
     directingTheReferencePart2Media,
     directingTheReferencePart3Media,
     directingTheReferencePart4Media,
+    directingTheReferencePart5Media,
 } from "./media";
 import screenplayCover from "../assets/blog-covers/5rps-screenplay-complete.webp";
 import storyboardingCover from "../assets/blog-covers/5rps-storyboarding-in-progress.webp";
@@ -15,6 +16,37 @@ import { post as localVscodeCloudGpus } from "./migrated/local-vscode-cloud-gpus
 import { post as ragEnterpriseDocuments } from "./migrated/rag-enterprise-documents";
 
 export const posts = [
+    {
+        slug: "directing-the-reference-part-5",
+        date: "2026-09-05",
+        tags: ["production", "animation", "editing"],
+        media: directingTheReferencePart5Media,
+        cover: {
+            src: directingTheReferencePart5Media.cover,
+            position: "center",
+            lede: {
+                en: "A 9:29 pacing animatic and a 9:02 current WIP show how timed notes, per-line voices, and positive-only prompt experiments changed the film in one week.",
+                ja: "9分29秒のペーシング・アニマティックと9分02秒の現行WIPから、タイムコードを反映した制作ノート、台詞ごとの音声、肯定形のプロンプト検証が、この1週間で映画をどう変えたかを記録します。",
+            },
+            alt: {
+                en: "A quiet, empty rainy shopping street in the current WIP, with a deliberately low-detail darkened left area reserved for title copy.",
+                ja: "現行WIPに登場する静かで無人の雨の商店街。タイトル用に左側を意図的に暗く、情報量を抑えています。",
+            },
+        },
+        translations: {
+            en: {
+                title: "Directing the Reference, Part 5",
+                summary:
+                    "A 9:29 pacing animatic and a 9:02 current WIP show how timed notes, per-line ElevenLabs voices, and positive-only prompt experiments changed the film in one week.",
+            },
+            ja: {
+                title: "リファレンスを演出する Part 5",
+                titleBreaks: ["リファレンスを", "演出する", "Part 5"],
+                summary:
+                    "9分29秒のペーシング・アニマティックと9分02秒の現行WIPから、タイムコードを反映した制作ノート、台詞ごとのElevenLabs音声、肯定形のプロンプト検証が、この1週間で映画をどう変えたかを記録します。",
+            },
+        },
+    },
     {
         slug: "directing-the-reference-part-4",
         date: "2026-08-22",

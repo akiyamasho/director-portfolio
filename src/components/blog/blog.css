@@ -1644,3 +1644,37 @@
         font-size: 0.95rem;
     }
 }
+.blog-part5 .blog-comparison-table-wrap {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.blog-part5 .blog-comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 34rem;
+}
+
+.blog-part5 .blog-comparison-table caption {
+    text-align: left;
+    margin-bottom: 0.75rem;
+    color: var(--text-muted, #a7a7a7);
+}
+
+.blog-part5 .blog-comparison-table th,
+.blog-part5 .blog-comparison-table td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 0.8rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.blog-part5 .blog-comparison-table th {
+    color: #fff;
+}
+
+.blog-part5 .blog-comparison-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+}
