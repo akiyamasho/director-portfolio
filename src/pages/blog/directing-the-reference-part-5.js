@@ -73,8 +73,8 @@ const EnglishArticle = ({ locale }) => {
                 </h2>
                 <p>
                     {ja
-                        ? "字幕付きの現行WIPを先に置き、その後に新しく字幕を付けたペーシング・カットを置きます。両方とも66個のバイリンガル字幕キューを持ち、ペーシングの字幕タイミングは順序付きの音声エンベロープ・ブロックとシーン境界に合わせています。"
-                        : "The current WIP comes first, followed by the newly subtitled pacing cut. Both public videos carry 66 bilingual subtitle cues. The pacing timing follows ordered audio-envelope blocks and scene boundaries."}
+                        ? "字幕付きの現行WIPを先に置き、その後に新しく字幕を付けたペーシング・カットを置きます。両方とも66個のバイリンガル字幕キューを持ちます。ペーシング版の字幕は、このカットの音声とシーン境界に合わせてタイミングを引き直しました。"
+                        : "The current WIP comes first, followed by the newly subtitled pacing cut. Both public videos carry 66 bilingual subtitle cues. The pacing subtitles were retimed against that cut's audio and scene boundaries."}
                 </p>
                 <Test
                     src={media.currentWip.video}
