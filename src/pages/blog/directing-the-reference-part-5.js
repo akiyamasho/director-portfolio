@@ -29,28 +29,28 @@ const EnglishArticle = ({ locale }) => {
     const ja = locale === "ja";
     const scenes = ja
         ? [
-              "冒頭の通りと連続性",
-              "空間の受け渡し",
-              "タイミングと画面方向",
-              "声の芝居とキャンセル",
-              "17カット中14個の不一致",
-              "二つのカットのフレーム",
+              "ランニング・アニメーションのデモ（ペーシング 01:00／WIP 01:00）",
+              "スタジオでのデジタル作画（ペーシング 02:40／WIP 02:20）",
+              "寝室でのノートPC検証（ペーシング 03:20／WIP 03:20）",
+              "ライブ配信への反応（ペーシング 04:40／WIP 04:40）",
+              "短編の編集（ペーシング 08:00／WIP 07:40）",
+              "父のフリップブック（ペーシング 08:40／WIP 08:20）",
           ]
         : [
-              "opening street and continuity",
-              "spatial handoff",
-              "timing and screen direction",
-              "voice performance and cancellation",
-              "fourteen mismatches across seventeen cuts",
-              "frames from the two cuts",
+              "running-animation demo (pacing 01:00 / WIP 01:00)",
+              "digital character drawing (pacing 02:40 / WIP 02:20)",
+              "bedroom laptop test (pacing 03:20 / WIP 03:20)",
+              "livestream reaction (pacing 04:40 / WIP 04:40)",
+              "editing the short film (pacing 08:00 / WIP 07:40)",
+              "the father's flipbook (pacing 08:40 / WIP 08:20)",
           ];
     return (
         <div className="blog-notebook blog-part5 blog-rich-part5">
             <div className="blog-body blog-opening">
                 <p className="blog-lead">
                     {ja
-                        ? "Part 4で掲げた8月31日の目標には間に合いませんでした。9分29.0秒のペーシング・アニマティックと、9分02.8秒の字幕付き現行WIPが、いまの映画の二つの全長カットです。制作はまだWIPです。"
-                        : "We missed the August 31 target from Part 4. A 9:29.0 pacing animatic and a 9:02.8 subtitled current WIP are now the film's two full-length working cuts. The film is still a WIP."}
+                        ? "Part 4で掲げた8月31日の締切は、9月14日まで延長されました。9分29.0秒のペーシング・アニマティックと、9分02.8秒の字幕付き現行WIPが、いまの映画の二つの全長カットです。制作はまだWIPです。"
+                        : "The August 31 deadline mentioned in Part 4 was extended to September 14. A 9:29.0 pacing animatic and a 9:02.8 subtitled current WIP are now the film's two full-length working cuts. The film is still a WIP."}
                 </p>
                 <p>
                     {ja
@@ -235,6 +235,11 @@ const EnglishArticle = ({ locale }) => {
                     {ja
                         ? "8月29日から9月3日の最終ペーシング・コミットまで、ペーシングを繰り返し改訂しました。Scene 1のタイトル・コーダを更新し、Scene 4のコンタミネーションとキャンセルの制作プランを整理しました。キャンセルは合計20.0秒の6つの外景ショットとして再構成し、登録済みのロケーション・ハンドルを使い、却下したScene 4 SH01のプリフライトを記録しました。配信チャットのインサートとScene 5のペース付きショット・プランも更新しました。"
                         : "Pacing was revised repeatedly from August 29 through the final pacing commit on September 3. The Scene 1 title coda was updated, and the Scene 4 contamination and cancellation plans were clarified. Cancellation was rebuilt as six exterior shots totaling 20.0 seconds. Registered location handles were used, a rejected Scene 4 SH01 preflight was archived, the livestream chat insert was updated, and the Scene 5 paced shot plans were revised."}
+                </p>
+                <p>
+                    {ja
+                        ? "以下では、二つのカットから同じ芝居の瞬間を選び、前後の別ショットではなく画面設計の差を比較します。"
+                        : "Each pair below holds on the same narrative beat in both cuts, so the comparison is between staging decisions rather than adjacent moments."}
                 </p>
                 <div className="blog-comparison-grid">
                     {media.comparisons.map((src, index) => (
