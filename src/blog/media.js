@@ -1,6 +1,6 @@
 import scene01Comparison from "../assets/blog-comparisons/directing-reference-part5/scene-01-comparison-16bc2421b3fd.webp";
 import scene02Comparison from "../assets/blog-comparisons/directing-reference-part5/scene-02-comparison-cb1e494b9133.webp";
-import scene03Comparison from "../assets/blog-comparisons/directing-reference-part5/scene-03-comparison-abfaeb43035d.webp";
+import scene03Comparison from "../assets/blog-comparisons/directing-reference-part5/scene-03-comparison-d8cab4342889.webp";
 import scene04Comparison from "../assets/blog-comparisons/directing-reference-part5/scene-04-comparison-d0169f61d968.webp";
 import scene05Comparison from "../assets/blog-comparisons/directing-reference-part5/scene-05-comparison-99465450e275.webp";
 import scene06Comparison from "../assets/blog-comparisons/directing-reference-part5/scene-06-comparison-f0c19c123a88.webp";

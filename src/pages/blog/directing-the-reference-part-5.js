@@ -31,7 +31,7 @@ const EnglishArticle = ({ locale }) => {
         ? [
               "ランニング・アニメーションのデモ（ペーシング 01:00／WIP 01:00）",
               "スタジオでのデジタル作画（ペーシング 02:40／WIP 02:20）",
-              "寝室でのノートPC検証（ペーシング 03:20／WIP 03:20）",
+              "ミアがノートPCを持ってくる場面（ペーシング 03:20／WIP 03:25）",
               "ライブ配信への反応（ペーシング 04:40／WIP 04:40）",
               "短編の編集（ペーシング 08:00／WIP 07:40）",
               "父のフリップブック（ペーシング 08:40／WIP 08:20）",
@@ -39,7 +39,7 @@ const EnglishArticle = ({ locale }) => {
         : [
               "running-animation demo (pacing 01:00 / WIP 01:00)",
               "digital character drawing (pacing 02:40 / WIP 02:20)",
-              "bedroom laptop test (pacing 03:20 / WIP 03:20)",
+              "Mia brings in the laptop (pacing 03:20 / WIP 03:25)",
               "livestream reaction (pacing 04:40 / WIP 04:40)",
               "editing the short film (pacing 08:00 / WIP 07:40)",
               "the father's flipbook (pacing 08:40 / WIP 08:20)",
