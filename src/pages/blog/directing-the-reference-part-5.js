@@ -30,7 +30,7 @@ const EnglishArticle = ({ locale }) => {
     const scenes = ja
         ? [
               "ランニング・アニメーションのデモ（ペーシング 01:00／WIP 01:00）",
-              "スタジオでのデジタル作画（ペーシング 02:40／WIP 02:20）",
+              "ライブ配信中に作画するノゾミ（ペーシング 02:53／WIP 02:53）",
               "ミアがノートPCを持ってくる場面（ペーシング 03:20／WIP 03:25）",
               "ライブ配信への反応（ペーシング 04:40／WIP 04:40）",
               "短編の編集（ペーシング 08:00／WIP 07:40）",
@@ -38,7 +38,7 @@ const EnglishArticle = ({ locale }) => {
           ]
         : [
               "running-animation demo (pacing 01:00 / WIP 01:00)",
-              "digital character drawing (pacing 02:40 / WIP 02:20)",
+              "Nozomi drawing during the livestream (pacing 02:53 / WIP 02:53)",
               "Mia brings in the laptop (pacing 03:20 / WIP 03:25)",
               "livestream reaction (pacing 04:40 / WIP 04:40)",
               "editing the short film (pacing 08:00 / WIP 07:40)",
