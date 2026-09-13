@@ -30,6 +30,7 @@ import moon from "../assets/project/moon.jpeg";
 import brighter from "../assets/project/brighter.jpeg";
 import seichou from "../assets/project/seichou.jpeg";
 import fiverps from "../assets/project/5rps-2026.webp";
+import { makingTegakiPart4Media } from "../blog/media";
 
 const Container = styled.div`
     padding-bottom: clamp(4rem, 10vw, 10rem);
@@ -137,6 +138,37 @@ class Portfolio extends Component {
     render() {
         const { intl } = this.props;
         const projects = [
+            {
+                posterImageSrc: makingTegakiPart4Media.poster,
+                posterFit: "contain",
+                title: intl.formatMessage({ id: "projects.tegaki.title" }),
+                subTitle: intl.formatMessage({
+                    id: "projects.tegaki.subTitle",
+                }),
+                roles: [
+                    intl.formatMessage({ id: "portfolio.role.screenplay" }),
+                    intl.formatMessage({ id: "portfolio.role.storyboard" }),
+                    intl.formatMessage({ id: "portfolio.role.direction" }),
+                    intl.formatMessage({
+                        id: "portfolio.role.roughPrompts",
+                    }),
+                ],
+                linkTextList: [
+                    {
+                        text: intl.formatMessage({
+                            id: "portfolio.watchTheShortFilm",
+                        }),
+                        link: makingTegakiPart4Media.finalFilm.video,
+                    },
+                    {
+                        text: intl.formatMessage({
+                            id: "portfolio.filmFestivalSubmission",
+                        }),
+                        link: "https://higgsfield.ai/@jsonmathsai/projects/tegaki",
+                    },
+                ],
+                snsLinkTypeMap: {},
+            },
             {
                 posterImageSrc: fiverps,
                 posterFit: "contain",

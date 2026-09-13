@@ -73,8 +73,13 @@ const EnglishArticle = ({ locale, media }) => {
                 </p>
                 <p>
                     {ja
-                        ? "私たち二人は、機械学習エンジニアリングとアニメーションの両方にまたがって制作しています。Sho Akiyamaがアニメーションを演出し、Json Cunananが機械学習エンジニアリングを担当します。だから、手と機械を対立する二つの陣営として扱うことはできません。機械学習の自動化は反復の速度と比較の幅を増やし、アニメーションの知識は、何を残し、何を捨て、どこで直すべきかを判断します。二つの世界は互いを助けることができます。"
-                        : "Our two-person team works across machine-learning engineering and animation. Sho Akiyama directs the animation, and Json Cunanan handles the machine-learning engineering. We cannot treat hand and machine as opposing moral camps. Machine-learning automation increases the speed of repetition and the range of comparison. Animation knowledge decides what to keep, what to reject, and where a correction has to happen. The two worlds can help each other."}
+                        ? "私たちの役割は明確でした。脚本・絵コンテ・演出・ラフプロンプトは秋山翔、エージェントハーネス・ポストプロセス・自動化はJson Cunananが担いました。企画・制作はJson Cunananと秋山翔で行いました。だから、手と機械を対立する二つの陣営として扱うことはできません。機械学習の自動化は反復の速度と比較の幅を増やし、アニメーションの知識は、何を残し、何を捨て、どこで直すべきかを判断します。二つの世界は互いを助けることができます。"
+                        : "Within our partnership, the credits name the work plainly: Screenplay, Storyboard, Direction, and Rough Prompts by Sho Akiyama. Agent Harness, Post-processing, and Automation by Json Cunanan. We created and produced Tegaki together. That is why we cannot treat hand and machine as opposing moral camps. Machine-learning automation increases the speed of repetition and the range of comparison. Animation knowledge decides what to keep, what to reject, and where a correction has to happen. The two worlds can help each other."}
+                </p>
+                <p>
+                    {ja
+                        ? "私たちは平日の仕事が終わった後と週末にこの映画を作り、制作費とHiggsfieldのクレジットのために私たちの小遣いを出し合いました。限られた時間と予算の中でも、画面を一つずつ見て、必要な試行と修正にお金と時間を配りました。"
+                        : "We made this film after-hours and on weekends, pooling our pocket money for production expenses and Higgsfield credits. With limited time and a small budget, we kept putting that money and time toward the next necessary attempt, correction, or export."}
                 </p>
                 <p>
                     {ja
