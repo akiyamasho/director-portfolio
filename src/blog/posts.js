@@ -4,6 +4,7 @@ import {
     directingTheReferencePart3Media,
     directingTheReferencePart4Media,
     directingTheReferencePart5Media,
+    makingTegakiPart4Media,
 } from "./media";
 import screenplayCover from "../assets/blog-covers/5rps-screenplay-complete.webp";
 import storyboardingCover from "../assets/blog-covers/5rps-storyboarding-in-progress.webp";
@@ -16,6 +17,37 @@ import { post as localVscodeCloudGpus } from "./migrated/local-vscode-cloud-gpus
 import { post as ragEnterpriseDocuments } from "./migrated/rag-enterprise-documents";
 
 export const posts = [
+    {
+        slug: "making-tegaki-part-4",
+        date: "2026-09-13",
+        tags: ["production", "animation"],
+        media: makingTegakiPart4Media,
+        cover: {
+            src: makingTegakiPart4Media.hero,
+            position: "center",
+            lede: {
+                en: "Manual screen finishing and a Suno score setup move TEGAKI from a screen-completion export toward the next conform pass.",
+                ja: "手動で画面を仕上げ、Sunoのスコア設計を組み上げる。TEGAKIを画面完成書き出しから次のコンフォームへ進めます。",
+            },
+            alt: {
+                en: "Nozomi at a drawing tablet with a bilingual livestream chat overlay on the right beside a dark title field",
+                ja: "暗いタイトル用の余白の隣で、右側に日英の配信チャットを重ねた描画タブレットに向かうノゾミ",
+            },
+        },
+        translations: {
+            en: {
+                title: "Making TEGAKI, Part 4",
+                summary:
+                    "A September 6–13 production log on manual screen finishing and the Suno score setup for the next conform pass.",
+            },
+            ja: {
+                title: "『手描き』制作記録 Part 4",
+                titleBreaks: ["『手描き』制作記録", "Part 4"],
+                summary:
+                    "9月6日から13日までの制作記録。手動の画面仕上げと、次のコンフォームへ向けたSunoのスコア設計をまとめます。",
+            },
+        },
+    },
     {
         slug: "directing-the-reference-part-5",
         date: "2026-09-05",
@@ -35,13 +67,13 @@ export const posts = [
         },
         translations: {
             en: {
-                title: "Directing the Reference, Part 5",
+                title: "Making TEGAKI, Part 3",
                 summary:
                     "A 9:29 pacing animatic and a 9:02 current WIP show how timed notes, per-line ElevenLabs voices, and positive-only prompt experiments changed the film in one week.",
             },
             ja: {
-                title: "リファレンスを演出する Part 5",
-                titleBreaks: ["リファレンスを", "演出する", "Part 5"],
+                title: "『手描き』制作記録 Part 3",
+                titleBreaks: ["『手描き』制作記録", "Part 3"],
                 summary:
                     "9分29秒のペーシング・アニマティックと9分02秒の現行WIPから、タイムコードを反映した制作ノート、台詞ごとのElevenLabs音声、肯定形のプロンプト検証が、この1週間で映画をどう変えたかを記録します。",
             },
@@ -60,19 +92,19 @@ export const posts = [
                 ja: "脚本は完成しました。二人の小さなチームと限られた時間で映画を仕上げます。",
             },
             alt: {
-                en: "First frame from the opening demo video for Directing the Reference, Part 4",
-                ja: "リファレンスを演出する Part 4の冒頭デモ映像のファーストフレーム",
+                en: "First frame from the opening demo video for Making TEGAKI, Part 2",
+                ja: "『手描き』制作記録 Part 2の冒頭デモ映像のファーストフレーム",
             },
         },
         translations: {
             en: {
-                title: "Directing the Reference, Part 4",
+                title: "Making TEGAKI, Part 2",
                 summary:
                     "The screenplay is complete. A two-person team is finishing a six-scene short film by August 31, while learning that pacing, writing, and drawing fundamentals matter more than ever.",
             },
             ja: {
-                title: "リファレンスを演出する Part 4",
-                titleBreaks: ["リファレンスを", "演出する", "Part 4"],
+                title: "『手描き』制作記録 Part 2",
+                titleBreaks: ["『手描き』制作記録", "Part 2"],
                 summary:
                     "脚本を完成させ、二人のチームで8月31日までに短編を仕上げる。AI時代にこそ必要なペーシング、文章、描画の基礎を記録します。",
             },
@@ -97,13 +129,13 @@ export const posts = [
         },
         translations: {
             en: {
-                title: "Directing the Reference, Part 3",
+                title: "Making TEGAKI, Part 1",
                 summary:
                     "Building a short film through story development, character design, spatial planning, manual storyboards, production experiments, and one finished moving shot.",
             },
             ja: {
-                title: "リファレンスを演出する Part 3",
-                titleBreaks: ["リファレンスを", "演出する", "Part 3"],
+                title: "『手描き』制作記録 Part 1",
+                titleBreaks: ["『手描き』制作記録", "Part 1"],
                 summary:
                     "短編の企画、キャラクター設計、空間設計、手描き絵コンテ、制作検証、最初の完成映像までをたどる制作記録。",
             },

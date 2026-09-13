@@ -43,18 +43,6 @@ const directingReferenceEntries = {
             slug: "directing-the-reference-part-2",
             label: "Productionizing fewer, stronger inputs",
         },
-        {
-            slug: "directing-the-reference-part-3",
-            label: "Turning fear into a short film",
-        },
-        {
-            slug: "directing-the-reference-part-4",
-            label: "Finishing the film with two people",
-        },
-        {
-            slug: "directing-the-reference-part-5",
-            label: "Making the cut answer to the notes",
-        },
     ],
     ja: [
         {
@@ -64,18 +52,6 @@ const directingReferenceEntries = {
         {
             slug: "directing-the-reference-part-2",
             label: "少数の強い入力へ仕上げる",
-        },
-        {
-            slug: "directing-the-reference-part-3",
-            label: "恐れを短編へ変える",
-        },
-        {
-            slug: "directing-the-reference-part-4",
-            label: "二人で映画を完成させる",
-        },
-        {
-            slug: "directing-the-reference-part-5",
-            label: "ノートに応える編集へ",
         },
     ],
 };
@@ -197,13 +173,13 @@ export const DirectingReferenceSeriesNavigation = ({ currentPart, locale }) => {
                     id="directing-reference-series-title"
                 >
                     {language === "ja"
-                        ? "全5回の制作記録"
-                        : "Five-part production study"}
+                        ? "全2回のリファレンス検証"
+                        : "Two-part reference study"}
                 </p>
                 <span>
                     {language === "ja"
-                        ? `Part ${currentPart} / 5`
-                        : "Part " + currentPart + " / 5"}
+                        ? `Part ${currentPart} / 2`
+                        : "Part " + currentPart + " / 2"}
                 </span>
             </div>
             <ol className="blog-series-overview">
@@ -252,6 +228,112 @@ export const DirectingReferenceSeriesNavigation = ({ currentPart, locale }) => {
 };
 
 DirectingReferenceSeriesNavigation.propTypes = {
-    currentPart: PropTypes.oneOf([1, 2, 3, 4, 5]).isRequired,
+    currentPart: PropTypes.oneOf([1, 2]).isRequired,
+    locale: PropTypes.string.isRequired,
+};
+
+const tegakiEntries = {
+    en: [
+        {
+            slug: "directing-the-reference-part-3",
+            label: "Turning fear into a short film",
+        },
+        {
+            slug: "directing-the-reference-part-4",
+            label: "Finishing the film with two people",
+        },
+        {
+            slug: "directing-the-reference-part-5",
+            label: "Making the cut answer to the notes",
+        },
+        {
+            slug: "making-tegaki-part-4",
+            label: "Building the screens and score",
+        },
+    ],
+    ja: [
+        {
+            slug: "directing-the-reference-part-3",
+            label: "恐れを短編へ変える",
+        },
+        {
+            slug: "directing-the-reference-part-4",
+            label: "二人で映画を仕上げる",
+        },
+        {
+            slug: "directing-the-reference-part-5",
+            label: "ノートに応える編集へ",
+        },
+        {
+            slug: "making-tegaki-part-4",
+            label: "画面と音楽の設計を組み上げる",
+        },
+    ],
+};
+
+export const TegakiSeriesNavigation = ({ currentPart, locale }) => {
+    const language = locale === "ja" ? "ja" : "en";
+    const entries = tegakiEntries[language];
+    const previous = entries[currentPart - 2];
+    const next = entries[currentPart];
+    return (
+        <nav className="blog-series-nav" aria-labelledby="tegaki-series-title">
+            <div className="blog-series-heading">
+                <p className="blog-nav-label" id="tegaki-series-title">
+                    {language === "ja" ? "『手描き』制作記録" : "Making TEGAKI"}
+                </p>
+                <span>
+                    {language === "ja"
+                        ? `Part ${currentPart} / 4`
+                        : `Part ${currentPart} / 4`}
+                </span>
+            </div>
+            <ol className="blog-series-overview">
+                {entries.map((entry, index) => {
+                    const part = index + 1;
+                    return (
+                        <li key={entry.slug}>
+                            <span aria-hidden="true">0{part}</span>
+                            {part === currentPart ? (
+                                <strong aria-current="page">
+                                    {entry.label}
+                                </strong>
+                            ) : (
+                                <Link to={`/blog/${entry.slug}`}>
+                                    {entry.label}
+                                </Link>
+                            )}
+                        </li>
+                    );
+                })}
+            </ol>
+            <div className="blog-series-pager">
+                <div>
+                    {previous && (
+                        <Link to={`/blog/${previous.slug}`}>
+                            <span>
+                                {language === "ja" ? "前の記事" : "Previous"}
+                            </span>
+                            {previous.label}
+                        </Link>
+                    )}
+                </div>
+                <div>
+                    {next && (
+                        <Link to={`/blog/${next.slug}`}>
+                            <span>
+                                {language === "ja" ? "次の記事" : "Next"}
+                            </span>
+                            {next.label}
+                        </Link>
+                    )}
+                </div>
+            </div>
+        </nav>
+    );
+};
+
+TegakiSeriesNavigation.propTypes = {
+    currentPart: PropTypes.oneOf([1, 2, 3, 4]).isRequired,
     locale: PropTypes.string.isRequired,
 };

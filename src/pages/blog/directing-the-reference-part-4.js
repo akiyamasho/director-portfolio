@@ -2,7 +2,7 @@ import React from "react";
 import { injectIntl } from "gatsby-plugin-intl";
 import BlogLayout from "../../components/blog/blog-layout";
 import PostHero from "../../components/blog/post-hero";
-import { DirectingReferenceSeriesNavigation } from "../../components/blog/article-navigation";
+import { TegakiSeriesNavigation } from "../../components/blog/article-navigation";
 import SEO from "../../components/seo";
 import { getPost } from "../../blog/posts";
 import TestVideo from "../../components/blog/test-video";
@@ -311,10 +311,7 @@ const Post = ({ intl }) => {
                 ]}
             />
             <PostHero post={post} locale={locale} />
-            <DirectingReferenceSeriesNavigation
-                currentPart={4}
-                locale={locale}
-            />
+            <TegakiSeriesNavigation currentPart={2} locale={locale} />
             {locale === "ja" ? (
                 <JapaneseArticle locale={locale} />
             ) : (

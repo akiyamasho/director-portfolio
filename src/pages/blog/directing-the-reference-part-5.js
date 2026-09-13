@@ -2,7 +2,7 @@ import React from "react";
 import { injectIntl } from "gatsby-plugin-intl";
 import BlogLayout from "../../components/blog/blog-layout";
 import PostHero from "../../components/blog/post-hero";
-import { DirectingReferenceSeriesNavigation } from "../../components/blog/article-navigation";
+import { TegakiSeriesNavigation } from "../../components/blog/article-navigation";
 import SEO from "../../components/seo";
 import { getPost } from "../../blog/posts";
 import TestVideo from "../../components/blog/test-video";
@@ -49,8 +49,8 @@ const EnglishArticle = ({ locale }) => {
             <div className="blog-body blog-opening">
                 <p className="blog-lead">
                     {ja
-                        ? "Part 4で掲げた8月31日の締切は、9月14日まで延長されました。9分29.0秒のペーシング・アニマティックと、9分02.8秒の字幕付き現行WIPが、いまの映画の二つの全長カットです。制作はまだWIPです。"
-                        : "The August 31 deadline mentioned in Part 4 was extended to September 14. A 9:29.0 pacing animatic and a 9:02.8 subtitled current WIP are now the film's two full-length working cuts. The film is still a WIP."}
+                        ? "Part 2で掲げた8月31日の締切は、9月14日まで延長されました。9分29.0秒のペーシング・アニマティックと、9分02.8秒の字幕付き現行WIPが、いまの映画の二つの全長カットです。制作はまだWIPです。"
+                        : "The August 31 deadline mentioned in Part 2 was extended to September 14. A 9:29.0 pacing animatic and a 9:02.8 subtitled current WIP are now the film's two full-length working cuts. The film is still a WIP."}
                 </p>
                 <p>
                     {ja
@@ -319,10 +319,7 @@ const Post = ({ intl }) => {
                 ]}
             />
             <PostHero post={post} locale={locale} />
-            <DirectingReferenceSeriesNavigation
-                currentPart={5}
-                locale={locale}
-            />
+            <TegakiSeriesNavigation currentPart={3} locale={locale} />
             <EnglishArticle locale={locale} />
         </BlogLayout>
     );

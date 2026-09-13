@@ -3,7 +3,7 @@ import { injectIntl } from "gatsby-plugin-intl";
 import BlogLayout from "../../components/blog/blog-layout";
 import PostHero from "../../components/blog/post-hero";
 import TestVideo from "../../components/blog/test-video";
-import { DirectingReferenceSeriesNavigation } from "../../components/blog/article-navigation";
+import { TegakiSeriesNavigation } from "../../components/blog/article-navigation";
 import SEO from "../../components/seo";
 import { getPost } from "../../blog/posts";
 
@@ -103,8 +103,8 @@ const EnglishArticle = ({ media }) => (
 
         <div className="blog-body blog-opening">
             <p className="blog-lead">
-                This idea began a few years ago, before other projects moved into
-                production. I am returning to it now as a short film for an
+                This idea began a few years ago, before other projects moved
+                into production. I am returning to it now as a short film for an
                 upcoming deadline, while 5 Requests Per Second pauses for a few
                 weeks. The story is inspired by being in the middle of
                 engineering (especially machine learning) and animation.
@@ -121,17 +121,17 @@ const EnglishArticle = ({ media }) => (
                 </a>
                 . The short is a psychological drama set inside contemporary
                 animation production. It is being made with hand-drawn planning,
-                character and spatial design, image and video models, and a local
-                production system built around the repository. This is not a
-                statement that one side has won. It is a record of trying to make
-                those methods answer to the same direction.
+                character and spatial design, image and video models, and a
+                local production system built around the repository. This is not
+                a statement that one side has won. It is a record of trying to
+                make those methods answer to the same direction.
             </p>
             <p>
-                The numbers above come from the first seven days of the production
-                repository, from August 10 to 16. I have been making the film at
-                night after work and on weekends. They measure activity, not a
-                finished film. The useful part of the record is how each stage
-                changed the next one.
+                The numbers above come from the first seven days of the
+                production repository, from August 10 to 16. I have been making
+                the film at night after work and on weekends. They measure
+                activity, not a finished film. The useful part of the record is
+                how each stage changed the next one.
             </p>
         </div>
 
@@ -150,27 +150,28 @@ const EnglishArticle = ({ media }) => (
             />
             <div className="blog-body blog-transfer-copy">
                 <p>
-                    The first moving result covers Nozomi waking at her desk after
-                    an all-nighter. Three manual drawings establish the wide,
-                    overhead close view, and reverse. They also establish what the
-                    finished video must not change: the desk, curtain, paper,
-                    drawing tablet, phone, wine, her sleeping posture, and the
-                    emotional delay before she looks up.
+                    The first moving result covers Nozomi waking at her desk
+                    after an all-nighter. Three manual drawings establish the
+                    wide, overhead close view, and reverse. They also establish
+                    what the finished video must not change: the desk, curtain,
+                    paper, drawing tablet, phone, wine, her sleeping posture,
+                    and the emotional delay before she looks up.
                 </p>
                 <p>
                     The video model contributes continuous movement, light,
                     texture, and the small physical transitions between those
                     directed states. The output lasts 15.07 seconds at 24 frames
-                    per second. It is not proof that the process has been solved.
-                    It is proof that the manual layer can remain legible after the
-                    production layer arrives.
+                    per second. It is not proof that the process has been
+                    solved. It is proof that the manual layer can remain legible
+                    after the production layer arrives.
                 </p>
                 <p>
-                    That is the hybrid I am trying to build. Traditional practice
-                    supplies the judgment needed to design, diagnose, and revise.
-                    The models expand what a very small production can attempt.
-                    Neither becomes meaningful by being placed above the other.
-                    They become useful when they share one authored film.
+                    That is the hybrid I am trying to build. Traditional
+                    practice supplies the judgment needed to design, diagnose,
+                    and revise. The models expand what a very small production
+                    can attempt. Neither becomes meaningful by being placed
+                    above the other. They become useful when they share one
+                    authored film.
                 </p>
             </div>
             <Figure
@@ -198,19 +199,20 @@ const EnglishArticle = ({ media }) => (
                     question at a time until the subject became personal.
                 </p>
                 <p>
-                    I spoke about the fear of being replaced as a filmmaker while
-                    using these tools to make the film. I wanted to redirect that
-                    fear, almost like judo, instead of disguising it as confidence
-                    or writing a lecture. The protagonist became an overworked
-                    animator. The deepest injury became loss of identity. The
-                    decisive emotional choice was self-betrayal rather than a
-                    machine or a friend becoming the villain.
+                    I spoke about the fear of being replaced as a filmmaker
+                    while using these tools to make the film. I wanted to
+                    redirect that fear, almost like judo, instead of disguising
+                    it as confidence or writing a lecture. The protagonist
+                    became an overworked animator. The deepest injury became
+                    loss of identity. The decisive emotional choice was
+                    self-betrayal rather than a machine or a friend becoming the
+                    villain.
                 </p>
                 <p>
-                    That distinction shaped everything. The short does not condemn
-                    artificial intelligence or place traditional artists on a
-                    moral pedestal. It stays close to an artist who has spent
-                    years learning anatomy, perspective, acting,
+                    That distinction shaped everything. The short does not
+                    condemn artificial intelligence or place traditional artists
+                    on a moral pedestal. It stays close to an artist who has
+                    spent years learning anatomy, perspective, acting,
                     cinematography, animation, drawing, and storytelling while
                     the economic meaning of those years begins to move beneath
                     her. The technology can be exciting. The social pressure can
@@ -241,13 +243,13 @@ const EnglishArticle = ({ media }) => (
             />
             <div className="blog-body blog-transfer-copy">
                 <p>
-                    The development conversation became a film bible, beat sheet,
-                    and screenplay. Nozomi is a skilled animator and animation
-                    director at a small studio. She can correct the weight of a
-                    shoulder, the timing of a glance, or the shape of a hand
-                    because thousands of invisible hours sit behind those small
-                    decisions. Her friend Mia works in machine learning and sees
-                    the same transition from the other side.
+                    The development conversation became a film bible, beat
+                    sheet, and screenplay. Nozomi is a skilled animator and
+                    animation director at a small studio. She can correct the
+                    weight of a shoulder, the timing of a glance, or the shape
+                    of a hand because thousands of invisible hours sit behind
+                    those small decisions. Her friend Mia works in machine
+                    learning and sees the same transition from the other side.
                 </p>
                 <p>
                     The story is designed so that enthusiasm and resistance both
@@ -285,10 +287,11 @@ const EnglishArticle = ({ media }) => (
                 <p>
                     Short production does not remove the need for continuity. It
                     concentrates it. The apartment had to support sleeping,
-                    drawing, a visit from Mia, livestreaming, and later changes in
-                    light without shifting its desk, entrance, window, or walking
-                    lane. The studio needed enough geometry to stage work from
-                    several directions while remaining the same cramped place.
+                    drawing, a visit from Mia, livestreaming, and later changes
+                    in light without shifting its desk, entrance, window, or
+                    walking lane. The studio needed enough geometry to stage
+                    work from several directions while remaining the same
+                    cramped place.
                 </p>
                 <p>
                     We built character definitions, prop definitions, location
@@ -301,12 +304,12 @@ const EnglishArticle = ({ media }) => (
                 </p>
                 <p>
                     This is where foundational knowledge becomes practical. A
-                    reference can only control perspective if somebody recognizes
-                    a broken perspective. A character sheet can only protect
-                    anatomy if somebody sees when a shoulder, hand, or weight
-                    shift is wrong. Tools can produce options very quickly. They
-                    cannot replace the directing decision that says which option
-                    belongs to the same film.
+                    reference can only control perspective if somebody
+                    recognizes a broken perspective. A character sheet can only
+                    protect anatomy if somebody sees when a shoulder, hand, or
+                    weight shift is wrong. Tools can produce options very
+                    quickly. They cannot replace the directing decision that
+                    says which option belongs to the same film.
                 </p>
             </div>
             <VideoFigure
@@ -329,8 +332,8 @@ const EnglishArticle = ({ media }) => (
                     The hand-drawn boards do the work that matters most. They
                     choose where the camera stands, what the audience learns,
                     when a character crosses the room, how long a pause lasts,
-                    and what must remain outside the frame. They are quick enough
-                    to change and specific enough to argue with.
+                    and what must remain outside the frame. They are quick
+                    enough to change and specific enough to argue with.
                 </p>
                 <p>
                     Each board is paired with manual notes. The notes name the
@@ -341,20 +344,22 @@ const EnglishArticle = ({ media }) => (
                 </p>
                 <p>
                     The more these tools enter the workflow, the more I need
-                    actual drawing ability. Moving quickly and accurately from an
-                    idea to a visual strengthens every later hybrid stage, and the
-                    gain compounds almost exponentially. When the first camera,
-                    perspective, pose, or acting idea is vague, everything
-                    downstream stalls. This production has pushed me to review
-                    fundamentals and spend more time warming up before I draw.
+                    actual drawing ability. Moving quickly and accurately from
+                    an idea to a visual strengthens every later hybrid stage,
+                    and the gain compounds almost exponentially. When the first
+                    camera, perspective, pose, or acting idea is vague,
+                    everything downstream stalls. This production has pushed me
+                    to review fundamentals and spend more time warming up before
+                    I draw.
                 </p>
                 <p>
                     Without that preparation, using a model feels like playing
-                    gacha: pull again, hope the random result feels exciting, and
-                    accept that the next shot may belong to another film. The
-                    hybrid setup becomes useful when the drawings and boards
-                    carry authorship, while the models help test finish, lighting,
-                    materials, and motion against decisions that already exist.
+                    gacha: pull again, hope the random result feels exciting,
+                    and accept that the next shot may belong to another film.
+                    The hybrid setup becomes useful when the drawings and boards
+                    carry authorship, while the models help test finish,
+                    lighting, materials, and motion against decisions that
+                    already exist.
                 </p>
             </div>
             <Figure
@@ -378,8 +383,8 @@ const EnglishArticle = ({ media }) => (
                     to approval. Early passes changed the room, added furniture,
                     wrote dialogue into the image, weakened the camera, lost
                     fingers, or followed the finish reference while ignoring the
-                    staging reference. Those results are not hidden. They explain
-                    what the next instruction had to become.
+                    staging reference. Those results are not hidden. They
+                    explain what the next instruction had to become.
                 </p>
                 <p>
                     We tested direct reference transfer, style-only reference,
@@ -392,17 +397,18 @@ const EnglishArticle = ({ media }) => (
                 </p>
                 <p>
                     The image model is very good at making a plausible finished
-                    picture. Production requires a stricter question: is this the
-                    right picture, connected to the one before and the one after?
-                    That question still comes from drawing, staging, editing, and
-                    knowing what to look for.
+                    picture. Production requires a stricter question: is this
+                    the right picture, connected to the one before and the one
+                    after? That question still comes from drawing, staging,
+                    editing, and knowing what to look for.
                 </p>
                 <p>
                     Since the first snapshot, production packages have extended
-                    through Shot 32 of the bedroom demo. Shots 12, 25, and 32 were
-                    rerun from updated manual authority. Indoor footwear is also a
-                    hard continuity check now, so a character sheet cannot
-                    silently put shoes on a character who is barefoot in the room.
+                    through Shot 32 of the bedroom demo. Shots 12, 25, and 32
+                    were rerun from updated manual authority. Indoor footwear is
+                    also a hard continuity check now, so a character sheet
+                    cannot silently put shoes on a character who is barefoot in
+                    the room.
                 </p>
             </div>
             <Figure
@@ -436,20 +442,20 @@ const EnglishArticle = ({ media }) => (
                 </p>
                 <p>
                     I built a local production website that reads the project as
-                    scenes, sequences, and shots. The shot detail panel places the
-                    board beside editable manual notes. Character, prop, and
-                    location tags remain visible as authorities rather than being
-                    buried inside a long prompt. The site writes those decisions
-                    back to Markdown so the browser does not become a second,
-                    disconnected source of truth. The latest pass also tightened
-                    reference search and workspace sync.
+                    scenes, sequences, and shots. The shot detail panel places
+                    the board beside editable manual notes. Character, prop, and
+                    location tags remain visible as authorities rather than
+                    being buried inside a long prompt. The site writes those
+                    decisions back to Markdown so the browser does not become a
+                    second, disconnected source of truth. The latest pass also
+                    tightened reference search and workspace sync.
                 </p>
                 <p>
-                    This part is engineering in service of directing. It does not
-                    decide the shot. It shortens the distance between seeing a
-                    problem, changing the instruction, and checking the next
-                    result. That distance matters when a short film still contains
-                    nearly one hundred planned shots.
+                    This part is engineering in service of directing. It does
+                    not decide the shot. It shortens the distance between seeing
+                    a problem, changing the instruction, and checking the next
+                    result. That distance matters when a short film still
+                    contains nearly one hundred planned shots.
                 </p>
             </div>
             <Figure
@@ -464,10 +470,11 @@ const EnglishArticle = ({ media }) => (
             <SectionHeading number="07 / Next" title="Continue the short" />
             <div className="blog-body blog-transfer-copy">
                 <p>
-                    The short is still in production. The next pass is to finish the
-                    current Scene 1 authority review, turn the approved boards into
-                    video packages, then carry the same system into the studio
-                    scenes without losing the looseness of the first drawings.
+                    The short is still in production. The next pass is to finish
+                    the current Scene 1 authority review, turn the approved
+                    boards into video packages, then carry the same system into
+                    the studio scenes without losing the looseness of the first
+                    drawings.
                 </p>
             </div>
         </section>
@@ -517,7 +524,8 @@ const JapaneseArticle = ({ media }) => (
                     最初の映像は、徹夜明けに机で目を覚ますノゾミです。3枚の手描きは、ワイド、俯瞰の寄り、リバースを決めています。机、カーテン、紙、液晶タブレット、スマートフォン、ワイン、眠る姿勢、顔を上げる前の間も、この段階で変えてはいけない要素として決めました。
                 </p>
                 <p>
-                    映像モデルは、その間の連続した動き、光、質感、小さな身体の移行を担います。出力は24 fps、15.07秒です。工程が解決した証明ではありません。制作の仕上げが入った後も、手動の演出が読めることを確認した最初の結果です。
+                    映像モデルは、その間の連続した動き、光、質感、小さな身体の移行を担います。出力は24
+                    fps、15.07秒です。工程が解決した証明ではありません。制作の仕上げが入った後も、手動の演出が読めることを確認した最初の結果です。
                 </p>
                 <p>
                     私が目指すハイブリッドはこの関係です。従来の制作知識が、設計、診断、修正の判断を支える。モデルは、小さな体制で試せる画面の幅を広げる。どちらかを上に置くことで意味が生まれるのではなく、同じひとつの映画へ参加することで役割が生まれます。
@@ -660,7 +668,9 @@ const JapaneseArticle = ({ media }) => (
                     画像モデルは、もっともらしい完成画をつくることが得意です。制作で必要なのは、その前後とつながる正しい画かという問いです。その問いは、作画、ステージング、編集、そして見るべき点を知っていることから生まれます。
                 </p>
                 <p>
-                    最初の記録以降、ベッドルーム・デモの制作パッケージはShot 32まで揃いました。Shot 12、25、32は更新した手動の基準から再制作しています。室内の履物も連続性の必須確認に加え、裸足の場面へキャラクター設定の靴がそのまま入り込まないようにしました。
+                    最初の記録以降、ベッドルーム・デモの制作パッケージはShot
+                    32まで揃いました。Shot
+                    12、25、32は更新した手動の基準から再制作しています。室内の履物も連続性の必須確認に加え、裸足の場面へキャラクター設定の靴がそのまま入り込まないようにしました。
                 </p>
             </div>
             <Figure
@@ -685,7 +695,8 @@ const JapaneseArticle = ({ media }) => (
             />
             <div className="blog-body blog-transfer-copy">
                 <p>
-                    7日間で94 commits、94本のショット記録に加え、人物、場所、プロップ、プロンプト、レビューのファイルが増えました。フォルダ構造は正確でも、現在のボード、ノート、制作状態が何階層も離れると、そこから演出するのは難しくなります。
+                    7日間で94
+                    commits、94本のショット記録に加え、人物、場所、プロップ、プロンプト、レビューのファイルが増えました。フォルダ構造は正確でも、現在のボード、ノート、制作状態が何階層も離れると、そこから演出するのは難しくなります。
                 </p>
                 <p>
                     そこで、プロジェクトをシーン、シークエンス、ショットとして読むローカル制作サイトをつくりました。ショット詳細では、ボードの隣で手動ノートを編集できます。キャラクター、プロップ、ロケーションのタグも、長いプロンプトの中ではなく、基準として見えます。編集内容はMarkdownへ戻るため、ブラウザが別の正解を持つこともありません。最新の更新では、リファレンス検索とワークスペース同期も改善しました。
@@ -706,7 +717,8 @@ const JapaneseArticle = ({ media }) => (
             <SectionHeading number="07 / 次" title="短編制作を続ける" />
             <div className="blog-body blog-transfer-copy">
                 <p>
-                    短編は制作中です。次はScene 1の現在の基準確認を終え、承認したボードを映像パッケージへ進めます。その後、最初の絵の緩さを失わないまま、同じ仕組みをスタジオのシーンへ移します。
+                    短編は制作中です。次はScene
+                    1の現在の基準確認を終え、承認したボードを映像パッケージへ進めます。その後、最初の絵の緩さを失わないまま、同じ仕組みをスタジオのシーンへ移します。
                 </p>
             </div>
         </section>
@@ -731,10 +743,7 @@ const Post = ({ intl }) => {
                 meta={meta}
             />
             <PostHero post={post} locale={locale} />
-            <DirectingReferenceSeriesNavigation
-                currentPart={3}
-                locale={locale}
-            />
+            <TegakiSeriesNavigation currentPart={1} locale={locale} />
             {locale === "ja" ? (
                 <JapaneseArticle media={post.media} />
             ) : (

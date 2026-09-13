@@ -295,3 +295,20 @@ export const directingTheReferencePart5Media = {
         scene06Comparison,
     ],
 };
+
+const makingTegakiPart4Prefix = "20260913_making-tegaki-part-4";
+const makingTegakiPart4Asset = (name) =>
+    `${bucketUrl}/${makingTegakiPart4Prefix}/${name}`;
+
+export const makingTegakiPart4Media = {
+    hero: makingTegakiPart4Asset("hero-6b3a4c612d03.webp"),
+    screenSystem: makingTegakiPart4Asset("screen-system-295e901919be.webp"),
+    comparison: {
+        video: makingTegakiPart4Asset(
+            "generated-vs-manual-screens-56e8832866f5.mp4"
+        ),
+        poster: makingTegakiPart4Asset(
+            "generated-vs-manual-screens-poster-570f04d0a901.webp"
+        ),
+    },
+};
