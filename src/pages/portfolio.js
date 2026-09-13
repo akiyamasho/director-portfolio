@@ -166,6 +166,14 @@ class Portfolio extends Component {
                         })}
                     </>
                 ),
+                roles: [
+                    intl.formatMessage({ id: "portfolio.role.director" }),
+                    intl.formatMessage({ id: "portfolio.role.producer" }),
+                    intl.formatMessage({ id: "portfolio.role.writer" }),
+                    intl.formatMessage({
+                        id: "portfolio.role.storyboardArtist",
+                    }),
+                ],
                 linkTextList: [
                     {
                         text: intl.formatMessage({

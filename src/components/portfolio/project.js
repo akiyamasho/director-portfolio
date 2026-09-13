@@ -174,22 +174,28 @@ const Project = ({
             <DetailsWrapper>
                 <Title>{title}</Title>
                 <SubTitle>{subTitle}</SubTitle>
-                <RoleWrapper>
-                    <RoleLabel>
-                        {creditLabel || (
-                            <FormattedMessage id="portfolio.role" />
-                        )}
-                    </RoleLabel>
-                    {credit ? (
+                {credit && (
+                    <RoleWrapper>
+                        <RoleLabel>
+                            {creditLabel || (
+                                <FormattedMessage id="portfolio.collaboration" />
+                            )}
+                        </RoleLabel>
                         <Credit>{credit}</Credit>
-                    ) : (
+                    </RoleWrapper>
+                )}
+                {roles.length > 0 && (
+                    <RoleWrapper>
+                        <RoleLabel>
+                            <FormattedMessage id="portfolio.role" />
+                        </RoleLabel>
                         <RoleList>
                             {roles.map((role) => (
                                 <Role key={role}>{role}</Role>
                             ))}
                         </RoleList>
-                    )}
-                </RoleWrapper>
+                    </RoleWrapper>
+                )}
                 <CallToAction>
                     <BtnWrapper>
                         {linkTextList.map(
