@@ -71,13 +71,13 @@ const EnglishArticle = ({ locale, media }) => {
                 </p>
                 <p>
                     {ja
-                        ? "この映画の出発点には、技術への期待だけでなく恐れがありました。アニメ業界で原画マンと作画監督として大きなシリーズに関わっていた友人が、AIを使う仕事へ移ったあと、その業界で知っていた全員から排斥されたことを私たちは見ました。その痛みをノゾミとミアの間に置き、画面と芝居と時間のある映画へ変えました。"
-                        : "Tegaki began with fear as well as hope about technology. A friend in the anime industry had worked as a genga artist and sakkan on major anime series. After moving toward work with AI, they were ostracized by everyone they knew in that community. We placed that pain between Nozomi and Mia, then gave it images, performance, and time."}
+                        ? "この映画の出発点には、技術への期待だけでなく恐れがありました。アニメ業界で原画マンと作画監督として大きなシリーズに関わっていた友人が、AIを使う仕事へ移ったあと、その業界で知っていた全員から排斥されたことを私は見ました。その痛みをノゾミとミアの間に置き、画面と芝居と時間のある映画へ変えました。"
+                        : "Tegaki began with fear as well as hope about technology. A friend in the anime industry had worked as a genga artist and sakkan on major anime series. After moving toward work with AI, they were ostracized by everyone they knew in that community. I placed that pain between Nozomi and Mia, then gave it images, performance, and time."}
                 </p>
                 <p>
                     {ja ? (
                         <>
-                            私たちの役割は明確でした。私たちが脚本・絵コンテ・演出・ラフプロンプトを担い、
+                            私たちの役割は明確でした。私が脚本・絵コンテ・演出・ラフプロンプトを担い、
                             <a
                                 href="https://www.jsonmaths.ai/"
                                 target="_blank"
@@ -90,7 +90,7 @@ const EnglishArticle = ({ locale, media }) => {
                         </>
                     ) : (
                         <>
-                            Within our partnership, we carried screenplay,
+                            Within our partnership, I carried screenplay,
                             storyboards, direction, and rough prompts.{" "}
                             <a
                                 href="https://www.jsonmaths.ai/"
@@ -118,8 +118,8 @@ const EnglishArticle = ({ locale, media }) => {
                 </p>
                 <p>
                     {ja
-                        ? "その間に立つ私たちは、恐れを絵コンテ、カット、音、字幕を持つ一本の映画として完成・公開しました。"
-                        : "Working between those worlds, we turned the fear into a completed and released film with boards, shots, sound, and subtitles."}
+                        ? "その二つの世界のあいだで、私は恐れを絵コンテ、カット、音、字幕を持つ一本の映画へ変えました。完成と公開は二人で行いました。"
+                        : "Working between those worlds, I turned that fear into a completed and released film with boards, shots, sound, and subtitles. We completed and released it together."}
                 </p>
                 <p>
                     {ja ? (

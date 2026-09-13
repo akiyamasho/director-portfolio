@@ -110,8 +110,7 @@ const EnglishArticle = ({ media }) => (
                 engineering (especially machine learning) and animation.
             </p>
             <p>
-                We are making this film with us carrying the animation direction
-                and{" "}
+                I am directing the animation, with{" "}
                 <a
                     href="https://www.jsonmaths.ai/"
                     target="_blank"
@@ -493,7 +492,7 @@ const JapaneseArticle = ({ media }) => (
                 この企画の最初の着想は数年前にあり、その後はほかの企画が制作へ進みました。今回の締切に向けて短編として再開し、『秒速5リクエスト』は数週間だけ休止しています。エンジニアリング（とくに機械学習）とアニメーションの間で仕事をしてきた経験から生まれた物語です。
             </p>
             <p>
-                この短編は
+                私がアニメーションを演出するこの短編は、
                 <a
                     href="https://www.jsonmaths.ai/"
                     target="_blank"

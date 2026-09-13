@@ -28,7 +28,7 @@ const EnglishArticle = ({ locale }) => {
                 <p>
                     {ja ? (
                         <>
-                            私たちがアニメーションディレクションを担い、MLエンジニアリングを担当する{" "}
+                            私がアニメーションディレクションを担い、MLエンジニアリングを担当する{" "}
                             <a
                                 href="https://www.jsonmaths.ai/"
                                 target="_blank"
@@ -41,7 +41,7 @@ const EnglishArticle = ({ locale }) => {
                         </>
                     ) : (
                         <>
-                            This is a two-person production. We carry the
+                            This is a two-person production. I carry the
                             animation direction, and{" "}
                             <a
                                 href="https://www.jsonmaths.ai/"
