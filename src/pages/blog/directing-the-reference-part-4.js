@@ -28,8 +28,7 @@ const EnglishArticle = ({ locale }) => {
                 <p>
                     {ja ? (
                         <>
-                            制作しているのは、アニメーションディレクションを担当するSho
-                            Akiyamaと、MLエンジニアリングを担当する{" "}
+                            私たちがアニメーションディレクションを担い、MLエンジニアリングを担当する{" "}
                             <a
                                 href="https://www.jsonmaths.ai/"
                                 target="_blank"
@@ -42,8 +41,8 @@ const EnglishArticle = ({ locale }) => {
                         </>
                     ) : (
                         <>
-                            This is a two-person production. Sho Akiyama directs
-                            animation, and{" "}
+                            This is a two-person production. We carry the
+                            animation direction, and{" "}
                             <a
                                 href="https://www.jsonmaths.ai/"
                                 target="_blank"

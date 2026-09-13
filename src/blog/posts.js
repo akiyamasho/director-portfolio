@@ -26,8 +26,8 @@ export const posts = [
             src: makingTegakiPart4Media.poster,
             position: "center",
             lede: {
-                en: "The finished English-subtitled Tegaki film closes a journey from fear through animation foundations, manual correction, and machine-assisted production.",
-                ja: "英語字幕付きの完成版で『手描き』を閉じます。恐れから出発し、アニメーションの基礎、手動修正、機械を使った制作を通って映画にしました。",
+                en: "The completed and released English-subtitled Tegaki film closes a journey from fear through animation foundations, manual correction, and machine-assisted production.",
+                ja: "英語字幕付きの完成・公開版で『手描き』を閉じます。恐れから出発し、アニメーションの基礎、手動修正、機械を使った制作を通って映画にしました。",
             },
             alt: {
                 en: "Tegaki poster showing Nozomi and Mia surrounded by storyboards, drawing tools, wine, and translucent generation-interface panels",
@@ -38,13 +38,13 @@ export const posts = [
             en: {
                 title: "Tegaki: Between Hand and Machine, Part 4",
                 summary:
-                    "The final English-subtitled film, and a detailed account of turning fear into a finished work through screenplay writing, storyboards, animation foundations, manual correction, Suno, and machine-assisted production.",
+                    "The completed and released English-subtitled film, and a detailed account of turning fear into a work through screenplay writing, storyboards, animation foundations, manual correction, Suno, and machine-assisted production.",
             },
             ja: {
                 title: "『手描き』：手と機械のあいだ Part 4",
                 titleBreaks: ["『手描き』：手と機械のあいだ", "Part 4"],
                 summary:
-                    "英語字幕付き完成版と、脚本、絵コンテ、アニメーションの基礎、手動修正、Suno、機械を使った制作を通して、恐れを映画に変えた最終記録。",
+                    "英語字幕付き完成・公開版と、脚本、絵コンテ、アニメーションの基礎、手動修正、Suno、機械を使った制作を通して、恐れを映画に変えた最終記録。",
             },
         },
     },

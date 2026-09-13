@@ -22,18 +22,18 @@ const EnglishArticle = ({ locale, media }) => {
             <div className="blog-body blog-opening">
                 <p className="blog-lead">
                     {ja
-                        ? "『手描き』は完成しました。英語字幕を映像に焼き込んだ最終版は、1280×720、H.264/AAC、24fps、626.218957秒、約10分26秒です。ここで、このシリーズを終えます。"
-                        : "Tegaki is finished. The final version with English subtitles burned into the picture is 1280×720, H.264/AAC, 24 fps, and 626.218957 seconds, or about 10:26. This is the last article in the series."}
+                        ? "『手描き』は完成・公開しました。英語字幕を映像に焼き込んだ公開版は、1280×720、H.264/AAC、24fps、10分26秒です。ここで、このシリーズを終えます。"
+                        : "Tegaki is completed and released. The released version with English subtitles burned into the picture is 1280×720, H.264/AAC, 24 fps, and 10 minutes and 26 seconds. This is the last article in the series."}
                 </p>
                 <p>
                     {ja
-                        ? "9月13日の画面と音の書き出しは613.167秒でした。そこからクレジットと字幕を含む最終版へ進み、9月14日に英語字幕付きの626.218957秒の納品版を書き出しました。"
-                        : "The September 13 screen and sound export was 613.167 seconds. We carried that penultimate pass through the later credit and subtitle state, then exported the 626.218957-second English-subtitled delivery on September 14."}
+                        ? "9月13日の画面と音の書き出しは10分13秒でした。そこからクレジットと字幕を含む公開版へ進み、9月14日に英語字幕付きの10分26秒の納品版を書き出しました。"
+                        : "The September 13 screen and sound export was 10 minutes and 13 seconds. We carried that penultimate pass through the later credit and subtitle state, then exported the 10-minute, 26-second English-subtitled delivery on September 14."}
                 </p>
                 <p>
                     {ja
-                        ? "完成した英語字幕版をここで公開します。字幕は映像に焼き込まれています。"
-                        : "We are presenting the finished English-subtitled film here. The subtitles are burned into the picture."}
+                        ? "完成・公開した英語字幕版をここで紹介します。字幕は映像に焼き込まれています。"
+                        : "We are presenting the completed and released English-subtitled film here. The subtitles are burned into the picture."}
                 </p>
             </div>
 
@@ -42,7 +42,10 @@ const EnglishArticle = ({ locale, media }) => {
                 aria-labelledby="final-film-heading"
             >
                 <div className="blog-rich-section-label">
-                    A / {ja ? "完成した映画" : "THE FINISHED FILM"}
+                    A /{" "}
+                    {ja
+                        ? "完成・公開した映画"
+                        : "THE COMPLETED AND RELEASED FILM"}
                 </div>
                 <h2 id="final-film-heading">
                     {ja ? "恐れを一本の映画にする" : "Turning fear into a film"}
@@ -52,19 +55,19 @@ const EnglishArticle = ({ locale, media }) => {
                     poster={media.finalFilm.poster}
                     title={
                         ja
-                            ? "英語字幕付き完成版『手描き』"
-                            : "Tegaki, final English-subtitled film"
+                            ? "英語字幕付き公開版『手描き』"
+                            : "Tegaki, completed and released English-subtitled film"
                     }
                     fallback={
                         ja
-                            ? "英語字幕付き完成版の映像を読み込めませんでした。"
-                            : "The final English-subtitled film could not be loaded."
+                            ? "英語字幕付き公開版の映像を読み込めませんでした。"
+                            : "The completed and released English-subtitled film could not be loaded."
                     }
                 />
                 <p className="blog-media-caption">
                     {ja
-                        ? "完成版。1280×720、H.264/AAC、24fps、626.218957秒。英語字幕は映像に焼き込まれています。"
-                        : "Final version. 1280×720, H.264/AAC, 24 fps, 626.218957 seconds. English subtitles are burned into the picture."}
+                        ? "完成・公開版。1280×720、H.264/AAC、24fps、10分26秒。英語字幕は映像に焼き込まれています。"
+                        : "Completed and released version. 1280×720, H.264/AAC, 24 fps, 10 minutes and 26 seconds. English subtitles are burned into the picture."}
                 </p>
                 <p>
                     {ja
@@ -72,9 +75,41 @@ const EnglishArticle = ({ locale, media }) => {
                         : "Tegaki began with fear as well as hope about technology. A friend in the anime industry had worked as a genga artist and sakkan on major anime series. After moving toward work with AI, they were ostracized by everyone they knew in that community. We placed that pain between Nozomi and Mia, then gave it images, performance, and time."}
                 </p>
                 <p>
-                    {ja
-                        ? "私たちの役割は明確でした。脚本・絵コンテ・演出・ラフプロンプトは秋山翔、エージェントハーネス・ポストプロセス・自動化はJson Cunananが担いました。企画・制作はJson Cunananと秋山翔で行いました。だから、手と機械を対立する二つの陣営として扱うことはできません。機械学習の自動化は反復の速度と比較の幅を増やし、アニメーションの知識は、何を残し、何を捨て、どこで直すべきかを判断します。二つの世界は互いを助けることができます。"
-                        : "Within our partnership, the credits name the work plainly: Screenplay, Storyboard, Direction, and Rough Prompts by Sho Akiyama. Agent Harness, Post-processing, and Automation by Json Cunanan. We created and produced Tegaki together. That is why we cannot treat hand and machine as opposing moral camps. Machine-learning automation increases the speed of repetition and the range of comparison. Animation knowledge decides what to keep, what to reject, and where a correction has to happen. The two worlds can help each other."}
+                    {ja ? (
+                        <>
+                            私たちの役割は明確でした。私たちが脚本・絵コンテ・演出・ラフプロンプトを担い、
+                            <a
+                                href="https://www.jsonmaths.ai/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Json Cunananのウェブサイト"
+                            >
+                                Json Cunanan
+                            </a>
+                            がエージェントハーネス・ポストプロセス・自動化を担いました。企画・制作は二人で行いました。だから、手と機械を対立する二つの陣営として扱うことはできません。機械学習の自動化は反復の速度と比較の幅を増やし、アニメーションの知識は、何を残し、何を捨て、どこで直すべきかを判断します。二つの世界は互いを助けることができます。
+                        </>
+                    ) : (
+                        <>
+                            Within our partnership, we carried screenplay,
+                            storyboards, direction, and rough prompts.{" "}
+                            <a
+                                href="https://www.jsonmaths.ai/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Json Cunanan website"
+                            >
+                                Json Cunanan
+                            </a>{" "}
+                            built the agent harness and handled post-processing
+                            and automation. We created and produced Tegaki
+                            together. That is why we cannot treat hand and
+                            machine as opposing moral camps. Machine-learning
+                            automation increases the speed of repetition and the
+                            range of comparison. Animation knowledge decides
+                            what to keep, what to reject, and where a correction
+                            has to happen. The two worlds can help each other.
+                        </>
+                    )}
                 </p>
                 <p>
                     {ja
@@ -83,13 +118,13 @@ const EnglishArticle = ({ locale, media }) => {
                 </p>
                 <p>
                     {ja
-                        ? "その間に立つ私たちは、恐れを絵コンテ、カット、音、字幕を持つ一本の映画として完成させました。"
-                        : "Working between those worlds, we turned the fear into a finished film with boards, shots, sound, and subtitles."}
+                        ? "その間に立つ私たちは、恐れを絵コンテ、カット、音、字幕を持つ一本の映画として完成・公開しました。"
+                        : "Working between those worlds, we turned the fear into a completed and released film with boards, shots, sound, and subtitles."}
                 </p>
                 <p>
                     {ja ? (
                         <>
-                            完成した提出用プロジェクトは、
+                            完成・公開した提出用プロジェクトは、
                             <a
                                 href="https://higgsfield.ai/@jsonmathsai/projects/tegaki"
                                 target="_blank"
@@ -101,8 +136,8 @@ const EnglishArticle = ({ locale, media }) => {
                         </>
                     ) : (
                         <>
-                            The finished submission project is available through
-                            the{" "}
+                            The completed and released submission project is
+                            available through the{" "}
                             <a
                                 href="https://higgsfield.ai/@jsonmathsai/projects/tegaki"
                                 target="_blank"
@@ -131,8 +166,8 @@ const EnglishArticle = ({ locale, media }) => {
                 </h2>
                 <p>
                     {ja
-                        ? "限られた時間の中で、完成版にはまだ改善点があります。生成映像にはハルシネーションの修正をさらに重ねられる箇所があり、すべての不整合を解消したとは言えません。それでも、私たちは基礎なしにこの映画の動く版へ到達できませんでした。"
-                        : "Within the time available, the finished film still has improvement points. There are generated moments where we would make more hallucination fixes, and we cannot say that every inconsistency was resolved. Even so, we could not have reached a working film without foundational knowledge."}
+                        ? "限られた時間の中で、完成・公開版にはまだ改善点があります。生成映像にはハルシネーションの修正をさらに重ねられる箇所があり、すべての不整合を解消したとは言えません。それでも、私たちは基礎なしにこの映画の動く版へ到達できませんでした。"
+                        : "Within the time available, the completed and released film still has improvement points. There are generated moments where we would make more hallucination fixes, and we cannot say that every inconsistency was resolved. Even so, we could not have reached a working film without foundational knowledge."}
                 </p>
                 <p>
                     {ja
@@ -257,7 +292,7 @@ const EnglishArticle = ({ locale, media }) => {
                     <p>
                         {ja
                             ? "基礎があったからこそ、私たちは自動化の結果を読み、直し、映画の時間へ戻せました。完成版に残る改善点も、ハルシネーションも、私たちがまだ学ぶ場所を示しています。絵を描き、脚本を書き、絵コンテを切り、アニマティックを見て、カメラと芝居を判断する知識があったからこそ、恐れは画面の中で動く映画になりました。"
-                            : "Foundations let us read the results of automation, correct them, and return them to film time. The improvement points and hallucinations that remain in the finished cut show us where we still have work to do. The fear became a moving film because we knew how to draw, write a screenplay, cut storyboards, watch an animatic, and judge camera and acting."}
+                            : "Foundations let us read the results of automation, correct them, and return them to film time. The improvement points and hallucinations that remain in the completed and released cut show us where we still have work to do. The fear became a moving film because we knew how to draw, write a screenplay, cut storyboards, watch an animatic, and judge camera and acting."}
                     </p>
                     <p>
                         {ja

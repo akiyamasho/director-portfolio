@@ -110,7 +110,8 @@ const EnglishArticle = ({ media }) => (
                 engineering (especially machine learning) and animation.
             </p>
             <p>
-                We are making this film with Sho Akiyama directing animation and{" "}
+                We are making this film with us carrying the animation direction
+                and{" "}
                 <a
                     href="https://www.jsonmaths.ai/"
                     target="_blank"
