@@ -302,6 +302,7 @@ const makingTegakiPart4Asset = (name) =>
 
 export const makingTegakiPart4Media = {
     hero: makingTegakiPart4Asset("hero-6b3a4c612d03.webp"),
+    poster: makingTegakiPart4Asset("tegaki-poster-65adf4fb08d5.webp"),
     screenSystem: makingTegakiPart4Asset("screen-system-295e901919be.webp"),
     comparison: {
         video: makingTegakiPart4Asset(

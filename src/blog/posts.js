@@ -23,26 +23,26 @@ export const posts = [
         tags: ["production", "animation"],
         media: makingTegakiPart4Media,
         cover: {
-            src: makingTegakiPart4Media.hero,
+            src: makingTegakiPart4Media.poster,
             position: "center",
             lede: {
-                en: "Manual screen finishing and a Suno score setup move TEGAKI from a screen-completion export toward the next conform pass.",
-                ja: "手動で画面を仕上げ、Sunoのスコア設計を組み上げる。TEGAKIを画面完成書き出しから次のコンフォームへ進めます。",
+                en: "Manual screen finishing and a Suno score setup move Tegaki from a screen-completion export toward the next conform pass.",
+                ja: "手動で画面を仕上げ、Sunoのスコア設計を組み上げる。『手描き』を画面完成書き出しから次のコンフォームへ進めます。",
             },
             alt: {
-                en: "Nozomi at a drawing tablet with a bilingual livestream chat overlay on the right beside a dark title field",
-                ja: "暗いタイトル用の余白の隣で、右側に日英の配信チャットを重ねた描画タブレットに向かうノゾミ",
+                en: "Tegaki poster showing Nozomi and Mia surrounded by storyboards, drawing tools, wine, and translucent generation-interface panels",
+                ja: "絵コンテ、画材、ワイン、半透明の生成インターフェースに囲まれたノゾミとミアを描く『手描き』のポスター",
             },
         },
         translations: {
             en: {
-                title: "Making TEGAKI, Part 4",
+                title: "Tegaki: Between Hand and Machine, Part 4",
                 summary:
                     "A September 6–13 production log on manual screen finishing and the Suno score setup for the next conform pass.",
             },
             ja: {
-                title: "『手描き』制作記録 Part 4",
-                titleBreaks: ["『手描き』制作記録", "Part 4"],
+                title: "『手描き』：手と機械のあいだ Part 4",
+                titleBreaks: ["『手描き』：手と機械のあいだ", "Part 4"],
                 summary:
                     "9月6日から13日までの制作記録。手動の画面仕上げと、次のコンフォームへ向けたSunoのスコア設計をまとめます。",
             },
@@ -67,13 +67,13 @@ export const posts = [
         },
         translations: {
             en: {
-                title: "Making TEGAKI, Part 3",
+                title: "Tegaki: Between Hand and Machine, Part 3",
                 summary:
                     "A 9:29 pacing animatic and a 9:02 current WIP show how timed notes, per-line ElevenLabs voices, and positive-only prompt experiments changed the film in one week.",
             },
             ja: {
-                title: "『手描き』制作記録 Part 3",
-                titleBreaks: ["『手描き』制作記録", "Part 3"],
+                title: "『手描き』：手と機械のあいだ Part 3",
+                titleBreaks: ["『手描き』：手と機械のあいだ", "Part 3"],
                 summary:
                     "9分29秒のペーシング・アニマティックと9分02秒の現行WIPから、タイムコードを反映した制作ノート、台詞ごとのElevenLabs音声、肯定形のプロンプト検証が、この1週間で映画をどう変えたかを記録します。",
             },
@@ -92,19 +92,19 @@ export const posts = [
                 ja: "脚本は完成しました。二人の小さなチームと限られた時間で映画を仕上げます。",
             },
             alt: {
-                en: "First frame from the opening demo video for Making TEGAKI, Part 2",
-                ja: "『手描き』制作記録 Part 2の冒頭デモ映像のファーストフレーム",
+                en: "First frame from the opening demo video for Tegaki: Between Hand and Machine, Part 2",
+                ja: "『手描き』：手と機械のあいだ Part 2の冒頭デモ映像のファーストフレーム",
             },
         },
         translations: {
             en: {
-                title: "Making TEGAKI, Part 2",
+                title: "Tegaki: Between Hand and Machine, Part 2",
                 summary:
                     "The screenplay is complete. A two-person team is finishing a six-scene short film by August 31, while learning that pacing, writing, and drawing fundamentals matter more than ever.",
             },
             ja: {
-                title: "『手描き』制作記録 Part 2",
-                titleBreaks: ["『手描き』制作記録", "Part 2"],
+                title: "『手描き』：手と機械のあいだ Part 2",
+                titleBreaks: ["『手描き』：手と機械のあいだ", "Part 2"],
                 summary:
                     "脚本を完成させ、二人のチームで8月31日までに短編を仕上げる。AI時代にこそ必要なペーシング、文章、描画の基礎を記録します。",
             },
@@ -129,13 +129,13 @@ export const posts = [
         },
         translations: {
             en: {
-                title: "Making TEGAKI, Part 1",
+                title: "Tegaki: Between Hand and Machine, Part 1",
                 summary:
                     "Building a short film through story development, character design, spatial planning, manual storyboards, production experiments, and one finished moving shot.",
             },
             ja: {
-                title: "『手描き』制作記録 Part 1",
-                titleBreaks: ["『手描き』制作記録", "Part 1"],
+                title: "『手描き』：手と機械のあいだ Part 1",
+                titleBreaks: ["『手描き』：手と機械のあいだ", "Part 1"],
                 summary:
                     "短編の企画、キャラクター設計、空間設計、手描き絵コンテ、制作検証、最初の完成映像までをたどる制作記録。",
             },

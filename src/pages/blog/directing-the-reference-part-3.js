@@ -104,13 +104,13 @@ const EnglishArticle = ({ media }) => (
         <div className="blog-body blog-opening">
             <p className="blog-lead">
                 This idea began a few years ago, before other projects moved
-                into production. I am returning to it now as a short film for an
-                upcoming deadline, while 5 Requests Per Second pauses for a few
-                weeks. The story is inspired by being in the middle of
+                into production. We are returning to it now as a short film for
+                an upcoming deadline, while 5 Requests Per Second pauses for a
+                few weeks. The story is inspired by being in the middle of
                 engineering (especially machine learning) and animation.
             </p>
             <p>
-                I am making this film with{" "}
+                We are making this film with Sho Akiyama directing animation and{" "}
                 <a
                     href="https://www.instagram.com/jsonmathsai/"
                     target="_blank"
@@ -128,7 +128,7 @@ const EnglishArticle = ({ media }) => (
             </p>
             <p>
                 The numbers above come from the first seven days of the
-                production repository, from August 10 to 16. I have been making
+                production repository, from August 10 to 16. We have been making
                 the film at night after work and on weekends. They measure
                 activity, not a finished film. The useful part of the record is
                 how each stage changed the next one.
@@ -166,12 +166,12 @@ const EnglishArticle = ({ media }) => (
                     after the production layer arrives.
                 </p>
                 <p>
-                    That is the hybrid I am trying to build. Traditional
-                    practice supplies the judgment needed to design, diagnose,
-                    and revise. The models expand what a very small production
-                    can attempt. Neither becomes meaningful by being placed
-                    above the other. They become useful when they share one
-                    authored film.
+                    That is the hybrid we are building. Traditional practice
+                    supplies the judgment needed to design, diagnose, and
+                    revise. The models expand what a very small production can
+                    attempt. Neither becomes meaningful by being placed above
+                    the other. They become useful when they share one authored
+                    film.
                 </p>
             </div>
             <Figure
@@ -192,21 +192,22 @@ const EnglishArticle = ({ media }) => (
             <div className="blog-body blog-transfer-copy">
                 <p>
                     The first session was a long voice conversation with a
-                    language model. I did not arrive with a plot. I had a summer
-                    setting, a three-to-five-minute festival constraint, and a
-                    desire for an emotional turn that would hurt without turning
-                    the film into a thriller. The conversation stayed with one
-                    question at a time until the subject became personal.
+                    language model. We did not arrive with a plot. The starting
+                    point was a summer setting, a three-to-five-minute festival
+                    constraint, and a desire for an emotional turn that would
+                    hurt without turning the film into a thriller. The
+                    conversation stayed with one question at a time until the
+                    subject became personal.
                 </p>
                 <p>
-                    I spoke about the fear of being replaced as a filmmaker
-                    while using these tools to make the film. I wanted to
-                    redirect that fear, almost like judo, instead of disguising
-                    it as confidence or writing a lecture. The protagonist
-                    became an overworked animator. The deepest injury became
-                    loss of identity. The decisive emotional choice was
-                    self-betrayal rather than a machine or a friend becoming the
-                    villain.
+                    The conversation addressed the fear of being replaced as
+                    filmmakers while using these tools to make the film. The aim
+                    was to redirect that fear, almost like judo, instead of
+                    disguising it as confidence or writing a lecture. The
+                    protagonist became an overworked animator. The deepest
+                    injury became loss of identity. The decisive emotional
+                    choice was self-betrayal rather than a machine or a friend
+                    becoming the villain.
                 </p>
                 <p>
                     That distinction shaped everything. The short does not
@@ -261,7 +262,7 @@ const EnglishArticle = ({ media }) => (
                     nowhere inside them.
                 </p>
                 <p>
-                    I am keeping the later turns out of this journal. The public
+                    The later turns remain outside this journal. The public
                     synopsis is simpler: a struggling animator tries to protect
                     the craft on which she built her identity as her industry
                     changes. Her own community rejects her for experimenting,
@@ -343,14 +344,14 @@ const EnglishArticle = ({ media }) => (
                     problem rather than an invitation to invent the scene.
                 </p>
                 <p>
-                    The more these tools enter the workflow, the more I need
+                    The more these tools enter the workflow, the more we need
                     actual drawing ability. Moving quickly and accurately from
                     an idea to a visual strengthens every later hybrid stage,
                     and the gain compounds almost exponentially. When the first
                     camera, perspective, pose, or acting idea is vague,
-                    everything downstream stalls. This production has pushed me
+                    everything downstream stalls. This production has pushed us
                     to review fundamentals and spend more time warming up before
-                    I draw.
+                    drawing.
                 </p>
                 <p>
                     Without that preparation, using a model feels like playing
@@ -441,14 +442,15 @@ const EnglishArticle = ({ media }) => (
                     apart.
                 </p>
                 <p>
-                    I built a local production website that reads the project as
-                    scenes, sequences, and shots. The shot detail panel places
-                    the board beside editable manual notes. Character, prop, and
-                    location tags remain visible as authorities rather than
-                    being buried inside a long prompt. The site writes those
-                    decisions back to Markdown so the browser does not become a
-                    second, disconnected source of truth. The latest pass also
-                    tightened reference search and workspace sync.
+                    Json Cunanan built our local production website that reads
+                    the project as scenes, sequences, and shots. The shot detail
+                    panel places the board beside editable manual notes.
+                    Character, prop, and location tags remain visible as
+                    authorities rather than being buried inside a long prompt.
+                    The site writes those decisions back to Markdown so the
+                    browser does not become a second, disconnected source of
+                    truth. The latest pass also tightened reference search and
+                    workspace sync.
                 </p>
                 <p>
                     This part is engineering in service of directing. It does
@@ -528,7 +530,7 @@ const JapaneseArticle = ({ media }) => (
                     fps、15.07秒です。工程が解決した証明ではありません。制作の仕上げが入った後も、手動の演出が読めることを確認した最初の結果です。
                 </p>
                 <p>
-                    私が目指すハイブリッドはこの関係です。従来の制作知識が、設計、診断、修正の判断を支える。モデルは、小さな体制で試せる画面の幅を広げる。どちらかを上に置くことで意味が生まれるのではなく、同じひとつの映画へ参加することで役割が生まれます。
+                    私たちが目指すハイブリッドはこの関係です。従来の制作知識が、設計、診断、修正の判断を支える。モデルは、小さな体制で試せる画面の幅を広げる。どちらかを上に置くことで意味が生まれるのではなく、同じひとつの映画へ参加することで役割が生まれます。
                 </p>
             </div>
             <Figure
@@ -551,7 +553,7 @@ const JapaneseArticle = ({ media }) => (
                     最初は、言語モデルとの長い音声対話でした。決まっていたのは夏という季節、3〜5分の映画祭という制約、そしてスリラーにせず心へ刺さる転換を置きたいということだけです。ひとつずつ問いを重ねるうちに、題材が自分自身へ近づいてきました。
                 </p>
                 <p>
-                    私は、映画監督としてAIに置き換えられる恐れと、その道具を使って映画をつくる矛盾について話しました。その恐れを隠したり説教へ変えたりせず、柔道のように力の向きを変えて使いたかった。主人公は疲弊したアニメーターになり、中心の傷はアイデンティティの喪失になりました。機械や友人を悪役にするより、自分を裏切った感覚の方が深く痛むと考えました。
+                    私たちは、映画監督としてAIに置き換えられる恐れと、その道具を使って映画をつくる矛盾について話しました。その恐れを隠したり説教へ変えたりせず、柔道のように力の向きを変えて使いたかった。主人公は疲弊したアニメーターになり、中心の傷はアイデンティティの喪失になりました。機械や友人を悪役にするより、自分を裏切った感覚の方が深く痛むと考えました。
                 </p>
                 <p>
                     この違いが作品全体を決めています。この短編はAIを否定せず、伝統的な作り手を道徳的に上へ置きません。人体、パース、芝居、撮影、作画、絵、物語を長年学んだ人のすぐそばに立ち、その時間の経済的な意味が揺れ始める瞬間を見ます。技術に興奮する気持ちと、コミュニティから受ける圧力は同時に存在できます。

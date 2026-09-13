@@ -28,7 +28,8 @@ const EnglishArticle = ({ locale }) => {
                 <p>
                     {ja ? (
                         <>
-                            制作しているのは、アニメーションディレクターの私とMLエンジニアの{" "}
+                            制作しているのは、アニメーションディレクションを担当するSho
+                            Akiyamaと、MLエンジニアリングを担当する{" "}
                             <a
                                 href="https://www.instagram.com/jsonmathsai/"
                                 target="_blank"
@@ -41,8 +42,8 @@ const EnglishArticle = ({ locale }) => {
                         </>
                     ) : (
                         <>
-                            This is a two-person production. I am the animation
-                            director, and{" "}
+                            This is a two-person production. Sho Akiyama directs
+                            animation, and{" "}
                             <a
                                 href="https://www.instagram.com/jsonmathsai/"
                                 target="_blank"
@@ -183,20 +184,20 @@ const EnglishArticle = ({ locale }) => {
                 </h2>
                 <p>
                     {ja
-                        ? "TEGAKIのSH14–19では、現在の方法での最初の試行と最終版を全9ペアで比較しています。改善点は、カメラを固定し、俳優のスケールと人物の識別を保ち、画面の中で誰がどこにいるかを崩さないことです。"
-                        : "For TEGAKI SH14–19, all nine first-attempt to final pairs from the current method are compared. The improvements come from locking the camera, holding actor scale, separating identities, and keeping each person's place in the frame legible."}
+                        ? "『手描き』のSH14–19では、現在の方法での最初の試行と最終版を全9ペアで比較しています。改善点は、カメラを固定し、俳優のスケールと人物の識別を保ち、画面の中で誰がどこにいるかを崩さないことです。"
+                        : "For Tegaki SH14–19, all nine first-attempt to final pairs from the current method are compared. The improvements come from locking the camera, holding actor scale, separating identities, and keeping each person's place in the frame legible."}
                 </p>
                 <Figure
                     src={media.comparisons.earlyToFinal}
                     alt={
                         ja
-                            ? "TEGAKI SH14からSH19の全9ペア、最初の試行と最終版"
-                            : "All nine TEGAKI SH14 to SH19 first-attempt and final pairs"
+                            ? "『手描き』SH14からSH19の全9ペア、最初の試行と最終版"
+                            : "All nine Tegaki SH14 to SH19 first-attempt and final pairs"
                     }
                     caption={
                         ja
-                            ? "TEGAKI SH14–19。最初の試行 → 最終版、全9ペア。"
-                            : "TEGAKI SH14–19. First attempt → final, all nine pairs."
+                            ? "『手描き』SH14–19。最初の試行 → 最終版、全9ペア。"
+                            : "Tegaki SH14–19. First attempt → final, all nine pairs."
                     }
                 />
             </section>
@@ -216,7 +217,7 @@ const EnglishArticle = ({ locale }) => {
                 <p>
                     {ja
                         ? "Scene 1 Shot 1では、ラフから空間キーをつくり、そのキーをモーションへ渡します。最初の出力を受け入れて終わりにはせず、カメラ、人物の大きさ、ポーズ、芝居のどこが崩れたかを確認して、次の指示へ戻します。"
-                        : "In TEGAKI Scene 1 Shot 1, the rough becomes a spatial key before it becomes motion. We do not accept the first result as the finish. We check where the camera, actor scale, pose, or acting slipped, then return that direction to the next iteration."}
+                        : "In Tegaki Scene 1 Shot 1, the rough becomes a spatial key before it becomes motion. We do not accept the first result as the finish. We check where the camera, actor scale, pose, or acting slipped, then return that direction to the next iteration."}
                 </p>
                 <TestVideo
                     src={media.roughKeyframeMotion.video}
@@ -260,8 +261,8 @@ const EnglishArticle = ({ locale }) => {
                     src={media.comparisons.plates}
                     alt={
                         ja
-                            ? "TEGAKIスタジオ夜の参照と採用プレート"
-                            : "TEGAKI studio-night reference and accepted plates"
+                            ? "『手描き』スタジオ夜の参照と採用プレート"
+                            : "Tegaki studio-night reference and accepted plates"
                     }
                     caption={
                         ja

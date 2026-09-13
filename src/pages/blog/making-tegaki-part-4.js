@@ -21,13 +21,40 @@ const EnglishArticle = ({ locale, media }) => {
             <div className="blog-body blog-opening">
                 <p className="blog-lead">
                     {ja
-                        ? "9月6日から13日まで、TEGAKIの画面を手動で仕上げ、次の音のためのSunoの設計を組み上げました。画面完成の書き出しはできましたが、映画の最終ロックでも完成したスコアでもありません。"
-                        : "From September 6 to 13, I manually finished the TEGAKI screens and built the Suno setup for the next score pass. The screen-completion export exists, but it is not a final lock or a finished score."}
+                        ? "9月6日から13日まで、私たちは『手描き』の画面を手動で仕上げ、次の音のためのSunoの設計を組み上げました。画面完成の書き出しはできましたが、映画の最終ロックでも完成したスコアでもありません。"
+                        : "From September 6 to 13, we manually finished the Tegaki screens and built the Suno setup for the next score pass. The screen-completion export exists, but it is not a final lock or a finished score."}
                 </p>
                 <p>
                     {ja
                         ? "9月13日の画面完成書き出しはH.264/AAC、1280×720、24fps、613.083秒です。9月6日のマスターは602.604秒、14,461フレームでした。今回の書き出しは10.479秒長くなっています。"
                         : "The September 13 screen-completion export is H.264/AAC at 1280×720, 24 fps, and 613.083 seconds. The September 6 master was 602.604 seconds and 14,461 frames, making this export 10.479 seconds longer."}
+                </p>
+                <p>
+                    {ja ? (
+                        <>
+                            関連する提出ページは、
+                            <a
+                                href="https://higgsfield.ai/@jsonmathsai/projects/tegaki"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                映画祭への提出ページ
+                            </a>
+                            です。
+                        </>
+                    ) : (
+                        <>
+                            The related project page is the{" "}
+                            <a
+                                href="https://higgsfield.ai/@jsonmathsai/projects/tegaki"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Film Festival Submission
+                            </a>
+                            .
+                        </>
+                    )}
                 </p>
             </div>
 

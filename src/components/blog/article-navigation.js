@@ -280,7 +280,9 @@ export const TegakiSeriesNavigation = ({ currentPart, locale }) => {
         <nav className="blog-series-nav" aria-labelledby="tegaki-series-title">
             <div className="blog-series-heading">
                 <p className="blog-nav-label" id="tegaki-series-title">
-                    {language === "ja" ? "『手描き』制作記録" : "Making TEGAKI"}
+                    {language === "ja"
+                        ? "『手描き』：手と機械のあいだ"
+                        : "Tegaki: Between Hand and Machine"}
                 </p>
                 <span>
                     {language === "ja"
