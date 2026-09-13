@@ -145,14 +145,27 @@ class Portfolio extends Component {
                 subTitle: intl.formatMessage({
                     id: "projects.tegaki.subTitle",
                 }),
-                roles: [
-                    intl.formatMessage({ id: "portfolio.role.screenplay" }),
-                    intl.formatMessage({ id: "portfolio.role.storyboard" }),
-                    intl.formatMessage({ id: "portfolio.role.direction" }),
-                    intl.formatMessage({
-                        id: "portfolio.role.roughPrompts",
-                    }),
-                ],
+                creditLabel: <FormattedMessage id="portfolio.collaboration" />,
+                credit: (
+                    <>
+                        {intl.formatMessage({
+                            id: "projects.tegaki.creditPrefix",
+                        })}{" "}
+                        <a
+                            href="https://www.jsonmaths.ai/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Json Cunanan
+                        </a>
+                        {intl.formatMessage({
+                            id: "projects.tegaki.creditSuffix",
+                        })}
+                        {intl.formatMessage({
+                            id: "projects.tegaki.creditPunctuation",
+                        })}
+                    </>
+                ),
                 linkTextList: [
                     {
                         text: intl.formatMessage({
@@ -789,6 +802,8 @@ class Portfolio extends Component {
                                     posterFit,
                                     title,
                                     roles,
+                                    credit,
+                                    creditLabel,
                                     subTitle,
                                     linkTextList,
                                     snsLinkTypeMap,
@@ -801,6 +816,8 @@ class Portfolio extends Component {
                                         title={title}
                                         subTitle={subTitle}
                                         roles={roles}
+                                        credit={credit}
+                                        creditLabel={creditLabel}
                                         linkTextList={linkTextList}
                                         snsLinkTypeMap={snsLinkTypeMap}
                                     />

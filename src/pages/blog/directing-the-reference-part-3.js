@@ -112,10 +112,10 @@ const EnglishArticle = ({ media }) => (
             <p>
                 We are making this film with Sho Akiyama directing animation and{" "}
                 <a
-                    href="https://www.instagram.com/jsonmathsai/"
+                    href="https://www.jsonmaths.ai/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="@jsonmathsai on Instagram"
+                    aria-label="Json Cunanan website"
                 >
                     @jsonmathsai
                 </a>
@@ -494,10 +494,10 @@ const JapaneseArticle = ({ media }) => (
             <p>
                 この短編は
                 <a
-                    href="https://www.instagram.com/jsonmathsai/"
+                    href="https://www.jsonmaths.ai/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Instagramの@jsonmathsai"
+                    aria-label="Json Cunananのウェブサイト"
                 >
                     @jsonmathsai
                 </a>

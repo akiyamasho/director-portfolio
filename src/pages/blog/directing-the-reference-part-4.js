@@ -31,10 +31,10 @@ const EnglishArticle = ({ locale }) => {
                             制作しているのは、アニメーションディレクションを担当するSho
                             Akiyamaと、MLエンジニアリングを担当する{" "}
                             <a
-                                href="https://www.instagram.com/jsonmathsai/"
+                                href="https://www.jsonmaths.ai/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="@jsonmathsai on Instagram"
+                                aria-label="Json Cunananのウェブサイト"
                             >
                                 @jsonmathsai
                             </a>
@@ -45,10 +45,10 @@ const EnglishArticle = ({ locale }) => {
                             This is a two-person production. Sho Akiyama directs
                             animation, and{" "}
                             <a
-                                href="https://www.instagram.com/jsonmathsai/"
+                                href="https://www.jsonmaths.ai/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="@jsonmathsai on Instagram"
+                                aria-label="Json Cunanan website"
                             >
                                 @jsonmathsai
                             </a>{" "}

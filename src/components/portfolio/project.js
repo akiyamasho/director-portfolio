@@ -103,6 +103,13 @@ const Role = styled.span`
         content: "/";
     }
 `;
+const Credit = styled.div`
+    color: #d4d0c8;
+    line-height: 1.6;
+    a {
+        color: ${accentColour};
+    }
+`;
 export const CallToAction = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -151,6 +158,8 @@ const Project = ({
     linkTextList = [],
     snsLinkTypeMap = {},
     roles = [],
+    credit,
+    creditLabel,
     posterFit = "cover",
     locale,
 }) => (
@@ -167,13 +176,19 @@ const Project = ({
                 <SubTitle>{subTitle}</SubTitle>
                 <RoleWrapper>
                     <RoleLabel>
-                        <FormattedMessage id="portfolio.role" />
+                        {creditLabel || (
+                            <FormattedMessage id="portfolio.role" />
+                        )}
                     </RoleLabel>
-                    <RoleList>
-                        {roles.map((role) => (
-                            <Role key={role}>{role}</Role>
-                        ))}
-                    </RoleList>
+                    {credit ? (
+                        <Credit>{credit}</Credit>
+                    ) : (
+                        <RoleList>
+                            {roles.map((role) => (
+                                <Role key={role}>{role}</Role>
+                            ))}
+                        </RoleList>
+                    )}
                 </RoleWrapper>
                 <CallToAction>
                     <BtnWrapper>
@@ -197,8 +212,7 @@ const Project = ({
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        {text}{" "}
-                                        <span aria-hidden="true">↗</span>
+                                        {text} <span aria-hidden="true">↗</span>
                                     </ProjectLink>
                                 )
                         )}
@@ -231,6 +245,8 @@ Project.propTypes = {
     title: PropTypes.node.isRequired,
     subTitle: PropTypes.node.isRequired,
     roles: PropTypes.arrayOf(PropTypes.string),
+    credit: PropTypes.node,
+    creditLabel: PropTypes.node,
     linkTextList: PropTypes.arrayOf(
         PropTypes.shape({
             link: PropTypes.string,
