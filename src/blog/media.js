@@ -322,33 +322,40 @@ export const makingTegakiPart4Media = {
     },
 };
 
+const tegakiDirectorCommentaryPrefix = "20260914_tegaki-director-commentary";
+const tegakiDirectorCommentaryAsset = (name) =>
+    `${bucketUrl}/${tegakiDirectorCommentaryPrefix}/${name}`;
+
 export const tegakiDirectorCommentaryMedia = {
     poster: makingTegakiPart4Media.poster,
     finalFilm: makingTegakiPart4Media.finalFilm,
     original: {
-        poster: makingTegakiPart4Asset(
+        poster: tegakiDirectorCommentaryAsset(
             "original-tegaki-poster-3725a685b783.webp"
         ),
         timingAnimatic: {
-            video: makingTegakiPart4Asset(
+            video: tegakiDirectorCommentaryAsset(
                 "original-tegaki-ct-compatible-7031923c03b4.mp4"
             ),
-            poster: makingTegakiPart4Asset(
+            poster: tegakiDirectorCommentaryAsset(
                 "original-tegaki-ct-compatible-poster-2a8af40c3013.webp"
             ),
         },
-        characters: makingTegakiPart4Asset(
+        characters: tegakiDirectorCommentaryAsset(
             "original-tegaki-character-designs-a778939751eb.webp"
         ),
     },
     productionHistory: {
-        carStudio:
-            "https://storage.googleapis.com/5rps-film-public-media/20260914_tegaki-director-commentary/car-as-writing-studio-4fba0afb8a1c.webp",
+        carStudio: tegakiDirectorCommentaryAsset(
+            "car-as-writing-studio-4fba0afb8a1c.webp"
+        ),
         pacingAnimatic: directingTheReferencePart5Media.pacing,
-        storyboardPromptApp:
-            "https://storage.googleapis.com/5rps-film-public-media/20260914_tegaki-director-commentary/storyboard-to-prompt-electron-app-bb0cbf62097e.webp",
-        threeDExperiment:
-            "https://storage.googleapis.com/5rps-film-public-media/20260914_tegaki-director-commentary/tegaki-3d-experiment-aa5e1dcaf5b0.webp",
+        storyboardPromptApp: tegakiDirectorCommentaryAsset(
+            "storyboard-to-prompt-electron-app-bb0cbf62097e.webp"
+        ),
+        threeDExperiment: tegakiDirectorCommentaryAsset(
+            "tegaki-3d-experiment-aa5e1dcaf5b0.webp"
+        ),
         manualStoryboards: directingTheReferencePart3Media.manualStoryboards,
         experiments: directingTheReferencePart3Media.experiments,
         roughToKeyframe:
