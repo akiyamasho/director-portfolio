@@ -338,7 +338,7 @@ export const tegakiDirectorCommentaryMedia = {
                 "original-tegaki-ct-compatible-7031923c03b4.mp4"
             ),
             poster: tegakiDirectorCommentaryAsset(
-                "original-tegaki-ct-compatible-poster-2a8af40c3013.webp"
+                "original-tegaki-ct-004000-poster-7c59645671f5.webp"
             ),
         },
         characters: tegakiDirectorCommentaryAsset(

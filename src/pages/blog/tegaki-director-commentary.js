@@ -234,8 +234,15 @@ const EnglishArticle = ({ locale, media }) => {
                 <p>
                     {ja ? (
                         <>
-                            Json
-                            CunananからHiggsfieldがAI映画祭を開くと聞き、最初は一日だけのハッカソンを考えました。8月半ば、
+                            <a
+                                href="https://www.jsonmaths.ai/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Json Cunananのウェブサイト"
+                            >
+                                Json Cunanan
+                            </a>
+                            からHiggsfieldがAI映画祭を開くと聞き、最初は一日だけのハッカソンを考えました。8月半ば、
                             <a
                                 href="https://5rps.jp/"
                                 target="_blank"
@@ -245,15 +252,24 @@ const EnglishArticle = ({ locale, media }) => {
                                 5RPS
                             </a>
                             の制作を二週間だけ止めて、絵コンテの練習をするつもりでした。Json
-                            Cunananのいるつくばへ向かう約1時間半の車内で、私はChatGPT
-                            Voiceを文字起こしと会話相手として使い、ジャンルから考え始めました。やがて、すでに『手描き』があることに気づき、元の脚本、自分の反発、私が知るアニメーターの経験を一つの短編に結びました。到着した時にはビートがあり、Json
+                            約1時間半の車内で、私はChatGPT
+                            Voiceを文字起こしと会話相手として使い、ジャンルから考え始めました。やがて、すでに『手描き』があることに気づき、元の脚本、友人の経験を通じて聞いた反発と私自身の経験、そして私が知るアニメーターの経験を一つの短編に結びました。到着した時にはビートがあり、Json
                             Cunananに話すと、彼は気に入ってくれました。
                         </>
                     ) : (
                         <>
-                            When Json Cunanan told me Higgsfield was running an
-                            AI film festival, I imagined a one-day hackathon.
-                            Around mid-August, I planned to pause my work on{" "}
+                            When{" "}
+                            <a
+                                href="https://www.jsonmaths.ai/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Json Cunanan website"
+                            >
+                                Json Cunanan
+                            </a>{" "}
+                            told me Higgsfield was running an AI film festival,
+                            I imagined a one-day hackathon. Around mid-August, I
+                            planned to pause my work on{" "}
                             <a
                                 href="https://5rps.jp/"
                                 target="_blank"
@@ -263,14 +279,16 @@ const EnglishArticle = ({ locale, media }) => {
                                 5RPS
                             </a>{" "}
                             for two weeks and use the deadline to practice
-                            storyboarding. During the roughly hour-and-a- half
-                            drive to Json Cunanan's place in Tsukuba, I used
-                            ChatGPT Voice as a transcriber and conversational
-                            notebook. I began with genre, then realized I
-                            already had Tegaki. I joined the old screenplay, my
-                            backlash, and the experience of an animator I know
-                            into one short. I arrived with the beats, and Json
-                            Cunanan liked the idea.
+                            storyboarding. During the roughly{" "}
+                            {"hour-and-a-half"}
+                            drive, I used ChatGPT Voice as a transcriber and
+                            conversational notebook. I began with genre, then
+                            realized I already had Tegaki. I joined the old
+                            screenplay, the backlash I had heard through my
+                            friend's experience and my own personal experiences,
+                            and the experience of an animator I know into one
+                            short. I arrived with the beats, and Json Cunanan
+                            liked the idea.
                         </>
                     )}
                 </p>
@@ -594,7 +612,16 @@ const Post = ({ intl }) => {
                 title={content.title}
                 lang={locale}
                 description={content.summary}
-                meta={[{ property: "og:type", content: "article" }]}
+                twitterCard="summary_large_image"
+                meta={[
+                    { property: "og:type", content: "article" },
+                    { property: "og:image", content: post.cover.src },
+                    {
+                        property: "og:image:alt",
+                        content: post.cover.alt[locale],
+                    },
+                    { name: "twitter:image", content: post.cover.src },
+                ]}
             />
             <header className="blog-article-header blog-body">
                 <PostHeader post={post} locale={locale} />
