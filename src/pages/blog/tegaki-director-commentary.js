@@ -286,9 +286,76 @@ const EnglishArticle = ({ locale, media }) => {
                 </p>
                 <p>
                     {ja
-                        ? "元は11、12ほどあったシーンを、二週間で終えられる6つの短いシーンへ圧縮しました。3Dのラフな環境やラフ絵コンテも試しましたが、生成結果は入力の粗さをそのまま受け取り、画面が平たくなりました。Json Cunananは試行を続け、きれいな背景プレートが環境を定める効率のよい方法だと見つけました。私が絵コンテを省いてテキストだけで進めると、技術的には速くても、映画のペースは悪くなりました。"
-                        : "The screenplay had roughly eleven or twelve scenes, so I compressed it into six shorter scenes that could fit the schedule. We also tried rough 3D environments and rough storyboard frames, but generations followed their limitations too literally and became flat. Json Cunanan kept testing and found clean background plates to be an efficient way to establish environments. When I tried removing storyboards and moving by text alone, it was technically faster but the pacing became worse."}
+                        ? "私は、ラフボード、手動の演出、制作プロンプトを一つに保つための、絵コンテからテキストプロンプトへつなぐElectronアプリも作りました。"
+                        : "I also built an Electron app that kept a rough board, manual direction, and its production text prompt together."}
                 </p>
+                <Figure
+                    src={media.productionHistory.storyboardPromptApp}
+                    alt={
+                        ja
+                            ? "ラフボードのシーケンス、寝室ショットのサムネイル、ショット詳細、手動の制作メモを表示した絵コンテ制作アプリ"
+                            : "Storyboard production app showing a rough-boards sequence, bedroom shot thumbnails, shot detail, and manual production notes."
+                    }
+                    caption={
+                        ja
+                            ? "絵コンテ、手動演出、制作プロンプトを確認する、寝室ショットの絵コンテからプロンプトへのワークフロー。"
+                            : "Storyboard-to-prompt workflow: a bedroom shot is reviewed with its board, manual direction, and production prompt."
+                    }
+                />
+                <p>
+                    {ja
+                        ? "元は11、12ほどあったシーンを、二週間で終えられる6つの短いシーンへ圧縮しました。3Dのラフな環境やラフ絵コンテも試しましたが、生成結果は入力の粗さをそのまま受け取り、画面が平たくなりました。"
+                        : "The screenplay had roughly eleven or twelve scenes, so I compressed it into six shorter scenes that could fit the schedule. We also tried rough 3D environments and rough storyboard frames, but generations followed their limitations too literally and became flat."}
+                </p>
+                <Figure
+                    src={media.productionHistory.threeDExperiment}
+                    alt={
+                        ja
+                            ? "プロキシ人物、テーブル、カメラリグ、ライティングガイドを配置した部屋の俯瞰3D実験を表示するBlenderビューポート"
+                            : "Blender viewport showing a top-down 3D room experiment with proxy figures, tables, camera rigs, and lighting guides."
+                    }
+                    caption={
+                        ja
+                            ? "アニメーション前に、部屋、プロキシ人物、カメラ位置を確認する3Dブロッキング実験。"
+                            : "A 3D blocking experiment maps the room, proxy figures, and camera positions before animation."
+                    }
+                />
+                <p>
+                    {ja
+                        ? "Json Cunananは試行を続け、きれいな背景プレートが環境を定める効率のよい方法だと見つけました。"
+                        : "Json Cunanan kept testing and found clean background plates to be an efficient way to establish environments."}
+                </p>
+                <Figure
+                    src={media.productionHistory.plates}
+                    alt={
+                        ja
+                            ? "背景プレートを使った環境設計の比較"
+                            : "Environment comparison using clean background plates"
+                    }
+                    caption={
+                        ja
+                            ? "背景プレートで環境を先に定める制作資料。"
+                            : "Production reference using background plates to establish the environment first."
+                    }
+                />
+                <p>
+                    {ja
+                        ? "私が絵コンテを省いてテキストだけで進めると、技術的には速くても、映画のペースは悪くなりました。"
+                        : "When I tried removing storyboards and moving by text alone, it was technically faster but the pacing became worse."}
+                </p>
+                <Figure
+                    src={media.productionHistory.experiments}
+                    alt={
+                        ja
+                            ? "絵コンテと生成結果の制作実験グリッド"
+                            : "Production experiment grid comparing storyboard and generated results"
+                    }
+                    caption={
+                        ja
+                            ? "絵コンテと生成結果を比較した制作実験。"
+                            : "Production experiments comparing storyboards with generated results."
+                    }
+                />
             </section>
 
             <section
@@ -308,16 +375,55 @@ const EnglishArticle = ({ locale, media }) => {
                         ? "この失敗で、絵コンテはモデルへの入力画像ではなく、演出そのものだと分かりました。情報をいつ渡すか、人物をどこに置くか、視線と画面の側をどうするか、反応にどれだけ時間を与えるか。これらはテキストだけでは自動的に映画になりません。私は全編を最後までつないだエンドツーエンドのアニマティックを作り、各ショットのプロンプトと制作情報を対応させました。"
                         : "That failure showed me that a storyboard is not merely an input image for a model. It is where direction happens. When information arrives, where a character stands, which way the eyeline and camera face, and how long a reaction lasts do not automatically become a film through text. I built an end-to-end animatic and matched every shot to its prompt and production information."}
                 </p>
+                <Figure
+                    src={media.productionHistory.manualStoryboards}
+                    alt={
+                        ja
+                            ? "手描きの絵コンテを並べた制作シート"
+                            : "Production sheet of hand-drawn storyboards"
+                    }
+                    caption={
+                        ja
+                            ? "後の制作で使った手描き絵コンテ。"
+                            : "Hand-drawn storyboards from the later production process."
+                    }
+                />
                 <p>
                     {ja
                         ? "アニマティックには、一つ前と一つ後のカット、尺、間、芝居の意図がありました。必要なら、すでに使える映像を取り込み、その尺に合わせて組み替えました。Json Cunananは抽象的なビートではなく、時間のある設計図を見て、生成、編集、ポスト処理を進められました。本業が忙しくなった私が演出に必要な判断へ集中できたのは、この分担があったからです。"
                         : "The animatic contained the preceding and following shots, duration, pauses, and performance intention. When footage was good enough, I incorporated it and adjusted the timing around it. Json Cunanan could work from a timed blueprint instead of abstract beats, then carry out generation, editing, and post-processing. As my day job became busier, this division let me focus on the judgments that required direction."}
                 </p>
+                <Figure
+                    src={media.productionHistory.roughToKeyframe}
+                    alt={
+                        ja
+                            ? "ラフな絵から仕上げ用キーへ進む制作比較"
+                            : "Production comparison from a rough drawing to a productionized keyframe"
+                    }
+                    caption={
+                        ja
+                            ? "後の制作で、ラフを仕上げ用キーへ整理した比較。"
+                            : "Later production comparison from a rough drawing to a productionized keyframe."
+                    }
+                />
                 <p>
                     {ja
                         ? "これはAI以前に一人で映画を作っていた方法にも戻っています。絵コンテを描き、自分で仮の声を録り、仮の音楽と効果音を置き、最初から最後までの粗い映画を作る。『手描き』ではElevenLabsで仮のキャラクター音声を作り、タイミングと台詞の間を確認しました。粗い素材を後で置き換えるために、映画全体を先に作るのです。"
                         : "The method also returned to how I made films alone before AI. I drew boards, recorded temporary voices, added rough music and sound, and built a rough film from beginning to end. For Tegaki, I used ElevenLabs for temporary character voices so I could hear timing and pauses. The point was to build the whole film first, then replace rough parts progressively."}
                 </p>
+                <Figure
+                    src={media.productionHistory.pacingComparison}
+                    alt={
+                        ja
+                            ? "ペース調整用の映像比較シート"
+                            : "Pacing comparison sheet from the production process"
+                    }
+                    caption={
+                        ja
+                            ? "後の制作で、ペースと現行映像を比較した資料。"
+                            : "Later production comparison used to review pacing and the current cut."
+                    }
+                />
                 <p>
                     {ja
                         ? "脚本がドラマを決め、絵コンテが画面を決め、アニマティックが時間を決める。そこへプロンプト、プレート、キー、動画モデルが入ります。『映画を作って』ではなく、『この映画のこのショットを作って』と頼める状態にしたことで、生成映像は初めて映画の材料として扱えるようになりました。"
@@ -357,6 +463,19 @@ const EnglishArticle = ({ locale, media }) => {
                         ? "配信、チャット、通知、翻訳、嫌がらせの画面は、生成モデルに任せられませんでした。正確な文字とタイミングが、彼女が会話の主導権を失う速度を伝えるからです。私は観客コメント、チャット、通知、翻訳などのUIを手で組み、動かしました。これはAI生成の上に載せた、従来のコンポジットとモーショングラフィックスです。"
                         : "The livestream, chat, notifications, translations, and harassment screens could not be left to the generation model. Exact text and timing show how quickly she loses control of the conversation. I built and animated the audience comments, chat, notifications, translations, and other UI by hand. This was traditional compositing and motion graphics inside a machine-assisted production."}
                 </p>
+                <Figure
+                    src={media.productionHistory.screenSystem}
+                    alt={
+                        ja
+                            ? "チャット、寄付、観客グリッドを含む画面システムの設計シート"
+                            : "Screen-system design sheet with chat, donation, and audience-grid elements"
+                    }
+                    caption={
+                        ja
+                            ? "Part 4で手動制作した画面システムの資料。"
+                            : "Screen-system reference from the manual finishing work in Part 4."
+                    }
+                />
             </section>
 
             <section

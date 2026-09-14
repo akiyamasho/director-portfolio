@@ -341,4 +341,17 @@ export const tegakiDirectorCommentaryMedia = {
             "original-tegaki-character-designs-a778939751eb.webp"
         ),
     },
+    productionHistory: {
+        storyboardPromptApp:
+            "https://storage.googleapis.com/5rps-film-public-media/20260914_tegaki-director-commentary/storyboard-to-prompt-electron-app-bb0cbf62097e.webp",
+        threeDExperiment:
+            "https://storage.googleapis.com/5rps-film-public-media/20260914_tegaki-director-commentary/tegaki-3d-experiment-aa5e1dcaf5b0.webp",
+        manualStoryboards: directingTheReferencePart3Media.manualStoryboards,
+        experiments: directingTheReferencePart3Media.experiments,
+        roughToKeyframe:
+            directingTheReferencePart4Media.comparisons.roughToKeyframe,
+        plates: directingTheReferencePart4Media.comparisons.plates,
+        pacingComparison: directingTheReferencePart5Media.comparisons[0],
+        screenSystem: makingTegakiPart4Media.screenSystem,
+    },
 };
