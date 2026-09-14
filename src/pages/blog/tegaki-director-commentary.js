@@ -276,6 +276,24 @@ const EnglishArticle = ({ locale, media }) => {
                 </p>
                 <p>
                     {ja
+                        ? "車は、私にとって一時的な執筆スタジオの一つになっています。走りながらの音声対話が、作業用のアウトラインへ変わっていきます。"
+                        : "The car has become one of my temporary writing studios, where voice conversation can become a working outline during a drive."}
+                </p>
+                <Figure
+                    src={media.productionHistory.carStudio}
+                    alt={
+                        ja
+                            ? "照明の点いた車のダッシュボードと、映画企画の概要を表示したスマートフォンが写る暗い車内"
+                            : "Dark car interior with an illuminated dashboard and a phone displaying a film project outline."
+                    }
+                    caption={
+                        ja
+                            ? "車内が一時的な執筆スタジオとなり、スマートフォン上で企画の概要が形になっていく。"
+                            : "A car becomes a temporary writing studio, with the project outline taking shape on a phone."
+                    }
+                />
+                <p>
+                    {ja
                         ? "一日で完成させる計画はすぐに壊れました。最初は自分の絵を入力できないと誤解し、約2時間かけて生成だけでキャラクターを設計しました。ビートをCodexに渡して、ビートごとにSeedanceの映像を一本作ればよいとも考えました。しかしビートはショットではありません。一つのビートに含まれる情報、感情、視点、リズムを一本へ押し込めた映像は、急ぎ足でつながりませんでした。"
                         : "The one-day plan collapsed quickly. We initially misunderstood the rules as not allowing our own drawings, so we spent about two hours developing characters through generation alone. I also thought we could give the beats to Codex, turn each beat into a Seedance prompt, generate one video per beat, and assemble the film. But a beat is not a shot. Compressing its information, emotion, perspective, and rhythm into one clip made a rushed, incoherent movie."}
                 </p>
@@ -388,6 +406,25 @@ const EnglishArticle = ({ locale, media }) => {
                             : "Hand-drawn storyboards from the later production process."
                     }
                 />
+                <TestVideo
+                    src={media.productionHistory.pacingAnimatic.video}
+                    poster={media.productionHistory.pacingAnimatic.poster}
+                    title={
+                        ja
+                            ? "字幕付きペーシング・アニマティック"
+                            : "Subtitled pacing animatic"
+                    }
+                    fallback={
+                        ja
+                            ? "字幕付きペーシング・アニマティックを読み込めませんでした。"
+                            : "The subtitled pacing animatic could not be loaded."
+                    }
+                />
+                <p className="blog-media-caption">
+                    {ja
+                        ? "字幕付きペーシング・アニマティック。"
+                        : "Subtitled pacing animatic from the later production process."}
+                </p>
                 <p>
                     {ja
                         ? "アニマティックには、一つ前と一つ後のカット、尺、間、芝居の意図がありました。必要なら、すでに使える映像を取り込み、その尺に合わせて組み替えました。Json Cunananは抽象的なビートではなく、時間のある設計図を見て、生成、編集、ポスト処理を進められました。本業が忙しくなった私が演出に必要な判断へ集中できたのは、この分担があったからです。"

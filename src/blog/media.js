@@ -331,10 +331,10 @@ export const tegakiDirectorCommentaryMedia = {
         ),
         timingAnimatic: {
             video: makingTegakiPart4Asset(
-                "original-tegaki-ct-91846fee6aff.mp4"
+                "original-tegaki-ct-compatible-7031923c03b4.mp4"
             ),
             poster: makingTegakiPart4Asset(
-                "original-tegaki-ct-poster-f2a0c6ec84cc.webp"
+                "original-tegaki-ct-compatible-poster-2a8af40c3013.webp"
             ),
         },
         characters: makingTegakiPart4Asset(
@@ -342,6 +342,9 @@ export const tegakiDirectorCommentaryMedia = {
         ),
     },
     productionHistory: {
+        carStudio:
+            "https://storage.googleapis.com/5rps-film-public-media/20260914_tegaki-director-commentary/car-as-writing-studio-4fba0afb8a1c.webp",
+        pacingAnimatic: directingTheReferencePart5Media.pacing,
         storyboardPromptApp:
             "https://storage.googleapis.com/5rps-film-public-media/20260914_tegaki-director-commentary/storyboard-to-prompt-electron-app-bb0cbf62097e.webp",
         threeDExperiment:

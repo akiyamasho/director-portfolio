@@ -51,19 +51,19 @@ export const posts = [
     },
     {
         slug: "making-tegaki-part-4",
-        date: "2026-09-14",
+        date: "2026-09-13",
         tags: ["production", "animation"],
         media: makingTegakiPart4Media,
         cover: {
-            src: makingTegakiPart4Media.poster,
+            src: makingTegakiPart4Media.hero,
             position: "center",
             lede: {
                 en: "The completed and released English-subtitled Tegaki film closes a journey from fear through animation foundations, manual correction, and machine-assisted production.",
                 ja: "英語字幕付きの完成・公開版で『手描き』を閉じます。恐れから出発し、アニメーションの基礎、手動修正、機械を使った制作を通って映画にしました。",
             },
             alt: {
-                en: "Tegaki poster showing Nozomi and Mia surrounded by storyboards, drawing tools, wine, and translucent generation-interface panels",
-                ja: "絵コンテ、画材、ワイン、半透明の生成インターフェースに囲まれたノゾミとミアを描く『手描き』のポスター",
+                en: "Tegaki production image from the completed and released film",
+                ja: "完成・公開した『手描き』の制作ビジュアル",
             },
         },
         translations: {
