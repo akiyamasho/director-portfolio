@@ -5,6 +5,7 @@ import {
     directingTheReferencePart4Media,
     directingTheReferencePart5Media,
     makingTegakiPart4Media,
+    tegakiDirectorCommentaryMedia,
 } from "./media";
 import screenplayCover from "../assets/blog-covers/5rps-screenplay-complete.webp";
 import storyboardingCover from "../assets/blog-covers/5rps-storyboarding-in-progress.webp";
@@ -17,6 +18,37 @@ import { post as localVscodeCloudGpus } from "./migrated/local-vscode-cloud-gpus
 import { post as ragEnterpriseDocuments } from "./migrated/rag-enterprise-documents";
 
 export const posts = [
+    {
+        slug: "tegaki-director-commentary",
+        date: "2026-09-14",
+        tags: ["production", "animation", "screenplay", "storyboarding"],
+        media: tegakiDirectorCommentaryMedia,
+        cover: {
+            src: tegakiDirectorCommentaryMedia.poster,
+            position: "center",
+            lede: {
+                en: "A personal account of making Tegaki, from an old feature screenplay and AI backlash to a finished short released for the Higgsfield film festival.",
+                ja: "過去の長編脚本とAIをめぐる反発から、Higgsfield映画祭に向けて完成・公開した短編『手描き』までの個人的な制作記録。",
+            },
+            alt: {
+                en: "Tegaki portrait poster showing the animator in a dark room with drawing tools and translucent interface panels",
+                ja: "暗い部屋で画材と半透明のインターフェースに囲まれたアニメーターを描く『手描き』の縦長ポスター",
+            },
+        },
+        translations: {
+            en: {
+                title: "Tegaki: Director Commentary",
+                summary:
+                    "A personal account of making Tegaki, from an old feature screenplay and AI backlash to a finished short released for the Higgsfield film festival.",
+            },
+            ja: {
+                title: "『手描き』：監督コメンタリー",
+                titleBreaks: ["『手描き』：監督コメンタリー"],
+                summary:
+                    "過去の長編脚本とAIをめぐる反発から、Higgsfield映画祭に向けて完成・公開した短編『手描き』までの個人的な制作記録。",
+            },
+        },
+    },
     {
         slug: "making-tegaki-part-4",
         date: "2026-09-14",

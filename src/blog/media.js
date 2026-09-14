@@ -321,3 +321,8 @@ export const makingTegakiPart4Media = {
         ),
     },
 };
+
+export const tegakiDirectorCommentaryMedia = {
+    poster: makingTegakiPart4Media.poster,
+    finalFilm: makingTegakiPart4Media.finalFilm,
+};
