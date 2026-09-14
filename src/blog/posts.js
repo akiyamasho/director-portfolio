@@ -55,15 +55,15 @@ export const posts = [
         tags: ["production", "animation"],
         media: makingTegakiPart4Media,
         cover: {
-            src: makingTegakiPart4Media.hero,
+            src: makingTegakiPart4Media.finalFilm.poster,
             position: "center",
             lede: {
                 en: "The completed and released English-subtitled Tegaki film closes a journey from fear through animation foundations, manual correction, and machine-assisted production.",
                 ja: "英語字幕付きの完成・公開版で『手描き』を閉じます。恐れから出発し、アニメーションの基礎、手動修正、機械を使った制作を通って映画にしました。",
             },
             alt: {
-                en: "Tegaki production image from the completed and released film",
-                ja: "完成・公開した『手描き』の制作ビジュアル",
+                en: "Tegaki film still of a dark-haired animator beside a glowing smartphone on a wooden floor.",
+                ja: "木の床に置かれた光るスマートフォンのそばで、黒髪のアニメーターがうずくまる『手描き』の映画スチル。",
             },
         },
         translations: {
