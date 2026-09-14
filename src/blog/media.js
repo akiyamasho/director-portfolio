@@ -325,4 +325,20 @@ export const makingTegakiPart4Media = {
 export const tegakiDirectorCommentaryMedia = {
     poster: makingTegakiPart4Media.poster,
     finalFilm: makingTegakiPart4Media.finalFilm,
+    original: {
+        poster: makingTegakiPart4Asset(
+            "original-tegaki-poster-3725a685b783.webp"
+        ),
+        timingAnimatic: {
+            video: makingTegakiPart4Asset(
+                "original-tegaki-ct-91846fee6aff.mp4"
+            ),
+            poster: makingTegakiPart4Asset(
+                "original-tegaki-ct-poster-f2a0c6ec84cc.webp"
+            ),
+        },
+        characters: makingTegakiPart4Asset(
+            "original-tegaki-character-designs-a778939751eb.webp"
+        ),
+    },
 };

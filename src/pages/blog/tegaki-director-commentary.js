@@ -97,16 +97,62 @@ const EnglishArticle = ({ locale, media }) => {
                         ? "『手描き』は、2023年末から2024年初めごろに書いた長編脚本の転用です。元の主人公は、エンジニアからアニメーション監督へ転身した、過労の監督でした。夢だった仕事に入っても、上司の細かな介入と管理・マーケティング上の要求で、創作の自由は失われていきます。元の物語では飲酒が悪化し、身体を壊しても夢を手放せず、最後には病院のベッドで死に近づきます。うまくいった独立映画の人生は、彼女が見た幻でした。"
                         : "Tegaki is a repurposing of a feature screenplay I wrote around late 2023 to early 2024. The original protagonist was an overworked animation director who had moved from engineering into animation. Even after reaching the work she dreamed of, micromanagement and management and marketing demands stripped away her creative freedom. In that version, her drinking worsens, she cannot leave the dream even as her health fails, and she approaches death in a hospital bed. The successful independent filmmaking life was a hallucination."}
                 </p>
+                <Figure
+                    src={media.original.poster}
+                    alt={
+                        ja
+                            ? "日本語タイトルと2人のキャラクターを描いた手描きアニメーションポスター"
+                            : "Hand-drawn animation poster with two illustrated characters and Japanese title lettering."
+                    }
+                    caption={
+                        ja
+                            ? "手描きによるオリジナルポスター。"
+                            : "Original hand-drawn poster artwork."
+                    }
+                />
                 <p>
                     {ja
                         ? "長編の中心には、エンジニアに残った親友との関係もありました。友人は、夢が彼女を壊しているなら、なぜそこに留まるのかと問い続けます。それでも彼女を支え続けます。新しい短編では、工学とアニメーションの対立が、自動化、AI、創作労働、同意の問題へ置き換わりました。キャラクターの一部のデザインと過去も、元の企画から受け継いでいます。"
                         : "The feature was also built around her friendship with an engineer who kept asking why she stayed in a dream that was destroying her, while continuing to support her. In the short, engineering and animation become a conflict about automation, AI, creative labor, and consent. Some character designs and backstory were also carried over from the original project."}
+                </p>
+                <TestVideo
+                    src={media.original.timingAnimatic.video}
+                    poster={media.original.timingAnimatic.poster}
+                    title={
+                        ja
+                            ? "オリジナル『手描き』のCTタイミング・アニマティック"
+                            : "Original Tegaki CT timing animatic"
+                    }
+                    fallback={
+                        ja
+                            ? "オリジナルのCTタイミング・アニマティックを読み込めませんでした。"
+                            : "The original CT timing animatic could not be loaded."
+                    }
+                    muted={false}
+                />
+                <p className="blog-media-caption">
+                    {ja
+                        ? "オリジナルのCTタイミング・アニマティック、17分2秒。"
+                        : "Original CT timing animatic, 17 minutes 2 seconds."}
                 </p>
                 <p>
                     {ja
                         ? "その長編には、私が長く関わった企画を手放さなければならなかった経験の感情も流れています。権利や組織の事情を理解していても、自分の人生を注ぎ込んだ作品を失う痛みは消えません。必要な資金を集められず、脚本は数年眠りました。その後、AIをめぐる自分の矛盾が、このタイトルに新しい場所を与えました。"
                         : "The feature also carried the feelings from losing a project I had spent years developing. Understanding rights and organizational realities does not remove the pain of losing work into which I had poured my life. I could not secure the funding to make it, so the screenplay stayed parked for years. My own contradiction around AI later gave the title a new place to exist."}
                 </p>
+                <Figure
+                    src={media.original.characters}
+                    alt={
+                        ja
+                            ? "6人のキャラクター名を添えた手描きキャラクターデザインシート"
+                            : "Hand-drawn character design sheet showing six labeled characters."
+                    }
+                    caption={
+                        ja
+                            ? "オリジナルの手描きプロジェクトのキャラクターデザインシート。"
+                            : "Character design sheet for the original hand-drawn project."
+                    }
+                />
             </section>
 
             <section
@@ -127,14 +173,44 @@ const EnglishArticle = ({ locale, media }) => {
                         : "I am a traditional artist and a machine-learning engineer in my day job. I spent years learning anatomy, drawing, animation, screenwriting, storyboarding, and filmmaking. When Stable Diffusion and generative video systems appeared, I felt more than engineering interest. As an artist, I feared that the years of learning these foundations might become pointless. There were months when I barely wanted to make anything."}
                 </p>
                 <p>
-                    {ja
-                        ? "別の長編では、私は脚本、監督、制作、資金を自分で担っています。二日間の仕事の外で、アーティストやスタジオ、声優、作曲家に自分の貯金から支払いながら、約2分の予告編に一年を使いました。背景が大きなボトルネックになったとき、予算と時間を考え、背景の一部にGeminiを使うことを決めました。利用は公開しました。"
-                        : "For another feature, I write, direct, produce, and fund the film myself. Around a day job, I spent a year making a roughly two-minute trailer, paying artists, studios, voice actors, and composers from my savings. When backgrounds became a major bottleneck, I decided to use Gemini for some of them because the budget and time were running out. I was open about that use."}
+                    {ja ? (
+                        <>
+                            <a
+                                href="https://5rps.jp/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="5RPSのウェブサイト"
+                            >
+                                5RPS
+                            </a>
+                            は、私が脚本、監督、制作、資金を自分で担う長編映画です。ベンチャーキャピタルをだますテック系創業者たちを描いています。二つの仕事の外で、アーティストやスタジオ、声優、作曲家に自分の貯金から支払いながら、約2分の予告編に一年を使いました。背景が大きなボトルネックになったとき、予算と時間を考え、背景の一部にGeminiを使うことを決めました。利用は公開しました。
+                        </>
+                    ) : (
+                        <>
+                            <a
+                                href="https://5rps.jp/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="5RPS website"
+                            >
+                                5RPS
+                            </a>{" "}
+                            is a feature film that I write, direct, produce, and
+                            fund myself. It is about tech-bro founders scamming
+                            venture capitalists. Around a day job, I spent a
+                            year making a roughly two-minute trailer, paying
+                            artists, studios, voice actors, and composers from
+                            my savings. When backgrounds became a major
+                            bottleneck, I decided to use Gemini for some of them
+                            because the budget and time were running out. I was
+                            open about that use.
+                        </>
+                    )}
                 </p>
                 <p>
                     {ja
-                        ? "予告編への反応は、AIが一部で使われたという一点で変わりました。人が描き、手を入れ、複数の作り手と調整し、対価を支払った一年分の工程は見えなくなりました。さらに、職業アニメーターの友人がAIを試したことで、知人から遮断され、コミュニティを離れざるを得なくなった経験も聞きました。私はその人の名前や具体的な仕事をここでは出しません。"
-                        : "The trailer's reception changed around the single fact that AI had been used somewhere. A year of drawing, cleanup, coordination with other artists, and payment disappeared from view. I also heard about a professional animator friend who was blocked by people they knew after experimenting with AI and had to find new communities. I will not identify that person or their specific work here."}
+                        ? "予告編への反応は、AIが一部で使われたという一点で変わりました。人が描き、手を入れ、複数の作り手と調整し、対価を支払った一年分の工程は見えなくなりました。さらに、私が知るアニメーターがAIを試したことで、知人から遮断され、コミュニティを離れざるを得なくなった経験も聞きました。私はその人の名前や具体的な仕事をここでは出しません。"
+                        : "The trailer's reception changed around the single fact that AI had been used somewhere. A year of drawing, cleanup, coordination with other artists, and payment disappeared from view. I also heard about an animator I know who was blocked by people they knew after experimenting with AI and had to find new communities. I will not identify that person or their specific work here."}
                 </p>
                 <p>
                     {ja
@@ -156,9 +232,47 @@ const EnglishArticle = ({ locale, media }) => {
                         : "A film that began in the car"}
                 </h2>
                 <p>
-                    {ja
-                        ? "HiggsfieldがAI映画祭を開くと友人から聞き、最初は一日だけのハッカソンを考えました。8月半ば、別の長編を二週間だけ止めて、絵コンテの練習をするつもりでした。友人のいるつくばへ向かう約1時間半の車内で、私はChatGPT Voiceを文字起こしと会話相手として使い、ジャンルから考え始めました。やがて、すでに『手描き』があることに気づき、元の脚本、自分の反発、友人の経験を一つの短編に結びました。到着した時にはビートがあり、Json Cunananに話すと、彼は気に入ってくれました。"
-                        : "When a friend told me Higgsfield was running an AI film festival, I imagined a one-day hackathon. Around mid-August, I planned to pause another feature for two weeks and use the deadline to practice storyboarding. During the roughly hour-and-a-half drive to my friend's place in Tsukuba, I used ChatGPT Voice as a transcriber and conversational notebook. I began with genre, then realized I already had Tegaki. I joined the old screenplay, my backlash, and my friend's experience into one short. I arrived with the beats, and Json Cunanan liked the idea."}
+                    {ja ? (
+                        <>
+                            Json
+                            CunananからHiggsfieldがAI映画祭を開くと聞き、最初は一日だけのハッカソンを考えました。8月半ば、
+                            <a
+                                href="https://5rps.jp/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="5RPSのウェブサイト"
+                            >
+                                5RPS
+                            </a>
+                            の制作を二週間だけ止めて、絵コンテの練習をするつもりでした。Json
+                            Cunananのいるつくばへ向かう約1時間半の車内で、私はChatGPT
+                            Voiceを文字起こしと会話相手として使い、ジャンルから考え始めました。やがて、すでに『手描き』があることに気づき、元の脚本、自分の反発、私が知るアニメーターの経験を一つの短編に結びました。到着した時にはビートがあり、Json
+                            Cunananに話すと、彼は気に入ってくれました。
+                        </>
+                    ) : (
+                        <>
+                            When Json Cunanan told me Higgsfield was running an
+                            AI film festival, I imagined a one-day hackathon.
+                            Around mid-August, I planned to pause my work on{" "}
+                            <a
+                                href="https://5rps.jp/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="5RPS website"
+                            >
+                                5RPS
+                            </a>{" "}
+                            for two weeks and use the deadline to practice
+                            storyboarding. During the roughly hour-and-a- half
+                            drive to Json Cunanan's place in Tsukuba, I used
+                            ChatGPT Voice as a transcriber and conversational
+                            notebook. I began with genre, then realized I
+                            already had Tegaki. I joined the old screenplay, my
+                            backlash, and the experience of an animator I know
+                            into one short. I arrived with the beats, and Json
+                            Cunanan liked the idea.
+                        </>
+                    )}
                 </p>
                 <p>
                     {ja
