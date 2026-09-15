@@ -25,7 +25,7 @@ export const posts = [
         media: tegakiDirectorCommentaryMedia,
         cover: {
             src: tegakiDirectorCommentaryMedia.poster,
-            position: "center",
+            position: "center 22%",
             lede: {
                 en: "A personal account of making Tegaki, from an old feature screenplay and AI backlash to a finished short released for the Higgsfield film festival.",
                 ja: "過去の長編脚本とAIをめぐる反発から、Higgsfield映画祭に向けて完成・公開した短編『手描き』までの個人的な制作記録。",
