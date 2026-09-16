@@ -329,7 +329,7 @@ const tegakiDirectorCommentaryAsset = (name) =>
 export const tegakiDirectorCommentaryMedia = {
     poster: makingTegakiPart4Media.poster,
     hero: tegakiDirectorCommentaryAsset(
-        "tegaki-landscape-hero-a1a5f32ca69a.webp"
+        "tegaki-textless-landscape-hero-9fb04f35a053.webp"
     ),
     finalFilm: {
         video: tegakiDirectorCommentaryAsset(

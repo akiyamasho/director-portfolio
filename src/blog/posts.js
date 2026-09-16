@@ -31,8 +31,8 @@ export const posts = [
                 ja: "過去の長編脚本とAIをめぐる反発から、Higgsfield映画祭に向けて完成・公開した短編『手描き』までの個人的な制作記録。",
             },
             alt: {
-                en: "Wide cinematic illustration of Mia drawing in a dark animation studio for Tegaki",
-                ja: "暗いアニメーションスタジオで『手描き』のミアが絵を描く、横長の映画的なイラスト",
+                en: "Text-free wide cinematic view of a dark animation studio after hours for Tegaki",
+                ja: "『手描き』のための、夜更けの暗いアニメーションスタジオを描いた文字のない横長の映画的なイメージ",
             },
         },
         translations: {
