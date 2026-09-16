@@ -328,7 +328,17 @@ const tegakiDirectorCommentaryAsset = (name) =>
 
 export const tegakiDirectorCommentaryMedia = {
     poster: makingTegakiPart4Media.poster,
-    finalFilm: makingTegakiPart4Media.finalFilm,
+    hero: tegakiDirectorCommentaryAsset(
+        "tegaki-landscape-hero-a1a5f32ca69a.webp"
+    ),
+    finalFilm: {
+        video: tegakiDirectorCommentaryAsset(
+            "tegaki-final-higgsfield-submission-cefbfe97a9a.mp4"
+        ),
+        poster: tegakiDirectorCommentaryAsset(
+            "tegaki-final-higgsfield-submission-poster-42d68ddb87b3.webp"
+        ),
+    },
     original: {
         poster: tegakiDirectorCommentaryAsset(
             "original-tegaki-poster-3725a685b783.webp"

@@ -24,15 +24,15 @@ export const posts = [
         tags: ["production", "animation", "screenplay", "storyboarding"],
         media: tegakiDirectorCommentaryMedia,
         cover: {
-            src: tegakiDirectorCommentaryMedia.poster,
-            position: "center 22%",
+            src: tegakiDirectorCommentaryMedia.hero,
+            position: "center",
             lede: {
                 en: "A personal account of making Tegaki, from an old feature screenplay and AI backlash to a finished short released for the Higgsfield film festival.",
                 ja: "過去の長編脚本とAIをめぐる反発から、Higgsfield映画祭に向けて完成・公開した短編『手描き』までの個人的な制作記録。",
             },
             alt: {
-                en: "Tegaki portrait poster showing the animator in a dark room with drawing tools and translucent interface panels",
-                ja: "暗い部屋で画材と半透明のインターフェースに囲まれたアニメーターを描く『手描き』の縦長ポスター",
+                en: "Wide cinematic illustration of Mia drawing in a dark animation studio for Tegaki",
+                ja: "暗いアニメーションスタジオで『手描き』のミアが絵を描く、横長の映画的なイラスト",
             },
         },
         translations: {
