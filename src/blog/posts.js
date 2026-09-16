@@ -31,8 +31,8 @@ export const posts = [
                 ja: "過去の長編脚本とAIをめぐる反発から、Higgsfield映画祭に向けて完成・公開した短編『手描き』までの個人的な制作記録。",
             },
             alt: {
-                en: "Text-free wide cinematic view of a dark animation studio after hours for Tegaki",
-                ja: "『手描き』のための、夜更けの暗いアニメーションスタジオを描いた文字のない横長の映画的なイメージ",
+                en: "Wide crop from the Tegaki poster showing Mia, Nozomi, the Tegaki title, and production imagery with no credits visible",
+                ja: "ミア、ノゾミ、『手描き』のタイトル、制作風景を収め、クレジットを見せない『手描き』ポスターの横長トリミング",
             },
         },
         translations: {
