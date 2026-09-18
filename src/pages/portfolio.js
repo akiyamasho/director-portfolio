@@ -179,7 +179,7 @@ class Portfolio extends Component {
                         text: intl.formatMessage({
                             id: "portfolio.watchTheShortFilm",
                         }),
-                        link: makingTegakiPart4Media.finalFilm.video,
+                        link: "https://www.youtube.com/watch?v=6UbN9qtKDxc",
                     },
                     {
                         text: intl.formatMessage({
