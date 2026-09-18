@@ -13,6 +13,28 @@ const Figure = ({ src, alt, caption }) => (
     </figure>
 );
 
+const YouTubeEmbed = ({ title }) => (
+    <div
+        style={{
+            aspectRatio: "16 / 9",
+            width: "100%",
+        }}
+    >
+        <iframe
+            src="https://www.youtube-nocookie.com/embed/6UbN9qtKDxc"
+            title={title}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            style={{
+                width: "100%",
+                height: "100%",
+                border: 0,
+            }}
+        />
+    </div>
+);
+
 const EnglishArticle = ({ locale, media }) => {
     const ja = locale === "ja";
 
@@ -35,20 +57,12 @@ const EnglishArticle = ({ locale, media }) => {
                             : "Portrait poster for Tegaki."
                     }
                 />
-                <TestVideo
-                    src={media.finalFilm.video}
-                    poster={media.finalFilm.poster}
+                <YouTubeEmbed
                     title={
                         ja
                             ? "英語字幕付き完成・公開版『手描き』"
                             : "Tegaki, completed and released English-subtitled film"
                     }
-                    fallback={
-                        ja
-                            ? "英語字幕付き完成・公開版の映像を読み込めませんでした。"
-                            : "The completed and released English-subtitled film could not be loaded."
-                    }
-                    muted={false}
                 />
                 <p className="blog-media-caption">
                     {ja
